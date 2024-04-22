@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "streetsidesoftware.code-spell-checker",
+        "ms-toolsai.jupyter",
+        "pkief.material-icon-theme",
+        "streetsidesoftware.code-spell-checker-polish",
+        "ms-python.python",
+        "aaron-bond.better-comments",
+        "yzhang.markdown-all-in-one",
+        "kevinrose.vsc-python-indent"
+    ]
+}
