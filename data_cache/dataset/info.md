@@ -19,3 +19,8 @@ dataset = load_from_disk("./data_cache/dataset/{name}")
     })
     ```
 
+### git lfs
+
+`data_cache/dataset/wikipediaPL/*.arrow filter=lfs diff=lfs merge=lfs -text`
+
+dane nie mieszcza sie w planie free na github więc przesłałem to na google drive
