@@ -1,0 +1,89 @@
+{
+  "builder_name": "wikipedia",
+  "citation": "@ONLINE {wikidump,\n    author = {Wikimedia Foundation},\n    title  = {Wikimedia Downloads},\n    url    = {https://dumps.wikimedia.org}\n}\n",
+  "config_name": "20240420.pl",
+  "dataset_name": "wikipedia",
+  "dataset_size": 3007854270,
+  "description": "Wikipedia dataset containing cleaned articles of all languages.\nThe datasets are built from the Wikipedia dump\n(https://dumps.wikimedia.org/) with one split per language. Each example\ncontains the content of one full Wikipedia article with cleaning to strip\nmarkdown and unwanted sections (references, etc.).\n",
+  "download_checksums": {
+    "https://dumps.wikimedia.org/plwiki/20240420/dumpstatus.json": {
+      "num_bytes": 28619,
+      "checksum": null
+    },
+    "https://dumps.wikimedia.org/plwiki/20240420/plwiki-20240420-pages-articles-multistream1.xml-p1p187037.bz2": {
+      "num_bytes": 217127388,
+      "checksum": null
+    },
+    "https://dumps.wikimedia.org/plwiki/20240420/plwiki-20240420-pages-articles-multistream2.xml-p187038p564779.bz2": {
+      "num_bytes": 212058234,
+      "checksum": null
+    },
+    "https://dumps.wikimedia.org/plwiki/20240420/plwiki-20240420-pages-articles-multistream3.xml-p564780p1199518.bz2": {
+      "num_bytes": 298905503,
+      "checksum": null
+    },
+    "https://dumps.wikimedia.org/plwiki/20240420/plwiki-20240420-pages-articles-multistream4.xml-p1199519p2047892.bz2": {
+      "num_bytes": 402230594,
+      "checksum": null
+    },
+    "https://dumps.wikimedia.org/plwiki/20240420/plwiki-20240420-pages-articles-multistream5.xml-p2047893p3462393.bz2": {
+      "num_bytes": 596167961,
+      "checksum": null
+    },
+    "https://dumps.wikimedia.org/plwiki/20240420/plwiki-20240420-pages-articles-multistream6.xml-p3462394p4962393.bz2": {
+      "num_bytes": 536026795,
+      "checksum": null
+    },
+    "https://dumps.wikimedia.org/plwiki/20240420/plwiki-20240420-pages-articles-multistream6.xml-p4962394p5649033.bz2": {
+      "num_bytes": 289370642,
+      "checksum": null
+    }
+  },
+  "download_size": 2551915736,
+  "features": {
+    "id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "url": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "title": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "https://dumps.wikimedia.org",
+  "license": "This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.",
+  "size_in_bytes": 5559770006,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 3007854270,
+      "num_examples": 1611471,
+      "shard_lengths": [
+        148000,
+        96596,
+        250000,
+        198614,
+        324000,
+        315000,
+        104793,
+        174468
+      ],
+      "dataset_name": "wikipedia"
+    }
+  },
+  "version": {
+    "version_str": "2.0.0",
+    "description": "",
+    "major": 2,
+    "minor": 0,
+    "patch": 0
+  }
+}

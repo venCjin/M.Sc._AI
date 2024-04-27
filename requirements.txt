@@ -1,5 +1,8 @@
-jupyterlab
-python-dotenv
-langchain
-openai
-langchain_openai
+datasets==2.14.6 
+fsspec==2023.9.2
+langchain 
+openai 
+pinecone-client 
+tiktoken
+mwparserfromhell
+#? ipywidgets

@@ -1,7 +1,7 @@
 ---
-thesis-title-en:    ..LLMs and Knowledge Graphs..
+thesis-title-en:    LLMs and Knowledge Graphs
                     <!-- TODO: final title --> 
-thesis-title-pl:    ..Wielkie modele językowe i grafy wiedzy..
+thesis-title-pl:    Wielkie modele językowe i grafy wiedzy
 degree:             Master of Science
 author:             Jarosław Suchiński
 thesis-supervisor:  dr Marcin Skulimowski
@@ -9,7 +9,7 @@ publication-date:   4 June 2024
                     <!-- TODO: final date -->
 ---
 # Master of Science thesis
-<!-- TODO: Abstaract --> ..short description..
+<!-- TODO: Abstract --> ..short description..
 
 ## Table of contents
 <!-- TODO: TOC --> ..create when ready..
@@ -37,15 +37,15 @@ Project is using jupyter notebooks (.ipynb) to provide a meaningful description 
         ```
    1. (mac)
         ```sh
-        . ./.venv/Scripts/activate
+        . ./.venv/bin/activate
         ```
-3. create .env file with OpenAI api key
+3. create .env file with api keys
     ```ini
-    OPENAI_API_KEY=<API-KEY>
+    OPENAI_API_KEY=<openai_api_key>
+    PINECONE_API_KEY=<pinecone_api_key>
     ```
 4. create requirements.txt with required python packages
     ```ini
-    jupyterlab
     python-dotenv
     langchain
     openai
