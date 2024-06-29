@@ -75,16 +75,17 @@ Project is using jupyter notebooks (.ipynb) to provide a meaningful description 
     pip install -r requirements.txt
     ```
     ---
-6. ***(optional)*** New required python packages shoud be added to requirements.txt and then repeat step 5.
+6. ***(optional)*** New required python packages should be added to requirements.txt and then repeat step 5.
 
 ### Testing methods
 
-1. Creating a knowledge graph using LLM (mgr1.ipynb)
+1. (mgr1.ipynb) LLM-augmented KG construction - Coreference resolution
+    Creating a knowledge graph using LLM ?
 
 
     <!-- TODO: mgr1 --> ..short meaningful description..
 
-2. Inject KG into request to LLM to achive RAG (mgr2.ipynb)
+2. Inject KG into request to LLM to achieve RAG (mgr2.ipynb)
 
     RAG (retrieval-augmented generation) ...
     <!-- TODO: mgr2 --> ..short meaningful description..
