@@ -1,0 +1,4 @@
+viina_version,event_id_1pd,date,n_reports,event_ids,sources,geonameid,feature_code,asciiname,ADM1_NAME,ADM1_CODE,ADM2_NAME,ADM2_CODE,longitude,latitude,GEO_PRECISION,t_mil_b,t_loc_b,t_san_b,a_rus_b,a_ukr_b,a_civ_b,a_other_b,t_aad_b,t_airstrike_b,t_armor_b,t_arrest_b,t_artillery_b,t_control_b,t_firefight_b,t_ied_b,t_property_b,t_raid_b,t_occupy_b,t_cyber_b,t_hospital_b,t_milcas_b,t_civcas_b,t_retreat_b,t_airalert_b
+bert_20240607051309,97124,20240101,1,866715,espreso,698740,PPLA,Odessa,Odessa,1800,Odes'ka,26260,30.731689,46.484213,ADM3,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+bert_20240607051309,261130,20240101,1,869460,ria,709717,PPLA,Donetsk,Donets'k,655,Donets'ka,10139,37.80285,48.015884,ADM3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+bert_20240607051309,64897,20240101,1,869461,ria,694423,PPLA,Sevastopol,Sevastopol',2215,Lenins'kyi,20221,33.5229142,44.6010512,ADM3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
