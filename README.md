@@ -1,13 +1,12 @@
 ---
-thesis-title-en:    LLMs and Knowledge Graphs
-                    <!-- TODO: final title --> 
+thesis-title-en:    LLMs and Knowledge Graph
 thesis-title-pl:    Wielkie modele językowe i grafy wiedzy
 degree:             Master of Science
 author:             Jarosław Suchiński
 thesis-supervisor:  dr Marcin Skulimowski
-publication-date:   4 June 2024
-                    <!-- TODO: final date -->
+publication-date:   (?) 2024
 ---
+
 # Master of Science thesis
 <!-- TODO: Abstract --> ..short description..
 
