@@ -7,6 +7,7 @@
         "ms-python.python",
         "aaron-bond.better-comments",
         "yzhang.markdown-all-in-one",
-        "kevinrose.vsc-python-indent"
+        "kevinrose.vsc-python-indent",
+        "stardog-union.stardog-rdf-grammars"
     ]
 }

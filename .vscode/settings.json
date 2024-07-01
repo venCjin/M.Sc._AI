@@ -3,7 +3,10 @@
     "cSpell.words": [
         "dotenv",
         "langchain",
+        "llms",
+        "Ollama",
         "OPENAI",
+        "streamlit",
         "Suchiński"
     ],
     "explorer.autoReveal": false
