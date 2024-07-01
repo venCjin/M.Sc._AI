@@ -15,7 +15,7 @@
       2. llm chain, llm agents
       3. rag
    2. graph rag
-      1. kg - przetwarzanie danych (wyciaganie obiektów i relacji) (wykorzystnaie llm do dostania rdf w określonej ontologii)
+      1. kg - przetwarzanie danych (wyciaganie obiektów i relacji) (wykorzystanie llm do dostania rdf w określonej ontologii)
       2. llm chain, llm agents
       3. graph rag
    3. wnioski / analiza wyników
