@@ -107,3 +107,12 @@
 
 ## misc
 1. [auto ui chat ollama](https://mer.vin/2024/06/gemma-2-code-examples/)
+
+
+
+
+---
+Rozwiń punkt xx na co najmniej 4 paragrafy tekstu i podaj więcej szczegółowych informacji.
+
+
+Rozwiń punkt 3.3.2. Przykłady zastosowań Graph RAG na co najmniej 4 paragrafy tekstu i podaj więcej szczegółowych informacji.
