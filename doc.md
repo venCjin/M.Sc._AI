@@ -249,49 +249,78 @@ Tworzenie grafu wiedzy obejmuje procesy ekstrakcji informacji, modelowania danyc
 
 ### 4.1. Baseline RAG
 #### 4.1.1. Wektoryzowanie danych tekstowych
+
 4.1.1.1. Opis zbioru danych (dane o samochodach)
+
 4.1.1.2. Metody wektoryzacji tekstu
+
 4.1.1.3. Implementacja i narzędzia wykorzystywane do wektoryzacji
+
 4.1.1.4. Analiza i wybór najlepszych metod wektoryzacji
 
 #### 4.1.2. LLM chain, LLM agents
+
 4.1.2.1. Implementacja LLM chain w kontekście RAG
+
 4.1.2.2. Rola LLM agents w RAG
+
 4.1.2.3. Przykłady implementacji i wyniki
 
 #### 4.1.3. RAG
+
 4.1.3.1. Implementacja standardowego RAG
+
 4.1.3.2. Testowanie i ewaluacja RAG
+
 4.1.3.3. Wyniki i analiza
 
 ### 4.2. Graph RAG
 #### 4.2.1. KG - przetwarzanie danych
+
 4.2.1.1. Wyciąganie obiektów i relacji z danych tekstowych
+
 4.2.1.2. Wykorzystanie LLM do generowania RDF zgodnie z określoną ontologią
+
 4.2.1.3. Tworzenie i zarządzanie grafem wiedzy
 
 #### 4.2.2. LLM chain, LLM agents
+
 4.2.2.1. Implementacja LLM chain w kontekście Graph RAG
+
 4.2.2.2. Rola LLM agents w Graph RAG
+
 4.2.2.3. Przykłady implementacji i wyniki
 
 #### 4.2.3. Graph RAG
+
 4.2.3.1. Implementacja Graph RAG
+
 4.2.3.2. Testowanie i ewaluacja Graph RAG
+
 4.2.3.3. Porównanie wyników Graph RAG z baseline RAG
 
 ### 4.3. Wnioski / analiza wyników
+
 4.3.1. Porównanie wydajności standardowego RAG i Graph RAG
+
 4.3.2. Analiza zalet i wad obu podejść
+
 4.3.3. Dyskusja na temat wyników i ich znaczenia
 
 ## 5. Podsumowanie
+
 5.1. Podsumowanie głównych wniosków
+
 5.2. Wnioski na temat wydajności Graph RAG w porównaniu do standardowego RAG
+
 5.3. Ogólne wnioski na temat przetwarzania danych tekstowych i grafów wiedzy
 
 ## 6. Dalsze możliwości rozwoju tematu
+
 6.1. Możliwe kierunki dalszych badań
+
 6.2. Propozycje udoskonaleń metodologii
+
 6.3. Zastosowanie innych technologii i narzędzi w przyszłych badaniach
+
 6.4. Potencjalne aplikacje praktyczne wyników badania
