@@ -131,7 +131,7 @@ W sektorze finansowym i biznesowym RAG może wspierać analityków w podejmowani
 
 W dziedzinie prawa, RAG może wspierać prawników i konsultantów prawnych poprzez szybkie wyszukiwanie i analizowanie przepisów prawnych, orzeczeń sądowych i innych dokumentów prawniczych. Na przykład, prawnik przygotowujący się do sprawy sądowej może zadać pytania dotyczące precedensów prawnych lub interpretacji przepisów, a system RAG przeszuka bazy danych prawnych i dostarczy najbardziej relewantne informacje. To znacznie skraca czas potrzebny na badanie i przygotowanie się do sprawy, co zwiększa efektywność pracy prawnika.
 
-Dzięki szerokiemu zakresowi zastosowań i zdolności do dynamicznego wyszukiwania informacji, RAG stanowi potężne narzędzie, które może znacznie poprawić jakość i efektywność pracy w wielu różnych dziedzinach. Integracja wyszukiwania informacji z generowaniem tekstu pozwala na tworzenie bardziej trafnych i kontekstualnych odpowiedzi, co otwiera nowe możliwości w zastosowaniach NLP.
+Dzięki szerokiemu zakresowi zastosowań i zdolności do dynamicznego wyszukiwania informacji, RAG stanowi potężne narzędzie, które może znacznie poprawić jakość i efektywność pracy w wielu różnych dziedzinach. Integracja wyszukiwania informacji z generowaniem tekstu pozwala na tworzenie bardziej trafnych odpowiedzi, co otwiera nowe możliwości w zastosowaniach NLP.
 
 #### 3.2.4. Zalety i wyzwania związane z RAG
 
@@ -189,13 +189,10 @@ Mimo licznych zalet, Graph RAG niesie ze sobą także pewne wyzwania. Jednym z g
 
 Innym wyzwaniem jest optymalizacja wydajności. Przeszukiwanie dużych grafów wiedzy może być zasobochłonne i wymagać zaawansowanych algorytmów, aby zapewnić szybki i efektywny dostęp do informacji. Ponadto, integracja grafów wiedzy z tradycyjnymi komponentami RAG wymaga precyzyjnego dostrojenia, aby zapewnić harmonijną współpracę i maksymalizację korzyści płynących z obu podejść.
 
-Podsumowując, Graph RAG to zaawansowane podejście łączące generowanie tekstu z dynamicznym wyszukiwaniem informacji i strukturą grafów wiedzy, co umożliwia bardziej precyzyjne, kontekstualne i kompleksowe odpowiedzi na zapytania użytkowników. Choć niesie ze sobą pewne wyzwania, jego zalety sprawiają, że jest to obiecująca technologia o szerokim spektrum zastosowań.
+Podsumowując, Graph RAG to zaawansowane podejście łączące generowanie tekstu z dynamicznym wyszukiwaniem informacji i strukturą grafów wiedzy, co umożliwia bardziej precyzyjne i kompleksowe odpowiedzi na zapytania użytkowników. Choć niesie ze sobą pewne wyzwania, jego zalety sprawiają, że jest to obiecująca technologia o szerokim spektrum zastosowań.
 
 #### 3.3.2. Przykłady zastosowań Graph RAG
-Graph RAG może być wykorzystywany w zaawansowanych systemach pytanie-odpowiedź, gdzie wymagane jest głębokie rozumienie i wykorzystanie wiedzy domenowej, np. w analizach finansowych, medycynie, czy systemach rekomendacji. Przykłady zastosowań obejmują wyszukiwanie odpowiedzi w bazach wiedzy technicznej, gdzie relacje między pojęciami są kluczowe.
-
-`chat 3.5: `
-Graph Retrieval Augmented Generation (Graph RAG) jest technologią o dużym potencjale zastosowań w różnych dziedzinach, dzięki swojej zdolności do integracji danych i generowania informacji na podstawie strukturalnych grafów wiedzy. Oto kilka przykładów praktycznego wykorzystania Graph RAG:
+Graph RAG może być wykorzystywany w zaawansowanych systemach pytanie-odpowiedź, gdzie wymagane jest głębokie rozumienie i wykorzystanie wiedzy domenowej, np. w analizach finansowych, medycynie, czy systemach rekomendacji. Przykłady zastosowań obejmują wyszukiwanie odpowiedzi w bazach wiedzy technicznej, gdzie relacje między pojęciami są kluczowe, takich jak:
 
 **1. Medycyna i opieka zdrowotna:**
 
@@ -207,7 +204,7 @@ W sektorze finansowym, Graph RAG może wspierać analityków i inwestorów w pod
 
 **3. Edukacja i e-learning:**
 
-W dziedzinie edukacji, Graph RAG może znacznie wzbogacić doświadczenie uczniów i nauczycieli, dostarczając kontekstualnych i interaktywnych materiałów edukacyjnych. Grafy wiedzy mogą zawierać informacje z różnych dziedzin nauki, łącząc definicje pojęć, powiązane tematy oraz przykłady zastosowań. Na przykład, podczas nauki o zjawiskach fizycznych, uczniowie mogą zadawać pytania dotyczące konkretnych teorii lub równań, a system Graph RAG może przeszukać graf wiedzy, aby dostarczyć nie tylko odpowiedzi, ale także powiązane informacje, takie jak historyczne odkrycia, zastosowania w praktyce oraz powiązane eksperymenty. Dzięki temu, uczniowie mają możliwość bardziej głębokiego zrozumienia materiału.
+W dziedzinie edukacji, Graph RAG może znacznie wzbogacić doświadczenie uczniów i nauczycieli, dostarczając interaktywnych materiałów edukacyjnych. Grafy wiedzy mogą zawierać informacje z różnych dziedzin nauki, łącząc definicje pojęć, powiązane tematy oraz przykłady zastosowań. Na przykład, podczas nauki o zjawiskach fizycznych, uczniowie mogą zadawać pytania dotyczące konkretnych teorii lub równań, a system Graph RAG może przeszukać graf wiedzy, aby dostarczyć nie tylko odpowiedzi, ale także powiązane informacje, takie jak historyczne odkrycia, zastosowania w praktyce oraz powiązane eksperymenty. Dzięki temu, uczniowie mają możliwość bardziej głębokiego zrozumienia materiału.
 
 **4. Wyszukiwanie informacji i personalizacja treści:**
 
@@ -225,12 +222,8 @@ W dziedzinie prawa, Graph RAG może wspierać prawników i konsultantów prawnyc
 
 Graph RAG, dzięki integracji grafów wiedzy z procesem wyszukiwania i generowania informacji, oferuje szerokie możliwości zastosowań w różnych dziedzinach. Umożliwia tworzenie bardziej kompleksowych, kontekstowych i spersonalizowanych odpowiedzi, co może znacząco poprawić jakość interakcji z systemami informacyjnymi. Choć wdrożenie Graph RAG wiąże się z pewnymi wyzwaniami, takimi jak zarządzanie złożonością grafów wiedzy i optymalizacja wydajności, jego zalety sprawiają, że jest to technologia o dużym potencjale dla przyszłości przetwarzania języka naturalnego i analizy danych.
 
-
 #### 3.3.3. Zalety Graph RAG w porównaniu do standardowego RAG
-Zalety Graph RAG obejmują lepsze wykorzystanie strukturalnej wiedzy, co prowadzi do bardziej precyzyjnych i złożonych odpowiedzi. Graph RAG może również lepiej radzić sobie z problemem niepełnych lub wieloznacznych zapytań dzięki wykorzystaniu grafów wiedzy do rozwiązywania ambiguitetów.
-
-`chat 3.5:`
-
+Zalety Graph RAG obejmują lepsze wykorzystanie strukturalnej wiedzy, co prowadzi do bardziej precyzyjnych i złożonych odpowiedzi. Graph RAG może również lepiej radzić sobie z problemem niepełnych lub wieloznacznych zapytań dzięki wykorzystaniu grafów wiedzy do rozwiązywania niejednoznaczności.
 
 #### 3.3.1.1. Definicja grafu wiedzy (KG)
 Graf wiedzy to strukturalna reprezentacja informacji, w której węzły reprezentują pojęcia, a krawędzie reprezentują relacje między nimi. Grafy wiedzy są wykorzystywane do przechowywania i zarządzania złożoną wiedzą w sposób umożliwiający jej efektywne przetwarzanie i wyszukiwanie.
@@ -294,5 +287,3 @@ Tworzenie grafu wiedzy obejmuje procesy ekstrakcji informacji, modelowania danyc
 6.2. Propozycje udoskonaleń metodologii
 6.3. Zastosowanie innych technologii i narzędzi w przyszłych badaniach
 6.4. Potencjalne aplikacje praktyczne wyników badania
-
-Każdy z powyższych punktów można dalej rozwijać, dodając szczegółowe opisy, diagramy, przykłady kodu i wyniki eksperymentów, aby stworzyć pełną i kompleksową pracę magisterską.
