@@ -2,15 +2,23 @@
 
 ## 1. Wstęp
 1.1. Wprowadzenie do tematu
+
 1.2. Znaczenie i rola wielkich modeli językowych (LLM) w przetwarzaniu języka naturalnego
+
 1.3. Krótkie omówienie RAG (Retrieval Augmented Generation) i jego znaczenia
+
 1.4. Znaczenie grafów wiedzy (Knowledge Graphs, KG) i ontologii RDF
+
 1.5. Cel i struktura pracy
 
 ## 2. Cel i zakres pracy
+
 2.1. Cel główny: Porównanie wydajności standardowego RAG z Graph RAG
+
 2.2. Szczegółowe cele badawcze
+
 2.3. Zakres pracy: Przetwarzanie danych o samochodach, tworzenie wektorów tekstowych, budowa grafu wiedzy
+
 2.4. Ograniczenia i założenia badania
 
 ## 3. Część teoretyczna
@@ -71,7 +79,7 @@ W klasycznym podejściu do generowania tekstu, modele językowe bazują wyłącz
 
 Architektura RAG składa się z dwóch głównych elementów: retrievera i generatora. Retriever odpowiada za wyszukiwanie i wybieranie najbardziej adekwatnych fragmentów tekstu z bazy danych w odpowiedzi na zapytanie użytkownika. W praktyce może to oznaczać wykorzystanie metod takich jak BM25 (Best Matching 25) lub bardziej zaawansowanych technik opartych na sieciach neuronowych, takich jak Dense Passage Retrieval (DPR). Te techniki pozwalają na efektywne przeszukiwanie dużych zbiorów danych i identyfikowanie fragmentów tekstu, które są najbardziej zgodne z zapytaniem.
 
-Po wybraniu odpowiednich fragmentów tekstu, przekazywane są one do generatora, który jest zazwyczaj oparty na wielkim modelu językowym (LLM). Generator ten, mając dostęp do zewnętrznych danych dostarczonych przez retrievera, tworzy odpowiedź na zapytanie użytkownika. Dzięki integracji z wyszukiwaniem informacji, generowane odpowiedzi są nie tylko oparte na wewnętrznej wiedzy modelu, ale również wzbogacone o aktualne i dokładne informacje z zewnętrznych źródeł. To pozwala na tworzenie bardziej kompleksowych i kontekstualnych odpowiedzi, które są istotne dla użytkownika.
+Po wybraniu odpowiednich fragmentów tekstu, przekazywane są one do generatora, który jest zazwyczaj oparty na wielkim modelu językowym (LLM). Generator ten, mając dostęp do zewnętrznych danych dostarczonych przez retrievera, tworzy odpowiedź na zapytanie użytkownika. Dzięki integracji z wyszukiwaniem informacji, generowane odpowiedzi są nie tylko oparte na wewnętrznej wiedzy modelu, ale również wzbogacone o aktualne i dokładne informacje z zewnętrznych źródeł. To pozwala na tworzenie bardziej kompleksowych odpowiedzi, które są istotne dla użytkownika.
 
 RAG znajduje zastosowanie w wielu dziedzinach, w tym w systemach wsparcia technicznego, gdzie może odpowiadać na skomplikowane pytania dotyczące produktów na podstawie dokumentacji technicznej, oraz w medycynie, gdzie może dostarczać aktualne informacje na temat diagnostyki i leczenia chorób. Dzięki zdolności do łączenia statycznej wiedzy modeli językowych z dynamicznymi informacjami z zewnętrznych źródeł, RAG stanowi potężne narzędzie, które znacząco zwiększa efektywność i użyteczność aplikacji NLP.
 
@@ -225,16 +233,16 @@ Graph RAG, dzięki integracji grafów wiedzy z procesem wyszukiwania i generowan
 #### 3.3.3. Zalety Graph RAG w porównaniu do standardowego RAG
 Zalety Graph RAG obejmują lepsze wykorzystanie strukturalnej wiedzy, co prowadzi do bardziej precyzyjnych i złożonych odpowiedzi. Graph RAG może również lepiej radzić sobie z problemem niepełnych lub wieloznacznych zapytań dzięki wykorzystaniu grafów wiedzy do rozwiązywania niejednoznaczności.
 
-#### 3.3.1.1. Definicja grafu wiedzy (KG)
+#### 3.3.3.1. Definicja grafu wiedzy (KG)
 Graf wiedzy to strukturalna reprezentacja informacji, w której węzły reprezentują pojęcia, a krawędzie reprezentują relacje między nimi. Grafy wiedzy są wykorzystywane do przechowywania i zarządzania złożoną wiedzą w sposób umożliwiający jej efektywne przetwarzanie i wyszukiwanie.
 
-#### 3.3.1.2. Struktura i komponenty KG
+#### 3.3.3.2. Struktura i komponenty KG
 Graf wiedzy składa się z węzłów (reprezentujących pojęcia lub encje) oraz krawędzi (reprezentujących relacje między encjami). Dodatkowo, węzły i krawędzie mogą mieć atrybuty, które zawierają dodatkowe informacje. Struktura KG może być hierarchiczna lub bardziej złożona, zależnie od domeny wiedzy.
 
-#### 3.3.1.3. Ontologie RDF: definicja, struktura i znaczenie
+#### 3.3.3.3. Ontologie RDF: definicja, struktura i znaczenie
 RDF (Resource Description Framework) to standard służący do reprezentowania informacji o zasobach w sieci w postaci trójek (subject-predicate-object). Ontologie RDF definiują pojęcia i relacje w danej domenie wiedzy, umożliwiając strukturalne i semantyczne modelowanie informacji. Ontologie RDF są kluczowe dla tworzenia i zarządzania grafami wiedzy.
 
-#### 3.3.1.4. Tworzenie i zarządzanie KG
+#### 3.3.3.4. Tworzenie i zarządzanie KG
 Tworzenie grafu wiedzy obejmuje procesy ekstrakcji informacji, modelowania danych i definiowania ontologii. Zarządzanie grafem wiedzy obejmuje aktualizację, utrzymanie spójności i zapewnienie jakości danych. Narzędzia i technologie takie jak SPARQL, OWL, i różne silniki baz danych grafowych są używane do efektywnego zarządzania KG.
 
 ## 4. Część praktyczna
