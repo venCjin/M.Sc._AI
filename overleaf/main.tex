@@ -423,7 +423,7 @@ Graph Retrieval-Augmented Generation (Graph RAG) to zaawansowane podejście do p
 
 \subsection{Opis zbioru danych (dane o filmach)}
 
-Do badania zostały wybrane dane 1000 filmów z bazy IMDB \cite{11_aa}. Są one ustrukturyzowane i zapisane w pliku csv. W tej pracy rozważamy przypadek działania z danymi tekstowymi, w związku z czym informacje o filmach zapisujemy do plików tekstowych w przedstawionej poniżej formie:
+Do badania zostały wybrane dane 1000 filmów z bazy IMDB \cite{imdb:data}. Są one ustrukturyzowane i zapisane w pliku csv. W tej pracy rozważamy przypadek działania z danymi tekstowymi, w związku z czym informacje o filmach zapisujemy do plików tekstowych w przedstawionej poniżej formie:
 
 % \begin{codestyle}[]\\
 % Movie name: The Shawshank Redemption\\
@@ -460,7 +460,7 @@ Tekst z wybranego zbioru jest w języku angielskim, dlatego też dane te są dal
 
 Do realizacji algorytmów RAG i Graph RAG wybrany został jeden z najbardziej zaawansowanych wielkich modeli językowych w czasie realizacji tej pracy -- OpenAI GPT-4.1. Dostępny za darmo z limitem 250 tys. tokenów dziennie, pod warunkiem udzielenia przez użytkownika zgody, by OpenAI miało dostęp do jego zapytań i odpowiedzi LLM.
 
-W toku rozwoju pracy używane też były inne modele (Llama 3, Llama 3.1, Gemma2) z bazy publicznie dostępnych modeli LLM (Ollama) i używane one były na komputerze lokalnie. Niestety dostępny komputer nie był w stanie obsłużyć modeli większych niż 7B (7 miliardów aktywnych parametrów), co sprawiało że odpowiedzi LLM były niewystarczające (np. w przypadku tak trudnego zadania jak napisanie zapytania do bazy Neo4j w języku CYPHER, gdzie owe „małe” modele często tworzyły zapytania nie dające poprawnych odpowiedzi z bazy). Zadecydowało to o tym, iż nie są one reprezentatywnym przykładem LLM do przedstawienia w tej pracy. W związku z tym warte odnotowania jest, iż o ile takie modele nie nadają się do tworzenia np. zapytań do bazy, to mogą okazać się wystarczające do wygenerowania finalnej odpowiedzi, w ostatnim etapie gdzie są już wyszukane dane (o ile cały dostarczony kontekst zmieści się w maksymalnej liczbie tokenów wejściowych dla tego modelu).
+W toku rozwoju pracy używane też były inne modele (Llama 3, Llama 3.1, Gemma2) z bazy publicznie dostępnych modeli LLM (Ollama) i używane one były na komputerze lokalnie. Niestety dostępny komputer nie był w stanie obsłużyć modeli większych niż 7B (7 miliardów aktywnych parametrów), co sprawiało że odpowiedzi LLM były niewystarczające (np. w przypadku tak trudnego zadania jak napisanie zapytania do bazy Neo4j w języku Cypher, gdzie owe „małe” modele często tworzyły zapytania nie dające poprawnych odpowiedzi z bazy). Zadecydowało to o tym, iż nie są one reprezentatywnym przykładem LLM do przedstawienia w tej pracy. W związku z tym warte odnotowania jest, iż o ile takie modele nie nadają się do tworzenia np. zapytań do bazy, to mogą okazać się wystarczające do wygenerowania finalnej odpowiedzi, w ostatnim etapie gdzie są już wyszukane dane (o ile cały dostarczony kontekst zmieści się w maksymalnej liczbie tokenów wejściowych dla tego modelu).
 
 \newpage
 \begin{python}
@@ -496,18 +496,16 @@ Na wybranym fragmencie kodu widać, jak zostały utworzone połączenia do model
 
 \subsubsubsection{Metoda wektoryzacji tekstu -- text-embedding-3-small}
 
-TODO: [J] tu skończyłem
-
 Wybranym modelem do wektoryzacji tekstu został \textit{text-embedding-3-small} autorstwa OpenAI \cite{te3s}, który generuje embeddingi w przestrzeni 1536 wymiarowej.
 \textcolor{red}{Embeddingi to numeryczne reprezentacje tekstu w postaci wielowymiarowych wektorów, które pozwalają obliczyć podobieństwo dwóch tekstów. Wektory te są użyteczne w zadaniach związanych z przeszukiwaniem, klastrowaniem, rekomendacjami oraz klasyfikowaniem.}
 (Jest on) \textcolor{red}{Wybrany model jest} 
 oferowany jako usługa SaaS (Software as a Service) i jest jednym z najlepszych narzędzi tego typu dostępnych na rynku, i jest udostępniany w przystępnej cenie. Istnieje również bardziej zaawansowany model text-embedding-3-large \cite{te3l}, jednak jest on 7 razy droższy co zaważyło o decyzji wybrania modelu small. Zadaniem modelu jest wygenerowanie embeddingów, które zostaną zapisane w bazie wektorowej Pinecone, dzięki czemu będzie później możliwy do przeprowadzenia proces wyszukiwania tekstów (retrieval) powiązanych z pytaniem użytkownika.
 
-Istnieją również inne modele wektoryzujące m.in. $\text{all-MiniLM-L6-v2}$ \cite{miniLM}, $\text{nomic-embed-text-v1}$ \cite{nomic} - natomiast ich wyniki są mniej dokładne on wybranego, zwłaszcza w kluczowej dla tej pracy operacji znajdowania powiązanych tekstów (retrieval). 
+Istnieją również inne modele wektoryzujące m.in. $\text{all-MiniLM-L6-v2}$ \cite{miniLM}, $\text{nomic-embed-text-v1}$ \cite{nomic} - natomiast ich wyniki są mniej dokładne on wybranego, zwłaszcza w kluczowej dla tej pracy operacji znajdowania powiązanych tekstów (\textit{retrieval}). 
 
 \subsubsubsection{Wektorowa baza danych -- Pinecone}
 
-W pracy wykorzystujemy wektorową bazę danych Pinecone, ponieważ zapewnia ona dodatkowe funkcjonalności, z których korzystamy. U podstaw baza ta przechowywuje embeddingi tak jak na przykład biblioteka FAISS (Facebook AI Similarity Search) \cite{faiss}, dzięki czemu zwektoryzowane dane możemy zapisać i później wysyłać zapytania o dane podobne do pytania użytkownika (retrieval i similarity search). Ta podstawowa funkcjonalność zapewnia nam możliwość realizacji RAG w najprostszej postaci, w tej pracy nazwanej RAG v1. Natomiast dodatkowe funkcjonalności, których nie zapewnia FAISS, to przechowywanie i możliwość filtrowania po dodatkowych danych (metadanych) \cite{pinecone:metatdata}, które zapisujemy razem z embeddingiem, dzięki czemu jesteśmy w stanie wykonać bardziej zaawansowany RAG, u nas nazwany RAG v2. Poza tym Pinecone zapewnia znacznie więcej korzyści, takich jak zarządzanie dostępem, integrację z usługami firm trzecich, skalowalność przy znacznym rozbudowaniu i obciążeniu bazy, podpodział danych na przestrzenie nazwane (ang. namespaces), jednak te i inne zalety tego rozwiązania nie są wykorzystywane i prezentowane w tej pracy, jako że nie są istotne w realizacji rozważanych implementacji RAG. Wspominamy o nich ponieważ warto odnotować że są to cechy pożądane w komercyjnej realizacji RAG, gdzie poziom skomplikowania drastycznie rośnie i trzeba zadbać o bezpieczeństwo danych i stabilność rozwiązania dla klientów. 
+W pracy wykorzystujemy wektorową bazę danych Pinecone, ponieważ zapewnia ona dodatkowe funkcjonalności, z których korzystamy. U podstaw baza ta przechowywuje embeddingi tak jak na przykład biblioteka FAISS (Facebook AI Similarity Search) \cite{faiss}, dzięki czemu zwektoryzowane dane możemy zapisać i później wysyłać zapytania o dane podobne do pytania użytkownika (\textit{retrieval} i \textit{similarity search}). Ta podstawowa funkcjonalność zapewnia nam możliwość realizacji RAG w najprostszej postaci, w tej pracy nazwanej RAG v1. Natomiast dodatkowe funkcjonalności, których nie zapewnia FAISS, to przechowywanie i możliwość filtrowania po dodatkowych danych (metadanych) \cite{pinecone:metatdata}, które zapisujemy razem z embeddingiem, dzięki czemu jesteśmy w stanie wykonać bardziej zaawansowany RAG, u nas nazwany RAG v2. Poza tym Pinecone zapewnia znacznie więcej korzyści, takich jak zarządzanie dostępem, integrację z usługami firm trzecich, skalowalność przy znacznym rozbudowaniu i obciążeniu bazy, podpodział danych na przestrzenie nazwane (ang. namespaces), jednak te i inne zalety tego rozwiązania nie są wykorzystywane i prezentowane w tej pracy, jako że nie są istotne w realizacji rozważanych implementacji RAG. Wspominamy o nich ponieważ warto odnotować że są to cechy pożądane w komercyjnej realizacji RAG, gdzie poziom skomplikowania drastycznie rośnie i trzeba zadbać o bezpieczeństwo danych i stabilność rozwiązania dla klientów.
 
 \subsubsubsection{Implementacja i narzędzia wykorzystywane do wektoryzacji}
 
@@ -540,7 +538,7 @@ text_splitter = RecursiveCharacterTextSplitter(
 )
 \end{python}
 
-W pierwszej kolejności definiujemy, że do embeddingu będziemy używać model text-embedding-3-small i inicjalizujemy obiekt \pythoninline{embed}, który pozwoli nam wysyłać tekst i odbierać odpowiadający mu wektor.
+W pierwszej kolejności definiujemy, że do embeddingu będziemy używać model\linebreak text-embedding-3-small i inicjalizujemy obiekt \pythoninline{embed}, który pozwoli nam wysyłać tekst i odbierać odpowiadający mu wektor.
 
 Funkcja \pythoninline{tiktoken_len} oblicza jaką długość w tokenach ma podany jej tekst i jest potrzebna obiektowi \pythoninline{text_splitter}, który to będzie używany by podzielić tekst pojedynczego dokumentu na chunki, które zgodnie z ustawieniem, nie powinny być dłuższe niż 400 tokenów.
 
@@ -588,7 +586,7 @@ vector_store = PineconeVectorStore(
 )
 \end{python}
 
-Następnie otwieramy połączenie do Pinecone, by stworzyć bazę wektorową przy pomocy \linebreak\pythoninline{pc.create_index(...)} jeśli ta nie istnieje. W kolejnym kroku łączymy się do tej bazy (obiekt \pythoninline{index}), i otwieramy połączenie do wykonywania operacji retrieval (obiekt \pythoninline{vector_store}).
+Następnie otwieramy połączenie do Pinecone, by stworzyć bazę wektorową przy pomocy \linebreak\pythoninline{pc.create_index(...)} jeśli ta nie istnieje. W kolejnym kroku łączymy się do tej bazy (obiekt \pythoninline{index}), i otwieramy połączenie do wykonywania operacji retrieval poprzez obiekt\linebreak \pythoninline{vector_store}.
 
 Powyższe definicje wykorzystujemy w implementacji funkcji odpowiedzialnych za wektoryzację danych wejściowych (tekstów z informacjami o filmach) i zapisanie ich w bazie Pinecone. Implementacja ta różni się dla dwóch zaproponowanych rozwiązań: RAG v1 (tylko wyszukiwanie wektorowe na podstawie pytania użytkownika bez dodatkowych metadanych) oraz RAG v2 (dodatkowa możliwość filtrowania danych na podstawie wybranych wartości), i zostały przedstawione w dalszej części tekstu. 
 \newline\null
@@ -635,7 +633,7 @@ def create_chunk_embeddings(content, document_name):
     pass
 \end{python}
 
-W tej części kodu najważniejszą funkcją jest \pythoninline{create_chunk_embeddings(...)}, która to przyjmuje treść dokumentu oraz jego nazwę, a wykorzysując \pythoninline{text_splitter} dzieli treść na części (ang. chunk) i zapisuje je na liście do wysłania - \pythoninline{texts} (zapisuje również nazwę pliku źródłowego w metadanych - \pythoninline{metadataList} - potrzebne w procesie rozwoju metody, w celu łatwiejszej weryfikacji poprawności rozwiązania, nie używany de facto w gotowym rozwiązaniu). Generowanie embeddingu oraz zapis tych danych do bazy Pinecone został przeniesiony do osobnej funkcji \pythoninline{send_embeddings()}, w celu optymalizacji prędkości wykonania. Wykorzystujemy tutaj API OpenAI, które pozwala nam zwektoryzować wiele tekstów naraz (zamiast generować dla każdego chunku tekstu), i analogicznie API Pinecone pozwala nam zapisać do bazy wszystkie te wygenerowane embeddingi oraz dane w jednym żądaniu. Dzięki temu przy wybranej opcji 100 embeddingów naraz (\pythoninline{BATCH_LIMIT}), zamiast co najmniej 1000 (tyle jest plików z danymi) żądań generowania embeddingu oraz zapisu do bazy, wykonujemy 100x mniej, a więc 10 lub więcej zapytań (jeśli jeden plik z danymi został podzielony na części). Sprawia to że generujemy mniej ruchu sieciowego, który dokłada pewien narzut czasowy, ale co ważniejsze usługi te są w stanie nasze żądania np. generacji embeddingu wykonać współbieżnie, co oznacza że wysłane teksty zostaną zwektoryzowane jednocześnie, a nie sekwencyjnie, przez co jeszcze bardziej skracamy czas wykonywania operacji.
+W tej części kodu najważniejszą funkcją jest \pythoninline{create_chunk_embeddings(...)}, która to przyjmuje treść dokumentu oraz jego nazwę, a wykorzysując \pythoninline{text_splitter} dzieli treść na części (ang. chunk) i zapisuje je na liście do wysłania -- \pythoninline{texts} (zapisuje również nazwę pliku źródłowego w metadanych - \pythoninline{metadataList} - potrzebne w procesie rozwoju metody, w celu łatwiejszej weryfikacji poprawności rozwiązania, nie używany de facto w gotowym rozwiązaniu). Generowanie embeddingu oraz zapis tych danych do bazy Pinecone został przeniesiony do osobnej funkcji \pythoninline{send_embeddings()}, w celu optymalizacji prędkości wykonania. Wykorzystujemy tutaj API OpenAI, które pozwala nam zwektoryzować wiele tekstów naraz (zamiast generować dla każdego chunku tekstu), i analogicznie API Pinecone pozwala nam zapisać do bazy wszystkie te wygenerowane embeddingi oraz dane w jednym żądaniu. Dzięki temu przy wybranej opcji 100 embeddingów naraz (\pythoninline{BATCH_LIMIT}), zamiast co najmniej 1000 (tyle jest plików z danymi) żądań generowania embeddingu oraz zapisu do bazy, wykonujemy 100x mniej, a więc 10 lub więcej zapytań (jeśli jeden plik z danymi został podzielony na części). Sprawia to że generujemy mniej ruchu sieciowego, który dokłada pewien narzut czasowy, ale co ważniejsze usługi te są w stanie nasze żądania np. generacji embeddingu wykonać współbieżnie, co oznacza że wysłane teksty zostaną zwektoryzowane jednocześnie, a nie sekwencyjnie, przez co jeszcze bardziej skracamy czas wykonywania operacji.
 \newline\null
 
 \noindent\textbf{Wektoryzacja tekstu w RAG v2}
@@ -703,7 +701,7 @@ def create_chunk_embeddings(content, document_name):
     pass
 \end{python}
 
-W tej wersji RAGa proces przebiega analogicznie jak został opisany dla RAG v1, z tą różnicą że tutaj dla każdego chunku tekstu do metadanych dodajemy dodatkowe dane takie jak: 
+W tej wersji metody proces przebiega analogicznie jak został opisany dla RAG v1, z tą różnicą że tutaj dla każdego chunku tekstu do metadanych dodajemy dodatkowe dane takie jak: 
 \pythoninline{grossRevenue}, \pythoninline{numberOfRatingVotes}, \pythoninline{runtime}, \pythoninline{year}, \pythoninline{rating},
 po których później baza Pinecone będzie mogła filtrować wyniki. 
 Dodatkowy fragment został umieszczony mi˛edzy komentarzami 
@@ -758,7 +756,7 @@ def process_vector_response(llm, question):
         ...
 \end{python}
 
-RAG v1 realizuje przedstawiona funkcja - \pythoninline{process_vector_response(...)}, dostarczamy jej model - \pythoninline{llm}, który ma udzielić odpowiedzi na zadane pytanie - \pythoninline{question}. Pierwszym i najważniejszym elementem RAG jest możliwość wydobycia z bazy wektorowej danych, co realizujemy przez obiekt \pythoninline{retriever}. Podajemy mu ustawienia: próg wyniku podobieństwa - 0.5 (czyli oczekujemy że zwróci chunki dla których wynik similarity score wynosi co najmniej 0.5) i maksymalna liczba chunków, którą retriever zwróci - 100. Następnie tworzymy chain \pythoninline{doc_retriever}, który opakowuje wcześniej wspomnianego retrivera o dodatkowe funkcje kompresujące odpowiedź poprzez podział otrzymanych dokumentów na części nie większe niż 3000 tokenów oraz odrzucające teksty które zostaną uznane za redundantne ze względu na podobieństwo wektorowe do innych otrzymanych tekstów. Następnie uruchamiamy \pythoninline{doc_retriever} aby otrzymać dokumenty, które spełnią wszystkie powyższe warunki, dla zadanego pytania użytkownika. 
+RAG v1 realizuje przedstawiona funkcja \pythoninline{process_vector_response(...)}, dostarczamy jej model -- \pythoninline{llm}, który ma udzielić odpowiedzi na zadane pytanie -- \pythoninline{question}. Pierwszym i najważniejszym elementem RAG jest możliwość wydobycia z bazy wektorowej danych, co realizujemy przez obiekt \pythoninline{retriever}. Podajemy mu ustawienia: próg wyniku podobieństwa - 0.5 (czyli oczekujemy że zwróci chunki dla których wynik similarity score wynosi co najmniej 0.5) i maksymalna liczba chunków, którą retriever zwróci - 100. Następnie tworzymy chain \pythoninline{doc_retriever}, który opakowuje wcześniej wspomnianego retrivera o dodatkowe funkcje kompresujące odpowiedź poprzez podział otrzymanych dokumentów na części nie większe niż 3000 tokenów oraz odrzucające teksty które zostaną uznane za redundantne ze względu na podobieństwo wektorowe do innych otrzymanych tekstów. Następnie uruchamiamy \pythoninline{doc_retriever} aby otrzymać dokumenty, które spełnią wszystkie powyższe warunki, dla zadanego pytania użytkownika. 
 
 \begin{python}
         ...
@@ -861,11 +859,12 @@ def process_vector_response(llm:ChatOpenAI, question:str, verbose:bool=False):
             search_type="similarity_score_threshold",
             search_kwargs=search_kwargs,
         )
+        ...
 \end{python}
 
 Rozszerzona wersja - RAG v2 - od podstawowej różni się tylko w początkowej fazie (przedstawionej powyżej), gdzie definiujemy ustawienia retrievera, natomiast w dalszej części jest taka sama jak w wersji podstawowej. Dodatkowy fragment został umieszczony między komentarzami 
 \text{\fontfamily{pcr}\selectfont\color{red} \#!-----------}.
-W tej wersji przed stworzeniem retrievera, dodajemy chain z zapytaniem do LLM, czy dla danego pytania użytkownika można utworzyć dodatkowe zapytanie filtrujące po metadanych zapisanych w bazie Pinecone razem z embeddingami. W zapytaniu do LLM w promptcie dajemy modelowi informacje o tym jakie metadane są dostępne (nazwa i typ wartości - string, float), oraz tekst na podstawie dokumentacji z Pinecone \cite{pinecone:metatdata} jak stworzyć takie zapytanie filtrujące. 
+W tej wersji przed stworzeniem retrievera, dodajemy chain z zapytaniem do LLM, czy dla danego pytania użytkownika można utworzyć dodatkowe zapytanie filtrujące po metadanych zapisanych w bazie Pinecone razem z embeddingami. W promptcie do LLM podajemy modelowi informacje o tym jakie metadane są dostępne (nazwa i typ wartości), oraz instrukcje na podstawie dokumentacji z Pinecone \cite{pinecone:metatdata} jak stworzyć takie zapytanie filtrujące. 
 
 
 \subsection{Rozwiązanie Graph RAG}
@@ -878,7 +877,7 @@ W tej wersji przed stworzeniem retrievera, dodajemy chain z zapytaniem do LLM, c
 \subsubsubsection{Grafowa baza danych -- Neo4j}
 
 W pracy wykorzystujemy grafową bazę danych Neo4j, ponieważ zapewnia ona funkcjonalności niezbędne do realizacji podejścia Graph RAG. U podstaw baza ta przechowuje dane w postaci węzłów i krawędzi opisujących relacje pomiędzy elementami wiedzy. Umożliwia to tworzenie i eksplorowanie grafów wiedzy, które są znacznie lepiej dostosowane do reprezentowania powiązań semantycznych niż tradycyjne bazy relacyjne czy wektorowe.
-Podstawowa funkcjonalność Neo4j opiera się na zapytaniach w języku \textbf{\textit{Cypher}}, który umożliwia wyszukiwanie informacji w kontekście relacji pomiędzy węzłami. 
+Podstawowa funkcjonalność Neo4j opiera się na zapytaniach w języku Cypher, który umożliwia wyszukiwanie informacji w kontekście relacji pomiędzy węzłami. 
 
 Podobnie jak opisana wcześniej baza Pinecone tak i ta baza oferuje wiele dodatkowych funkcjonalności takich jak skalowalność czy bezpieczeństwo danych i dostępu do nich.  W tej pracy nie korzystamy z nich, lecz w komercyjnej realizacji projektu byłby niezwykle istotne. 
 
@@ -956,7 +955,7 @@ def llm_extract_graph(llm, document_list, graph:Neo4jGraph)-> List[GraphDocument
             if node.type.strip() and node.id.strip():
                 node.type = node.type.replace('`', '')
                 cleaned_nodes.append(node)
-        # Clean relationship id types and source/target node id and types
+        # Clean relationship
         cleaned_relationships = []
         for rel in graph_document.relationships:
             if rel.type.strip() and rel.source.id.strip() and rel.source.type.strip() and rel.target.id.strip() and rel.target.type.strip():
@@ -976,9 +975,9 @@ def llm_extract_graph(llm, document_list, graph:Neo4jGraph)-> List[GraphDocument
 
 Funkcja \pythoninline{llm_extract_graph(...)} dla danej listy dokumentów używa LLM, by wyekstrahować obiekty i relacje wynikające z zawartości danych tekstowych. W tym celu tworzymy obiekt \pythoninline{LLMGraphTransformer}, który wewnątrz jest prostym LLM chain i na podstawie domyślnego promptu i podanych przez nas dodatkowych instrukcji oraz wcześniej opisanych dozwolonych obiektów, właściwości i relacji, poprzez wywołanie metody \linebreak\pythoninline{convert_to_graph_documents(...)} tworzy odpowiednie elementy (dokumenty grafowe) możliwe do zapisania w bazie. 
 
-W tym procesie zdarza się, że wygenerowane nazwy obiektów czy relacji mogą zawierać dodatkowy znak ( \pythoninline{`} - odwrotny apostrof), dlatego następnie w pętli dla każdego dokumentu grafowego usuwamy te znaki z nazw jeśli występują. Dodatkowo z dokumentów grafowych usuwamy treść dokumentu źródłowego (\pythoninline{graph_document.source.page_content}), ponieważ w bazie Neo4j dane te chcemy mieć w postaci grafowej i nie potrzebujemy dodatkowo tekstu źródłowego.
+W tym procesie zdarza się, że wygenerowane nazwy obiektów czy relacji mogą zawierać dodatkowy znak ( \pythoninline{`} - odwrotny apostrof), dlatego dla każdego dokumentu grafowego usuwamy te znaki z nazw, jeśli występują. Dodatkowo z dokumentów grafowych usuwamy treść dokumentu źródłowego (\pythoninline{graph_document.source.page_content}), ponieważ w bazie Neo4j dane te chcemy mieć w postaci grafowej i nie potrzebujemy dodatkowo tekstu źródłowego.
 
-Finalnie wywołujemy zapis wygenerowanych przez LLM elementów grafowych do bazy Neo4j poprzez wywołanie 
+Finalnie zapisujemy wygenerowane przez LLM elementy grafowe do bazy Neo4j poprzez wywołanie 
 \pythoninline{graph.add_graph_documents(...)}.
 
 \subsubsection{Algorytm Graph RAG}
@@ -1025,8 +1024,8 @@ def process_graph_response(llm:ChatOpenAI, graph:Neo4jGraph, question:str, verbo
         print(f"Error processing graph response: {str(e)}")
 \end{python}
 
-Graph RAG realizuje przedstawiona funkcja - \pythoninline{process_graph_response(...)}, dostarczamy jej model - llm, który na podstawie informacji w grafowej bazie danych graph, ma udzielić odpowiedzi na zadane pytanie - \pythoninline{question}. Pierwszym i najważniejszym elementem funkcji jest stworzenie obiektu \pythoninline{GraphCypherQAChain}, który to jest algorytmem informującym  LLM, jaki jest schemat bazy grafowej tj. jakie są dostępne obiekty, właściwości i relacje, oraz
-instruującym jak zbudować zapytanie w języku CYPHER, i również weryfikującym jego poprawność składniową. Etap ten sprawdza czy zapytanie jest poprawnie skonstruowane pod względem uruchomienia, natomiast nie ma niestety pewności czy stworzone zapytanie jest poprawne merytorycznie, czyli czy informacje, o które zapyta LLM będą tymi oczekiwanymi przez użytkownika.
+Graph RAG realizuje przedstawiona funkcja \pythoninline{process_graph_response(...)}, dostarczamy jej model -- \pythoninline{llm}, który na podstawie informacji w grafowej bazie danych -- \pythoninline{graph}, ma udzielić odpowiedzi na zadane pytanie -- \pythoninline{question}. Pierwszym i najważniejszym elementem funkcji jest stworzenie obiektu \pythoninline{GraphCypherQAChain}, który to jest algorytmem informującym  LLM, jaki jest schemat bazy grafowej tj. jakie są dostępne obiekty, właściwości i relacje, oraz
+instruującym jak zbudować zapytanie w języku Cypher, i również weryfikującym jego poprawność składniową. Etap ten sprawdza czy zapytanie jest poprawnie skonstruowane pod względem uruchomienia, natomiast nie ma niestety pewności czy stworzone zapytanie jest poprawne merytorycznie, czyli czy informacje, o które zapyta LLM będą tymi oczekiwanymi przez użytkownika.
 
 
 \subsection{Wnioski i analiza wyników}
@@ -1075,7 +1074,7 @@ Poza samą ilością lepiej ocenionych odpowiedzi, należy również zwrócić u
 \label{tab:2}
 \end{table}
 
-Na korzyść Graph RAG przemawia również mediana wyników, przedstawiona w poniższej tabeli, która jest znacznie wyższa od tych prezentowanych przez RAG v1 i v2, ale co ważniejsze, jest również znacznie wyższa od swojej średniej. Z tej obserwacji wynika, że odpowiedzi Graph RAG są na ogół jeszcze lepsze niż wynika to ze średniej, a jednocześnie skłania nas do postawienia hipotezy, iż czasem udziela odpowiedzi o bardzo niskim wyniku.
+Na korzyść Graph RAG przemawia również mediana wyników, przedstawiona w tabeli \ref{tab:3}, która jest znacznie wyższa od tych prezentowanych przez RAG v1 i v2, ale co ważniejsze, jest również znacznie wyższa od swojej średniej. Z tej obserwacji wynika, że odpowiedzi Graph RAG są na ogół jeszcze lepsze niż wynika to ze średniej, a jednocześnie skłania nas do postawienia hipotezy, iż czasem udziela odpowiedzi o bardzo niskim wyniku.
 
 \begin{table}[H]
 \centering
@@ -1092,7 +1091,7 @@ Na korzyść Graph RAG przemawia również mediana wyników, przedstawiona w pon
 \label{tab:3}
 \end{table}
 
-W celu sprawdzenia tej hipotezy opracowujemy przedstawiony na rysunku \ref{fig:box_plot} wykres pudełkowy. Wyniki uzyskane w eksperymencie we wszystkich trzech metodach charakteryzują się skośnością ujemną. Oznacza to, że rozkład odpowiedzi nie jest symetryczny, lecz przesunięty w stronę wartości wyższych (bliższych 1). Innymi słowy, większość uzyskanych wyników koncentruje się w prawej części przedziału [0, 1], podczas gdy lewy ogon rozkładu (w kierunku wartości bliskich 0) jest wydłużony. Taki kształt rozkładu wskazuje, że modele częściej generują odpowiedzi o stosunkowo wysokich wartościach, natomiast rzadziej – choć nadal istotnie – pojawiają się wyniki znacznie niższe, które powodują odchylenie całego rozkładu w lewą stronę.
+W celu sprawdzenia tej hipotezy opracowujemy przedstawiony na rysunku \ref{fig:box_plot} wykres pudełkowy. Wyniki uzyskane w eksperymencie we wszystkich trzech metodach charakteryzują się skośnością ujemną. Oznacza to, że rozkład odpowiedzi nie jest symetryczny, lecz przesunięty w stronę wartości wyższych (bliższych 1). Innymi słowy, większość uzyskanych wyników koncentruje się w prawej części przedziału [0, 1], podczas gdy lewy ogon rozkładu (w kierunku wartości bliskich 0) jest wydłużony. Taki kształt rozkładu wskazuje, że modele częściej generują odpowiedzi o stosunkowo wysokich wartościach, natomiast rzadziej – choć nadal istotne – pojawiają się wyniki znacznie niższe, które powodują odchylenie całego rozkładu w lewą stronę.
 
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{images/fig/box_plot.png}
