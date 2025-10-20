@@ -6,13 +6,13 @@ temp/
 *.arrow
 
 # LaTeX files
-.aux
-.bbl
-.bcf
-.blg
-.fdb_latexmk
-.fls
-.lof
+overleaf/*.aux
+overleaf/*.bbl
+overleaf/*.bcf
+overleaf/*.blg
+overleaf/*.fdb_latexmk
+overleaf/*.fls
+overleaf/*.lof
 overleaf/main.log
 overleaf/main.out
 overleaf/main.run.xml
