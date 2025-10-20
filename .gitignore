@@ -4,3 +4,18 @@
 .venv*/
 temp/
 *.arrow
+
+# LaTeX files
+.aux
+.bbl
+.bcf
+.blg
+.fdb_latexmk
+.fls
+.lof
+overleaf/main.log
+overleaf/main.out
+overleaf/main.run.xml
+overleaf/main.synctex.gz
+overleaf/main.toc
+

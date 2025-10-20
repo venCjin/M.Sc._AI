@@ -1,12 +1,14 @@
 \documentclass[
 a4paper,
 12pt,
-% twoside, % to print margins
+% twoside, % to print
 ]{article}
 
 \usepackage[
-inner=3cm,
-outer=2cm, 
+inner=2.5cm,
+outer=2.5cm, 
+% inner=3cm, % to print
+% outer=2cm, % to print
 a4paper,
 tmargin=2.8cm,
 bmargin=2.8cm,
@@ -217,7 +219,7 @@ deletekeywords={id, type},
 
 %%% Pusta strona - odstęp do druku
 % v----------------v
-\blankpage
+% \blankpage % to print
 % -------------
 % \newpage\null
 % \newpage
@@ -229,12 +231,13 @@ deletekeywords={id, type},
 %--------------------------------------------------------
 
 \section{Wstęp}
-Napisać na końcu
+\textcolor{red}{\textit{Napisać na końcu ...}}
 
 \section{Cel pracy i zakres pracy}
 Grafy wiedzy i wielkie modele językowe to dwa różne podejścia do reprezentacji i przetwarzania wiedzy. Okazuje się jednak, że duże korzyści możemy odnieść łącząc te dwa podejścia. Celem pracy jest przedstawienie i przetestowanie różnych możliwości wykorzystania grafów wiedzy w połączeniu z wielkimi modelami językowymi.
 
 %%% Część teoretyczna
+\newpage
 \section{Część teoretyczna}
 \subsection{LLM oraz LLM chain}
 \subsubsection{Definicja i ewolucja wielkich modeli językowych (LLM)}
@@ -243,7 +246,7 @@ Wielkie modele językowe (ang. large language model, LLM) to zaawansowane modele
 
 Kolejne rozwiązania bazowały na łańcuchach Markowa, które są ciągiem zdarzeń, gdzie prawdopodobieństwo każdego zdarzenia zależy jedynie od poprzedniego \cite{lancuchy_markowa}. Łańcuchy Markowa były używane do generowania tekstu na podstawie danych treningowych. Modele te miały kontekst ograniczony do kilku poprzednich słów, wymagały dużych mocy obliczeniowych, nie bazowały na znaczeniu słów, a na sekwencjach. Wraz z postępem techniki i nauki modele bazujące na łańcuchach Markowa zostały zastąpione modelami opartymi np. na sieciach neuronowych. Kolejnymi ważnymi modelami były n-gramy, czyli modele językowe rozpoznające mowę. Bazowały one na zliczeniu wystąpień pojedynczego słowa (model 1-gramowy), dwójek (2-gramy) lub trójek (3-gramy) etc. Po przeanalizowaniu odpowiednio dużej ilości tekstu zamienia się liczbę wystąpień na prawdopodobieństwa poprzez normalizację. Pozwala to na przewidywanie kolejnego słowa na podstawie sekwencji poprzednich. Modele te były proste i skalowalne \cite{n_gram}. 
 
-Następnie powstał LSTM (ang. Long Short-Term Memory, czyli długa pamięć krótkotrwała), specjalny rodzaj RNN (ang. recurrent neural network, czyli rekurencyjna sieć neuronowa), który został zaprojektowany, aby lepiej radzić sobie z długodystansowymi zależnościami, dzięki mechanizmom „zapamiętywania” i „zapominania” informacji. LSTM odniosły wielki sukces w zadaniach takich jak tłumaczenie maszynowe, przetwarzanie mowy i klasyfikacja tekstu (wczesny Google Translate). W miarę jak sieci neuronowe zdobywały popularność, opracowano metody reprezentowania słów w postaci wektorów. Najpopularniejszą metodą były word embeddings, z których najbardziej znanymi były Word2Vec oraz GloVe.
+Następnie powstała długa pamięć krótkotrwała (ang. long short-term memory, LSTM), specjalny rodzaj rekurencyjnej sieci neuronowej (ang. recurrent neural network, RNN), który został zaprojektowany, aby lepiej radzić sobie z długodystansowymi zależnościami, dzięki mechanizmom „zapamiętywania” i „zapominania” informacji. LSTM odniosły wielki sukces w zadaniach takich jak tłumaczenie maszynowe, przetwarzanie mowy i klasyfikacja tekstu (wczesny Google Translate). W miarę jak sieci neuronowe zdobywały popularność, opracowano metody reprezentowania słów w postaci wektorów. Najpopularniejszą metodą były word embeddings, z których najbardziej znanymi były Word2Vec oraz GloVe.
 
 Największą rewolucję w przetwarzaniu języka przyniosło wprowadzenie mechanizmu uwagi (attention mechanism), który pozwolił modelom efektywnie radzić sobie z długodystansowymi zależnościami między słowami w zdaniu. Najbardziej przełomowym krokiem w tej ewolucji było wprowadzenie modelu Transformer w artykule „Attention is All You Need” 
 przez Vaswaniego i in. w 2017 roku
@@ -252,7 +255,7 @@ przez Vaswaniego i in. w 2017 roku
 
 
 \subsubsection{Embedding}
-Embedding jest wektorową reprezentacją tekstu. W Chat GPT oraz w rozwiązaniach w niniejszej pracy, używane są wektory gęste (ang. dense) z wartościami rzeczywistymi. Wektor kodujący słowa w ten sposób gwarantuje, że słowa znajdujące się blisko w wektorowej przestrzeni będą miały podobne znaczenie. Używanie embenddingu jako podstawowej reprezentacji wejściowej zwiększa wydajność zadań NLP (ang. natural language processing, przetwarzanie języka naturalnego) \cite{word_embedding}.
+Embedding jest wektorową reprezentacją tekstu. W Chat GPT oraz w rozwiązaniach w niniejszej pracy, używane są wektory gęste (ang. dense) z wartościami rzeczywistymi. Wektor kodujący słowa w ten sposób gwarantuje, że słowa znajdujące się blisko w wektorowej przestrzeni będą miały podobne znaczenie. Używanie embenddingu jako podstawowej reprezentacji wejściowej zwiększa wydajność zadań przetwarzania języka naturalnego (ang. natural language processing, NLP) \cite{word_embedding}.
 
 Proces embeddingu przebiega etapowo. W pierwszym etapie tekst zamieniany jest na tokeny na przykład słowo „królowa” dzielone jest na „król” i „owa”. Dzielenie na tokeny pozwala obsłużyć cały język przy ograniczonym słowniku. Następnie do każdego tokenu przypisany jest wektor o określonym wymiarze. Pierwszy wektor może być przypisany losowo. Następnie model (transformer) przewiduje brakujące słowa na podstawie otoczenia. W czasie miliardów takich przykładów wektory przesuwają się w przestrzeni tak, żeby podobne słowa znalazły się blisko siebie. Dzięki takiemu rozwiązaniu na wektorach działa prosta arytmetyka słów np.:
 \begin{center}
@@ -407,18 +410,35 @@ Powyższe wyzwania mogą być ograniczone poprzez zastosowanie modułu \textit{f
 Graph Retrieval-Augmented Generation (Graph RAG) to zaawansowane podejście do przetwarzania języka naturalnego, które łączy tradycyjne techniki Retrieval-Augmented Generation (RAG) z wykorzystaniem grafów wiedzy (ang. Knowledge Graphs, KG). Podstawową ideą Graph RAG jest wykorzystanie struktury grafu do organizowania i przetwarzania informacji, co pozwala na bardziej złożone i semantycznie bogate reprezentacje danych. Dzięki temu możliwe jest generowanie bardziej precyzyjnych i kontekstowych odpowiedzi na zapytania użytkowników.
 
 \subsubsection{Architektura Graph RAG}
+Graph RAG rozszerza RAG przez wykorzystanie struktur grafowych – wiedzy reprezentowanej nie tylko jako odrębne dokumenty, ale jako sieć (graf) węzłów i krawędzi, gdzie węzły to np. byty, dokumenty, fragmenty tekstu, a krawędzie – relacje między nimi. Dzięki temu można wykonywać wielokrokowe (ang. multi-hop) wyszukiwanie i rozumowanie między powiązanymi elementami wiedzy.   
 
-\textcolor{red}{\textit{TODO: [A],[J]}}
-
+Architektura Graph RAG składa się z następujących komponentów: 
+\begin{itemize}
+    \item \textbf{Strukturalne źródło danych} -- zbiór dokumentów, bazy wiedzy, ontologie, słowniki domenowe, czasem tekst + metadane. Kluczowe jest zapewnienie różnorodności i jakości źródeł, ponieważ wpływają one bezpośrednio na jakość generowanych odpowiedzi. W praktyce często łączy się wiele typów danych, tworząc wspólny zbiór, który później przetwarzany jest na strukturę grafową. 
+    \item \textbf{Przetwarzanie wstępne i ekstrakcja struktur} -- surowe dane tekstowe są oczyszczane, segmentowane i analizowane w celu wyodrębnienia jednostek semantycznych. Typowym krokiem jest tzw. \textit{chunking}, czyli podział dokumentów na mniejsze fragmenty o spójnej treści, które będą później indeksowane. Następnie stosuje się narzędzia NLP do ekstrakcji bytów (ang. entity extraction) oraz relacji między nimi (ang. relation extraction).
+    \item \textbf{Proces budowy grafu} -- proces tworzenia węzłów i krawędzi. Każdy węzeł reprezentuje określony byt (np. pojęcie, dokument, autor, termin), a krawędzie opisują relacje między nimi (np. „cytuje”, „dotyczy”, „pochodzi z”). Możliwe jest tworzenie grafów wielowarstwowych, które obejmują różne poziomy abstrakcji – od relacji między dokumentami po powiązania między pojęciami. 
+    % \item \textbf{Indeksowanie / reprezentacja} -- tworzenie embeddingów węzłów, tekstów, struktury. Embedding pozwala na mierzenie semantycznego podobieństwa między strukturami grafu a zapytaniem użytkownika.
+    \item \textbf{Przetwarzanie zapytania} --  zapytanie użytkownika (ang. query) podlega analizie językowej i semantycznej, aby zrozumieć jego intencję oraz odnieść je do elementów grafu. Następnie tworzona jest reprezentacja wektorowa zapytania, która służy do wyszukiwania odpowiednich węzłów w grafie. 
+    \item \textbf{Retriever} -- biorąc pod uwagę zapytanie użytkownika wybiera istotne fragmentu graphu. W niektórych architekturach dodatkowo \textit{pruning} / filtrowanie,  czyli selekcja podgrafu najbardziej relewantnego.
+    \item \textbf{Organizer / przeredagowanie / ograniczanie} -- proces polegający na selekcji najważniejszych informacji. 
+    \item \textbf{Generator} -- Model LLM generuje odpowiedź, biorąc pod uwagę zapytanie i odzyskany kontekst (tekst + struktura). Niektóre implementacje stosują dodatkowe techniki, jak \textit{chain-of-thought prompting} czy \textit{graph reasoning templates}, które pomagają modelowi lepiej wykorzystywać strukturę wiedzy \cite{grag1}.
+\end{itemize}
 
 \subsubsection{Zalety Graph RAG w porównaniu do standardowego RAG}
 
-\textcolor{red}{\textit{TODO: [A],[J]}}
+Graph RAG (Graph Retrieval-Augmented Generation) stanowi rozwinięcie klasycznego podejścia RAG (Retrieval-Augmented Generation), integrując mechanizmy grafowych struktur danych w procesie pozyskiwania i przetwarzania informacji. Podczas gdy standardowy RAG opiera się na wyszukiwaniu fragmentów tekstu w oparciu o podobieństwo semantyczne (np. z wykorzystaniem wektorowych baz danych), Graph RAG dodatkowo modeluje relacje między poszczególnymi jednostkami wiedzy w postaci grafu -- węzłów i krawędzi reprezentujących odpowiednio pojęcia oraz ich powiązania. Dzięki temu możliwe jest nie tylko pobieranie treści najbardziej podobnych do zapytania, ale również eksploracja kontekstu poprzez analizę powiązań między informacjami.
+
+Zastosowanie grafowej reprezentacji wiedzy niesie ze sobą szereg zalet. W pracy \textit{In-depth Analysis of Graph-based RAG in a Unified Framework”} (2025) znajduje się porównanie metod RAG oraz Graph RAG. Autorzy pracy wskazują, że zastosowanie metody Graph RAG skutkuje większą dokładnością faktograficzną oraz adaptacyjnością (lepsze dostosowanie do różnych typów zapytań) \cite{grag2}.  Dodatkowo Graph RAG można wykorzystywać w sposób dualny - graf w postawi relacji jest dobrze interpretowany przez modele językowe, a graf w postaci graficznej jest również możliwy do interpretacji przez specjalistów w danej dziedzinie.  W pracy pod tytułem \textit{Knowledge Graph-augmented Language Models for Knowledge-Grounded Dialogue Generation} (2023) autorzy zauważają, że korzystanie z grafów wiedzy, przy generowaniu treści dialogowych poprawia spójność faktów i trafność odpowiedzi. \cite{grag3}
+
+Grafy wiedzy używane są przez wiele firm oraz instytucji państwowych. Firma Ringier Axel Springer Polska wykorzystuje modele oparte na Graph RAG, przy wspomaganiu śledztw dziennikarskich. 
+
+
 
 
 %%% -----------------
 
 %%% Część praktyczna
+\newpage
 \section{Część eksperymentalna}
 
 \subsection{Opis zbioru danych (dane o filmach)}
@@ -489,17 +509,16 @@ gpt4 = ChatOpenAI(
 Na wybranym fragmencie kodu widać, jak zostały utworzone połączenia do modeli\linebreak GPT-4.1 i Llama 3.1. Ważny jest tutaj parametr \textit{temperature}, który to kontroluje losowość lub „kreatywność” wyników modelu i przyjmuje wartości z zakresu 0.0 do 1.0. Niższa temperatura skutkuje bardziej przewidywalnymi i ukierunkowanymi reakcjami, podczas gdy wyższa temperatura sprzyja bardziej zróżnicowanym i potencjalnie kreatywnym wynikom. Parametr ten został ustawiony na wartość 0, ponieważ w niniejszej pracy zależy nam, żeby model dokładnie wykonywał instrukcje i korzystał z wiedzy, którą dostarczamy w procesie \textit{augmentation}.
 
 \subsection{Rozwiązanie RAG}
-\textcolor{red}{\textit{? Opis ogólny dodać ?  co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
+% \textcolor{red}{\textit{? Opis ogólny dodać ?  co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
 
 \subsubsection{Wektoryzowanie danych tekstowych}
-\textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ?  co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
+% \textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ?  co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
 
 \subsubsubsection{Metoda wektoryzacji tekstu -- text-embedding-3-small}
 
 Wybranym modelem do wektoryzacji tekstu został \textit{text-embedding-3-small} autorstwa OpenAI \cite{te3s}, który generuje embeddingi w przestrzeni 1536 wymiarowej.
-\textcolor{red}{Embeddingi to numeryczne reprezentacje tekstu w postaci wielowymiarowych wektorów, które pozwalają obliczyć podobieństwo dwóch tekstów. Wektory te są użyteczne w zadaniach związanych z przeszukiwaniem, klastrowaniem, rekomendacjami oraz klasyfikowaniem.}
-(Jest on) \textcolor{red}{Wybrany model jest} 
-oferowany jako usługa SaaS (Software as a Service) i jest jednym z najlepszych narzędzi tego typu dostępnych na rynku, i jest udostępniany w przystępnej cenie. Istnieje również bardziej zaawansowany model text-embedding-3-large \cite{te3l}, jednak jest on 7 razy droższy co zaważyło o decyzji wybrania modelu small. Zadaniem modelu jest wygenerowanie embeddingów, które zostaną zapisane w bazie wektorowej Pinecone, dzięki czemu będzie później możliwy do przeprowadzenia proces wyszukiwania tekstów (retrieval) powiązanych z pytaniem użytkownika.
+Embeddingi to numeryczne reprezentacje tekstu w postaci wielowymiarowych wektorów, które pozwalają obliczyć podobieństwo dwóch tekstów. Wektory te są użyteczne w zadaniach związanych z przeszukiwaniem, klastrowaniem, rekomendacjami oraz klasyfikowaniem.
+Wybrany model jest oferowany jako usługa SaaS (Software as a Service) i jest jednym z najlepszych narzędzi tego typu dostępnych na rynku, i jest udostępniany w przystępnej cenie. Istnieje również bardziej zaawansowany model text-embedding-3-large \cite{te3l}, jednak jest on 7 razy droższy co zaważyło o decyzji wybrania modelu small. Zadaniem modelu jest wygenerowanie embeddingów, które zostaną zapisane w bazie wektorowej Pinecone, dzięki czemu będzie później możliwy do przeprowadzenia proces wyszukiwania tekstów (retrieval) powiązanych z pytaniem użytkownika.
 
 Istnieją również inne modele wektoryzujące m.in. $\text{all-MiniLM-L6-v2}$ \cite{miniLM}, $\text{nomic-embed-text-v1}$ \cite{nomic} - natomiast ich wyniki są mniej dokładne on wybranego, zwłaszcza w kluczowej dla tej pracy operacji znajdowania powiązanych tekstów (\textit{retrieval}). 
 
@@ -709,7 +728,7 @@ Dodatkowy fragment został umieszczony mi˛edzy komentarzami
 
 \subsubsection{Algorytm RAG}
 
-\textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ?  co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
+% \textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ?  co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
 
 \subsubsubsection{Implementacja standardowego RAG (RAG v1)}
 
@@ -868,11 +887,11 @@ W tej wersji przed stworzeniem retrievera, dodajemy chain z zapytaniem do LLM, c
 
 
 \subsection{Rozwiązanie Graph RAG}
-\textcolor{red}{\textit{? Opis ogólny dodać ?  co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
+% \textcolor{red}{\textit{? Opis ogólny dodać ?  co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
 
 
 \subsubsection{Tworzenie grafu wiedzy}
-\textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ?  co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
+% \textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ?  co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
 
 \subsubsubsection{Grafowa baza danych -- Neo4j}
 
@@ -900,7 +919,6 @@ graph = Neo4jGraph(
 \end{python}
 
 Następnie definiujemy jakie typy obiektów, ich właściwości oraz relacje między nimi będą dopuszczalne w naszej bazie.
-
 \begin{python}\\
 nodes = [
     "Movie",
@@ -945,7 +963,9 @@ def llm_extract_graph(llm, document_list, graph:Neo4jGraph)-> List[GraphDocument
         ignore_tool_usage = True,
         additional_instructions = GRAPH_EXTRACT_INSTRUCTIONS,
     )
-    graph_document_list = llm_transformer.convert_to_graph_documents(document_list)
+    graph_document_list = llm_transformer.convert_to_graph_documents(
+        document_list,
+    )
 
     # clean output
     for graph_document in graph_document_list:
@@ -981,7 +1001,7 @@ Finalnie zapisujemy wygenerowane przez LLM elementy grafowe do bazy Neo4j poprze
 \pythoninline{graph.add_graph_documents(...)}.
 
 \subsubsection{Algorytm Graph RAG}
-\textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ?  co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
+% \textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ?  co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
 
 \subsubsubsection{Implementacja Graph RAG}
 
@@ -1102,6 +1122,13 @@ W celu sprawdzenia tej hipotezy opracowujemy przedstawiony na rysunku \ref{fig:b
 
 Największą skośność można zaobserwować w GraphRAG. Metoda ta ma odpowiedzi z największą zgodnością, jednocześnie kilka odpowiedzi miało znaczące gorsze odpowiedzi od pozostałych.
 
+\textcolor{red}{\textit{TODO: dokończyć}}
+
+
+
+
+
+
 
 
 
@@ -1110,8 +1137,10 @@ Największą skośność można zaobserwować w GraphRAG. Metoda ta ma odpowiedz
 
 
 \subsubsection{Analiza zalet i wad obu podejść}
-\subsubsection{?Dyskusja na temat wyników i ich znaczenia}
+\textcolor{red}{\textit{TODO: zrobic}}
+% \subsubsection{?Dyskusja na temat wyników i ich znaczenia}
 \section{Podsumowanie}
+\textcolor{red}{\textit{TODO: zrobic}}
 
 %%% tabela wzorcowa begin
 % \begin{table}[H]
@@ -1131,7 +1160,7 @@ Największą skośność można zaobserwować w GraphRAG. Metoda ta ma odpowiedz
 %%% tabela wzorcowa end
 
 %%% ----------------
-\section{} % TODO: [J] usuń, to tylko dla wygody zwijania (pod)rozdziałów
+% \section{} % TODO: [J] usuń, to tylko dla wygody zwijania (pod)rozdziałów
 \newpage
 \clearpage\newpage
 
