@@ -37,6 +37,7 @@ bmargin=2.8cm,
 \usepackage{thmtools}
 
 \usepackage[english,polish]{babel}
+\usepackage{csquotes}
 \linespread{1.25}
 % \linespread{1.5} % max
 
@@ -51,8 +52,8 @@ sorting=none,
 urlseen = {dostęp}
 }
 \DeclareFieldFormat{urldate}{(%
-  \bibstring{urlseen} \mkdatezeros{\thefield{urlday}}-%
-  \mkdatezeros{\thefield{urlmonth}}-%
+  \bibstring{urlseen} \mkdayzeros{\thefield{urlday}}-%
+  \mkmonthzeros{\thefield{urlmonth}}-%
   \thefield{urlyear}\isdot
 )}
 
@@ -238,8 +239,14 @@ Grafy wiedzy i wielkie modele językowe to dwa fundamentalnie różne podejścia
 
 %%% Część teoretyczna
 \newpage
+
 \section{Część teoretyczna}
+
+\subsection{[n] Grafy wiedzy}
+Grafy wiedzy są super!
+
 \subsection{LLM oraz LLM chain}
+
 \subsubsection{Definicja i ewolucja wielkich modeli językowych (LLM)}
 
 Wielkie modele językowe (ang. large language model, LLM) to zaawansowane modele przetwarzania języka naturalnego, które zostały wytrenowane na ogromnych korpusach tekstów, umożliwiając im rozumienie, generowanie i tłumaczenie języka naturalnego. Rozumienie ludzkiej mowy przez lata było jedną z fundamentalnych umiejętności z którą kojarzyła nam się sztuczna inteligencja. Pierwsze rozwiązania rozumienia ludzkiej mowy były oparte na słowach kluczach - model Eliza, który symulował rozmowę z psychologiem \cite{elize}. 
@@ -248,10 +255,7 @@ Kolejne rozwiązania bazowały na łańcuchach Markowa, które są ciągiem zdar
 
 Następnie powstała długa pamięć krótkotrwała (ang. long short-term memory, LSTM), specjalny rodzaj rekurencyjnej sieci neuronowej (ang. recurrent neural network, RNN), który został zaprojektowany, aby lepiej radzić sobie z długodystansowymi zależnościami, dzięki mechanizmom „zapamiętywania” i „zapominania” informacji. LSTM odniosły wielki sukces w zadaniach takich jak tłumaczenie maszynowe, przetwarzanie mowy i klasyfikacja tekstu (wczesny Google Translate). W miarę jak sieci neuronowe zdobywały popularność, opracowano metody reprezentowania słów w postaci wektorów. Najpopularniejszą metodą były word embeddings, z których najbardziej znanymi były Word2Vec oraz GloVe.
 
-Największą rewolucję w przetwarzaniu języka przyniosło wprowadzenie mechanizmu uwagi (attention mechanism), który pozwolił modelom efektywnie radzić sobie z długodystansowymi zależnościami między słowami w zdaniu. Najbardziej przełomowym krokiem w tej ewolucji było wprowadzenie modelu Transformer w artykule „Attention is All You Need” 
-przez Vaswaniego i in. w 2017 roku
-% (Vaswani et al., 2017)
-\cite{attention_2023vaswani}.
+Największą rewolucję w przetwarzaniu języka przyniosło wprowadzenie mechanizmu uwagi (attention mechanism), który pozwolił modelom efektywnie radzić sobie z długodystansowymi zależnościami między słowami w zdaniu. Najbardziej przełomowym krokiem w tej ewolucji było wprowadzenie modelu Transformer w artykule „Attention is All You Need” przez Vaswaniego i in. w 2017 roku \cite{attention_2023vaswani}.
 
 
 \subsubsection{Embedding}
@@ -324,7 +328,21 @@ W powyższym omówiliśmy tylko najbardziej klasyczne typy LLM Chains. Poszczeg�
 
 Koncepcja LLM chains jest nie tylko potężnym narzędziem w kontekście przetwarzania języka naturalnego, ale także elastycznym podejściem, które może być dostosowane do różnych dziedzin i zastosowań. Dzięki możliwości segmentacji złożonych zadań na mniejsze, wyspecjalizowane etapy, LLM chains umożliwiają bardziej efektywne i precyzyjne przetwarzanie danych, co otwiera nowe możliwości dla zaawansowanych aplikacji w różnych sektorach.
 
-\subsection{RAG}
+\subsection{[n] Metody połączenia KG i LLM}
+źródło: https://arxiv.org/abs/2306.08302
+
+1. ekstrakcja wiedzy z LLM do KG - prompting
+
+2. ekstrakcja wiedzy z danych tekstowych do KG poprzez LLM 
+
+3. graphRAG - retrieval wiedzy z KG przez LLM
+
+4. ???
+
+\subsection{Ekstrakcja wiedzy z danych tekstowych do KG poprzez LLM}
+TODO: rozdział teoretyczny 
+
+\subsection{[edit] RAG - przenieść pod "Graph RAG" jakoś}
 
 \subsubsection{Definicja i koncepcja RAG}
 
@@ -439,6 +457,7 @@ Grafy wiedzy używane są przez wiele firm oraz instytucji państwowych. Firma R
 
 %%% Część praktyczna
 \newpage
+
 \section{Część eksperymentalna}
 
 \subsection{Opis zbioru danych (dane o filmach)}
@@ -1140,6 +1159,7 @@ Największą skośność można zaobserwować w GraphRAG. Metoda ta ma odpowiedz
 \subsubsection{Analiza zalet i wad obu podejść}
 \textcolor{red}{\textit{TODO: zrobic}}
 % \subsubsection{?Dyskusja na temat wyników i ich znaczenia}
+
 \section{Podsumowanie}
 \textcolor{red}{\textit{TODO: zrobic}}
 
@@ -1161,6 +1181,7 @@ Największą skośność można zaobserwować w GraphRAG. Metoda ta ma odpowiedz
 %%% tabela wzorcowa end
 
 %%% ----------------
+
 % \section{} % TODO: [J] usuń, to tylko dla wygody zwijania (pod)rozdziałów
 \newpage
 \clearpage\newpage
