@@ -243,21 +243,28 @@ Grafy wiedzy i wielkie modele językowe to dwa fundamentalnie różne podejścia
 \section{Część teoretyczna}
 
 \subsection{[n] Grafy wiedzy}
-Grafy wiedzy stanowią jedną z kluczowych struktur umożliwiających reprezentację i organizację informacji w sposób zrozumiały dla maszyn. Umożliwiają one modelowanie powiązań pomiędzy pojęciami, obiektami i faktami, co czyni je istotnym narzędziem w zadaniach związanych z przetwarzaniem wiedzy, wnioskowaniem i wyszukiwaniem informacji. W ostatnich latach ich znaczenie wzrosło szczególnie w kontekście integracji z dużymi modelami językowymi.\\
-Graf wiedzy przechowują wiedzę w strukturyzowanych trójkach $$KG = \{(h, r, t) \subseteq E \times R \times E\} $$ gdzie $E$ to zbiór elementów, $R$ to zbiór relacji. Graf wiedzy w postaci graficznej, który reprezentuje wiedzę w postaci elementów i relacji między nimi, może zawierać ontologie, która pozwala zarówno ludziom, jak i maszyną zrozumieć oraz wnioskować na podstawie wiedzy zawartej w grafie. 
+
+\textbf{Grafy wiedzy} stanowią jedną z kluczowych struktur umożliwiających reprezentację i organizację informacji w sposób zrozumiały dla maszyn. Umożliwiają one modelowanie powiązań pomiędzy pojęciami, obiektami i faktami, co czyni je istotnym narzędziem w zadaniach związanych z przetwarzaniem wiedzy, wnioskowaniem i wyszukiwaniem informacji. W ostatnich latach ich znaczenie wzrosło szczególnie w kontekście integracji z dużymi modelami językowymi.
+
+\textbf{Graf wiedzy} przechowują wiedzę w strukturyzowanych trójkach $$KG = \{(h, r, t) \subseteq E \times R \times E\} $$ gdzie $E$ to zbiór elementów - bytów, $R$ to zbiór relacji. Graf wiedzy w postaci graficznej, który reprezentuje wiedzę w postaci bytów i relacji między nimi, może zawierać ontologie, która pozwala zarówno ludziom, jak i maszyną zrozumieć oraz wnioskować na podstawie wiedzy zawartej w grafie. 
 
 
-Rozróżniamy następujące typy grafów: 
+Rozróżniamy następujące typy grafów:
 \begin{itemize}
-    \item \textbf{Encyklopedyczne grafy wiedzy} (ang. Encyclopedic Knowledge Graphs) - najbardziej popularny typ grafów wiedzy, który reprezentuje ogólną wiedzę w świecie rzeczywistym. Encyklopedyczne wykresy wiedzy są często konstruowane przez integrowanie informacji pochodzących z różnorodnych i rozbudowanych źródeł, w tym ekspertów, encyklopedie i bazy danych.
-    \item \textbf{Zdroworozsądkowe grafy wiedzy} (ang.  Commonsense Knowledge Graphs) - opisują relacje między pojęciami w sposób odzwierciedlający ludzką intuicję i codzienne doświadczenia, co pozwala maszynom lepiej rozumieć znaczenie kontekstowe.
-    \item \textbf{Domenowe grafy wiedzy} (ang. Domain-specific Knowledge Graphs) - stworzone aby opisywać wiedzę oraz zależności z danej dziedziny np biologi czy finansów. Domenowe grafy wiedzy są mniejsze i dokładniejsze od grafów encyklopedycznych. Dla na przykład \textbf{Unified Medical Language System (UMLS)} jest grafem wiedzy specyficznej dla domeny w dziedzinie medycyny, która zawiera koncepcje biomedyczne i ich relacje \cite{umls}. 
-    \item \textbf{Multi-modalne grafy wiedzy} (ang. Multi-modal Knowledge Graphs) - W przeciwieństwie do konwencjonalnych wykresów wiedzy, które zawierają tylko informacje tekstowe, multimodalne wykresy wiedzy przedstawiają fakty w wielu modalnościach, takich jak obrazy, dźwięki i filmy. Wiedza zawarta w multi-modalnych grafach może być wykorzystywana do różnych zadań multi-modalnych, takich jak dopasowanie obrazu do tekstu. Przykładem może być IMGpedia czyli połączony zbiór danych, który zawiera informacje wizualne o obrazach ze zbioru danych Wikimedia \cite{IMGpedia}. 
+    \item \textbf{Encyklopedyczne grafy wiedzy} (ang. Encyclopedic Knowledge Graphs) - najbardziej popularny typ grafów wiedzy, który reprezentuje ogólną wiedzę w świecie rzeczywistym. Encyklopedyczne wykresy wiedzy są często konstruowane przez integrowanie informacji pochodzących z różnorodnych i rozbudowanych źródeł, w tym ekspertów, encyklopedie i bazy danych. Przykładem jest \textbf{Yet Another Great \href{https://en.wikipedia.org/wiki/Ontology_(information_science)}{Ontology}} (YAGO) czyli obszerna baza wiedzy zawierająca ogólną wiedzę o ludziach, miastach, krajach, filmach i organizacjach \cite{yago}.
+    
+    \item \textbf{Zdroworozsądkowe grafy wiedzy} (ang.  Commonsense Knowledge Graphs) -- opisują relacje między pojęciami w sposób odzwierciedlający ludzką intuicję i codzienne doświadczenia, co pozwala maszynom lepiej rozumieć znaczenie kontekstowe.  Przykładem jest \textbf{ConceptNet} czyli ogólnodostępna sieć semantyczna, zaprojektowana, aby pomóc komputerom zrozumieć znaczenie słów, których używają ludzie \cite{conceptnet}.
+    
+    \item \textbf{Domenowe grafy wiedzy} (ang. Domain-specific Knowledge Graphs) -- stworzone aby opisywać wiedzę oraz zależności z danej dziedziny np. biologi czy finansów. Domenowe grafy wiedzy są mniejsze i dokładniejsze od grafów encyklopedycznych. Dla na przykład \textbf{Unified Medical Language System (UMLS)} jest grafem wiedzy specyficznej dla domeny w dziedzinie medycyny, która zawiera koncepcje biomedyczne i ich relacje \cite{umls}. 
+    
+    \item \textbf{Multi-modalne grafy wiedzy} (ang. Multi-modal Knowledge Graphs) -- W przeciwieństwie do konwencjonalnych wykresów wiedzy, które zawierają tylko informacje tekstowe, multimodalne wykresy wiedzy przedstawiają fakty w wielu modalnościach, takich jak obrazy, dźwięki i filmy. Wiedza zawarta w multi-modalnych grafach może być wykorzystywana do różnych zadań multi-modalnych, takich jak dopasowanie obrazu do tekstu. Przykładem może być \textbf{IMGpedia} czyli połączony zbiór danych, który zawiera informacje wizualne o obrazach ze zbioru danych Wikimedia \cite{IMGpedia}. 
 \end{itemize}
 
+Grafy wiedzy  są jednym z najskuteczniejszych sposobów reprezentacji informacji w postaci powiązanych ze sobą faktów. Ich główną zaletą jest strukturalność i przejrzystość -- dane są przedstawiane w postaci wierzchołków (bytów) i krawędzi (relacji), co umożliwia intuicyjne modelowanie złożonych zależności między pojęciami. Dzięki temu możliwe jest wnioskowanie semantyczne, czyli odkrywanie nowych relacji na podstawie już istniejących powiązań. Grafy wiedzy cechują się także wysoką interpretowalnością, co oznacza, że procesy oparte na nich są bardziej zrozumiałe dla człowieka niż w przypadku modeli czysto statystycznych. Dodatkowo, w połączeniu z ontologiami i językami semantycznymi (np. RDF, OWL), grafy wiedzy umożliwiają integrowanie informacji z różnych źródeł i zapewniają spójność znaczeniową danych \cite{graph:llm:roadmap}.
+
+Grafy wiedzy mają również pewne istotne ograniczenia. Jednym z głównych problemów jest niekompletność -- wiele grafów nie zawiera pełnej wiedzy o danym obszarze, co utrudnia wnioskowanie lub prowadzi do błędnych rezultatów. Trudności sprawia także utrzymanie aktualności takich struktur, ponieważ wiedza ulega zmianie, a ręczne lub półautomatyczne aktualizowanie grafu jest kosztowne i czasochłonne. Kolejnym ograniczeniem jest złożoność konstrukcji grafu, obejmująca procesy ekstrakcji bytów, relacji i ich walidacji, które często wymagają dużych nakładów pracy ekspertów lub zaawansowanych modeli NLP. Grafy wiedzy mają również ograniczoną zdolność do reprezentacji wiedzy niepewnej lub niejednoznacznej, co bywa problematyczne w zastosowaniach, w których kontekst i interpretacja odgrywają kluczową rolę \cite{graph:llm:roadmap}.
 
 
-[https://arxiv.org/pdf/2306.08302 - 2.2 co to graf wiedzy info]
 
 \subsection{LLM oraz LLM chain}
 
@@ -348,7 +355,7 @@ Koncepcja LLM chains jest nie tylko potężnym narzędziem w kontekście przetwa
 Integracja dużych modeli językowych (LLM) z grafami wiedzy (KG) stanowi obecnie jedno z najbardziej obiecujących podejść w dziedzinie sztucznej inteligencji. LLM oferują zdolność do rozumienia i generowania języka naturalnego, natomiast KG zapewniają strukturalną, precyzyjną i interpretowalną reprezentację wiedzy. W niniejszym rozdziale przedstawiono metaanalizę wybranych metod łączenia tych dwóch technologii (zaproponowanych w pracy „Unifying Large Language Models and Knowledge Graphs: A Roadmap” \cite{graph:llm:roadmap}).
 
 \subsubsection{Tworzenie KG przy pomocy LLM (LLM-augmented KG construction)}
-Ekstrakcja wiedzy polega na wykorzystaniu LLM do przetwarzania tekstu i generowania struktur KG. W tym podejściu LLM pełni rolę narzędzia do:
+Ekstrakcja wiedzy polega na wykorzystaniu LLM do przetwarzania tekstu i generowania struktur KG. W podejściu tym LLM pełni rolę narzędzia do:
 \begin{itemize}
     \item rozpoznawania encji (NER),
     \item rozpoznawania relacji (RE),
