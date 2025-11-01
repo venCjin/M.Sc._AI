@@ -246,7 +246,7 @@ Grafy wiedzy i wielkie modele językowe to dwa fundamentalnie różne podejścia
 
 \textbf{Grafy wiedzy} stanowią jedną z kluczowych struktur umożliwiających reprezentację i organizację informacji w sposób zrozumiały dla maszyn. Umożliwiają one modelowanie powiązań pomiędzy pojęciami, obiektami i faktami, co czyni je istotnym narzędziem w zadaniach związanych z przetwarzaniem wiedzy, wnioskowaniem i wyszukiwaniem informacji. W ostatnich latach ich znaczenie wzrosło szczególnie w kontekście integracji z dużymi modelami językowymi.
 
-\textbf{Graf wiedzy} przechowują wiedzę w strukturyzowanych trójkach $$KG = \{(h, r, t) \subseteq E \times R \times E\} $$ gdzie $E$ to zbiór elementów - bytów, $R$ to zbiór relacji. Graf wiedzy w postaci graficznej, który reprezentuje wiedzę w postaci bytów i relacji między nimi, może zawierać ontologie, która pozwala zarówno ludziom, jak i maszyną zrozumieć oraz wnioskować na podstawie wiedzy zawartej w grafie. 
+\textbf{Graf wiedzy} przechowują wiedzę w ustrukturyzowanych trójkach $$KG = \{(h, r, t) \subseteq E \times R \times E\} $$ gdzie $E$ to zbiór elementów - bytów, $R$ to zbiór relacji. Graf wiedzy w postaci graficznej, który reprezentuje wiedzę w postaci bytów i relacji między nimi, może zawierać ontologie, która pozwala zarówno ludziom, jak i maszyną zrozumieć oraz wnioskować na podstawie wiedzy zawartej w grafie. 
 
 
 Rozróżniamy następujące typy grafów:
@@ -357,17 +357,17 @@ Integracja dużych modeli językowych (LLM) z grafami wiedzy (KG) stanowi obecni
 \subsubsection{Tworzenie KG przy pomocy LLM (LLM-augmented KG construction)}
 Ekstrakcja wiedzy polega na wykorzystaniu LLM do przetwarzania tekstu i generowania struktur KG. W podejściu tym LLM pełni rolę narzędzia do:
 \begin{itemize}
-    \item rozpoznawania encji (NER),
-    \item rozpoznawania relacji (RE),
-    \item rozwiązywania koreferencji (CR),
-    \item generowania trójek wiedzy (h, r, t).
+    \item \textbf{rozpoznawania encji} (NER),
+    \item \textbf{rozpoznawania relacji} (RE),
+    \item \textbf{rozwiązywania koreferencji} (CR),
+    \item \textbf{generowania trójek wiedzy} (h, r, t).
 \end{itemize}
 
 Przykładowe metody:
 \begin{itemize}
-    \item AutoKG -- wykorzystuje LLM (np. ChatGPT) do generowania trójek wiedzy na podstawie zaprojektowanych promptów.
-    \item Grapher -- system wieloetapowy, który najpierw generuje encje, a następnie relacje.
-    \item COMET -- generuje trójki „zdroworozsądkowej” wiedzy (ang. commonsense) na podstawie istniejących danych wejściowych.
+    \item \textbf{AutoKG} -- wykorzystuje LLM (np. ChatGPT) do generowania trójek wiedzy na podstawie zaprojektowanych promptów.
+    \item \textbf{Grapher} -- system wieloetapowy, który najpierw generuje encje, a następnie relacje.
+    \item \textbf{COMET} -- generuje trójki „zdroworozsądkowej” wiedzy (ang. commonsense) na podstawie istniejących danych wejściowych.
 \end{itemize}
 
 Zalety:
@@ -390,21 +390,21 @@ W podejściu tym graf wiedzy (KG) jest wykorzystywany do dynamicznego wydobycia 
 
 Mechanizm działania:
 \begin{itemize}
-    \item Retrieval: Na podstawie zapytania LLM wyszukuje odpowiednie trójki w KG.
-    \item Augmented Generation: Znalezione fakty są załączane do promptu lub jako kontekst do generacji odpowiedzi.
+    \item \textbf{Retrieval}: Na podstawie zapytania LLM wyszukuje odpowiednie trójki w KG.
+    \item \textbf{Augmented Generation}: Znalezione fakty są załączane do promptu lub jako kontekst do generacji odpowiedzi.
 \end{itemize}
 
-Inne metody opierające się na tym samym mechanizmie:
+Przykładowe metody:
 \begin{itemize}
-    \item Graph RAG -- LLM generuje zapytanie do KG w celu otrzymania wiedzy na zadane pytanie.
-    \item REALM -- wykorzystuje retriever do pobierania dokumentów z korpusu wiedzy.
-    \item KGLM -- generuje faktyczne zdania na podstawie kontekstu i KG.
-    \item Mindmap, ChatRule, CoK -- konwertują strukturę KG na tekstowe prompt’y, umożliwiając LLM reasoning.
+    \item \textbf{Graph RAG} -- LLM generuje zapytanie do KG w celu otrzymania wiedzy na zadane pytanie.
+    \item \textbf{REALM} -- wykorzystuje retriever do pobierania dokumentów z korpusu wiedzy.
+    \item \textbf{KGLM} -- generuje faktyczne zdania na podstawie kontekstu i KG.
+    \item \textbf{Mindmap, ChatRule, CoK} -- konwertują strukturę KG na tekstowe prompt'y, umożliwiając LLM reasoning.
 \end{itemize}
 
 Zalety:
 \begin{itemize}
-    \item Aktualność wiedzy – możliwość dynamicznego uzupełniania informacji.
+    \item Aktualność wiedzy -- możliwość dynamicznego uzupełniania informacji.
     \item Brak potrzeby ponownego trenowania modelu.
     \item Lepsza interpretowalność dzięki jawnej strukturze KG.
 \end{itemize}
@@ -425,9 +425,9 @@ Mechanizm działania:
     \item W trakcie pre-treningu LLM otrzymuje nie tylko tekst, ale również informacje z KG (np. encje, relacje).
     \item Wykorzystywane są techniki takie jak:
     \begin{itemize}
-        \item Maskowanie encji -- np. GLM przypisuje wyższe prawdopodobieństwo maskowania encji istotnych w grafie.
-        \item Alignment tekstu z wiedzą -- np. ERNIE uczy model przewidywania powiązań między tokenami a encjami.
-        \item Instruction tuning -- np. OntoPrompt konwertuje strukturę KG na instrukcje dla LLM.
+        \item \textbf{Maskowanie encji} -- np. GLM przypisuje wyższe prawdopodobieństwo maskowania encji istotnych w grafie.
+        \item \textbf{Alignment tekstu z wiedzą} -- np. ERNIE uczy model przewidywania powiązań między tokenami a encjami.
+        \item \textbf{Instruction tuning} -- np. OntoPrompt konwertuje strukturę KG na instrukcje dla LLM.
     \end{itemize}
 \end{itemize}
 
@@ -456,9 +456,9 @@ Mechanizm działania:
 
 Przykładowe podejścia:
 \begin{itemize}
-    \item LLM jako enkoder -- np. KG-BERT, SimKGC, MEM-KGC.
-    \item LLM jako generator -- np. GenKGC, KGT5, KG-S2S.
-    \item Prompt-based generation -- np. AutoKG wykorzystuje prompt'y do generowania brakujących encji.
+    \item \textbf{LLM jako enkoder} -- np. KG-BERT, SimKGC, MEM-KGC.
+    \item \textbf{LLM jako generator} -- np. GenKGC, KGT5, KG-S2S.
+    \item \textbf{Prompt-based generation} -- np. AutoKG wykorzystuje prompt'y do generowania brakujących encji.
 \end{itemize}
 
 Zalety:
@@ -484,22 +484,41 @@ Praca w dalszej części skupi się na dwóch pierwszych metodach tj. tworzeniu 
 
 
 \subsection{[n] Ekstrakcja wiedzy z danych tekstowych do KG poprzez LLM}
-TODO: rozdział teoretyczny \\
-https://arxiv.org/pdf/2510.23341 -- 3.1 Context-integrated Graph Extraction\\
-https://arxiv.org/pdf/2306.08302 -- 5.3 LLM-augmented KG Construction
+Współczesne podejścia do konstrukcji grafów wiedzy (KG) coraz częściej wykorzystują potencjał wielkich modeli językowych (LLM), które dzięki zdolności do rozumienia kontekstu i generowania semantycznych reprezentacji tekstu, umożliwiają automatyczne wydobywanie wiedzy z nieustrukturyzowanych danych. W niniejszym rozdziale przedstawiono dwa komplementarne podejścia: ekstrakcję wiedzy przy użyciu LLM (LLM-augmented KG Construction) \cite{graph:llm:roadmap} oraz lekką ekstrakcję grafową z kontekstem (Context-integrated Graph Extraction) \cite{kg:extraction:lightKGG} z wykorzystaniem małych modeli językowych (SLM).
+
+\subsubsection{Ekstrakcja wiedzy przy użyciu LLM}
+
+Podejście LLM-augmented KG Construction polega na wykorzystaniu LLM do realizacji zadań związanych z budową KG, takich jak:
+\begin{itemize}
+    \item \textbf{Embedding encji i relacji} -- LLM są wykorzystywane jako enkodery tekstu opisującego encje i relacje, co pozwala na wzbogacenie reprezentacji KG o informacje semantyczne. Przykładem jest Pretrain-KGE, który używa BERT do kodowania opisów encji i relacji.
+    
+    \item \textbf{Uzupełnianie KG (KG Completion)} -- LLM mogą działać jako enkodery lub generatory, przewidując brakujące fakty w grafie. Modele takie jak KG-BERT czy GenKGC przekształcają trójki wiedzy w sekwencje tekstowe, które są następnie klasyfikowane lub generowane przez LLM.
+    
+    \item \textbf{Konstrukcja KG} -- LLM wspierają proces wykrywania encji, rozpoznawania relacji oraz rozwiązywania koreferencji. System Grapher generuje encje i relacje w sposób wieloetapowy, natomiast AutoKG wykorzystuje prompt engineering do generowania trójek wiedzy z tekstu.
+    
+    \item \textbf{Distylacja wiedzy z LLM} -- niektóre metody, jak COMET czy BertNet, wykorzystują LLM do generowania nowych trójek wiedzy na podstawie istniejących danych wejściowych, tworząc KG bez potrzeby ręcznej anotacji.
+    
+    \item \textbf{Generowanie tekstu z KG (KG-to-text)} -- LLM są używane do tworzenia opisów tekstowych na podstawie danych grafowych, co zwiększa ich użyteczność w zadaniach NLP. Przykładem jest JointGT, który łączy reprezentacje grafowe i tekstowe w jednym modelu.
+\end{itemize}
+
+Wykorzystanie wielkich modeli językowych do tworzenia grafów wiedzy będzie bardziej pożądane lub wręcz wymagane w sytuacjach, gdy zadanie ekstrakcji wiedzy wymaga głębokiego rozumienia semantycznego, rozpoznawania złożonych relacji, rozwiązywania koreferencji lub interpretacji wiedzy niejawnej i nieustrukturyzowanej. Przykładowo, w domenach takich jak medycyna, prawo czy nauki społeczne, gdzie teksty zawierają subtelne zależności i wieloznaczności, LLM dzięki swojej zdolności do uogólniania i rozumowania na poziomie kontekstowym, przewyższają możliwości SLM. Ponadto, LLM są niezbędne w zadaniach wymagających generowania nowych faktów, uzupełniania brakujących relacji w KG, czy tworzenia opisów tekstowych na podstawie danych grafowych. 
 
 
+\subsubsection{Lekka ekstrakcja grafowa z kontekstem}
 
+Alternatywą dla podejść opartych na LLM jest metoda LightKGG \cite{kg:extraction:lightKGG}, która wykorzystuje małe modele językowe (SLM) do ekstrakcji wiedzy w sposób efektywny obliczeniowo. Kluczowym komponentem tej metody jest \textbf{kontekstowa ekstrakcja grafowa} (Context-integrated Graph Extraction), która polega na:
+\begin{itemize}
+    \item \textbf{Wydobywaniu trójek wiedzy z tekstu} z jednoczesnym zachowaniem metadanych kontekstowych (np. czasowych, przestrzennych). Przykładowo, z tekstu „Marie Curie discovered radium in 1898” ekstraktowana jest trójka (Marie Curie, discovered, radium) z adnotacją kontekstu: rok 1898.
+    
+    \item \textbf{Modelowaniu encji, relacji i kontekstu jako jednej struktury grafowej}, co pozwala na redukcję niejednoznaczności semantycznej bez potrzeby głębokiego rozumowania lingwistycznego.
+    
+    \item \textbf{Agregacji grafu} -- scalanie informacji z wielu źródeł tekstowych, przy zachowaniu komplementarnych atrybutów encji (np. „Alan Turing” jako „matematyk” i „informatyk”).
+    
+    \item \textbf{Wnioskowaniu topologicznym} -- wykorzystanie cech strukturalnych grafu (np. gęstość połączeń, długość ścieżek, centralność wierzchołków) do identyfikacji relacji pośrednich i rozwiązywania niejednoznaczności encji (np. „Apple” jako firma vs owoc).
+\end{itemize}
 
-
-
-
-
-
-
-
-
-
+Podejście LightKGG pokazuje, że nawet małe modele językowe, wspierane przez analizę topologii grafu, mogą osiągać wyniki porównywalne z LLM w zadaniach o wysokim poziomie ustrukturyzowania danych wejściowych i tam, gdzie kontekst można zakotwiczyć topologicznie w grafie, bez potrzeby głębokiego rozumowania lingwistycznego.
+Podejście to generuje znacznie niższe koszty ze względu na niższe zapotrzebowanie na moc obliczeniową, co czyni je atrakcyjnym rozwiązaniem dla środowisk o ograniczonych zasobach.
 
 
 
