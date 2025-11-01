@@ -354,70 +354,81 @@ Koncepcja LLM chains jest nie tylko potężnym narzędziem w kontekście przetwa
 \subsection{[n] Metody połączenia KG i LLM}
 Integracja dużych modeli językowych (LLM) z grafami wiedzy (KG) stanowi obecnie jedno z najbardziej obiecujących podejść w dziedzinie sztucznej inteligencji. LLM oferują zdolność do rozumienia i generowania języka naturalnego, natomiast KG zapewniają strukturalną, precyzyjną i interpretowalną reprezentację wiedzy. W niniejszym rozdziale przedstawiono metaanalizę wybranych metod łączenia tych dwóch technologii (zaproponowanych w pracy „Unifying Large Language Models and Knowledge Graphs: A Roadmap” \cite{graph:llm:roadmap}).
 
-\subsubsection{Tworzenie KG przy pomocy LLM (LLM-augmented KG construction)}
-Ekstrakcja wiedzy polega na wykorzystaniu LLM do przetwarzania tekstu i generowania struktur KG. W podejściu tym LLM pełni rolę narzędzia do:
+\subsubsection{Tworzenie KG przy pomocy LLM (ang. LLM-augmented KG construction) (5.3)}
+
+KG są konstrukcją umożliwiającą ustrukzuryzowanie wiedzy, jednak konwencjonalne KG są często niekompletne i nie uwzględniają informacji tekstowych. Wykorzystanie LLM do pracy z KG pozwala na automatyczną konstrukcje KG z nieustrukturyzowanego tekstu.
+W podejściu tym LLM wykonuje następujące akcje:
 \begin{itemize}
-    \item \textbf{rozpoznawania encji} (NER),
-    \item \textbf{rozpoznawania relacji} (RE),
-    \item \textbf{rozwiązywania koreferencji} (CR),
-    \item \textbf{generowania trójek wiedzy} (h, r, t).
+    \item \textbf{rozpoznawania encji} (ang. Named Entity Recognition, NER) -- automatyczne identyfikowanie w źródle nazw własnych lub istotnych pojęć np. osób, organizacji czy terminów naukowych. 
+    \item \textbf{rozpoznawania relacji} (ang. Relation Extraction, RE) -- wykrywanie semantycznych zależności między wcześniej rozpoznanymi encjami. 
+    \item \textbf{rozwiązywania koreferencji} (ang. Corefernce Resolution, CR) -- identyfikacja przypadków, gdy do opisu encji używa się zaimków osobowych  (np. ona, on) lub dzierżawczych (np. jej, jego).
+    \item \textbf{generowania trójek wiedzy} (h, r, t) -- reprezentacja faktów w postaci trójek: head (h) – encja początkowa, relation (r) – typ relacji, oraz tail (t) – encja docelowa.
 \end{itemize}
 
-Przykładowe metody:
-\begin{itemize}
-    \item \textbf{AutoKG} -- wykorzystuje LLM (np. ChatGPT) do generowania trójek wiedzy na podstawie zaprojektowanych promptów.
-    \item \textbf{Grapher} -- system wieloetapowy, który najpierw generuje encje, a następnie relacje.
-    \item \textbf{COMET} -- generuje trójki „zdroworozsądkowej” wiedzy (ang. commonsense) na podstawie istniejących danych wejściowych.
-\end{itemize}
+%%%W ramach sposobu  LLM-augmented KG construction autorzy artykułu \textit{Unifying Large Language Models and Knowledge Graphs: A Roadmap} opisują kilka sposobów implementacji \cite{roadmap}. Pierwszym jest wykorzystanie \textbf{LLM jako enkodera tekstu (ang.  LLMs as Text Encoders)}, gdzie model językowy wykorzystywany jest do tworzenia reprezentacji semantycznych encji, relacji lub opisów tekstowych, które następnie są integrowane z KG.  Model językowy można również zaimplementować jako \textbf{ekstraktor wiedzy (ang. LLMs as Knowledge Extractors)}, gdzie LLM wydobywa nowe encje, fakty oraz relacje z teksu.  Kolejnym sposobem implementacji może być uzupełnianie brakujących powiązań w KG, poprawiania błędów oraz weryfikacja spójności grafu czyli użycia\textbf{ LLM jako uzupełnienie lub udoskonalenie wiedzy (ang. LLMs as Knowledge Completers or Refiners).} Innym sposobem implementacji jest wykorzystanie \textbf{LLM do wnioskowanie (ang. LLMs as Reasoners)}, poprzez interpretację zapytań, wyciąganie implikacji czy łączenie informacji z różnych części grafu. Ostatnią metodą realizacji jest wykorzystanie LLM jako interface (ang. LLMs as Interfaces), gdzie LLM stanowi warstwę interakcji z użytkownikiem, tłumacząc zapytania w języku naturalnym na kwerendy, lub generując tekst na podstawie wyników KG.
 
-Zalety:
-\begin{itemize}
-    \item Możliwość automatycznej konstrukcji KG z nieustrukturyzowanego tekstu.
-    \item Użycie LLM pozwala na uogólnienie i uzupełnienie brakujących informacji.
-\end{itemize}
-
-Wyzwania:
-\begin{itemize}
-    \item Jakość generowanych trójek zależy od jakości promptów.
-    \item Trudność w walidacji generowanej wiedzy.
-    \item Potrzeba mechanizmów weryfikacji i korekty (np. PiVE).
-\end{itemize}
+Taką konstrukcją grafu zajmuje się np. \textbf{AutoKG} \cite{kg:autoKG}. Metoda ta wykorzystuje LLM (np. Chat GPT) do generowania trójek wiedzy na podstawie zaprojektowanych promptów pod konkretną wiedzę dziedzinową np. medyczna, techniczna, encyklopedyczna. W odróżnieniu od klastycznego sposobu generowania, ta nie wymaga wcześniej zbudowanej ontologii, stąd słowo „Auto” (pol. automatyczny) w nazwie metody. Metoda ta świetnie nadaje się do zastosowań w systemach eksperckich, rekomendacji czy systemach pytanie - odpowiedź (ang. question answering, QA).
 
 
 
-\subsubsection{Wydobywanie wiedzy z KG przez LLM (KG-enhanced LLM Inference)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+W podobny sposób działa metoda \textbf{COMET} \cite{kg:comet}, ona również generuje trójki wiedzy na podstawie istniejących danych wejściowych, jednak znacznie rożni się zastosowaniem i konkretną dziedziną, na której operuje.  
+
+todo::::„zdroworozsądkowej”(ang. commonsense)   
+todo::::\textbf{COM}mons\textbf{E}nse \textbf{T}ransformers
+
+Inne podejście prezentuje metoda \textbf{Grapher} \cite{kg:grapher}, która najpierw generuje encje, a następnie relacje, tworząc tym samym modułowy system przetwarzania.
+
+
+
+
+
+
+
+
+Użycie LLM pozwala na uogólnienie i uzupełnienie brakujących informacji w KG, jednak warto zwrócić uwagę na zagrożenia związane z tą metodą takie jak trudność w walidacji generowanej wiedzy. Jakość generowanych trójek zależy w dużej mierze zarówno od promtów jak i doboru odpowiedniego LLM. Wykorzystanie tego rozwiązania  warto wzbogacić o dodatkowe mechanizmy weryfikacji i ewentualnie korekty, które sprawdzają, czy fakty wygenerowane lub uzupełnione przez LLM są poprawne, spójne i zgodne z ontologią grafu wiedzy. Jedynym z mechanizmów automatycznej weryfikacji i edycji KG jest PiVE \cite{kg:pive}, który dodaje pętlę kontrolną (ang. prompt-in-the-loop), aby zwiększyć rzetelność i spójność wyników.
+
+%Podsumowując, integracja dużych modeli językowych z grafami wiedzy znajduje zastosowanie przede wszystkim w trzech obszarach: automatycznej konstrukcji i aktualizacji grafów, wnioskowaniu i uzupełnianiu braków wiedzy oraz interaktywnym dostępie do informacji w języku naturalnym. Takie połączenie łączy zalety przetwarzania semantycznego z precyzją struktur symbolicznych, stanowiąc podstawę rozwoju nowoczesnych systemów wiedzo-centrycznych.
+
+
+\subsubsection{Wydobywanie wiedzy z KG przez LLM (KG-enhanced LLM Inference) (4.2)}
+
+
 W podejściu tym graf wiedzy (KG) jest wykorzystywany do dynamicznego wydobycia wiedzy w czasie działania (inferencji) dużego modelu językowego (LLM), bez konieczności jego retrenowania. Celem jest dostarczenie aktualnej, zewnętrznej wiedzy, która może być użyta przez LLM do generowania bardziej trafnych, faktograficznych i interpretowalnych odpowiedzi.
 
-Mechanizm działania:
-\begin{itemize}
-    \item \textbf{Retrieval}: Na podstawie zapytania LLM wyszukuje odpowiednie trójki w KG.
-    \item \textbf{Augmented Generation}: Znalezione fakty są załączane do promptu lub jako kontekst do generacji odpowiedzi.
-\end{itemize}
+
+Integracja KG z LLM w tym podejściu opiera się na dwufazowym mechanizmie działania: \textbf{retrieval} - pobieranie wiedzy oraz \textbf{augmented Generation} - generowanie wzbogaconych odpowiedzi. 
+
+W pierwszym etapie \textbf{retrieval } LLM identyfikuje, które fragmenty wiedzy z grafu są istotne. Mechanizm ten  może działać poprzez bezpośrednie dopasowanie semantyczne, wówczas zapytanie jest konwertowane na reprezentacje wektorową, a następnie porównane z trójkami w KG.  Inny sposób działania opiera się na wnioskowaniu po ścieżkach KG, gdzie LLM eksploruje ścieżki relacji w KG.  Dzięki temu etapowi \textbf{retrieval} model nie korzysta z całego KG, który może zawierać miliony trójek, tylko z ograniczonego fragmentu. 
+
+W drugim etapie \textbf{augmented Generation} pozyskane fakty są przekazywane do LLM jako dodatkowe informacje załączane do promptu.  Trójki wiedzy mogą być przekazywane do KG zamienione na język naturalny i dołączone do promptu.  Wiedzą z KG może być również przekazana symbolicznie, po przez łączenie embeddingu słów LLM z embeddingiem encji i relacji.  Dzięki temu etapowi odpowiedzi LLM są wzbogacane o dodatkową wiedzę z KG, co powoduje wzrost rzetelności odpowiedzi. 
 
 Przykładowe metody:
 \begin{itemize}
     \item \textbf{Graph RAG} -- LLM generuje zapytanie do KG w celu otrzymania wiedzy na zadane pytanie.
-    \item \textbf{REALM} -- wykorzystuje retriever do pobierania dokumentów z korpusu wiedzy.
-    \item \textbf{KGLM} -- generuje faktyczne zdania na podstawie kontekstu i KG.
+    \item \textbf{REALM} -- wykorzystuje retriever do pobierania dokumentów z korpusu wiedzy. na etapie przygotowawczym i skutecznie poprawia wydajność odpowiedzi na pytania \cite{Realm}.
+    \item \textbf{KGLM} -- łączy model językowy z grafem wiedzy w sposób, który pozwala mu przewidywać słowa zależnie od faktów   \cite{KGLM}.
     \item \textbf{Mindmap, ChatRule, CoK} -- konwertują strukturę KG na tekstowe prompt'y, umożliwiając LLM reasoning.
 \end{itemize}
 
-Zalety:
-\begin{itemize}
-    \item Aktualność wiedzy -- możliwość dynamicznego uzupełniania informacji.
-    \item Brak potrzeby ponownego trenowania modelu.
-    \item Lepsza interpretowalność dzięki jawnej strukturze KG.
-\end{itemize}
 
-Wyzwania:
-\begin{itemize}
-    \item Projektowanie efektywnych promptów.
-    \item Integracja wydobytej wiedzy z generacją tekstu.
-    \item Ograniczenia długości promptu LLM.
-\end{itemize}
+Wydobywanie wiedzy z KG przez LLM pozwala na wykorzystywanie aktualnej wiedzy w odpowiedziach LLM, dzięki możliwości dynamicznego uzupełniania informacji. Dodatkowo dodanie nowych informacji przebiega bez dodatkowego trenowania LLM, co zmiesza koszta.  Dzięki jawnej strukturze KG wiedza w nim zawarta jest łatwo interpretowalna dla LLM jak i dla użytkowników.  Metoda ta wymaga od użytkownika tworzenia efektywnych promptów oraz dobrej integracji wydobytej wiedzy z KG z generatorem tekstu.  W przypadku dużej ilości wiedzy zawartej w KG ograniczeniem może być maksymalna długość promptu wysyłanego do LLM - po przekroczeniu pewniej liczby tokenów, kolejne są ucinane i nie posłużą LLM jako dodatkowe informacje do generowania odpowiedzi. 
 
+Podsumowując, wykorzystywanie KG jako źródła dodatkowych informacji pozwala dostarczać aktualne informacje do LLM, co jest ważnym aspektem w dzisiejszym świecie. 
 
-\subsubsection{LLM rozszerzony o wiedzę z KG na etapie pre-trainingu (KG-enhanced LLM Pre-training)}
+\subsubsection{LLM rozszerzony o wiedzę z KG na etapie pre-trainingu (KG-enhanced LLM Pre-training) (4.1)}
 Jedną z fundamentalnych metod integracji KG z LLM jest ich połączenie już na etapie pre-treningu modelu językowego. Celem jest wzbogacenie reprezentacji językowych o wiedzę strukturalną zawartą w grafach wiedzy.
 
 Mechanizm działania:
@@ -445,7 +456,7 @@ Wyzwania:
 \end{itemize}
 
 
-\subsubsection{Rozszerzanie wiedzy w KG przez LLM (LLM-augmented KG Completion)}
+\subsubsection{Rozszerzanie wiedzy w KG przez LLM (LLM-augmented KG Completion) (5.2)}
 Uzupełnianie KG (KG Completion) to zadanie polegające na przewidywaniu brakujących faktów w grafie. LLM mogą być wykorzystane do generowania nowych trójek lub oceny ich prawdopodobieństwa.
 
 Mechanizm działania:
@@ -475,7 +486,9 @@ Wyzwania:
 \end{itemize}
 
 
-Praca w dalszej części skupi się na dwóch pierwszych metodach tj. tworzeniu KG oraz wydobywaniu z niego wiedzy, ponieważ zastosowania te zyskują na popularności np. w zastosowaniach firmowych, gdzie tajne dane czy dokumenty wewnętrzne nie powinny opuszczać firmy, a jednocześnie firma nie chce ponosić ogromnych kosztów w związku z utrzymywaniem własnego LLM i infrastruktury do jego działania. Dzięki temu firma zajmuje się tylko utrzymaniem KG (tworzeniem, a następnie rozszerzaniem o nowe dane), natomiast LLM wynajmuje w formie SaaS (ang. Software as a Service), dzięki czemu może korzystać z coraz to nowszych i bardziej zaawansowanych modeli (najnowsze mają np. wbudowany w siebie \textit{reasoning} -- LLM „myśli” dłużej nad odpowiedzią starając się głębiej przeanalizować dostępne informacje i udzielić bardziej trafnej odpowiedzi).
+Podsumowując, integracja dużych modeli językowych z grafami wiedzy znajduje zastosowanie przede wszystkim w trzech obszarach: automatycznej konstrukcji i aktualizacji grafów, wnioskowaniu i uzupełnianiu braków wiedzy oraz interaktywnym dostępie do informacji w języku naturalnym. Takie połączenie łączy zalety przetwarzania semantycznego z precyzją struktur grafowych, stanowiąc podstawę rozwoju nowoczesnych systemów wiedzo-centrycznych.
+
+Praca w dalszej części skupi się na dwóch pierwszych metodach tj. tworzeniu KG oraz wydobywaniu z niego wiedzy, ponieważ zastosowania te zyskują na popularności np. w zastosowaniach firmowych, gdzie tajne dane czy dokumenty wewnętrzne nie powinny opuszczać firmy, a jednocześnie firma nie chce ponosić ogromnych kosztów w związku z utrzymywaniem własnego LLM i infrastruktury do jego działania. Dzięki temu firma zajmuje się tylko utrzymaniem KG (tworzeniem, a następnie rozszerzaniem o nowe dane), natomiast LLM wynajmuje w formie SaaS (ang. Software as a Service), dzięki czemu może korzystać z coraz to nowszych i bardziej zaawansowanych modeli (obecnie najnowsze LLM mają np. wbudowany w siebie \textit{reasoning} -- LLM „myśli” dłużej nad odpowiedzią starając się głębiej przeanalizować dostępne informacje i udzielić bardziej trafnej odpowiedzi).
 
 
 
