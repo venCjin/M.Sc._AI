@@ -11,7 +11,7 @@
     url = {https://doi.org/10.1145/365153.365168},
     journal = {Commun. ACM},
     month = jan,
-    pages = {36–45},
+    pages = {36--45},
     numpages = {10}
 }
 
@@ -146,7 +146,6 @@
     urldate = {2025-10-12},
 }
 
-
 @misc{ grag2,
     title = {In-depth Analysis of Graph-based RAG in a Unified Framework}, 
     author = {Yingli Zhou and Yaodong Su and Youran Sun and Shu Wang and Taotao Wang and Runyuan He and Yongwei Zhang and Sicong Liang and Xilin Liu and Yuchi Ma and Yixiang Fang},
@@ -206,11 +205,17 @@
     year = {2017},
 }
 
-@misc{ conceptnet,
-    title = {ConceptNet 5.5: An Open Multilingual Graph of General Knowledge},
-    url = {https://arxiv.org/abs/1612.03975},
-    author = {Robyn Speer and Joshua Chin and Catherine Havasi},
-    year = {2018},
+@inproceedings{ kg:conceptnet,
+    author = {Speer, Robyn and Chin, Joshua and Havasi, Catherine},
+    title = {ConceptNet 5.5: an open multilingual graph of general knowledge},
+    year = {2017},
+    publisher = {AAAI Press},
+    abstract = {Machine learning about language can be improved by supplying it with specific knowledge and sources of external information. We present here a new version of the linked open data resource ConceptNet that is particularly well suited to be used with modern NLP techniques such as word embeddings.ConceptNet is a knowledge graph that connects words and phrases of natural language with labeled edges. Its knowledge is collected from many sources that include expert-created resources, crowd-sourcing, and games with a purpose. It is designed to represent the general knowledge involved in understanding language, improving natural language applications by allowing the application to better understand the meanings behind the words people use.When ConceptNet is combined with word embeddings acquired from distributional semantics (such as word2vec), it provides applications with understanding that they would not acquire from distributional semantics alone, nor from narrower resources such as WordNet or DBPedia. We demonstrate this with state-of-the-art results on intrinsic evaluations of word relatedness that translate into improvements on applications of word vectors, including solving SAT-style analogies.},
+    booktitle = {Proceedings of the Thirty-First AAAI Conference on Artificial Intelligence},
+    pages = {4444-4451},
+    numpages = {8},
+    location = {San Francisco, California, USA},
+    series = {AAAI'17}
 }
 
 @misc{ yago,
@@ -223,14 +228,16 @@
     url = {https://arxiv.org/abs/2308.11884}, 
 }
 
-@misc{ Realm,
-      title = {REALM: Retrieval-Augmented Language Model Pre-Training}, 
-      author = {Kelvin Guu and Kenton Lee and Zora Tung and Panupong Pasupat and Ming-Wei Chang},
-      year = {2020},
-      eprint = {2002.08909},
-      archivePrefix = {arXiv},
-      primaryClass = {cs.CL},
-      url = {https://arxiv.org/abs/2002.08909}, 
+@inproceedings{ Realm,
+    author = {Guu, Kelvin and Lee, Kenton and Tung, Zora and Pasupat, Panupong and Chang, Ming-Wei},
+    title = {REALM: retrieval-augmented language model pre-training},
+    year = {2020},
+    publisher = {JMLR.org},
+    abstract = {Language model pre-training has been shown to capture a surprising amount of world knowledge, crucial for NLP tasks such as question answering. However, this knowledge is stored implicitly in the parameters of a neural network, requiring everlarger networks to cover more facts.To capture knowledge in a more modular and interpretable way, we augment language model pretraining with a latent knowledge retriever, which allows the model to retrieve and attend over documents from a large corpus such as Wikipedia, used during pre-training, fine-tuning and inference. For the first time, we show how to pre-train such a knowledge retriever in an unsupervised manner, using masked language modeling as the learning signal and backpropagating through a retrieval step that considers millions of documents.We demonstrate the effectiveness of Retrieval-Augmented Language Model pretraining (REALM) by fine-tuning on the challenging task of Open-domain Question Answering (Open-QA). We compare against state-of-the-art models for both explicit and implicit knowledge storage on three popular Open-QA benchmarks, and find that we outperform all previous methods by a significant margin (4-16\% absolute accuracy), while also providing qualitative benefits such as interpretability and modularity.},
+    booktitle = {Proceedings of the 37th International Conference on Machine Learning},
+    articleno = {368},
+    numpages = {10},
+    series = {ICML'20},
 }
 
 @misc{ KGLM,
@@ -279,5 +286,354 @@
     primaryClass = {cs.CL},
     url = {https://arxiv.org/abs/2307.01709}, 
 }
+
+@article{ kg:ATOMIC, 
+    title = {ATOMIC: An Atlas of Machine Commonsense for If-Then Reasoning}, 
+    volume = {33}, 
+    url = {https://ojs.aaai.org/index.php/AAAI/article/view/4160}, 
+    DOI = {10.1609/aaai.v33i01.33013027}, 
+    abstractNote = {&lt;p&gt;We present ATOMIC, an atlas of everyday commonsense reasoning, organized through 877k textual descriptions of inferential knowledge. Compared to existing resources that center around taxonomic knowledge, ATOMIC focuses on inferential knowledge organized as typed &lt;em&gt;if-then&lt;/em&gt; relations with variables (e.g., “&lt;em&gt;if&lt;/em&gt; X pays Y a compliment, &lt;em&gt;then&lt;/em&gt; Y will likely return the compliment”). We propose nine &lt;em&gt;if-then&lt;/em&gt; relation types to distinguish causes vs. effects, agents vs. themes, voluntary vs. involuntary events, and actions vs. mental states. By generatively training on the rich inferential knowledge described in ATOMIC, we show that neural models can acquire simple commonsense capabilities and reason about previously unseen events. Experimental results demonstrate that multitask models that incorporate the hierarchical structure of &lt;em&gt;if-then&lt;/em&gt; relation types lead to more accurate inference compared to models trained in isolation, as measured by both automatic and human evaluation.&lt;/p&gt;}, 
+    number = {01}, 
+    journal = {Proceedings of the AAAI Conference on Artificial Intelligence}, 
+    author = {Sap, Maarten and Le Bras, Ronan and Allaway, Emily and Bhagavatula, Chandra and Lourie, Nicholas and Rashkin, Hannah and Roof, Brendan and Smith, Noah A. and Choi, Yejin}, 
+    year = {2019}, 
+    month = jul, 
+    pages = {3027-3035} 
+}
+
+@misc{ bert,
+      title = {BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding}, 
+      author = {Jacob Devlin and Ming-Wei Chang and Kenton Lee and Kristina Toutanova},
+      year = {2019},
+      eprint = {1810.04805},
+      archivePrefix = {arXiv},
+      primaryClass = {cs.CL},
+      url = {https://arxiv.org/abs/1810.04805}, 
+}
+
+@inproceedings{ glm,
+    title = "Exploiting Structured Knowledge in Text via Graph-Guided Representation Learning",
+    author = "Shen, Tao  and
+      Mao, Yi  and
+      He, Pengcheng  and
+      Long, Guodong  and
+      Trischler, Adam  and
+      Chen, Weizhu",
+    editor = "Webber, Bonnie  and
+      Cohn, Trevor  and
+      He, Yulan  and
+      Liu, Yang",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2020.emnlp-main.722/",
+    doi = "10.18653/v1/2020.emnlp-main.722",
+    pages = "8980--8994",
+    abstract = "In this work, we aim at equipping pre-trained language models with structured knowledge. We present two self-supervised tasks learning over raw text with the guidance from knowledge graphs. Building upon entity-level masked language models, our first contribution is an entity masking scheme that exploits relational knowledge underlying the text. This is fulfilled by using a linked knowledge graph to select informative entities and then masking their mentions. In addition, we use knowledge graphs to obtain distractors for the masked entities, and propose a novel distractor-suppressed ranking objective that is optimized jointly with masked language model. In contrast to existing paradigms, our approach uses knowledge graphs implicitly, only during pre-training, to inject language models with structured knowledge via learning from raw text. It is more efficient than retrieval-based methods that perform entity linking and integration during finetuning and inference, and generalizes more effectively than the methods that directly learn from concatenated graph triples. Experiments show that our proposed model achieves improved performance on five benchmarks, including question answering and knowledge base completion."
+}
+
+@inproceedings{ ernie,
+    title = "{ERNIE}: Enhanced Language Representation with Informative Entities",
+    author = "Zhang, Zhengyan  and
+      Han, Xu  and
+      Liu, Zhiyuan  and
+      Jiang, Xin  and
+      Sun, Maosong  and
+      Liu, Qun",
+    editor = "Korhonen, Anna  and
+      Traum, David  and
+      M{\`a}rquez, Llu{\'i}s",
+    booktitle = "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2019",
+    address = "Florence, Italy",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/P19-1139/",
+    doi = "10.18653/v1/P19-1139",
+    pages = "1441--1451",
+    abstract = "Neural language representation models such as BERT pre-trained on large-scale corpora can well capture rich semantic patterns from plain text, and be fine-tuned to consistently improve the performance of various NLP tasks. However, the existing pre-trained language models rarely consider incorporating knowledge graphs (KGs), which can provide rich structured knowledge facts for better language understanding. We argue that informative entities in KGs can enhance language representation with external knowledge. In this paper, we utilize both large-scale textual corpora and KGs to train an enhanced language representation model (ERNIE), which can take full advantage of lexical, syntactic, and knowledge information simultaneously. The experimental results have demonstrated that ERNIE achieves significant improvements on various knowledge-driven tasks, and meanwhile is comparable with the state-of-the-art model BERT on other common NLP tasks. The code and datasets will be available in the future."
+}
+
+@inproceedings{ OntoPrompt,
+    author = {Ye, Hongbin and Zhang, Ningyu and Deng, Shumin and Chen, Xiang and Chen, Hui and Xiong, Feiyu and Chen, Xi and Chen, Huajun},
+    title = {Ontology-enhanced Prompt-tuning for Few-shot Learning},
+    year = {2022},
+    isbn = {9781450390965},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3485447.3511921},
+    doi = {10.1145/3485447.3511921},
+    abstract = {Few-shot Learning (FSL) is aimed to make predictions based on a limited number of samples. Structured data such as knowledge graphs and ontology libraries has been leveraged to benefit the few-shot setting in various tasks. However, the priors adopted by the existing methods suffer from challenging knowledge missing, knowledge noise, and knowledge heterogeneity, which hinder the performance for few-shot learning. In this study, we explore knowledge injection for FSL with pre-trained language models and propose ontology-enhanced prompt-tuning (OntoPrompt). Specifically, we develop the ontology transformation based on the external knowledge graph to address the knowledge missing issue, which fulfills and converts structure knowledge to text. We further introduce span-sensitive knowledge injection via a visible matrix to select informative knowledge to handle the knowledge noise issue. To bridge the gap between knowledge and text, we propose a collective training algorithm to optimize representations jointly. We evaluate our proposed OntoPrompt in three tasks, including relation extraction, event extraction, and knowledge graph completion, with eight datasets. Experimental results demonstrate that our approach can obtain better few-shot performance than baselines.},
+    booktitle = {Proceedings of the ACM Web Conference 2022},
+    pages = {778--787},
+    numpages = {10},
+    keywords = {Event Extraction, Few-shot Learning, Knowledge Graph Completion, Ontology, Prompt-tuning, Relation Extraction},
+    location = {Virtual Event, Lyon, France},
+    series = {WWW '22}
+}
+
+@misc{ graphRAG,
+    title = {Retrieval-Augmented Generation with Graphs (GraphRAG)}, 
+    author = {Haoyu Han and Yu Wang and Harry Shomer and Kai Guo and Jiayuan Ding and Yongjia Lei and Mahantesh Halappanavar and Ryan A. Rossi and Subhabrata Mukherjee and Xianfeng Tang and Qi He and Zhigang Hua and Bo Long and Tong Zhao and Neil Shah and Amin Javari and Yinglong Xia and Jiliang Tang},
+    year = {2025},
+    eprint = {2501.00309},
+    archivePrefix = {arXiv},
+    primaryClass = {cs.IR},
+    url = {https://arxiv.org/abs/2501.00309}, 
+}
+
+@inproceedings{ mindmap,
+    title = "{M}ind{M}ap: Knowledge Graph Prompting Sparks Graph of Thoughts in Large Language Models",
+    author = "Wen, Yilin  and
+      Wang, Zifeng  and
+      Sun, Jimeng",
+    editor = "Ku, Lun-Wei  and
+      Martins, Andre  and
+      Srikumar, Vivek",
+    booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = aug,
+    year = "2024",
+    address = "Bangkok, Thailand",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.acl-long.558/",
+    doi = "10.18653/v1/2024.acl-long.558",
+    pages = "10370--10388",
+    abstract = "Large language models (LLMs) have achieved remarkable performance in natural language understanding and generation tasks. However, they often suffer from limitations such as difficulty in incorporating new knowledge, generating hallucinations, and explaining their reasoning process. To address these challenges, we propose a novel prompting pipeline, named MindMap, that leverages knowledge graphs (KGs) to enhance LLMs' inference and transparency. Our method enables LLMs to comprehend KG inputs and infer with a combination of implicit and external knowledge. Moreover, our method elicits the mind map of LLMs, which reveals their reasoning pathways based on the ontology of knowledge. We evaluate our method on diverse question {\&} answering tasks, especially in medical domains, and show significant improvements over baselines. We also introduce a new hallucination evaluation benchmark and analyze the effects of different components of our method. Our results demonstrate the effectiveness and robustness of our method in merging knowledge from LLMs and KGs for combined inference."
+}
+
+@inproceedings{ chatrule,
+    author = "Luo, Linhao
+        and Ju, Jiaxin
+        and Xiong, Bo
+        and Li, Yuan-Fang
+        and Haffari, Gholamreza
+        and Pan, Shirui",
+    editor = "Wu, Xintao
+        and Spiliopoulou, Myra
+        and Wang, Can
+        and Kumar, Vipin
+        and Cao, Longbing
+        and Wu, Yanqiu
+        and Yao, Yu
+        and Wu, Zhangkai",
+    title = "ChatRule: Mining Logical Rules with Large Language Models for Knowledge Graph Reasoning",
+    booktitle = "Advances in Knowledge Discovery and Data Mining",
+    year = "2025",
+    publisher = "Springer Nature Singapore",
+    address = "Singapore",
+    pages = "314--325",
+    abstract = "Logical rules are essential for uncovering the logical connections between relations, which could improve reasoning performance and provide interpretable results on knowledge graphs (KGs). Although there have been many efforts to mine meaningful logical rules over KGs, existing methods suffer from computationally intensive searches over the rule space and a lack of scalability for large-scale KGs. Besides, they often ignore the semantics of relations which is crucial for uncovering logical connections. Recently, large language models (LLMs) have shown impressive performance in the field of natural language processing and various applications, owing to their emergent ability and generalizability. In this paper, we propose a novel framework, ChatRule, unleashing the power of large language models for mining logical rules over knowledge graphs. Specifically, the framework is initiated with an LLM-based rule generator, leveraging both the semantic and structural information of KGs to prompt LLMs to generate logical rules. To refine the generated rules, a rule ranking module estimates the rule quality by incorporating facts from existing KGs. Last, the ranked rules can be used to conduct reasoning over KGs. ChatRule is evaluated on five large-scale KGs, showing the effectiveness and scalability of our method.",
+    isbn = "978-981-96-8173-0"
+}
+
+@inproceedings{ cok,
+    author = {Wang, Jianing and Sun, Qiushi and Li, Xiang and Gao, Ming},
+    year = {2024},
+    month = {01},
+    pages = {4958-4981},
+    title = {Boosting Language Models Reasoning with Chain-of-Knowledge Prompting},
+    doi = {10.18653/v1/2024.acl-long.271}
+}
+
+@misc{ kg:kgbert,
+      title = {KG-BERT: BERT for Knowledge Graph Completion}, 
+      author = {Liang Yao and Chengsheng Mao and Yuan Luo},
+      year = {2019},
+      eprint = {1909.03193},
+      archivePrefix = {arXiv},
+      primaryClass = {cs.CL},
+      url = {https://arxiv.org/abs/1909.03193}, 
+}
+
+@inproceedings{ kg:simKGC,
+    title = "{S}im{KGC}: Simple Contrastive Knowledge Graph Completion with Pre-trained Language Models",
+    author = "Wang, Liang  and
+      Zhao, Wei  and
+      Wei, Zhuoyu  and
+      Liu, Jingming",
+    editor = "Muresan, Smaranda  and
+      Nakov, Preslav  and
+      Villavicencio, Aline",
+    booktitle = "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = may,
+    year = "2022",
+    address = "Dublin, Ireland",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.acl-long.295/",
+    doi = "10.18653/v1/2022.acl-long.295",
+    pages = "4281--4294",
+    abstract = "Knowledge graph completion (KGC) aims to reason over known facts and infer the missing links. Text-based methods such as KGBERT (Yao et al., 2019) learn entity representations from natural language descriptions, and have the potential for inductive KGC. However, the performance of text-based methods still largely lag behind graph embedding-based methods like TransE (Bordes et al., 2013) and RotatE (Sun et al., 2019b). In this paper, we identify that the key issue is efficient contrastive learning. To improve the learning efficiency, we introduce three types of negatives: in-batch negatives, pre-batch negatives, and self-negatives which act as a simple form of hard negatives. Combined with InfoNCE loss, our proposed model SimKGC can substantially outperform embedding-based methods on several benchmark datasets. In terms of mean reciprocal rank (MRR), we advance the state-of-the-art by +19{\%} on WN18RR, +6.8{\%} on the Wikidata5M transductive setting, and +22{\%} on the Wikidata5M inductive setting. Thorough analyses are conducted to gain insights into each component. Our code is available at \url{https://github.com/intfloat/SimKGC} ."
+}
+
+@article{ kg:mem-kgc,
+    author = {Choi, Bonggeun and Jang, Daesik and Ko, Youngjoong},
+    journal = {IEEE Access}, 
+    title = {MEM-KGC: Masked Entity Model for Knowledge Graph Completion With Pre-Trained Language Model}, 
+    year = {2021},
+    volume = {9},
+    number = {},
+    pages = {132025-132032},
+    keywords = {Task analysis;Predictive models;Training;Bit error rate;Semantics;Micromechanical devices;Knowledge graph completion;link prediction;masked language model;pre-trained language model},
+    doi = {10.1109/ACCESS.2021.3113329},
+}
+
+@inproceedings{ kg:genKGC,
+    author = {Xie, Xin and Zhang, Ningyu and Li, Zhoubo and Deng, Shumin and Chen, Hui and Xiong, Feiyu and Chen, Mosha and Chen, Huajun},
+    title = {From Discrimination to Generation: Knowledge Graph Completion with Generative Transformer},
+    year = {2022},
+    isbn = {9781450391306},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3487553.3524238},
+    doi = {10.1145/3487553.3524238},
+    abstract = {Knowledge graph completion aims to address the problem of extending a KG with missing triples. In this paper, we provide an approach GenKGC, which converts knowledge graph completion to sequence-to-sequence generation task with the pre-trained language model. We further introduce relation-guided demonstration and entity-aware hierarchical decoding for better representation learning and fast inference. Experimental results on three datasets show that our approach can obtain better or comparable performance than baselines and achieve faster inference speed compared with previous methods with pre-trained language models. We also release a new large-scale Chinese knowledge graph dataset OpenBG500 for research purpose1.},
+    booktitle = {Companion Proceedings of the Web Conference 2022},
+    pages = {162--165},
+    numpages = {4},
+    keywords = {Transformer, Knowledge Graph Completion, Generation},
+    location = {Virtual Event, Lyon, France},
+    series = {WWW '22}
+}
+
+@inproceedings{ kg:kgt5,
+    title = "Sequence-to-Sequence Knowledge Graph Completion and Question Answering",
+    author = "Saxena, Apoorv  and
+      Kochsiek, Adrian  and
+      Gemulla, Rainer",
+    editor = "Muresan, Smaranda  and
+      Nakov, Preslav  and
+      Villavicencio, Aline",
+    booktitle = "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = may,
+    year = "2022",
+    address = "Dublin, Ireland",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.acl-long.201/",
+    doi = "10.18653/v1/2022.acl-long.201",
+    pages = "2814--2828",
+    abstract = "Knowledge graph embedding (KGE) models represent each entity and relation of a knowledge graph (KG) with low-dimensional embedding vectors. These methods have recently been applied to KG link prediction and question answering over incomplete KGs (KGQA). KGEs typically create an embedding for each entity in the graph, which results in large model sizes on real-world graphs with millions of entities. For downstream tasks these atomic entity representations often need to be integrated into a multi stage pipeline, limiting their utility. We show that an off-the-shelf encoder-decoder Transformer model can serve as a scalable and versatile KGE model obtaining state-of-the-art results for KG link prediction and incomplete KG question answering. We achieve this by posing KG link prediction as a sequence-to-sequence task and exchange the triple scoring approach taken by prior KGE methods with autoregressive decoding. Such a simple but powerful method reduces the model size up to 98{\%} compared to conventional KGE models while keeping inference time tractable. After finetuning this model on the task of KGQA over incomplete KGs, our approach outperforms baselines on multiple large-scale datasets without extensive hyperparameter tuning."
+}
+
+@inproceedings{ kg:kg-s2s,
+    title = "Knowledge Is Flat: A {S}eq2{S}eq Generative Framework for Various Knowledge Graph Completion",
+    author = "Chen, Chen  and
+      Wang, Yufei  and
+      Li, Bing  and
+      Lam, Kwok-Yan",
+    editor = "Calzolari, Nicoletta  and
+      Huang, Chu-Ren  and
+      Kim, Hansaem  and
+      Pustejovsky, James  and
+      Wanner, Leo  and
+      Choi, Key-Sun  and
+      Ryu, Pum-Mo  and
+      Chen, Hsin-Hsi  and
+      Donatelli, Lucia  and
+      Ji, Heng  and
+      Kurohashi, Sadao  and
+      Paggio, Patrizia  and
+      Xue, Nianwen  and
+      Kim, Seokhwan  and
+      Hahm, Younggyun  and
+      He, Zhong  and
+      Lee, Tony Kyungil  and
+      Santus, Enrico  and
+      Bond, Francis  and
+      Na, Seung-Hoon",
+    booktitle = "Proceedings of the 29th International Conference on Computational Linguistics",
+    month = oct,
+    year = "2022",
+    address = "Gyeongju, Republic of Korea",
+    publisher = "International Committee on Computational Linguistics",
+    url = "https://aclanthology.org/2022.coling-1.352/",
+    pages = "4005--4017",
+    abstract = "Knowledge Graph Completion (KGC) has been recently extended to multiple knowledge graph (KG) structures, initiating new research directions, e.g. static KGC, temporal KGC and few-shot KGC. Previous works often design KGC models closely coupled with specific graph structures, which inevitably results in two drawbacks: 1) structure-specific KGC models are mutually incompatible; 2) existing KGC methods are not adaptable to emerging KGs. In this paper, we propose KG-S2S, a Seq2Seq generative framework that could tackle different verbalizable graph structures by unifying the representation of KG facts into ``flat'' text, regardless of their original form. To remedy the KG structure information loss from the ``flat'' text, we further improve the input representations of entities and relations, and the inference algorithm in KG-S2S. Experiments on five benchmarks show that KG-S2S outperforms many competitive baselines, setting new state-of-the-art performance. Finally, we analyze KG-S2S{'}s ability on the different relations and the Non-entity Generations."
+}
+
+@inproceedings{ pretrain-kge,
+    title = "Pretrain-{KGE}: Learning Knowledge Representation from Pretrained Language Models",
+    author = "Zhang, Zhiyuan  and
+      Liu, Xiaoqian  and
+      Zhang, Yi  and
+      Su, Qi  and
+      Sun, Xu  and
+      He, Bin",
+    editor = "Cohn, Trevor  and
+      He, Yulan  and
+      Liu, Yang",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2020",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2020.findings-emnlp.25/",
+    doi = "10.18653/v1/2020.findings-emnlp.25",
+    pages = "259--266",
+    abstract = "Conventional knowledge graph embedding (KGE) often suffers from limited knowledge representation, leading to performance degradation especially on the low-resource problem. To remedy this, we propose to enrich knowledge representation via pretrained language models by leveraging world knowledge from pretrained models. Specifically, we present a universal training framework named \textit{Pretrain-KGE} consisting of three phases: semantic-based fine-tuning phase, knowledge extracting phase and KGE training phase. Extensive experiments show that our proposed Pretrain-KGE can improve results over KGE models, especially on solving the low-resource problem."
+}
+
+@inproceedings{ bertnet,
+    title = "{B}ert{N}et: Harvesting Knowledge Graphs with Arbitrary Relations from Pretrained Language Models",
+    author = "Hao, Shibo  and
+      Tan, Bowen  and
+      Tang, Kaiwen  and
+      Ni, Bin  and
+      Shao, Xiyan  and
+      Zhang, Hengzhe  and
+      Xing, Eric  and
+      Hu, Zhiting",
+    editor = "Rogers, Anna  and
+      Boyd-Graber, Jordan  and
+      Okazaki, Naoaki",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2023",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.findings-acl.309/",
+    doi = "10.18653/v1/2023.findings-acl.309",
+    pages = "5000--5015",
+    abstract = "It is crucial to automatically construct knowledge graphs (KGs) of diverse new relations to support knowledge discovery and broad applications. Previous KG construction methods, based on either crowdsourcing or text mining, are often limited to a small predefined set of relations due to manual cost or restrictions in text corpus. Recent research proposed to use pretrained language models (LMs) as implicit knowledge bases that accept knowledge queries with prompts. Yet, the implicit knowledge lacks many desirable properties of a full-scale symbolic KG, such as easy access, navigation, editing, and quality assurance. In this paper, we propose a new approach of harvesting massive KGs of arbitrary relations from pretrained LMs. With minimal input of a relation definition (a prompt and a few shot of example entity pairs), the approach efficiently searches in the vast entity pair space to extract diverse accurate knowledge of the desired relation. We develop an effective search-and-rescore mechanism for improved efficiency and accuracy. We deploy the approach to harvest KGs of over 400 new relations, from LMs of varying capacities such as RoBERTaNet. Extensive human and automatic evaluations show our approach manages to extract diverse accurate knowledge, including tuples of complex relations (e.g., ``A is capable of but not good at B''). The resulting KGs as a symbolic interpretation of the source LMs also reveal new insights into the LMs' knowledge capacities."
+}
+
+@inproceedings{ jointGT,
+    title = "{J}oint{GT}: Graph-Text Joint Representation Learning for Text Generation from Knowledge Graphs",
+    author = "Ke, Pei  and
+      Ji, Haozhe  and
+      Ran, Yu  and
+      Cui, Xin  and
+      Wang, Liwei  and
+      Song, Linfeng  and
+      Zhu, Xiaoyan  and
+      Huang, Minlie",
+    editor = "Zong, Chengqing  and
+      Xia, Fei  and
+      Li, Wenjie  and
+      Navigli, Roberto",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.findings-acl.223/",
+    doi = "10.18653/v1/2021.findings-acl.223",
+    pages = "2526--2538"
+}
+
+@misc{ slm,
+    title = {Small Language Models: Survey, Measurements, and Insights}, 
+    author = {Zhenyan Lu and Xiang Li and Dongqi Cai and Rongjie Yi and Fangming Liu and Xiwen Zhang and Nicholas D. Lane and Mengwei Xu},
+    year = {2025},
+    eprint = {2409.15790},
+    archivePrefix = {arXiv},
+    primaryClass = {cs.CL},
+    url = {https://arxiv.org/abs/2409.15790}, 
+}
+
+
+
+
 
 
