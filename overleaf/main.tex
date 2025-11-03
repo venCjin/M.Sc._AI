@@ -234,7 +234,7 @@ deletekeywords={id, type},
 \section{Wstęp}
 \textcolor{red}{\textit{Napisać na końcu ...}}
 
-\section{Cel pracy i zakres pracy}
+\section{Cel i zakres pracy}
 Grafy wiedzy i wielkie modele językowe to dwa fundamentalnie różne podejścia do reprezentacji i przetwarzania wiedzy. Grafy wiedzy oferują strukturalne i semantyczne ramy umożliwiające precyzyjne wyszukiwanie informacji oraz logikę wnioskowania. Wielkie modele językowe potrafią generować oraz interpretować tekst w sposób zbliżony do ludzkiego, co czyni je niezwykle potężnymi narzędziami w kontekście zadań związanych z przetwarzaniem języka naturalnego. Integracja grafów wiedzy z wielkimi modelami językowymi umożliwia tworzenie systemów, które mogą korzystać z najlepszych cech obu technologii: strukturalnej przejrzystości i dokładności grafów wiedzy oraz elastyczności i kreatywności modeli językowych. Celem pracy jest przedstawienie i przetestowanie różnych możliwości wykorzystania grafów wiedzy w połączeniu z wielkimi modelami językowymi. Praca skupi się na analizie, jak te dwa podejścia mogą wzajemnie się uzupełniać, a także na identyfikacji konkretnych scenariuszy aplikacyjnych, w których ich integracja jest szczególnie korzystna.
 
 %%% Część teoretyczna
@@ -484,17 +484,15 @@ Alternatywą dla podejść opartych na LLM jest metoda LightKGG \cite{kg:extract
 Podejście LightKGG pokazuje, że nawet małe modele językowe, wspierane przez analizę topologii grafu, mogą osiągać wyniki porównywalne z LLM w zadaniach o wysokim poziomie ustrukturyzowania danych wejściowych i tam, gdzie kontekst można zakotwiczyć topologicznie w grafie, bez potrzeby głębokiego rozumowania lingwistycznego.
 Podejście to generuje znacznie niższe koszty ze względu na niższe zapotrzebowanie na moc obliczeniową, co czyni je atrakcyjnym rozwiązaniem dla środowisk o ograniczonych zasobach.
 
-\subsection{[edit] Wydobywanie wiedzy z KG przy pomocy LLM}
-
-
+\subsection{Wydobywanie wiedzy z KG przy pomocy LLM}
 
 \subsubsection{Definicja i koncepcja Graph RAG}
 
 Graph RAG (Graph Retrieval-Augmented Generation) to zaawansowane podejście do przetwarzania języka naturalnego, które łączy tradycyjne techniki RAG (Retrieval-Augmented Generation) z wykorzystaniem grafów wiedzy (ang. Knowledge Graphs, KG). Podstawową ideą Graph RAG jest wykorzystanie struktury grafu do organizowania i przetwarzania informacji, co pozwala na bardziej złożone i semantycznie bogate reprezentacje danych. Dzięki temu możliwe jest generowanie bardziej precyzyjnych i kontekstowych odpowiedzi na zapytania użytkowników.
 
-Graph RAG bazuje na architekturze RAG, to ją należy zaprezentować zanim przejdziemy do dalszej części przedstawiania metody z tego rozdziału.
+Graph RAG bazuje na architekturze RAG, w związku z czym najpierw omówimy tą podstawową architekturę, nim przejdziemy do dalszej części przedstawiania metody z niniejszego rozdziału.
 
-\subsubsection{RAG [edit - przeniesione z poziomu X.Y do X.Y.Z po grag]}
+\subsubsection{RAG}
 
 \subsubsubsection{Definicja i koncepcja RAG}
 
@@ -572,7 +570,6 @@ Dodatkowym wyzwaniem jest określenie znaczenia i trafności poszczególnych fra
 Co więcej, istnieje ryzyko, że modele generujące będą nadmiernie polegać na dostarczonym kontekście, ograniczając się do powtarzania treści zamiast oferować głębszą analizę czy syntezę informacji.
 
 Powyższe wyzwania mogą być ograniczone poprzez zastosowanie modułu \textit{fakt-checkingu} lub wykorzystania innego modułu, który poprawia jakość odpowiedzi.
-
 
 \subsubsection{Architektura Graph RAG}
 Graph RAG rozszerza RAG przez wykorzystanie struktur grafowych - wiedzy reprezentowanej nie tylko jako odrębne dokumenty, ale jako sieć (graf) węzłów i krawędzi, gdzie węzły to np. byty, dokumenty, fragmenty tekstu, a krawędzie - relacje między nimi. Dzięki temu można wykonywać wielokrokowe (ang. multi-hop) wyszukiwanie i rozumowanie między powiązanymi elementami wiedzy.   
