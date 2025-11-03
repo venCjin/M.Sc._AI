@@ -274,7 +274,7 @@ Kolejne rozwiązania bazowały na łańcuchach Markowa, które są ciągiem zdar
 Następnie powstała długa pamięć krótkotrwała (ang. long short-term memory, LSTM), specjalny rodzaj rekurencyjnej sieci neuronowej (ang. recurrent neural network, RNN), który został zaprojektowany, aby lepiej radzić sobie z długodystansowymi zależnościami, dzięki mechanizmom „zapamiętywania” i „zapominania” informacji. LSTM odniosły wielki sukces w zadaniach takich jak tłumaczenie maszynowe, przetwarzanie mowy i klasyfikacja tekstu (wczesny Google Translate). W miarę jak sieci neuronowe zdobywały popularność, opracowano metody reprezentowania słów w postaci wektorów. Najpopularniejszą metodą były word embeddings, z których najbardziej znanymi były Word2Vec oraz GloVe.
 
 Największą rewolucję w przetwarzaniu języka przyniosło wprowadzenie mechanizmu\linebreak
-uwagi (attention mechanism), który pozwolił modelom efektywnie radzić sobie z długodystansowymi zależnościami między słowami w zdaniu. Najbardziej przełomowym krokiem w tej ewolucji było wprowadzenie modelu Transformer w artykule „Attention is All You Need” przez Vaswaniego i in. w 2017 roku \cite{attention_2023vaswani}.
+uwagi (attention mechanism), który pozwolił modelom efektywnie radzić sobie z długodystansowymi zależnościami między słowami w zdaniu. Najbardziej przełomowym krokiem w tej ewolucji było wprowadzenie modelu Transformer w artykule \textit{Attention is All You Need} (2017) \cite{attention_2023vaswani}.
 
 \subsubsection{Embedding}
 Embedding jest wektorową reprezentacją tekstu. W Chat GPT oraz w rozwiązaniach w niniejszej pracy, używane są wektory gęste (ang. dense) z wartościami rzeczywistymi. Wektor kodujący słowa w ten sposób gwarantuje, że słowa znajdujące się blisko w wektorowej przestrzeni będą miały podobne znaczenie. Używanie embenddingu jako podstawowej reprezentacji wejściowej zwiększa wydajność zadań przetwarzania języka naturalnego (ang. natural language processing, NLP) \cite{word_embedding}.
@@ -348,7 +348,7 @@ W powyższym omówiliśmy tylko najbardziej klasyczne typy LLM Chains. Poszczeg�
 Koncepcja LLM chains jest nie tylko potężnym narzędziem w kontekście przetwarzania języka naturalnego, ale także elastycznym podejściem, które może być dostosowane do różnych dziedzin i zastosowań. Dzięki możliwości segmentacji złożonych zadań na mniejsze, wyspecjalizowane etapy, LLM chains umożliwiają bardziej efektywne i precyzyjne przetwarzanie danych, co otwiera nowe możliwości dla zaawansowanych aplikacji w różnych sektorach.
 
 \subsection{Metody połączenia KG i LLM}
-Integracja wielkich modeli językowych (LLM) z grafami wiedzy (KG) stanowi obecnie jedno z najbardziej obiecujących podejść w dziedzinie sztucznej inteligencji. LLM oferują zdolność do rozumienia i generowania języka naturalnego, natomiast KG zapewniają strukturalną, precyzyjną i interpretowalną reprezentację wiedzy. W niniejszym rozdziale przedstawiono metaanalizę wybranych metod łączenia tych dwóch technologii (zaproponowanych w pracy „Unifying Large Language Models and Knowledge Graphs: A Roadmap” \cite{graph:llm:roadmap}).
+Integracja wielkich modeli językowych (LLM) z grafami wiedzy (KG) stanowi obecnie jedno z najbardziej obiecujących podejść w dziedzinie sztucznej inteligencji. LLM oferują zdolność do rozumienia i generowania języka naturalnego, natomiast KG zapewniają strukturalną, precyzyjną i interpretowalną reprezentację wiedzy. W niniejszym rozdziale przedstawiono metaanalizę wybranych metod łączenia tych dwóch technologii (zaproponowanych w pracy \textit{Unifying Large Language Models and Knowledge Graphs: A Roadmap} (2024) \cite{graph:llm:roadmap}).
 
 \subsubsection{Tworzenie KG przy pomocy LLM (LLM-augmented KG construction)} % (5.3)
 
@@ -372,7 +372,7 @@ Dwie poprzednie metody bazują na już użyciu już wytrenowanego LLM, natomiast
 %, co częściowo powiązane z podrozdziałem „\nameref{sec:sub:sub:llm-kg-pre-training}” z dalszej części pracy.
 W przeciwieństwie do innych powszechnych transformerów, takich jak Chat GPT, jego celem nie jest generowanie odpowiedzi w języku naturalnym, lecz generowanie „zdroworozsądkowych trójek wiedzy” (ang. commonsense knowledge triples) - czyli struktur opisujących codzienne zależności między zdarzeniami, intencjami, emocjami i skutkami. Co ciekawe COMET został wytrenowany na wcześniej już wspominanych źródłach danych \textbf{ConceptNet} \cite{kg:conceptnet} oraz \textbf{ATOMIC} \cite{kg:ATOMIC}. 
 
-Użycie LLM pozwala na uogólnienie i uzupełnienie brakujących informacji w KG, jednak warto zwrócić uwagę na zagrożenia związane z tą metodą takie jak trudność w walidacji generowanej wiedzy. Jakość generowanych trójek zależy w dużej mierze zarówno od promtów jak i doboru odpowiedniego LLM. Wykorzystanie tego rozwiązania warto wzbogacić o dodatkowe mechanizmy weryfikacji i ewentualnie korekty, które sprawdzają, czy fakty wygenerowane lub uzupełnione przez model są poprawne, spójne i zgodne z ontologią grafu wiedzy. Jedynym z mechanizmów automatycznej weryfikacji i edycji KG jest PiVE \cite{kg:pive}, który dodaje pętlę kontrolną (ang. Prompt-in-the-loop Verification and Editing), aby ograniczeniczyć tzw. problem halucynacji LLM (ang. hallucination problem) — czyli sytuacji, w której model generuje poprawnie brzmiące, lecz fałszywe informacje. 
+Użycie LLM pozwala na uogólnienie i uzupełnienie brakujących informacji w KG, jednak warto zwrócić uwagę na zagrożenia związane z tą metodą takie jak trudność w walidacji generowanej wiedzy. Jakość generowanych trójek zależy w dużej mierze zarówno od promtów jak i doboru odpowiedniego LLM. Wykorzystanie tego rozwiązania warto wzbogacić o dodatkowe mechanizmy weryfikacji i ewentualnie korekty, które sprawdzają, czy fakty wygenerowane lub uzupełnione przez model są poprawne, spójne i zgodne z ontologią grafu wiedzy. Jedynym z mechanizmów automatycznej weryfikacji i edycji KG jest PiVE \cite{kg:pive}, który dodaje pętlę kontrolną (ang. Prompt-in-the-loop Verification and Editing), aby ograniczeniczyć tzw. problem halucynacji LLM (ang. hallucination problem) -- czyli sytuacji, w której model generuje poprawnie brzmiące, lecz fałszywe informacje. 
 % pętla:
 % 1. LLM generuje nową trójkę wiedzy lub fakt.
 % 2. Następnie inny prompt (lub ten sam model w trybie weryfikacyjnym) ocenia poprawność, spójność logiczną i zgodność z istniejącym grafem.
@@ -387,19 +387,13 @@ W podejściu tym graf wiedzy (KG) jest wykorzystywany do dynamicznego wydobycia 
 
 Integracja KG z LLM w tym podejściu opiera się na dwufazowym mechanizmie działania. Najpierw w procesie \textit{retrievalu} następuje pobieranie odpowiednich informacji z KG, a następnie podczas \textit{augmented generation} odpowiedź zostaje wzbogacona o tę wydobytą wiedzę.
 
-W pierwszym etapie - \textit{retrieval} - LLM identyfikuje, które fragmenty wiedzy z grafu są istotne. Mechanizm ten może działać poprzez bezpośrednie dopasowanie semantyczne, wówczas zapytanie jest konwertowane na reprezentacje wektorową, a następnie porównane z trójkami w KG. Inny sposób działania opiera się na wnioskowaniu po ścieżkach KG, gdzie LLM eksploruje ścieżki relacji w KG. Dzięki temu etapowi model nie korzysta z całego KG, który może zawierać miliony trójek, tylko z ograniczonego fragmentu.
+W pierwszym etapie \textit{retrieval} LLM identyfikuje, które fragmenty wiedzy z grafu są istotne. Mechanizm ten może działać poprzez bezpośrednie dopasowanie semantyczne, wówczas zapytanie jest konwertowane na reprezentacje wektorową, a następnie porównane z trójkami w KG. Inny sposób działania opiera się na wnioskowaniu po ścieżkach KG, gdzie LLM eksploruje ścieżki relacji w KG. Dzięki temu etapowi model nie korzysta z całego KG, który może zawierać miliony trójek, tylko z ograniczonego fragmentu.
 
 W drugim etapie \textit{augmented generation} pozyskane fakty są przekazywane do LLM jako dodatkowe informacje załączane do promptu. Trójki wiedzy mogą być przekazywane do KG w formie zamienionej na język naturalny i tak dołączonej do promptu. Wiedza z KG może być również przekazana symbolicznie, poprzez łączenie embeddingu słów LLM z embeddingiem encji i relacji. Dzięki temu etapowi odpowiedzi LLM są wzbogacane o dodatkową wiedzę z KG, co powoduje wzrost rzetelności odpowiedzi. 
 
-Przykładowe metody:
-\begin{itemize}
-    \item \textbf{Graph RAG} \cite{graphRAG} -- LLM generuje zapytanie do KG w celu otrzymania wiedzy na zadane pytanie.
-    \item \textbf{REALM} \cite{Realm} -- wykorzystuje retriever do pobierania dokumentów z korpusu wiedzy na etapie przygotowawczym i skutecznie poprawia wydajność odpowiedzi na pytania.
-    \item \textbf{KGLM} \cite{KGLM} -- łączy model językowy z grafem wiedzy w sposób, który pozwala mu przewidywać słowa zależnie od faktów.
-    \item \textbf{Mindmap} \cite{mindmap}, \textbf{ChatRule} \cite{chatrule}, \textbf{CoK} \cite{cok} -- przekształcają strukturę grafu na tekstowe prompty, umożliwiając LLM reasoning.
-\end{itemize}
+Rozwiązanie implementujące to podejście to np. \textbf{Graph RAG} \cite{graphRAG}, gdzie LLM generuje zapytanie do KG w celu otrzymania wiedzy na zadane pytanie, a uzyskane informacje służą za kontekst w prompcie do generowania odpowiedzi. Z kolei rozwiązanie \textbf{REALM} \cite{Realm} wykorzystuje retriever do pobierania dokumentów z korpusu wiedzy na etapie przygotowawczym i skutecznie poprawia wydajność odpowiedzi na pytania. \textbf{KGLM} \cite{KGLM} natomiast łączy model językowy z grafem wiedzy w sposób, który pozwala mu przewidywać słowa zależnie od faktów. Inne metody takie jak \textbf{Mindmap} \cite{mindmap}, \textbf{ChatRule} \cite{chatrule} czy \textbf{CoK} \cite{cok} przekształcają strukturę grafu na tekstowe prompty, umożliwiając LLM reasoning.
 
-Wydobywanie informacji z KG przez LLM pozwala na wykorzystywanie aktualnej wiedzy w odpowiedziach LLM, dzięki możliwości dynamicznego uzupełniania informacji. Ponadto rozszerzanie grafu o nowye informacji przebiega bez dodatkowego trenowania LLM, co redukuje koszty. Dzięki jawnej strukturze KG, wiedza w nim zawarta jest łatwo interpretowalna dla LLM jak i dla użytkowników. Metoda ta wymaga od użytkownika tworzenia efektywnych promptów oraz dobrej integracji wydobytej wiedzy z grafu z generatorem tekstu. W przypadku dużej ilości wiedzy zawartej w KG ograniczeniem może być maksymalna długość promptu wysyłanego do LLM - po przekroczeniu pewniej liczby tokenów, kolejne są ucinane i nie posłużą LLM jako dodatkowe informacje do generowania odpowiedzi.
+Wydobywanie informacji z KG przez LLM pozwala na wykorzystywanie aktualnej wiedzy w odpowiedziach LLM, dzięki możliwości dynamicznego uzupełniania informacji. Ponadto rozszerzanie grafu o nowe informacji przebiega bez dodatkowego trenowania LLM, co redukuje koszty. Dzięki jawnej strukturze KG, wiedza w nim zawarta jest łatwo interpretowalna dla LLM jak i dla użytkowników. Metoda ta wymaga od użytkownika tworzenia efektywnych promptów oraz dobrej integracji wydobytej wiedzy z grafu z generatorem tekstu. W przypadku dużej ilości wiedzy zawartej w KG ograniczeniem może być maksymalna długość promptu wysyłanego do LLM - po przekroczeniu pewniej liczby tokenów, kolejne są ucinane i nie posłużą LLM jako dodatkowe informacje do generowania odpowiedzi.
 
 Podsumowując, wykorzystywanie KG jako źródła dodatkowych informacji pozwala dostarczać aktualne informacje do LLM, co jest ważnym aspektem w dzisiejszym świecie. Rozwiązanie to szczególnie użytecznie okazuje się w korporacjach, które z zasady mają sztywną strukturę organizacyjną oraz mają zdefiniowane procesy operacyjne, zwłaszcza gdy dbają o spełnianie norm ISO (w szczególności certyfikat ISO 9001 - zapewnienie stałej jakości procesów i usług). Struktura ta oraz procesy idealnie nadają się do adaptacji do grafu wiedzy, a co ważniejsze z użyciem metod takich jak Graph RAG, znacznie ułatwią i przyspieszą pracę pracowników na polu np. wyszukiwania dokumentów firmowych, których w korporacjach znajdują się niepoliczalne ilości, tym samym optymalizując koszty prowadzenia działalności i oferując klientom sprawniejszą komunikację i realizację projektów.
 
@@ -431,7 +425,7 @@ Model analizuje istniejące relacje między bytami oraz dostępne teksty, aby pr
 Pierwszym podejściem do tego zagadnienia jest wykorzystanie \textbf{LLM jako enkodera (ang. LLM as encoder)}, gdzie model językowy wykorzystywany jest do tworzenia reprezentacji semantycznych encji, relacji lub opisów tekstowych, które następnie są integrowane z KG. Podejście to implementują m.in następujące modele. \textbf{KG-BERT} \cite{kg:kgbert} wykorzystuje BERT jako enkoder, który reprezentuje pary (podmiot, relacja, obiekt) w przestrzeni wektorowej i klasyfikuje ich poprawność.
 \textbf{SimKGC} \cite{kg:simKGC} natomiast wprowadza ulepszony sposób porównywania embeddingów encji i relacji przy pomocy podobieństwa cosinusowego. \textbf{MEM-KGC} \cite{kg:mem-kgc} rozszerza to podejście o pamięć kontekstową (memory module), która przechowuje dodatkowe fakty pomocne przy wnioskowaniu.
 
-Drugim podejściem jest wykorzystanie \textbf{LLM jako generatora (ang. LLM as generator)}, gdzie model językowy wykorzystywany jest do oceniania faktów, ale również do generowania nowych trójek wiedzy. Nauka LLM następuje poprzez zastosowanie maskowania. Model otrzymuje fragment tekstu lub część trójki z brakującym elementem, np.: trójka (Albert Einstein, zawód, [MASK]), gdzie model generuje brakujący element, w powyższym przykładzie \textit{fizyk}. W niektórych podejściach model może tworzyć również całe nowe trójki lub opisy, które następnie są konwertowane do formy strukturalnej w grafie. Implementację tego podejścia przedstawiają m.in niżej wymienione metody. \textbf{GenKGC} \cite{kg:genKGC} traktuje uzupełnianie grafu jako zadanie generacji tekstu. \textbf{KGT5} \cite{kg:kgt5} używa architektury T5 („Text-to-Text Transfer Transformer”) i jest trenowany do przewidywania brakujących elementów trójki w formie naturalnego języka. \textbf{KG-S2S (Knowledge Graph Sequence-to-Sequence)} \cite{kg:kg-s2s} przekształca dane grafowe w sekwencje tekstowe i uczy model seq2seq przewidywania nowych relacji.
+Drugim podejściem jest wykorzystanie \textbf{LLM jako generatora (ang. LLM as generator)}, gdzie model językowy wykorzystywany jest do oceniania faktów, ale również do generowania nowych trójek wiedzy. Nauka LLM następuje poprzez zastosowanie maskowania. Model otrzymuje fragment tekstu lub część trójki z brakującym elementem, np.: trójka (Albert Einstein, zawód, [MASK]), gdzie model generuje brakujący element, w powyższym przykładzie \textit{fizyk}. W niektórych podejściach model może tworzyć również całe nowe trójki lub opisy, które następnie są konwertowane do formy strukturalnej w grafie. Implementację tego podejścia przedstawiają m.in niżej wymienione metody. \textbf{GenKGC} \cite{kg:genKGC} traktuje uzupełnianie grafu jako zadanie generacji tekstu. \textbf{KGT5} \cite{kg:kgt5} używa architektury T5 (\textit{Text-to-Text Transfer Transformer}) i jest trenowany do przewidywania brakujących elementów trójki w formie naturalnego języka. \textbf{KG-S2S (Knowledge Graph Sequence-to-Sequence)} \cite{kg:kg-s2s} przekształca dane grafowe w sekwencje tekstowe i uczy model seq2seq przewidywania nowych relacji.
 \newpage
 
 Ostatnim podejściem jest wykorzystanie LLM w ramach \textbf{generacji opartej na promptach (ang. Prompt-based Generation)}, które jest najnowszym podejściem wśród wyżej wymienionych. Podejście to nie wymaga dodatkowego trenowania LLM na KG, lecz użycia promptów, które opisując zadanie i kierują uwagę modelu na odpowiednią część jego wewnętrznej wiedzy, pozwalając wydobyć brakujące fakty i relacje. Przykładem realizacji tego podejścia jest\linebreak\textbf{AutoKG} \cite{kg:autoKG}, które wykorzystuje gotowe modele (np. GPT-3 czy T5) i specjalnie zaprojektowane prompty, by automatycznie generować brakujące encje lub relacje.
@@ -472,13 +466,13 @@ Wykorzystanie wielkich modeli językowych do tworzenia grafów wiedzy będzie ba
 
 Alternatywą dla podejść opartych na LLM jest metoda LightKGG \cite{kg:extraction:lightKGG}, która wykorzystuje małe modele językowe (SLM) do ekstrakcji wiedzy w sposób efektywny obliczeniowo. Kluczowym komponentem tej metody jest \textbf{kontekstowa ekstrakcja grafowa} (Context-integrated Graph Extraction), która polega na:
 \begin{itemize}
-    \item \textbf{Wydobywaniu trójek wiedzy z tekstu} z jednoczesnym zachowaniem metadanych kontekstowych (np. czasowych, przestrzennych). Przykładowo, z tekstu „Marie Curie discovered radium in 1898” ekstraktowana jest trójka (Marie Curie, discovered, radium) z adnotacją kontekstu: rok 1898.
+    \item \textbf{Wydobywaniu trójek wiedzy z tekstu} z jednoczesnym zachowaniem metadanych kontekstowych (np. czasowych, przestrzennych). Przykładowo, z tekstu \textit{„Marie Curie discovered radium in 1898”} ekstrahowana jest trójka (\textit{Marie Curie}, \textit{discovered}, \textit{radium}) z adnotacją kontekstu: rok \textit{1898}.
     
     \item \textbf{Modelowaniu encji, relacji i kontekstu jako jednej struktury grafowej}, co pozwala na redukcję niejednoznaczności semantycznej bez potrzeby głębokiego rozumowania lingwistycznego.
     
-    \item \textbf{Agregacji grafu} -- scalanie informacji z wielu źródeł tekstowych, przy zachowaniu komplementarnych atrybutów encji (np. „Alan Turing” jako „matematyk” i „informatyk”).
+    \item \textbf{Agregacji grafu} -- scalanie informacji z wielu źródeł tekstowych, przy zachowaniu komplementarnych atrybutów encji (np. \textit{Alan Turing} jako \textit{matematyk} i \textit{informatyk}).
     
-    \item \textbf{Wnioskowaniu topologicznym} -- wykorzystanie cech strukturalnych grafu (np. gęstość połączeń, długość ścieżek, centralność wierzchołków) do identyfikacji relacji pośrednich i rozwiązywania niejednoznaczności encji (np. „Apple” jako firma vs owoc).
+    \item \textbf{Wnioskowaniu topologicznym} -- wykorzystanie cech strukturalnych grafu (np. gęstość połączeń, długość ścieżek, centralność wierzchołków) do identyfikacji relacji pośrednich i rozwiązywania niejednoznaczności encji (np. \textit{„Apple”} jako firma vs owoc).
 \end{itemize}
 
 Podejście LightKGG pokazuje, że nawet małe modele językowe, wspierane przez analizę topologii grafu, mogą osiągać wyniki porównywalne z LLM w zadaniach o wysokim poziomie ustrukturyzowania danych wejściowych i tam, gdzie kontekst można zakotwiczyć topologicznie w grafie, bez potrzeby głębokiego rozumowania lingwistycznego.
@@ -557,7 +551,7 @@ RAG jest innowacyjnym narzędziem, które pozwala na optymalizację odpowiedzi L
 
 Głównymi zaletami RAG jest dostarczanie bardziej trafnych odpowiedzi oraz możliwość rozszerzenia wiedzy zawartej w modelu o nowe informacje. Tradycyjne modele językowe są ograniczone do wiedzy zdobytej podczas treningu, co oznacza, że nie mogą dynamicznie reagować na nowe informacje pojawiające się po zakończeniu procesu treningowego. RAG rozwiązuje ten problem, łącząc generowanie tekstu z dynamicznym wyszukiwaniem informacji. Dzięki temu odpowiedzi generowane przez RAG są bardziej aktualne, precyzyjne i kontekstowe, co jest szczególnie istotne w szybko zmieniających się dziedzinach, takich jak medycyna, technologia czy finanse.
 
-W pracy „Retrieval-Augmented Generation for Large Language Models: A Survey” \cite{rag:survey} omówione zostały następujące wady oraz zalety pracy z RAG. Głównym pojawiającym się\linebreak problemem w architekturze jest skalowalność oraz integracja komponentów \textit{retrievera} \linebreak i \textit{generatora}. Proces ten wymaga precyzyjnego dostosowania obu komponentów, aby działały one harmonijnie i efektywnie.
+W pracy \textit{Retrieval-Augmented Generation for Large Language Models: A Survey} (2024) \cite{rag:survey} omówione zostały następujące wady oraz zalety pracy z RAG. Głównym pojawiającym się\linebreak problemem w architekturze jest skalowalność oraz integracja komponentów \textit{retrievera} \linebreak i \textit{generatora}. Proces ten wymaga precyzyjnego dostosowania obu komponentów, aby działały one harmonijnie i efektywnie.
 
 Następne wyzwanie pojawia się na etapie \textit{retrievalu}, gdzie mogą występować problemy z precyzją i podobieństwem wektorowym zapytania i kontekstu, co prowadzi do wyszukania niespójnych lub nieistotnych \textit{chunków} tekstu. 
 
@@ -671,7 +665,170 @@ gpt4 = ChatOpenAI(
 
 Na wybranym fragmencie kodu widać, jak zostały utworzone połączenia do modeli\linebreak GPT-4.1 i Llama 3.1. Ważny jest tutaj parametr \textit{temperature}, który to kontroluje losowość lub „kreatywność” wyników modelu i przyjmuje wartości z zakresu 0.0 do 1.0. Niższa temperatura skutkuje bardziej przewidywalnymi i ukierunkowanymi reakcjami, podczas gdy wyższa temperatura sprzyja bardziej zróżnicowanym i potencjalnie kreatywnym wynikom. Parametr ten został ustawiony na wartość 0, ponieważ w niniejszej pracy zależy nam, żeby model dokładnie wykonywał instrukcje i korzystał z wiedzy, którą dostarczamy w procesie \textit{augmentation}.
 
-\subsection{Rozwiązanie RAG [todo - przenieść pod grag]}
+\subsection{Rozwiązanie Graph RAG}
+% \textcolor{red}{\textit{? Opis ogólny dodać ? co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
+
+\subsubsection{Tworzenie grafu wiedzy}
+% \textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ? co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
+
+\subsubsubsection{Grafowa baza danych -- Neo4j}
+
+W pracy wykorzystujemy grafową bazę danych Neo4j, ponieważ zapewnia ona funkcjonalności niezbędne do realizacji podejścia Graph RAG. U podstaw baza ta przechowuje dane w postaci węzłów i krawędzi opisujących relacje pomiędzy elementami wiedzy. Umożliwia to tworzenie i eksplorowanie grafów wiedzy, które są znacznie lepiej dostosowane do reprezentowania powiązań semantycznych niż tradycyjne bazy relacyjne czy wektorowe.
+Podstawowa funkcjonalność Neo4j opiera się na zapytaniach w języku Cypher, który umożliwia wyszukiwanie informacji w kontekście relacji pomiędzy węzłami. 
+
+Podobnie jak opisana wcześniej baza Pinecone tak i ta baza oferuje wiele dodatkowych funkcjonalności takich jak skalowalność czy bezpieczeństwo danych i dostępu do nich. W tej pracy nie korzystamy z nich, lecz w komercyjnej realizacji projektu byłby niezwykle istotne. 
+
+
+\subsubsubsection{Implementacja ekstrakcji obiektów i relacji do grafu}
+
+Zbudowane rozwiązanie jest autorską implementacją, jendak należy zaznaczyć, iż inspirowana była metodą \textbf{AutoKG} \cite{kg:autoKG}, uprzednio przedstawianą w niniejszej pracy.
+
+Implementację zaczynamy od stworzenia połączenia do bazy Neo4j - obiekt \pythoninline{graph}.
+
+\begin{python}\\
+from langchain_neo4j import Neo4jGraph
+
+graph = Neo4jGraph(
+    url = "neo4j://host.docker.internal:7687",
+    database = "neo4j",
+    username = "neo4j",
+    password = "password",
+    refresh_schema = True,
+    sanitize = True,
+)
+\end{python}
+
+Następnie definiujemy jakie typy obiektów, ich właściwości oraz relacje między nimi będą dopuszczalne w naszej bazie.
+\begin{python}\\
+nodes = [
+    "Movie",
+    "Year",
+    "Genre",
+    "Director",
+    "Actor",
+]
+node_properties = [
+    "description",
+    "grossRevenue",
+    "name",
+    "numberOfRatingVotes",
+    "rating",
+    "runtimeInMinutes",
+]
+relationships = [
+    "ACTED_IN",
+    "DIRECTED_BY",
+    "IN_GENRE",
+    "RELEASED_IN",
+]
+\end{python}
+
+Z tymi definicjami możemy przystąpić do ekstrakcji danych tekstowych do grafu.
+
+\begin{python}
+from typing import List
+from langchain_experimental.graph_transformers import LLMGraphTransformer
+from langchain_community.graphs.graph_document import GraphDocument
+
+specific = "With given data focus on movie and connect other data to it. Every listed actor should be in seperate Actor node. Every listed genre should be in seperate Genre node. Properties add only to Movie nodes."
+
+GRAPH_EXTRACT_INSTRUCTIONS = f"Your goal is to identify and categorize entities while ensuring that specific data types such as dates, numbers, revenues, and other non-entity information are not extracted as separate nodes. Instead, treat these as properties associated with the relevant entities. {specific}"
+
+def llm_extract_graph(llm, document_list, graph:Neo4jGraph)-> List[GraphDocument]:
+    llm_transformer = LLMGraphTransformer(
+        llm = llm,
+        allowed_nodes = nodes,
+        node_properties = node_properties,
+        allowed_relationships = relationships,
+        ignore_tool_usage = True,
+        additional_instructions = GRAPH_EXTRACT_INSTRUCTIONS,
+    )
+    graph_document_list = llm_transformer.convert_to_graph_documents(
+        document_list,
+    )
+
+    # clean output
+    for graph_document in graph_document_list:
+    # Clean node id and types
+        cleaned_nodes = []
+        for node in graph_document.nodes:
+            if node.type.strip() and node.id.strip():
+                node.type = node.type.replace('`', '')
+                cleaned_nodes.append(node)
+        # Clean relationship
+        cleaned_relationships = []
+        for rel in graph_document.relationships:
+            if rel.type.strip() and rel.source.id.strip() and rel.source.type.strip() and rel.target.id.strip() and rel.target.type.strip():
+                rel.type = rel.type.replace('`', '')
+                rel.source.type = rel.source.type.replace('`', '')
+                rel.target.type = rel.target.type.replace('`', '')
+                cleaned_relationships.append(rel)
+        graph_document.relationships = cleaned_relationships
+        graph_document.nodes = cleaned_nodes
+        graph_document.source.page_content = None
+        
+    graph.add_graph_documents(graph_document_list, baseEntityLabel=False, include_source=False)
+    
+    pass
+
+\end{python}
+
+Funkcja \pythoninline{llm_extract_graph(...)} dla danej listy dokumentów używa LLM, by wyekstrahować obiekty i relacje wynikające z zawartości danych tekstowych. W tym celu tworzymy obiekt \pythoninline{LLMGraphTransformer}, który wewnątrz jest prostym LLM chain i na podstawie domyślnego promptu i podanych przez nas dodatkowych instrukcji oraz wcześniej opisanych dozwolonych obiektów, właściwości i relacji, poprzez wywołanie metody \linebreak\pythoninline{convert_to_graph_documents(...)} tworzy odpowiednie elementy (dokumenty grafowe) możliwe do zapisania w bazie. 
+
+W tym procesie może się zdarzyć, że wygenerowane nazwy obiektów czy relacji mogą zawierać dodatkowy znak ( \pythoninline{`} - odwrotny apostrof), dlatego dla każdego dokumentu grafowego usuwamy te znaki z nazw, jeśli występują. Dodatkowo z dokumentów grafowych usuwamy treść dokumentu źródłowego (\pythoninline{graph_document.source.page_content}), ponieważ w bazie Neo4j dane te chcemy mieć w postaci grafowej i nie potrzebujemy dodatkowo tekstu źródłowego.
+
+Finalnie zapisujemy wygenerowane przez LLM elementy grafowe do bazy Neo4j poprzez wywołanie 
+\pythoninline{graph.add_graph_documents(...)}.
+
+\subsubsection{Algorytm Graph RAG}
+% \textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ? co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
+
+\subsubsubsection{Implementacja Graph RAG}
+
+\begin{python}\\
+def process_graph_response(llm:ChatOpenAI, graph:Neo4jGraph, question:str, verbose:bool):
+    try:
+        graph_chain = GraphCypherQAChain.from_llm(
+            llm = llm,
+            qa_prompt = CYPHER_QA_PROMPT,
+            validate_cypher = True,
+            graph = graph,
+            verbose = verbose, 
+            allow_dangerous_requests = True,
+            return_intermediate_steps = True,
+            top_k = 100,
+        )
+        
+        cypher_res = graph_chain.invoke({"query": question})
+        
+        response = cypher_res.get("result")
+        cypher_query = ""
+        context = []
+
+        for step in cypher_res.get("intermediate_steps", []):
+            if "query" in step:
+                cypher_string = step["query"]
+                cypher_query = cypher_string.replace("cypher\n", "").replace("\n", " ").strip() 
+            elif "context" in step:
+                context = step["context"]
+        
+        return {
+            "message": response,
+            "info": {
+                "cypher_query": cypher_query,
+                "context": context,
+            },
+        }
+    
+    except Exception as e:
+        print(f"Error processing graph response: {str(e)}")
+\end{python}
+
+Graph RAG realizuje przedstawiona funkcja \pythoninline{process_graph_response(...)}, dostarczamy jej model -- \pythoninline{llm}, który na podstawie informacji w grafowej bazie danych -- \pythoninline{graph}, ma udzielić odpowiedzi na zadane pytanie -- \pythoninline{question}. Pierwszym i najważniejszym elementem funkcji jest stworzenie obiektu \pythoninline{GraphCypherQAChain}, który to jest algorytmem informującym LLM, jaki jest schemat bazy grafowej tj. jakie są dostępne obiekty, właściwości i relacje, oraz
+instruującym jak zbudować zapytanie w języku Cypher, i również weryfikującym jego poprawność składniową. Etap ten sprawdza czy zapytanie jest poprawnie skonstruowane pod względem uruchomienia, natomiast nie ma niestety pewności czy stworzone zapytanie jest poprawne merytorycznie, czyli czy informacje, o które zapyta LLM będą tymi oczekiwanymi przez użytkownika.
+
+
+\subsection{Rozwiązanie RAG -- metody dla porównania wyników z Graph RAG}
 % \textcolor{red}{\textit{? Opis ogólny dodać ? co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
 
 \subsubsection{Wektoryzowanie danych tekstowych}
@@ -1051,167 +1208,6 @@ Rozszerzona wersja - RAG v2 - od podstawowej różni się tylko w początkowej f
 \text{\fontfamily{pcr}\selectfont\color{red} \#!-----------}.
 W tej wersji przed stworzeniem retrievera, dodajemy chain z zapytaniem do LLM, czy dla danego pytania użytkownika można utworzyć dodatkowe zapytanie filtrujące po metadanych zapisanych w bazie Pinecone razem z embeddingami. W promptcie do LLM podajemy modelowi informacje o tym jakie metadane są dostępne (nazwa i typ wartości), oraz instrukcje na podstawie dokumentacji z Pinecone \cite{pinecone:metatdata} jak stworzyć takie zapytanie filtrujące. 
 
-\subsection{Rozwiązanie Graph RAG}
-% \textcolor{red}{\textit{? Opis ogólny dodać ? co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
-
-\subsubsection{Tworzenie grafu wiedzy}
-% \textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ? co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
-
-\subsubsubsection{Grafowa baza danych -- Neo4j}
-
-W pracy wykorzystujemy grafową bazę danych Neo4j, ponieważ zapewnia ona funkcjonalności niezbędne do realizacji podejścia Graph RAG. U podstaw baza ta przechowuje dane w postaci węzłów i krawędzi opisujących relacje pomiędzy elementami wiedzy. Umożliwia to tworzenie i eksplorowanie grafów wiedzy, które są znacznie lepiej dostosowane do reprezentowania powiązań semantycznych niż tradycyjne bazy relacyjne czy wektorowe.
-Podstawowa funkcjonalność Neo4j opiera się na zapytaniach w języku Cypher, który umożliwia wyszukiwanie informacji w kontekście relacji pomiędzy węzłami. 
-
-Podobnie jak opisana wcześniej baza Pinecone tak i ta baza oferuje wiele dodatkowych funkcjonalności takich jak skalowalność czy bezpieczeństwo danych i dostępu do nich. W tej pracy nie korzystamy z nich, lecz w komercyjnej realizacji projektu byłby niezwykle istotne. 
-
-
-\subsubsubsection{Implementacja ekstrakcji obiektów i relacji do grafu}
-
-Zbudowane rozwiązanie jest autorską implementacją, jendak należy zaznaczyć, iż inspirowana była metodą \textbf{AutoKG} \cite{kg:autoKG}, uprzednio przedstawianą w niniejszej pracy.
-
-Implementację zaczynamy od stworzenia połączenia do bazy Neo4j - obiekt \pythoninline{graph}.
-
-\begin{python}\\
-from langchain_neo4j import Neo4jGraph
-
-graph = Neo4jGraph(
-    url = "neo4j://host.docker.internal:7687",
-    database = "neo4j",
-    username = "neo4j",
-    password = "password",
-    refresh_schema = True,
-    sanitize = True,
-)
-\end{python}
-
-Następnie definiujemy jakie typy obiektów, ich właściwości oraz relacje między nimi będą dopuszczalne w naszej bazie.
-\begin{python}\\
-nodes = [
-    "Movie",
-    "Year",
-    "Genre",
-    "Director",
-    "Actor",
-]
-node_properties = [
-    "description",
-    "grossRevenue",
-    "name",
-    "numberOfRatingVotes",
-    "rating",
-    "runtimeInMinutes",
-]
-relationships = [
-    "ACTED_IN",
-    "DIRECTED_BY",
-    "IN_GENRE",
-    "RELEASED_IN",
-]
-\end{python}
-
-Z tymi definicjami możemy przystąpić do ekstrakcji danych tekstowych do grafu.
-
-\begin{python}
-from typing import List
-from langchain_experimental.graph_transformers import LLMGraphTransformer
-from langchain_community.graphs.graph_document import GraphDocument
-
-specific = "With given data focus on movie and connect other data to it. Every listed actor should be in seperate Actor node. Every listed genre should be in seperate Genre node. Properties add only to Movie nodes."
-
-GRAPH_EXTRACT_INSTRUCTIONS = f"Your goal is to identify and categorize entities while ensuring that specific data types such as dates, numbers, revenues, and other non-entity information are not extracted as separate nodes. Instead, treat these as properties associated with the relevant entities. {specific}"
-
-def llm_extract_graph(llm, document_list, graph:Neo4jGraph)-> List[GraphDocument]:
-    llm_transformer = LLMGraphTransformer(
-        llm = llm,
-        allowed_nodes = nodes,
-        node_properties = node_properties,
-        allowed_relationships = relationships,
-        ignore_tool_usage = True,
-        additional_instructions = GRAPH_EXTRACT_INSTRUCTIONS,
-    )
-    graph_document_list = llm_transformer.convert_to_graph_documents(
-        document_list,
-    )
-
-    # clean output
-    for graph_document in graph_document_list:
-    # Clean node id and types
-        cleaned_nodes = []
-        for node in graph_document.nodes:
-            if node.type.strip() and node.id.strip():
-                node.type = node.type.replace('`', '')
-                cleaned_nodes.append(node)
-        # Clean relationship
-        cleaned_relationships = []
-        for rel in graph_document.relationships:
-            if rel.type.strip() and rel.source.id.strip() and rel.source.type.strip() and rel.target.id.strip() and rel.target.type.strip():
-                rel.type = rel.type.replace('`', '')
-                rel.source.type = rel.source.type.replace('`', '')
-                rel.target.type = rel.target.type.replace('`', '')
-                cleaned_relationships.append(rel)
-        graph_document.relationships = cleaned_relationships
-        graph_document.nodes = cleaned_nodes
-        graph_document.source.page_content = None
-        
-    graph.add_graph_documents(graph_document_list, baseEntityLabel=False, include_source=False)
-    
-    pass
-
-\end{python}
-
-Funkcja \pythoninline{llm_extract_graph(...)} dla danej listy dokumentów używa LLM, by wyekstrahować obiekty i relacje wynikające z zawartości danych tekstowych. W tym celu tworzymy obiekt \pythoninline{LLMGraphTransformer}, który wewnątrz jest prostym LLM chain i na podstawie domyślnego promptu i podanych przez nas dodatkowych instrukcji oraz wcześniej opisanych dozwolonych obiektów, właściwości i relacji, poprzez wywołanie metody \linebreak\pythoninline{convert_to_graph_documents(...)} tworzy odpowiednie elementy (dokumenty grafowe) możliwe do zapisania w bazie. 
-
-W tym procesie może się zdarzyć, że wygenerowane nazwy obiektów czy relacji mogą zawierać dodatkowy znak ( \pythoninline{`} - odwrotny apostrof), dlatego dla każdego dokumentu grafowego usuwamy te znaki z nazw, jeśli występują. Dodatkowo z dokumentów grafowych usuwamy treść dokumentu źródłowego (\pythoninline{graph_document.source.page_content}), ponieważ w bazie Neo4j dane te chcemy mieć w postaci grafowej i nie potrzebujemy dodatkowo tekstu źródłowego.
-
-Finalnie zapisujemy wygenerowane przez LLM elementy grafowe do bazy Neo4j poprzez wywołanie 
-\pythoninline{graph.add_graph_documents(...)}.
-
-\subsubsection{Algorytm Graph RAG}
-% \textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ? co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
-
-\subsubsubsection{Implementacja Graph RAG}
-
-\begin{python}\\
-def process_graph_response(llm:ChatOpenAI, graph:Neo4jGraph, question:str, verbose:bool):
-    try:
-        graph_chain = GraphCypherQAChain.from_llm(
-            llm = llm,
-            qa_prompt = CYPHER_QA_PROMPT,
-            validate_cypher = True,
-            graph = graph,
-            verbose = verbose, 
-            allow_dangerous_requests = True,
-            return_intermediate_steps = True,
-            top_k = 100,
-        )
-        
-        cypher_res = graph_chain.invoke({"query": question})
-        
-        response = cypher_res.get("result")
-        cypher_query = ""
-        context = []
-
-        for step in cypher_res.get("intermediate_steps", []):
-            if "query" in step:
-                cypher_string = step["query"]
-                cypher_query = cypher_string.replace("cypher\n", "").replace("\n", " ").strip() 
-            elif "context" in step:
-                context = step["context"]
-        
-        return {
-            "message": response,
-            "info": {
-                "cypher_query": cypher_query,
-                "context": context,
-            },
-        }
-    
-    except Exception as e:
-        print(f"Error processing graph response: {str(e)}")
-\end{python}
-
-Graph RAG realizuje przedstawiona funkcja \pythoninline{process_graph_response(...)}, dostarczamy jej model -- \pythoninline{llm}, który na podstawie informacji w grafowej bazie danych -- \pythoninline{graph}, ma udzielić odpowiedzi na zadane pytanie -- \pythoninline{question}. Pierwszym i najważniejszym elementem funkcji jest stworzenie obiektu \pythoninline{GraphCypherQAChain}, który to jest algorytmem informującym LLM, jaki jest schemat bazy grafowej tj. jakie są dostępne obiekty, właściwości i relacje, oraz
-instruującym jak zbudować zapytanie w języku Cypher, i również weryfikującym jego poprawność składniową. Etap ten sprawdza czy zapytanie jest poprawnie skonstruowane pod względem uruchomienia, natomiast nie ma niestety pewności czy stworzone zapytanie jest poprawne merytorycznie, czyli czy informacje, o które zapyta LLM będą tymi oczekiwanymi przez użytkownika.
 
 \subsection{Wnioski i analiza wyników}
 
