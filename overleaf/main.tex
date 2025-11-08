@@ -1227,7 +1227,9 @@ W niniejszej pracy proponujemy 3 ewaluacje wyników:
         \item \pythoninline{ 1 } -- odpowiedź o znaczeniu semantycznie identycznym.
     \end{itemize}
     
-    \item ewaluacja z użyciem OpenAI GPT-4.1 -- porównania dokonuje model LLM, a więc znów jest to proces zautomatyzowany, jednak w tym przypadku poprzez odpowiedni prompt instruujemy LLM, aby zliczył wszystkie fakty obecne w odpowiedzi poprawnej i sprawdził ile z nich znajduje się w odpowiedzi wygenerowanej, tym samym badając procent poprawności odpowiedzi (wartości z przedziału 0-100\%). Na przykładzie poprawnej odpowiedzi zawierającej 10 faktów, jeśli metoda:
+    \item ewaluacja z użyciem OpenAI GPT-4.1 -- porównania dokonuje model LLM, a więc znów jest to proces zautomatyzowany, jednak w tym przypadku poprzez odpowiedni prompt instruujemy LLM, aby zliczył wszystkie fakty obecne w odpowiedzi poprawnej i sprawdził ile z nich znajduje się w odpowiedzi wygenerowanej, tym samym badając procent poprawności odpowiedzi (wartości z przedziału 0-100\%). W takiej metodzie sprawdzenia tych odpowiedzi staramy się wychwycić fakty, czy odpowiedź dostarcza wiedzy której oczekiwaliśmy, a pomijamy samą semantykę i formę budowania zdań w odpowiedzi modelu \cite{gptEval}.
+    % [https://arxiv.org/abs/2510.19181 - 4.1 LLM-as-a-Judge Evaluation - \cite{gptEval} mimo że to był mój oryginalny pomysł]
+    Na przykładzie poprawnej odpowiedzi zawierającej 10 faktów, jeśli metoda:
     \begin{itemize}
         \item nie poda żadnego faktu to wynik wygląda następująco: 0/10 = 0\%,
         \item poda 2 fakty poprawnie to wynik wygląda następująco: 2/10 = 20\%,
@@ -1237,13 +1239,53 @@ W niniejszej pracy proponujemy 3 ewaluacje wyników:
     \item ewaluacja przeprowadzona przez człowieka -- ręcznego porównania dokonuje człowiek, analogicznie jak w sposobie z użyciem modelu LLM, oceniamy fakty w wygenerowanej odpowiedzi i wynikiem również są wartości z zakresu 0-100\%, z tym że korzystając z większych możliwości niż LLM, odpowiedzi niepasujące do oczekiwanej sprawdzamy w danych źródłowych, bo być może istnieje więcej niż jedan poprawna odpowiedź.
 \end{itemize}
 
+\subsubsection{Opis grup pytań}
 
-Dodatkowo każdą odpowiedź można porównać do oczekiwanej wysyłając obie w zapytaniu do LLM, z instrukcją by ocenił czy odpowiedź zawiera oczekiwane informacje. W takiej metodzie sprawdzenia tych odpowiedzi staramy się wychwycić fakty, czy odpowiedź dostarcza wiedzy której oczekiwaliśmy, a pomijamy samą semantykę i formę budowania zdań w odpowiedzi modelu. [https://arxiv.org/pdf/2510.19181 - 4.1 LLM-as-a-Judge Evaluation - mozna docytować mimo że to był mój oryginalny pomysł]
+Pytania zostały skategoryzowane i podzielone na grupy. Grupy te zostaną opisane niżej z przykładami.
+\begin{itemize}
+    \item Pytania skoncentrowane na aktorach (ang. Actor Focused Questions) -- 
+    
+    \item Pytania agregacyjne (ang. Aggregation Questions) -- 
+    
+    \item Podstawowe pytania o fakty (ang. Basic Factual Questions) -- 
+    
+    \item Pytania trudne/przypadki skrajne (ang. Challenging/Edge Case Questions) -- 
+    
+    \item Pytania porównawcze (ang. Comparative Questions) -- 
+    
+    \item Filtrowanie krzyżowe atrybutów (ang. Cross Attribute Filtering) -- 
+    
+    \item Pytania skoncentrowane na reżyserze (ang. Director Focused Questions) -- 
+    
+    \item Eksploracyjne lub interaktywne (ang. Exploratory or Interactive) -- 
+    
+    \item Forma swobodna/język naturalny (ang. Free Form/Natural Language Style) -- 
+    
+    \item Pytania specyficzne dla gatunku (ang. Genre Specific Questions) -- 
+    
+    \item Pytania wieloskokowe (ang. Multi Hop Questions) -- 
+    
+    \item Otwarte pytania analityczne (ang. Open Ended Analytical Questions) -- 
+    
+    \item Pytania dotyczące zakresu i filtrowania (ang. Range \& Filtering Questions) -- 
+    
+    \item Pytania dotyczące rozumowania (ang. Reasoning Questions) -- 
+    
+    \item Przychody i głosy (ang. Revenue \& Votes) -- 
+    
+    \item Statystyki i podsumowania (ang. Statistics and Summarization) -- 
+    
+    \item Pytania o stopniu najwyższym (ang. Superlative Questions) -- 
+    
+    \item Zapytania ukierunkowane z ograniczeniami (ang. Targeted Queries with Constraints) -- 
+    
+    \item Pytania oparte na czasie (ang. Time Based Questions) -- 
+\end{itemize}
 
-\subsubsection{Porównanie i analiza wyników Graph RAG z RAG v1 i RAG v2}
+%! \subsubsection{Porównanie i analiza wyników Graph RAG z RAG v1 i RAG v2}
 
 \subsubsection{Analiza wyników poprzez \textit{embeddings similarity}}
-% \subsubsubsection{Analiza wyników poprzez \textit{embeddings similarity}}
+%! \subsubsubsection{Analiza wyników poprzez \textit{embeddings similarity}}
 
 Zgodnie z oczekiwaniami Graph RAG znacznie częściej uzyskuje wynik podobieństwa do oczekiwanej odpowiedzi wyższy niż RAG v1 i RAG v2 razem, co prezentuje tabela \ref{tab:1}.
 
@@ -1308,16 +1350,30 @@ W celu sprawdzenia tej hipotezy opracowujemy przedstawiony na rysunku \ref{fig:b
 Największą skośność można zaobserwować w Graph RAG. Metoda ta ma odpowiedzi z największą zgodnością, jednocześnie kilka odpowiedzi miało znaczące gorsze odpowiedzi od pozostałych. Pozwala to wyciągnąć wnioski ....... \\
 \textcolor{red}{\textit{TODO: dokończyć ...}}
 
-
-
+analiza dla grup pytań popraz \textit{embedding similarity}
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{images/fig/similarity_eval.png}
+\vspace*{-8mm}
+\caption{Ewaluacja wyników RAG v1, RAG v2, Graph RAG dla grup pytań popraz \textit{embedding similarity}.}
+\label{fig:similarity_eval}
+\end{figure}
 
 
 
 
 \subsubsection{Analiza z użyciem LLM}
-% \subsubsubsection{Analiza z użyciem LLM}
+%! \subsubsubsection{Analiza z użyciem LLM}
 Automatyczne analiza poprawności odpowiedzi przeprowadzona przez OpenAI GPT-4.1.\\
 \textcolor{red}{\textit{TODO: napisać ...}}
+
+analiza dla grup pytań z użyciem OpenAI GPT-4.1
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{images/fig/gpt_eval.png}
+\vspace*{-8mm}
+\caption{Ewaluacja wyników RAG v1, RAG v2, Graph RAG dla grup pytań z użyciem OpenAI GPT-4.1.}
+\label{fig:gpt_eval}
+\end{figure}
+
 
 
 
@@ -1326,10 +1382,17 @@ Automatyczne analiza poprawności odpowiedzi przeprowadzona przez OpenAI GPT-4.1
 
 
 \subsubsection{Analiza przeprowadzona przez człowieka}
-% \subsubsubsection{Analiza przeprowadzona przez człowieka}
+%! \subsubsubsection{Analiza przeprowadzona przez człowieka}
 Ręczna analiza poprawności odpowiedzi przeprowadzona przez człowieka.\\
 \textcolor{red}{\textit{TODO: napisać ...}}
 
+analiza dla grup pytań przeprowadzona przez człowieka
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{images/fig/human_eval.png}
+\vspace*{-8mm}
+\caption{Ewaluacja wyników RAG v1, RAG v2, Graph RAG dla grup pytań przeprowadzona przez człowieka.}
+\label{fig:human_eval}
+\end{figure}
 
 
 
@@ -1344,10 +1407,11 @@ Ręczna analiza poprawności odpowiedzi przeprowadzona przez człowieka.\\
 \subsubsection{Analiza zalet i wad obu podejść}
 \textcolor{red}{\textit{TODO: napisać ...}}
 
-% \subsubsection{?Dyskusja na temat wyników i ich znaczenia}
-
 \section{Podsumowanie}
 \textcolor{red}{\textit{TODO: napisać ...}}
+
+%  tabela z excela do LaTeX: https://tex.stackexchange.com/questions/609475/how-to-add-excel-tables-with-colors-into-overleaf; https://www.ctan.org/tex-archive/support/excel2latex;
+%  być może z kolorami 
 
 %%% tabela wzorcowa begin
 % \begin{table}[H]
