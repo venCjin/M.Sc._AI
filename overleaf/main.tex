@@ -242,22 +242,29 @@ Grafy wiedzy i wielkie modele językowe to dwa fundamentalnie różne podejścia
 
 \section{Część teoretyczna}
 
-\subsection{Grafy wiedzy -- KG}
+\subsection{Grafy wiedzy}
 
-\textbf{Grafy wiedzy} (ang. knowledge graph, KG) stanowią jedną z kluczowych struktur umożliwiających reprezentację i organizację informacji w sposób zrozumiały dla maszyn. Umożliwiają one modelowanie powiązań pomiędzy pojęciami, obiektami i faktami, co czyni je istotnym narzędziem w zadaniach związanych z przetwarzaniem wiedzy, wnioskowaniem i wyszukiwaniem informacji. W ostatnich latach ich znaczenie wzrosło szczególnie w kontekście integracji z dużymi modelami językowymi.
+\textbf{Grafy wiedzy} (ang. knowledge graph, KG) stanowią jedną z kluczowych struktur umożliwiających reprezentację i organizację informacji w sposób zrozumiały dla maszyn. Umożliwiają one modelowanie powiązań pomiędzy pojęciami, obiektami i faktami, co czyni je istotnym narzędziem w zadaniach związanych z przetwarzaniem wiedzy, wnioskowaniem i wyszukiwaniem informacji \cite{kg:def}.
 
-\textbf{Graf wiedzy} przechowują wiedzę w ustrukturyzowanych trójkach $$KG = \{(h, r, t) \subseteq E \times R \times E\} $$ gdzie $E$ to zbiór elementów - bytów, $R$ to zbiór relacji. Graf wiedzy w postaci graficznej, który reprezentuje wiedzę w postaci bytów i relacji między nimi, może zawierać ontologie, która pozwala zarówno ludziom, jak i maszyną zrozumieć oraz wnioskować na podstawie wiedzy zawartej w grafie. 
+\textbf{Grafy wiedzy} przechowują ustrukturyzowaną wiedzę w postaci zbioru trójek $$KG = \{(h, r, t) \subseteq E \times R \times E\} $$ gdzie $E$ to zbiór elementów - bytów, $R$ to zbiór relacji \cite{graph:llm:roadmap}. Grafy mogą być zarówno zbudowane bez konkretnego schematu, gdzie typy encji czy relacji nie są ograniczone do pewnego zbioru \cite{kg:ontofree}, jak i przy pomocy ontologii, czyli właśnie schematu, który definiuje np. jakie klasy encji są dozwolone w grafie \cite{kg:yago} i tak mając zdefiniowaną klasę Państwo, możemy zakodować takie encje jak Polska, Czechy, a jednocześnie jeśli w ontologii nie będzie zdefiniowana klasa Miasto to nie będziemy zapisywać w grafie takich encji jak Warszawa czy Praga. Struktura taka może więc ograniczać informacje, które można zapisać w grafie, szczególnie gdy ontologia jest niekompletna, natomiast jej wielką zaletą jest umożliwienie zarówno ludziom jak i maszynom, wnioskowania na podstawie wiedzy zawartej w grafie \cite{kg:yago}.
 
-Rozróżniamy następujące typy grafów:
+\textbf{\textit{ todo: 1. dodać zdjecia i przykłady grafów wiedzy dla kazdego punktu moze}}
+
+Grafy wiedzy można podzielić na cztery grupy na podstawie przechowywanych w nich informacji \cite{graph:llm:roadmap}:
 \begin{itemize}
-    \item \textbf{Encyklopedyczne grafy wiedzy} (ang. Encyclopedic Knowledge Graphs) - najbardziej popularny typ grafów wiedzy, który reprezentuje ogólną wiedzę w świecie rzeczywistym. Encyklopedyczne wykresy wiedzy są często konstruowane przez integrowanie informacji pochodzących z różnorodnych i rozbudowanych źródeł, w tym ekspertów, encyklopedie i bazy danych. Przykładem jest \textbf{Yet Another Great \href{https://en.wikipedia.org/wiki/Ontology_(information_science)}{Ontology}} (YAGO), czyli obszerna baza wiedzy zawierająca ogólną wiedzę o ludziach, miastach, krajach, filmach i organizacjach \cite{yago}.
+    \item \textbf{Encyklopedyczne grafy wiedzy} (ang. Encyclopedic Knowledge Graphs) - najbardziej popularny typ grafów wiedzy, który reprezentuje ogólną wiedzę w świecie rzeczywistym. Encyklopedyczne grafy wiedzy są często konstruowane przez integrowanie informacji pochodzących z różnorodnych i rozbudowanych źródeł, w tym ekspertów, encyklopedii i baz danych. Wikidata to jeden z najczęściej używanych grafów wiedzy encyklopedycznej, który zawiera różnorodne informacje wyodrębnione z artykułów Wikipedii \cite{kg:wikidata}. Za inny przykład może posłużyć \textbf{Yet Another Great \href{https://en.wikipedia.org/wiki/Ontology_(information_science)}{Ontology}} (YAGO), czyli obszerny zbiór trójek kodujących ogólną wiedzę o ludziach, miastach, krajach, filmach i organizacjach, również bazująca na danych z Wikipedii \cite{kg:yago}.
     
-    \item \textbf{Zdroworozsądkowe grafy wiedzy} (ang. Commonsense Knowledge Graphs) -- opisują relacje między pojęciami w sposób odzwierciedlający ludzką intuicję i codzienne doświadczenia, co pozwala maszynom lepiej rozumieć znaczenie kontekstowe. Za przykład może posłużyć \textbf{ConceptNet} \cite{kg:conceptnet}, czyli ogólnodostępna sieć semantyczna, zaprojektowana, aby pomóc komputerom zrozumieć znaczenie słów, których używają ludzie, czy też \textbf{ATOMIC} \cite{kg:ATOMIC} -- również ogólnodostępny zbiór milionów trójek skoncentrowany na przyczynowo-skutkowych relacjach między zdarzeniami, stworzony aby umożliwić modelom rozumienie intencji, emocji i skutków działań ludzi.
+    \item \textbf{Zdroworozsądkowe grafy wiedzy} (ang. Commonsense Knowledge Graphs) -- opisują relacje między pojęciami w sposób odzwierciedlający ludzką intuicję i codzienne doświadczenia, co pozwala maszynom lepiej rozumieć znaczenie kontekstowe. Za przykład może posłużyć \textbf{ConceptNet} \cite{kg:conceptnet}, czyli ogólnodostępna graf wiedzy, zaprojektowany, aby pomóc komputerom zrozumieć znaczenie słów, których używają ludzie, czy też \textbf{ATOMIC} \cite{kg:ATOMIC} -- również ogólnodostępny zbiór milionów trójek skoncentrowany na przyczynowo-skutkowych relacjach między zdarzeniami, stworzony aby umożliwić modelom językowym przetwarzanie intencji, emocji i skutków działań ludzi.
     
     \item \textbf{Domenowe grafy wiedzy} (ang. Domain-specific Knowledge Graphs) -- stworzone aby opisywać wiedzę oraz zależności z danej dziedziny np. biologi czy finansów. Domenowe grafy wiedzy są mniejsze i dokładniejsze od grafów encyklopedycznych. Dla na przykład \textbf{Unified Medical Language System (UMLS)} jest grafem wiedzy specyficznej dla domeny w dziedzinie medycyny, która zawiera koncepcje biomedyczne i ich relacje \cite{umls}. 
     
-    \item \textbf{Multi-modalne grafy wiedzy} (ang. Multi-modal Knowledge Graphs) -- W przeciwieństwie do konwencjonalnych wykresów wiedzy, które zawierają tylko informacje tekstowe, multimodalne wykresy wiedzy przedstawiają fakty w wielu modalnościach, takich jak obrazy, dźwięki i filmy. Wiedza zawarta w multi-modalnych grafach może być wykorzystywana do różnych zadań multi-modalnych, takich jak dopasowanie obrazu do tekstu. Przykładem może być \textbf{IMGpedia} czyli połączony zbiór danych, który zawiera informacje wizualne o obrazach ze zbioru danych Wikimedia \cite{IMGpedia}. 
+    \item \textbf{Multi-modalne grafy wiedzy} (ang. Multi-modal Knowledge Graphs) -- W przeciwieństwie do konwencjonalnych grafy wiedzy, które zawierają tylko informacje tekstowe, multi-modalne grafy wiedzy przedstawiają fakty w postaci różnych mediów, takich jak obrazy, dźwięki i filmy. Wiedza zawarta w multi-modalnych grafach może być wykorzystywana do różnych zadań multi-modalnych, takich jak dopasowanie obrazu do tekstu. Przykładem może być \textbf{IMGpedia} czyli połączony zbiór danych, który zawiera informacje wizualne o obrazach ze zbioru danych Wikimedia \cite{IMGpedia}. 
 \end{itemize}
+
+todo:
+2. W jakich dziedzinach mają zastosowanie grafy?
+3. Do zapisu jakiej wiedzy najbardziej sie nadaja?
+4. przyklady zastosowan: google kg | istniejace kg - jak sa wykorzystywane?
 
 Grafy wiedzy są jednym z najskuteczniejszych sposobów reprezentacji informacji w postaci powiązanych ze sobą faktów. Ich główną zaletą jest strukturalność i przejrzystość -- dane są przedstawiane w postaci wierzchołków (bytów) i krawędzi (relacji), co umożliwia intuicyjne modelowanie złożonych zależności między pojęciami. Dzięki temu możliwe jest wnioskowanie semantyczne, czyli odkrywanie nowych relacji na podstawie już istniejących powiązań. Grafy wiedzy cechują się także wysoką interpretowalnością, co oznacza, że procesy oparte na nich są bardziej zrozumiałe dla człowieka niż w przypadku modeli czysto statystycznych. Dodatkowo, w połączeniu z ontologiami i językami semantycznymi (np. RDF, OWL), grafy wiedzy umożliwiają integrowanie informacji z różnych źródeł i zapewniają spójność znaczeniową danych \cite{graph:llm:roadmap}.
 
@@ -265,9 +272,11 @@ Grafy wiedzy mają również pewne istotne ograniczenia. Jednym z głównych pro
 
 \subsection{Wielkie modele językowe -- LLM}
 
+TODO: 5. struktura powinna byc podobna do kg (dodac wady zalety i co jeszcze?)
+
 \subsubsection{Definicja i ewolucja wielkich modeli językowych (LLM)}
 
-Wielkie modele językowe (ang. large language model, LLM) to zaawansowane modele przetwarzania języka naturalnego, które zostały wytrenowane na ogromnych korpusach tekstów, umożliwiając im rozumienie, generowanie i tłumaczenie języka naturalnego. Rozumienie ludzkiej mowy przez lata było jedną z fundamentalnych umiejętności z którą kojarzyła nam się sztuczna inteligencja. Pierwsze rozwiązania rozumienia ludzkiej mowy były oparte na słowach kluczach - model Eliza, który symulował rozmowę z psychologiem \cite{elize}. 
+Wielkie modele językowe (ang. large language model, LLM) to zaawansowane modele przetwarzania języka naturalnego, które zostały wytrenowane na ogromnych korpusach tekstów, umożliwiając im generowanie i tłumaczenie języka naturalnego. Rozumienie ludzkiej mowy przez lata było jedną z fundamentalnych umiejętności, z którą kojarzyła nam się sztuczna inteligencja. Pierwsze rozwiązania przetwarzania ludzkiej mowy były oparte na słowach kluczach, np. model Eliza, który symulował rozmowę z psychologiem \cite{elize}. 
 
 Kolejne rozwiązania bazowały na łańcuchach Markowa, które są ciągiem zdarzeń, gdzie prawdopodobieństwo każdego zdarzenia zależy jedynie od poprzedniego \cite{lancuchy_markowa}. Łańcuchy Markowa były używane do generowania tekstu na podstawie danych treningowych. Modele te miały kontekst ograniczony do kilku poprzednich słów, wymagały dużych mocy obliczeniowych, nie bazowały na znaczeniu słów, a na sekwencjach. Wraz z postępem techniki i nauki modele bazujące na łańcuchach Markowa zostały zastąpione modelami opartymi np. na sieciach neuronowych. Kolejnymi ważnymi modelami były n-gramy, czyli modele językowe rozpoznające mowę. Bazowały one na zliczeniu wystąpień pojedynczego słowa (model 1-gramowy), dwójek (2-gramy) lub trójek (3-gramy) etc. Po przeanalizowaniu odpowiednio dużej ilości tekstu zamienia się liczbę wystąpień na prawdopodobieństwa poprzez normalizację. Pozwala to na przewidywanie kolejnego słowa na podstawie sekwencji poprzednich. Modele te były proste i skalowalne \cite{n_gram}. 
 
@@ -315,6 +324,9 @@ Sukces wielkich modeli językowych możliwy jest przez zdolność do uogólniani
 
 \subsubsection{LLM Chains: koncepcja i przykłady zastosowania}
 
+TODO: 6. to wywalić moze do pracktycznego
+
+
 Mimo, że rozwój modeli językowych pozwolił na wykorzystanie ich do skomplikowanych zadań, nadal problem stanowi zachowanie kontekstu w długich tekstach. Rozwiązaniem tego problemu jest zastosowanie LLM Chain, czyli koncepcji, która realizuje złożone zadania przez podział na mniejsze etapy. Każdy z etapów obsługiwany jest przez odpowiednio przystosowany LLM. To podejście pozwala na zwiększenie precyzji i skuteczności przetwarzania złożonych zapytań \cite{llm_chains}.
 
 LLM Chain może mieć różną postać, w dużej mierze zależną od zastosowania. Jedną z najprostszych technik jest \textbf{Stuffing Chain}, polegający na dwóch krokach:
@@ -348,7 +360,7 @@ W powyższym omówiliśmy tylko najbardziej klasyczne typy LLM Chains. Poszczeg�
 Koncepcja LLM chains jest nie tylko potężnym narzędziem w kontekście przetwarzania języka naturalnego, ale także elastycznym podejściem, które może być dostosowane do różnych dziedzin i zastosowań. Dzięki możliwości segmentacji złożonych zadań na mniejsze, wyspecjalizowane etapy, LLM chains umożliwiają bardziej efektywne i precyzyjne przetwarzanie danych, co otwiera nowe możliwości dla zaawansowanych aplikacji w różnych sektorach.
 
 \subsection{Metody połączenia KG i LLM}
-Integracja wielkich modeli językowych (LLM) z grafami wiedzy (KG) stanowi obecnie jedno z najbardziej obiecujących podejść w dziedzinie sztucznej inteligencji. LLM oferują zdolność do rozumienia i generowania języka naturalnego, natomiast KG zapewniają strukturalną, precyzyjną i interpretowalną reprezentację wiedzy. W niniejszym rozdziale przedstawiono metaanalizę wybranych metod łączenia tych dwóch technologii (zaproponowanych w pracy \textit{Unifying Large Language Models and Knowledge Graphs: A Roadmap} (2024) \cite{graph:llm:roadmap}).
+Integracja wielkich modeli językowych (LLM) z grafami wiedzy (KG) stanowi obecnie jedno z najbardziej obiecujących podejść w dziedzinie sztucznej inteligencji. LLM oferują zdolność do przetwarzania języka naturalnego, natomiast KG zapewniają strukturalną, precyzyjną i interpretowalną reprezentację wiedzy. W niniejszym rozdziale przedstawiono metaanalizę wybranych metod łączenia tych dwóch technologii (zaproponowanych w pracy \textit{Unifying Large Language Models and Knowledge Graphs: A Roadmap} (2024) \cite{graph:llm:roadmap}).
 
 \subsubsection{Tworzenie KG przy pomocy LLM (LLM-augmented KG construction)} % (5.3)
 
@@ -1242,50 +1254,99 @@ W niniejszej pracy proponujemy 3 ewaluacje wyników:
 \subsubsection{Opis grup pytań}
 
 Pytania zostały skategoryzowane i podzielone na grupy. Grupy te zostaną opisane niżej z przykładami.
+
 \begin{itemize}
-    \item Pytania skoncentrowane na aktorach (ang. Actor Focused Questions) -- 
+\item     Podstawowe pytania o fakty (ang. Basic Factual Questions) -- Pytania o pojedynczy, konkretny fakt lub wartość. Testują ekstrakcje pojedynczego faktu z kontekstu. 
+Przykład pytania: 
+\textit{What is the runtime of *Inception*?}
+
+\item     Pytania porównawcze (ang. Comparative Questions) -- Pytania wymagające porównania dwóch lub więcej obiektów według jednej cechy.  Ten typ pytań sprawdza zdolność do pobrania wielu rekordów i porównania ich wartości numerycznych lub opisowych.
+Przykład pytania: 
+\textit{Which movie has a higher rating: *Interstellar* or *Gravity*?}
+
+\item  Pytania dotyczące zakresu i filtrowania (ang. Range \& Filtering Questions) -- Pytania zawężające wyniki do określonego zakresu wartości (daty, oceny, przychody), sprawdza zdolność do pobierania wielu rekordów i porównania ich wartości numerycznych. 
+Przykład pytania: 
+\textit{Find all action movies longer than 2.5 hours.}
+
+\item Pytania agregacyjne (ang. Aggregation Questions) -- Pytania wymagające obliczenia zbiorczej wartości (suma, średnia, liczba). 
+Przykład pytania: 
+\textit{What is the average runtime of movies directed by Quentin Tarantino?}
+
+    \item Pytania dotyczące rozumowania (ang. Reasoning Questions) -- Pytania wymagające logicznego rozumowania lub łączenia kilku faktów.
+Przykład pytania: 
+\textit{Which movies starring Tom Hanks were released before 2000?}
+
+    \item Pytania o stopniu najwyższym (ang. Superlative Questions) -- wymagają identyfikacji elementu o najwyższej lub najniższej wartości.
+Przykład pytania: 
+\textit{What is the highest-rated movie?}
+
+    \item Pytania specyficzne dla gatunku (ang. Genre Specific Questions) -- Pytania dotyczące konkretnego gatunku filmowego.
+Przykład pytania: 
+\textit{List all comedy movies released after 2015.}
+
+    \item Pytania skoncentrowane na reżyserze (ang. Director Focused Questions) -- Pytania koncentrujące się na reżyserze i jego dorobku.
+Przykład pytania: 
+\textit{What are all the movies directed by Ridley Scott?}
+
+    \item Pytania skoncentrowane na aktorach (ang. Actor Focused Questions) -- Pytania dotyczące konkretnego aktora i jego filmów lub współpracy.   
+Przykład pytania: 
+\textit{Which movies starred both Brad Pitt and George Clooney?}
+
+    \item Pytania oparte na czasie (ang. Time Based Questions) -- Pytania związane z chronologią – rok premiery, dekada, porządek czasowy.  Pytania te sprawdzają rozumienie czasu oraz chronologie przez LLM. 
+Przykład pytania: 
+\textit{What is the trend of average rating from 2000 to 2020?}
+
+    \item Przychody i głosy (ang. Revenue \& Votes) -- Pytania o dane liczbowe, np. przychody, budżet, oceny widzów, które sprawdzają jak pracuje LLM z danymi numerycznymi.
+Przykład pytania: 
+\textit{Which movies had less than 2 hours runtime but grossed over \$300 million?}
+
+    \item Pytania wieloskokowe (ang. Multi Hop Questions) -- Pytania wymagające kilku kroków logicznych (łączenia relacji).
+Przykład pytania: 
+\textit{Which actor starred in the highest-grossing drama movie?}
+
+    \item Forma swobodna/język naturalny (ang. Free Form/Natural Language Style) -- Pytania zadane w swobodnym, naturalnym języku — często nieprecyzyjne, subiektywne przez co testuje semantyczne rozumienie nieprecyzyjnych pytań i intencji użytkownika.
+Przykład pytania: 
+\textit{Tell me about a highly-rated crime thriller.}
+
+    \item Pytania trudne/przypadki skrajne (ang. Challenging/Edge Case Questions) -- Nietypowe lub podchwytliwe pytania – testujące odporność modelu na błędy i niejednoznaczność.
+Przykład pytania: 
+\textit{Which movie has zero gross revenue recorded?}
+
+    \item Filtrowanie krzyżowe atrybutów (ang. Cross Attribute Filtering) -- Pytania z filtrami na wielu różnych atrybutach jednocześnie.
+Przykład pytania: 
+\textit{Find movies with more than 8.5 rating, in the drama genre, released before 2000.}
+
+    \item Otwarte pytania analityczne (ang. Open Ended Analytical Questions) -- Pytania wymagające interpretacji, analizy lub opinii – nie mają jednej poprawnej odpowiedzi.
+Przykład pytania: 
+\textit{Are longer movies generally better rated?}
+
+    \item Eksploracyjne lub interaktywne (ang. Exploratory or Interactive) -- Pytania otwarte, eksploracyjne – użytkownik „szuka inspiracji” lub nowych tropów.   
+Przykład pytania: 
+\textit{List all movies you think a fan of *Inception* would enjoy.}
+
+    \item Statystyki i podsumowania (ang. Statistics and Summarization) -- Pytania proszące o podsumowanie danych lub statystykę.
+Przykład pytania: 
+\textit{What is the distribution of movie runtimes across all genres?}
+
+    \item Zapytania ukierunkowane z ograniczeniami (ang. Targeted Queries with Constraints) -- Pytania z precyzyjnymi warunkami ograniczającymi odpowiedź.
+Przykład pytania: 
+
+
     
-    \item Pytania agregacyjne (ang. Aggregation Questions) -- 
-    
-    \item Podstawowe pytania o fakty (ang. Basic Factual Questions) -- 
-    
-    \item Pytania trudne/przypadki skrajne (ang. Challenging/Edge Case Questions) -- 
-    
-    \item Pytania porównawcze (ang. Comparative Questions) -- 
-    
-    \item Filtrowanie krzyżowe atrybutów (ang. Cross Attribute Filtering) -- 
-    
-    \item Pytania skoncentrowane na reżyserze (ang. Director Focused Questions) -- 
-    
-    \item Eksploracyjne lub interaktywne (ang. Exploratory or Interactive) -- 
-    
-    \item Forma swobodna/język naturalny (ang. Free Form/Natural Language Style) -- 
-    
-    \item Pytania specyficzne dla gatunku (ang. Genre Specific Questions) -- 
-    
-    \item Pytania wieloskokowe (ang. Multi Hop Questions) -- 
-    
-    \item Otwarte pytania analityczne (ang. Open Ended Analytical Questions) -- 
-    
-    \item Pytania dotyczące zakresu i filtrowania (ang. Range \& Filtering Questions) -- 
-    
-    \item Pytania dotyczące rozumowania (ang. Reasoning Questions) -- 
-    
-    \item Przychody i głosy (ang. Revenue \& Votes) -- 
-    
-    \item Statystyki i podsumowania (ang. Statistics and Summarization) -- 
-    
-    \item Pytania o stopniu najwyższym (ang. Superlative Questions) -- 
-    
-    \item Zapytania ukierunkowane z ograniczeniami (ang. Targeted Queries with Constraints) -- 
-    
-    \item Pytania oparte na czasie (ang. Time Based Questions) -- 
+
 \end{itemize}
+\textit{Find a 90-minute horror movie released after 2010.}
+
 
 %! \subsubsection{Porównanie i analiza wyników Graph RAG z RAG v1 i RAG v2}
 
 \subsubsection{Analiza wyników poprzez \textit{embeddings similarity}}
 %! \subsubsubsection{Analiza wyników poprzez \textit{embeddings similarity}}
+Aby ocenić jakość uzyskanych wyników oraz sposób reprezentacji informacji w przestrzeni semantycznej, przeprowadzono analizę z wykorzystaniem miary \textit{embeddings similarity}. Metoda ta pozwala określić, w jakim stopniu poszczególne odpowiedzi, dokumenty lub pytania są zbliżone znaczeniowo w przestrzeni reprezentacji generowanej przez model językowy.
+
+W praktyce oznacza to porównywanie wektorów osadzeń odpowiadających danym elementom (np. pytaniom i ich wynikowym fragmentom kontekstu) przy użyciu metryk takich jak \textit{cosinus similarity}. Wysoka wartość podobieństwa sugeruje, że model poprawnie uchwycił semantyczne powiązanie między zapytaniem a zwróconą treścią, natomiast niskie wartości mogą wskazywać na problemy z dopasowaniem lub nieadekwatnym retrievalem.
+
+Dzięki takiemu podejściu możliwe jest nie tylko ilościowe porównanie wyników różnych konfiguracji modelu i komponentu RAG, ale również jakościowa interpretacja przestrzennego rozmieszczenia reprezentacji semantycznych — np. grupowanie podobnych pytań lub identyfikacja anomalii w embeddingach.
 
 Zgodnie z oczekiwaniami Graph RAG znacznie częściej uzyskuje wynik podobieństwa do oczekiwanej odpowiedzi wyższy niż RAG v1 i RAG v2 razem, co prezentuje tabela \ref{tab:1}.
 
@@ -1346,9 +1407,12 @@ W celu sprawdzenia tej hipotezy opracowujemy przedstawiony na rysunku \ref{fig:b
 \caption{Wykres pudełkowy wyników Graph RAG, RAG v1, RAG v2.}
 \label{fig:box_plot}
 \end{figure}
+W przypadku metody \textbf{Graph RAG} obserwowana skośność rozkładu jest najbardziej wyraźna spośród analizowanych wariantów. Oznacza to, że wartości podobieństwa embeddingów w tej metodzie w jeszcze większym stopniu skupiają się w pobliżu górnej granicy przedziału, co świadczy o wysokim poziomie zgodności semantycznej pomiędzy zapytaniami a pozyskanymi fragmentami kontekstu. Jednocześnie obecność wartość odstających o znacząco niższym podobieństwie (0.1-0.3), sugeruje, że występują sporadyczne błędy wynikające z ograniczeń struktury grafowej. 
 
-Największą skośność można zaobserwować w Graph RAG. Metoda ta ma odpowiedzi z największą zgodnością, jednocześnie kilka odpowiedzi miało znaczące gorsze odpowiedzi od pozostałych. Pozwala to wyciągnąć wnioski ....... \\
-\textcolor{red}{\textit{TODO: dokończyć ...}}
+Warto zauważyć również, że stosunkowo wąski zakres wartości (niewielka rozpiętość między kwartylami) sugeruje ponadto stabilność działania modelu oraz konsekwentne utrzymywanie wysokiej jakości generowanych odpowiedzi.
+
+
+\textcolor{red}{\textit{TODO: dokończyć ... ZMIENIĆ NAGŁÓWKI W TABELCE. ETYKIETY WIERSZY??????? ZAMIANA NA TYPY PYTAŃ!!!!!!!!!!!!!}}
 
 analiza dla grup pytań popraz \textit{embedding similarity}
 \begin{figure}[H]
@@ -1357,7 +1421,7 @@ analiza dla grup pytań popraz \textit{embedding similarity}
 \caption{Ewaluacja wyników RAG v1, RAG v2, Graph RAG dla grup pytań popraz \textit{embedding similarity}.}
 \label{fig:similarity_eval}
 \end{figure}
-
+Grupa pytań zaklasyfikowana jako Free Form/Natural Language Style została oceniona dużo gorzej niż pozostałe dla wszystkich rodzajów rozwiązań. Jest to dość logiczne, ponieważ w przypadku pytań otwartych z niejednoznaczną poprawną odpowiedziom trudno jest sprawdzić w ten sposób poprawność danych. Do oceny tego typu pytań najlepsza będzie analiza ekspercka aby jednoznacznie osądzić czy odpowiedzi są poprawne czy nie. 
 
 
 
