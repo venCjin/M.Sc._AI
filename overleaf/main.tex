@@ -248,17 +248,39 @@ Grafy wiedzy i wielkie modele językowe to dwa fundamentalnie różne podejścia
 
 \textbf{Grafy wiedzy} przechowują ustrukturyzowaną wiedzę w postaci zbioru trójek $$KG = \{(h, r, t) \subseteq E \times R \times E\} $$ gdzie $E$ to zbiór elementów - bytów, $R$ to zbiór relacji \cite{graph:llm:roadmap}. Grafy mogą być zarówno zbudowane bez konkretnego schematu, gdzie typy encji czy relacji nie są ograniczone do pewnego zbioru \cite{kg:ontofree}, jak i przy pomocy ontologii, czyli właśnie schematu, który definiuje np. jakie klasy encji są dozwolone w grafie \cite{kg:yago} i tak mając zdefiniowaną klasę Państwo, możemy zakodować takie encje jak Polska, Czechy, a jednocześnie jeśli w ontologii nie będzie zdefiniowana klasa Miasto to nie będziemy zapisywać w grafie takich encji jak Warszawa czy Praga. Struktura taka może więc ograniczać informacje, które można zapisać w grafie, szczególnie gdy ontologia jest niekompletna, natomiast jej wielką zaletą jest umożliwienie zarówno ludziom jak i maszynom, wnioskowania na podstawie wiedzy zawartej w grafie \cite{kg:yago}.
 
-\textbf{\textit{ todo: 1. dodać zdjecia i przykłady grafów wiedzy dla kazdego punktu moze}}
-
 Grafy wiedzy można podzielić na cztery grupy na podstawie przechowywanych w nich informacji \cite{graph:llm:roadmap}:
 \begin{itemize}
-    \item \textbf{Encyklopedyczne grafy wiedzy} (ang. Encyclopedic Knowledge Graphs) - najbardziej popularny typ grafów wiedzy, który reprezentuje ogólną wiedzę w świecie rzeczywistym. Encyklopedyczne grafy wiedzy są często konstruowane przez integrowanie informacji pochodzących z różnorodnych i rozbudowanych źródeł, w tym ekspertów, encyklopedii i baz danych. Wikidata to jeden z najczęściej używanych grafów wiedzy encyklopedycznej, który zawiera różnorodne informacje wyodrębnione z artykułów Wikipedii \cite{kg:wikidata}. Za inny przykład może posłużyć \textbf{Yet Another Great \href{https://en.wikipedia.org/wiki/Ontology_(information_science)}{Ontology}} (YAGO), czyli obszerny zbiór trójek kodujących ogólną wiedzę o ludziach, miastach, krajach, filmach i organizacjach, również bazująca na danych z Wikipedii \cite{kg:yago}.
+    \item \textbf{Encyklopedyczne grafy wiedzy} (ang. Encyclopedic Knowledge Graphs) -- najbardziej popularny typ grafów wiedzy, który reprezentuje ogólną wiedzę w świecie rzeczywistym. Encyklopedyczne grafy wiedzy są często konstruowane przez integrowanie informacji pochodzących z różnorodnych i rozbudowanych źródeł, w tym ekspertów, encyklopedii i baz danych. Wikidata to jeden z najczęściej używanych grafów wiedzy encyklopedycznej, który zawiera różnorodne informacje wyodrębnione z artykułów Wikipedii \cite{kg:wikidata}. Obrazowy przykład został zaprezentowany na rysunku \ref{fig:kg_enc}. Za inny przykład może posłużyć \textbf{Yet Another Great \href{https://en.wikipedia.org/wiki/Ontology_(information_science)}{Ontology}} (YAGO), czyli obszerny zbiór trójek kodujących ogólną wiedzę o ludziach, miastach, krajach, filmach i organizacjach, również bazująca na danych z Wikipedii \cite{kg:yago}.
+    \begin{figure}[H]
+        \includegraphics[width=\linewidth]{images/fig/kg_enc.png}
+        \vspace*{-8mm}
+        \caption{Przykład grafu encyklopedycznego \cite{graph:llm:roadmap}.}
+        \label{fig:kg_enc}
+    \end{figure}
     
-    \item \textbf{Zdroworozsądkowe grafy wiedzy} (ang. Commonsense Knowledge Graphs) -- opisują relacje między pojęciami w sposób odzwierciedlający ludzką intuicję i codzienne doświadczenia, co pozwala maszynom lepiej rozumieć znaczenie kontekstowe. Za przykład może posłużyć \textbf{ConceptNet} \cite{kg:conceptnet}, czyli ogólnodostępna graf wiedzy, zaprojektowany, aby pomóc komputerom zrozumieć znaczenie słów, których używają ludzie, czy też \textbf{ATOMIC} \cite{kg:ATOMIC} -- również ogólnodostępny zbiór milionów trójek skoncentrowany na przyczynowo-skutkowych relacjach między zdarzeniami, stworzony aby umożliwić modelom językowym przetwarzanie intencji, emocji i skutków działań ludzi.
+    \item \textbf{Zdroworozsądkowe grafy wiedzy} (ang. Commonsense Knowledge Graphs) -- opisują relacje między pojęciami w sposób odzwierciedlający ludzką intuicję i codzienne doświadczenia, co pozwala maszynom lepiej rozumieć znaczenie kontekstowe. Przykład takiego grafu dla konceptu „obudzenia się” przedstawiony został na rysunku \ref{fig:kg_comm}. Inne przykładowe zdroworozsądkowe grafy wiedzy to np. \textbf{ConceptNet} \cite{kg:conceptnet}, czyli ogólnodostępny graf wiedzy, zaprojektowany, aby pomóc komputerom zrozumieć znaczenie słów, których używają ludzie, czy też \textbf{ATOMIC} \cite{kg:ATOMIC} -- również ogólnodostępny zbiór milionów trójek skoncentrowany na przyczynowo-skutkowych relacjach między zdarzeniami, stworzony aby umożliwić modelom językowym przetwarzanie intencji, emocji i skutków działań ludzi.
+    \begin{figure}[H]
+        \includegraphics[width=\linewidth]{images/fig/kg_comm.png}
+        \vspace*{-8mm}
+        \caption{Przykład grafu zdroworozsądkowego \cite{graph:llm:roadmap}.}
+        \label{fig:kg_comm}
+    \end{figure}
     
-    \item \textbf{Domenowe grafy wiedzy} (ang. Domain-specific Knowledge Graphs) -- stworzone aby opisywać wiedzę oraz zależności z danej dziedziny np. biologi czy finansów. Domenowe grafy wiedzy są mniejsze i dokładniejsze od grafów encyklopedycznych. Dla na przykład \textbf{Unified Medical Language System (UMLS)} jest grafem wiedzy specyficznej dla domeny w dziedzinie medycyny, która zawiera koncepcje biomedyczne i ich relacje \cite{umls}. 
+    \item \textbf{Domenowe grafy wiedzy} (ang. Domain-specific Knowledge Graphs) -- stworzone aby opisywać wiedzę oraz zależności z danej dziedziny np. medycyny (rysunek \ref{fig:kg_dom}) czy finansów. Domenowe grafy wiedzy są mniejsze i dokładniejsze od grafów encyklopedycznych. Dla przykładu \textbf{Unified Medical Language System (UMLS)} jest grafem wiedzy specyficznej dla domeny w dziedzinie medycyny, która zawiera koncepcje biomedyczne i ich relacje \cite{umls}. 
+    \begin{figure}[H]
+        \includegraphics[width=\linewidth]{images/fig/kg_dom.png}
+        \vspace*{-8mm}
+        \caption{Przykład grafu domenowego \cite{graph:llm:roadmap}.}
+        \label{fig:kg_dom}
+    \end{figure}
     
-    \item \textbf{Multi-modalne grafy wiedzy} (ang. Multi-modal Knowledge Graphs) -- W przeciwieństwie do konwencjonalnych grafy wiedzy, które zawierają tylko informacje tekstowe, multi-modalne grafy wiedzy przedstawiają fakty w postaci różnych mediów, takich jak obrazy, dźwięki i filmy. Wiedza zawarta w multi-modalnych grafach może być wykorzystywana do różnych zadań multi-modalnych, takich jak dopasowanie obrazu do tekstu. Przykładem może być \textbf{IMGpedia} czyli połączony zbiór danych, który zawiera informacje wizualne o obrazach ze zbioru danych Wikimedia \cite{IMGpedia}. 
+    \item \textbf{Multi-modalne grafy wiedzy} (ang. Multi-modal Knowledge Graphs) -- W przeciwieństwie do konwencjonalnych grafy wiedzy, które zawierają tylko informacje tekstowe, multi-modalne grafy wiedzy przedstawiają fakty w postaci różnych mediów, takich jak obrazy (zaprezentowany na rysunku \ref{fig:kg_multi}), dźwięki czy filmy. Wiedza zawarta w multi-modalnych grafach może być wykorzystywana do różnych zadań multi-modalnych, takich jak dopasowanie obrazu do tekstu. Przykładem może być \textbf{IMGpedia} czyli połączony zbiór danych, który zawiera informacje wizualne o obrazach ze zbioru danych Wikimedia \cite{IMGpedia}. 
+    \begin{figure}[H]
+        \includegraphics[width=\linewidth]{images/fig/kg_multi.png}
+        \vspace*{-8mm}
+        \caption{Przykład grafu multi-modalnego \cite{graph:llm:roadmap}.}
+        \label{fig:kg_multi}
+    \end{figure}
 \end{itemize}
 
 todo:
@@ -302,7 +324,7 @@ Dzięki zastosowaniu normalizacji oraz wcześniejszym etapom, odległość międ
 Uzyskaną wartość interpretujemy w następujący sposób: wartość bliska 1 = wektory prawie identyczne (wysokie podobieństwo), 0 = brak korelacji, -1 = przeciwne znaczenie.
 
 \subsubsection{Mechanizm działania LLM}
-Wielkie modele językowe (LLM) takie jak Chat GPT działają na bazie architektury transformerów, które zostały wprowadzone w pracy „Attention is All You Need” \cite{attention_2023vaswani}. Transformer jest to struktura, która składa się z dwóch głównych komponentów: enkodera i dekodera. 
+Wielkie modele językowe (LLM) takie jak Chat GPT działają na bazie architektury transformerów, które zostały wprowadzone w pracy „Attention is All You Need” \cite{attention_2023vaswani}. Transformer, zaprezentowany na rysunku \ref{fig:attention}, jest strukturą, która składa się z dwóch głównych komponentów: enkodera i dekodera. 
 
 Enkoder przetwarza dane wejściowe i koduje je w wewnętrzną reprezentację wektorową. Reprezentacja wektorowa zachowuje kontekst oraz znaczenie co pozwala na dalszą analizę przez model. Struktura ta składa się z 6 identycznych warstw. Każda warstwa najpierw zawiera podwarstwę samouwagi (ang. Multi-Head Attention), która jest implementacją mechanizmu uwagi. Mechanizm ten pozwala modelowi skupić się na istotnych częściach sekwencji wejściowej podczas generowania sekwencji wyjściowej. Mechanizm uwagi umożliwia modelom językowym efektywne przetwarzanie sekwencji tekstowych poprzez przypisywanie różnym słowom w zdaniu różnych wag, co pozwala modelowi na zrozumienie kontekstu każdego słowa. Model „zwraca uwagę” na odpowiedni fragment tekstu, tak aby lepiej wychwycić kontekst zdania i znaczenie danego słowa. Druga podwarstwa to gęsto połączona sieć prosta, która przekształca każdą pozycję (token) niezależnie. Działa ona jak klasyczna sieć neuronowa, przekształcając dane przy pomocy liniowej transformacji i nieliniowej funkcji aktywacji, co umożliwia modelowi lepsze zrozumienie złożonych wzorców w danych wejściowych.
 
@@ -313,7 +335,7 @@ Dekoder przetwarza reprezentację wektorową i na jej podstawie generuje odpowie
 \includegraphics[width=0.5\linewidth]{images/fig/attention.png}
 \vspace*{-4mm}
 \caption{Architektura Transformera \cite{attention_2023vaswani}.}
-% \label{fig:}
+\label{fig:attention}
 \end{figure}
 
 Podczas trenowania wielkich modeli językowych wykorzystywane są ogromne korpusy danych zawierające teksty pochodzące z książek, artykułów, stron internetowych i innych dostępnych dokumentów. Zbiory te obejmują szeroki wachlarz tematów i stylów pisania. Trening wykorzystywał algorytm wstecznej propagacji błędu (ang. backpropagation). Model generuje przewidywania, które są porównywane z rzeczywistymi danymi (np. prawdziwymi słowami w zdaniu). Na tej podstawie obliczany jest błąd, czyli różnica między przewidywaniami, a rzeczywistymi wartościami. Błąd jest następnie propagowany z powrotem przez sieć, a algorytm oblicza, jak bardzo każdy neuron przyczynił się do tego błędu, wykorzystując pochodne funkcji aktywacji. Na podstawie obliczonego błędu i gradientów wag model aktualizuje swoje wagi przy użyciu algorytmu optymalizacji (np. Stochastic Gradient Descent lub jego wariantów). Celem jest minimalizacja błędu w kolejnych iteracjach.
