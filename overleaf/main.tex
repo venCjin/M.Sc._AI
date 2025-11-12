@@ -1256,86 +1256,83 @@ W niniejszej pracy proponujemy 3 ewaluacje wyników:
 Pytania zostały skategoryzowane i podzielone na grupy. Grupy te zostaną opisane niżej z przykładami.
 
 \begin{itemize}
-\item     Podstawowe pytania o fakty (ang. Basic Factual Questions) -- Pytania o pojedynczy, konkretny fakt lub wartość. Testują ekstrakcje pojedynczego faktu z kontekstu. 
-Przykład pytania: 
-\textit{What is the runtime of *Inception*?}
+    \item Podstawowe pytania o fakty (ang. Basic Factual Questions) -- Pytania o pojedynczy, konkretny fakt lub wartość. Testują ekstrakcje pojedynczego faktu z kontekstu.
+    Przykład pytania: 
+    \textit{What is the runtime of *Inception*?}
 
-\item     Pytania porównawcze (ang. Comparative Questions) -- Pytania wymagające porównania dwóch lub więcej obiektów według jednej cechy.  Ten typ pytań sprawdza zdolność do pobrania wielu rekordów i porównania ich wartości numerycznych lub opisowych.
-Przykład pytania: 
-\textit{Which movie has a higher rating: *Interstellar* or *Gravity*?}
+    \item Pytania porównawcze (ang. Comparative Questions) -- Pytania wymagające porównania dwóch lub więcej obiektów według jednej cechy.  Ten typ pytań sprawdza zdolność do pobrania wielu rekordów i porównania ich wartości numerycznych lub opisowych.
+    Przykład pytania: 
+    \textit{Which movie has a higher rating: *Interstellar* or *Gravity*?}
 
-\item  Pytania dotyczące zakresu i filtrowania (ang. Range \& Filtering Questions) -- Pytania zawężające wyniki do określonego zakresu wartości (daty, oceny, przychody), sprawdza zdolność do pobierania wielu rekordów i porównania ich wartości numerycznych. 
-Przykład pytania: 
-\textit{Find all action movies longer than 2.5 hours.}
+    \item Pytania dotyczące zakresu i filtrowania (ang. Range \& Filtering Questions) -- Pytania zawężające wyniki do określonego zakresu wartości (daty, oceny, przychody), sprawdza zdolność do pobierania wielu rekordów i porównania ich wartości numerycznych. 
+    Przykład pytania: 
+    \textit{Find all action movies longer than 2.5 hours.}
 
-\item Pytania agregacyjne (ang. Aggregation Questions) -- Pytania wymagające obliczenia zbiorczej wartości (suma, średnia, liczba). 
-Przykład pytania: 
-\textit{What is the average runtime of movies directed by Quentin Tarantino?}
+    \item Pytania agregacyjne (ang. Aggregation Questions) -- Pytania wymagające obliczenia \linebreak
+    zbiorczej wartości (suma, średnia, liczba). 
+    Przykład pytania: 
+    \textit{What is the average runtime of movies directed by Quentin Tarantino?}
 
     \item Pytania dotyczące rozumowania (ang. Reasoning Questions) -- Pytania wymagające logicznego rozumowania lub łączenia kilku faktów.
-Przykład pytania: 
-\textit{Which movies starring Tom Hanks were released before 2000?}
+    Przykład pytania: 
+    \textit{Which movies starring Tom Hanks were released before 2000?}
 
     \item Pytania o stopniu najwyższym (ang. Superlative Questions) -- wymagają identyfikacji elementu o najwyższej lub najniższej wartości.
-Przykład pytania: 
-\textit{What is the highest-rated movie?}
+    Przykład pytania: 
+    \textit{What is the highest-rated movie?}
 
     \item Pytania specyficzne dla gatunku (ang. Genre Specific Questions) -- Pytania dotyczące konkretnego gatunku filmowego.
-Przykład pytania: 
-\textit{List all comedy movies released after 2015.}
+    Przykład pytania: 
+    \textit{List all comedy movies released after 2015.}
 
     \item Pytania skoncentrowane na reżyserze (ang. Director Focused Questions) -- Pytania koncentrujące się na reżyserze i jego dorobku.
-Przykład pytania: 
-\textit{What are all the movies directed by Ridley Scott?}
+    Przykład pytania: 
+    \textit{What are all the movies directed by Ridley Scott?}
 
     \item Pytania skoncentrowane na aktorach (ang. Actor Focused Questions) -- Pytania dotyczące konkretnego aktora i jego filmów lub współpracy.   
-Przykład pytania: 
-\textit{Which movies starred both Brad Pitt and George Clooney?}
+    Przykład pytania: 
+    \textit{Which movies starred both Brad Pitt and George Clooney?}
 
     \item Pytania oparte na czasie (ang. Time Based Questions) -- Pytania związane z chronologią – rok premiery, dekada, porządek czasowy.  Pytania te sprawdzają rozumienie czasu oraz chronologie przez LLM. 
-Przykład pytania: 
-\textit{What is the trend of average rating from 2000 to 2020?}
+    Przykład pytania: 
+    \textit{What is the trend of average rating from 2000 to 2020?}
 
     \item Przychody i głosy (ang. Revenue \& Votes) -- Pytania o dane liczbowe, np. przychody, budżet, oceny widzów, które sprawdzają jak pracuje LLM z danymi numerycznymi.
-Przykład pytania: 
-\textit{Which movies had less than 2 hours runtime but grossed over \$300 million?}
+    Przykład pytania: 
+    \textit{Which movies had less than 2 hours runtime but grossed over \$300 million?}
 
     \item Pytania wieloskokowe (ang. Multi Hop Questions) -- Pytania wymagające kilku kroków logicznych (łączenia relacji).
-Przykład pytania: 
-\textit{Which actor starred in the highest-grossing drama movie?}
+    Przykład pytania: 
+    \textit{Which actor starred in the highest-grossing drama movie?}
 
     \item Forma swobodna/język naturalny (ang. Free Form/Natural Language Style) -- Pytania zadane w swobodnym, naturalnym języku — często nieprecyzyjne, subiektywne przez co testuje semantyczne rozumienie nieprecyzyjnych pytań i intencji użytkownika.
-Przykład pytania: 
-\textit{Tell me about a highly-rated crime thriller.}
+    Przykład pytania: 
+    \textit{Tell me about a highly-rated crime thriller.}
 
     \item Pytania trudne/przypadki skrajne (ang. Challenging/Edge Case Questions) -- Nietypowe lub podchwytliwe pytania – testujące odporność modelu na błędy i niejednoznaczność.
-Przykład pytania: 
-\textit{Which movie has zero gross revenue recorded?}
+    Przykład pytania: 
+    \textit{Which movie has zero gross revenue recorded?}
 
     \item Filtrowanie krzyżowe atrybutów (ang. Cross Attribute Filtering) -- Pytania z filtrami na wielu różnych atrybutach jednocześnie.
-Przykład pytania: 
-\textit{Find movies with more than 8.5 rating, in the drama genre, released before 2000.}
+    Przykład pytania: 
+    \textit{Find movies with more than 8.5 rating, in the drama genre, released before 2000.}
 
     \item Otwarte pytania analityczne (ang. Open Ended Analytical Questions) -- Pytania wymagające interpretacji, analizy lub opinii – nie mają jednej poprawnej odpowiedzi.
-Przykład pytania: 
-\textit{Are longer movies generally better rated?}
+    Przykład pytania: 
+    \textit{Are longer movies generally better rated?}
 
     \item Eksploracyjne lub interaktywne (ang. Exploratory or Interactive) -- Pytania otwarte, eksploracyjne – użytkownik „szuka inspiracji” lub nowych tropów.   
-Przykład pytania: 
-\textit{List all movies you think a fan of *Inception* would enjoy.}
+    Przykład pytania: 
+    \textit{List all movies you think a fan of *Inception* would enjoy.}
 
     \item Statystyki i podsumowania (ang. Statistics and Summarization) -- Pytania proszące o podsumowanie danych lub statystykę.
-Przykład pytania: 
-\textit{What is the distribution of movie runtimes across all genres?}
+    Przykład pytania: 
+    \textit{What is the distribution of movie runtimes across all genres?}
 
     \item Zapytania ukierunkowane z ograniczeniami (ang. Targeted Queries with Constraints) -- Pytania z precyzyjnymi warunkami ograniczającymi odpowiedź.
-Przykład pytania: 
-
-
-    
-
+    Przykład pytania: 
+    \textit{Find a 90-minute horror movie released after 2010.}
 \end{itemize}
-\textit{Find a 90-minute horror movie released after 2010.}
 
 
 %! \subsubsection{Porównanie i analiza wyników Graph RAG z RAG v1 i RAG v2}
