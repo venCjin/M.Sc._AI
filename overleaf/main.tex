@@ -283,7 +283,7 @@ Grafy wiedzy można podzielić na cztery grupy na podstawie przechowywanych w ni
     \end{figure}
 \end{itemize}
 
-todo:
+TODO:
 2. W jakich dziedzinach mają zastosowanie grafy?
 3. Do zapisu jakiej wiedzy najbardziej sie nadaja?
 4. przyklady zastosowan: google kg | istniejace kg - jak sa wykorzystywane?
@@ -343,43 +343,6 @@ Podczas trenowania wielkich modeli językowych wykorzystywane są ogromne korpus
 Powyższe opisy dotyczą algorytmów używanych w etapie \textit{pre-treningu}, gdzie model uczy się określonych wzorców językowych. Po tym etapie następuje \textit{fine-tuning}, który doszkala model, by dostosować go do konkretnych zadań przez dostarczenie mu bardziej specjalistycznych danych. Ten dwuetapowy proces pozwala na tworzenie bardzo wszechstronnych modeli, które mogą być łatwo dostosowane do różnych aplikacji, takich jak tłumaczenie maszynowe, odpowiadanie na pytania czy analiza sentymentu.
 
 Sukces wielkich modeli językowych możliwy jest przez zdolność do uogólniania wiedzy zdobytej podczas pre-treningu i jej zastosowania do nowych, nieznanych wcześniej zadań. Model może generować spójne i trafne teksty jednocześnie bez specjalistycznego procesu szkolenia.
-
-\subsubsection{LLM Chains: koncepcja i przykłady zastosowania}
-
-TODO: 6. to wywalić moze do pracktycznego
-
-
-Mimo, że rozwój modeli językowych pozwolił na wykorzystanie ich do skomplikowanych zadań, nadal problem stanowi zachowanie kontekstu w długich tekstach. Rozwiązaniem tego problemu jest zastosowanie LLM Chain, czyli koncepcji, która realizuje złożone zadania przez podział na mniejsze etapy. Każdy z etapów obsługiwany jest przez odpowiednio przystosowany LLM. To podejście pozwala na zwiększenie precyzji i skuteczności przetwarzania złożonych zapytań \cite{llm_chains}.
-
-LLM Chain może mieć różną postać, w dużej mierze zależną od zastosowania. Jedną z najprostszych technik jest \textbf{Stuffing Chain}, polegający na dwóch krokach:
-\begin{enumerate}
-    \item W pierwszym kroku gromadzimy wszystkie cytaty oraz fragmenty dokumentów w jednym prompcie, których jest przesyłany do LLM. 
-    \item W drugim kroku fragmenty są analizowane, a na ich podstawie tworzona jest ostateczna odpowiedź. 
-\end{enumerate}
-
-Inną popularną metodą jest \textbf{Map-Reduce Chain}, która podobna jest do rozproszonego przetwarzania danych. Metoda ta polega na:
-\begin{enumerate}
-    \item Krok pierwszy: wstępne przetworzeniu każdego fragmentu z dokumentów przez LLM.
-    \item Krok drugi: Wyniki każdego z przetwarzań scalane są w jedną odpowiedź.
-\end{enumerate}
-
-Zupełnie inny sposób działania ma metoda \textbf{Refine Chain}. Dane w tej metodzie przetwarzane są sekwencyjnie.
-\begin{enumerate}
-    \item Krok pierwszy: przeanalizowanie pierwszego źródła oraz stworzenie wstępnej odpowiedzi.
-    \item Krok drugi oraz każdy następny: przeanalizowanie kolejnego źródła i ewentualna korekta odpowiedzi.
-\end{enumerate}
-
-\textbf{Router (lub Conditional) Chain} to metoda, która zapewnia elastyczność i dopasowanie do zadania, jednak wymaga stworzenia scenariusza dla każdego typu promptu oraz posiadania dobrego klasyfikatora pytań. Metoda ta składa się z następujących kroków: 
-\begin{enumerate}
-    \item Krok pierwszy: wybór metody w zależności od zadania zawartego w prompcie.
-    \item Krok drugi: wykonanie zadania, zgodnie ze ścieżka przypisaną do metody.
-\end{enumerate}
-
-Ostatnią z głównych klasycznych typów LLM Chains jest \textbf{Iterative / Self-Ask Chain}, czyli metoda, gdzie model sam generuje pytania pomocnicze i generuje odpowiedź krok po kroku. 
-
-W powyższym omówiliśmy tylko najbardziej klasyczne typy LLM Chains. Poszczególne składowe kroków, mogą się różnić w zależności od zadania oraz możliwości. LLM Chains mogą być stosowane między innymi w systemach rekomendacji. Przykładem może być platforma\linebreak e-commerce, gdzie pierwszy model analizuje historię zakupów i zachowania użytkownika, drugi model identyfikuje podobne produkty lub usługi, a trzeci model generuje spersonalizowane rekomendacje. Dzięki zastosowaniu łańcucha modeli, platforma może zapewnić bardziej trafne i spersonalizowane sugestie dla użytkowników. 
-
-Koncepcja LLM chains jest nie tylko potężnym narzędziem w kontekście przetwarzania języka naturalnego, ale także elastycznym podejściem, które może być dostosowane do różnych dziedzin i zastosowań. Dzięki możliwości segmentacji złożonych zadań na mniejsze, wyspecjalizowane etapy, LLM chains umożliwiają bardziej efektywne i precyzyjne przetwarzanie danych, co otwiera nowe możliwości dla zaawansowanych aplikacji w różnych sektorach.
 
 \subsection{Metody połączenia KG i LLM}
 Integracja wielkich modeli językowych (LLM) z grafami wiedzy (KG) stanowi obecnie jedno z najbardziej obiecujących podejść w dziedzinie sztucznej inteligencji. LLM oferują zdolność do przetwarzania języka naturalnego, natomiast KG zapewniają strukturalną, precyzyjną i interpretowalną reprezentację wiedzy. W niniejszym rozdziale przedstawiono metaanalizę wybranych metod łączenia tych dwóch technologii (zaproponowanych w pracy \textit{Unifying Large Language Models and Knowledge Graphs: A Roadmap} (2024) \cite{graph:llm:roadmap}).
@@ -698,6 +661,45 @@ gpt4 = ChatOpenAI(
 \end{python}
 
 Na wybranym fragmencie kodu widać, jak zostały utworzone połączenia do modeli\linebreak GPT-4.1 i Llama 3.1. Ważny jest tutaj parametr \textit{temperature}, który to kontroluje losowość lub „kreatywność” wyników modelu i przyjmuje wartości z zakresu 0.0 do 1.0. Niższa temperatura skutkuje bardziej przewidywalnymi i ukierunkowanymi reakcjami, podczas gdy wyższa temperatura sprzyja bardziej zróżnicowanym i potencjalnie kreatywnym wynikom. Parametr ten został ustawiony na wartość 0, ponieważ w niniejszej pracy zależy nam, żeby model dokładnie wykonywał instrukcje i korzystał z wiedzy, którą dostarczamy w procesie \textit{augmentation}.
+
+
+\subsubsection{LLM Chains: koncepcja i przykłady zastosowania}
+
+TODO: tutaj zmienić żeby pasowało
+
+
+Mimo, że rozwój modeli językowych pozwolił na wykorzystanie ich do skomplikowanych zadań, nadal problem stanowi zachowanie kontekstu w długich tekstach. Rozwiązaniem tego problemu jest zastosowanie LLM Chain, czyli koncepcji, która realizuje złożone zadania przez podział na mniejsze etapy. Każdy z etapów obsługiwany jest przez odpowiednio przystosowany LLM. To podejście pozwala na zwiększenie precyzji i skuteczności przetwarzania złożonych zapytań \cite{llm_chains}.
+
+LLM Chain może mieć różną postać, w dużej mierze zależną od zastosowania. Jedną z najprostszych technik jest \textbf{Stuffing Chain}, polegający na dwóch krokach:
+\begin{enumerate}
+    \item W pierwszym kroku gromadzimy wszystkie cytaty oraz fragmenty dokumentów w jednym prompcie, których jest przesyłany do LLM. 
+    \item W drugim kroku fragmenty są analizowane, a na ich podstawie tworzona jest ostateczna odpowiedź. 
+\end{enumerate}
+
+Inną popularną metodą jest \textbf{Map-Reduce Chain}, która podobna jest do rozproszonego przetwarzania danych. Metoda ta polega na:
+\begin{enumerate}
+    \item Krok pierwszy: wstępne przetworzeniu każdego fragmentu z dokumentów przez LLM.
+    \item Krok drugi: Wyniki każdego z przetwarzań scalane są w jedną odpowiedź.
+\end{enumerate}
+
+Zupełnie inny sposób działania ma metoda \textbf{Refine Chain}. Dane w tej metodzie przetwarzane są sekwencyjnie.
+\begin{enumerate}
+    \item Krok pierwszy: przeanalizowanie pierwszego źródła oraz stworzenie wstępnej odpowiedzi.
+    \item Krok drugi oraz każdy następny: przeanalizowanie kolejnego źródła i ewentualna korekta odpowiedzi.
+\end{enumerate}
+
+\textbf{Router (lub Conditional) Chain} to metoda, która zapewnia elastyczność i dopasowanie do zadania, jednak wymaga stworzenia scenariusza dla każdego typu promptu oraz posiadania dobrego klasyfikatora pytań. Metoda ta składa się z następujących kroków: 
+\begin{enumerate}
+    \item Krok pierwszy: wybór metody w zależności od zadania zawartego w prompcie.
+    \item Krok drugi: wykonanie zadania, zgodnie ze ścieżka przypisaną do metody.
+\end{enumerate}
+
+Ostatnią z głównych klasycznych typów LLM Chains jest \textbf{Iterative / Self-Ask Chain}, czyli metoda, gdzie model sam generuje pytania pomocnicze i generuje odpowiedź krok po kroku. 
+
+W powyższym omówiliśmy tylko najbardziej klasyczne typy LLM Chains. Poszczególne składowe kroków, mogą się różnić w zależności od zadania oraz możliwości. LLM Chains mogą być stosowane między innymi w systemach rekomendacji. Przykładem może być platforma\linebreak e-commerce, gdzie pierwszy model analizuje historię zakupów i zachowania użytkownika, drugi model identyfikuje podobne produkty lub usługi, a trzeci model generuje spersonalizowane rekomendacje. Dzięki zastosowaniu łańcucha modeli, platforma może zapewnić bardziej trafne i spersonalizowane sugestie dla użytkowników. 
+
+Koncepcja LLM chains jest nie tylko potężnym narzędziem w kontekście przetwarzania języka naturalnego, ale także elastycznym podejściem, które może być dostosowane do różnych dziedzin i zastosowań. Dzięki możliwości segmentacji złożonych zadań na mniejsze, wyspecjalizowane etapy, LLM chains umożliwiają bardziej efektywne i precyzyjne przetwarzanie danych, co otwiera nowe możliwości dla zaawansowanych aplikacji w różnych sektorach.
+
 
 \subsection{Rozwiązanie Graph RAG}
 % \textcolor{red}{\textit{? Opis ogólny dodać ? co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
