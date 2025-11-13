@@ -294,8 +294,6 @@ Grafy wiedzy mają również pewne istotne ograniczenia. Jednym z głównych pro
 
 \subsection{Wielkie modele językowe -- LLM}
 
-TODO: 5. struktura powinna byc podobna do kg (dodac wady zalety i co jeszcze?)
-
 \subsubsection{Definicja i ewolucja wielkich modeli językowych (LLM)}
 
 Wielkie modele językowe (ang. large language model, LLM) to zaawansowane modele przetwarzania języka naturalnego, które zostały wytrenowane na ogromnych korpusach tekstów, umożliwiając im generowanie i tłumaczenie języka naturalnego. Rozumienie ludzkiej mowy przez lata było jedną z fundamentalnych umiejętności, z którą kojarzyła nam się sztuczna inteligencja. Pierwsze rozwiązania przetwarzania ludzkiej mowy były oparte na słowach kluczach, np. model Eliza, który symulował rozmowę z psychologiem \cite{elize}. 
@@ -308,14 +306,14 @@ Największą rewolucję w przetwarzaniu języka przyniosło wprowadzenie mechani
 uwagi (attention mechanism), który pozwolił modelom efektywnie radzić sobie z długodystansowymi zależnościami między słowami w zdaniu. Najbardziej przełomowym krokiem w tej ewolucji było wprowadzenie modelu Transformer w artykule \textit{Attention is All You Need} (2017) \cite{attention_2023vaswani}.
 
 \subsubsection{Embedding}
-Embedding jest wektorową reprezentacją tekstu. W Chat GPT oraz w rozwiązaniach w niniejszej pracy, używane są wektory gęste (ang. dense) z wartościami rzeczywistymi. Wektor kodujący słowa w ten sposób gwarantuje, że słowa znajdujące się blisko w wektorowej przestrzeni będą miały podobne znaczenie. Używanie embenddingu jako podstawowej reprezentacji wejściowej zwiększa wydajność zadań przetwarzania języka naturalnego (ang. natural language processing, NLP) \cite{word_embedding}.
+Embedding jest wektorową reprezentacją tekstu. W GPT-4 oraz w rozwiązaniach w niniejszej pracy, używane są wektory gęste (ang. dense) z wartościami rzeczywistymi. Wektor kodujący słowa w ten sposób gwarantuje, że słowa znajdujące się blisko w wektorowej przestrzeni będą miały podobne znaczenie. Używanie embenddingu jako podstawowej reprezentacji wejściowej zwiększa wydajność zadań przetwarzania języka naturalnego (ang. natural language processing, NLP) \cite{word_embedding}.
 
 Proces embeddingu przebiega etapowo. W pierwszym etapie tekst zamieniany jest na tokeny na przykład słowo „królowa” dzielone jest na „król” i „owa”. Dzielenie na tokeny pozwala obsłużyć cały język przy ograniczonym słowniku. Następnie do każdego tokenu przypisany jest wektor o określonym wymiarze. Pierwszy wektor może być przypisany losowo. Następnie model (transformer) przewiduje brakujące słowa na podstawie otoczenia. W czasie miliardów takich przykładów wektory przesuwają się w przestrzeni tak, żeby podobne słowa znalazły się blisko siebie. Dzięki takiemu rozwiązaniu na wektorach działa prosta arytmetyka słów np.:
 \begin{center}
     Król $-$ mężczyzna $+$ kobieta $\approx$ królowa \cite{dense_vectors}
 \end{center}
 
-Dzięki użyciu mechanizmu uwagi, embedding w modelach takich jak Chat GPT jest dynamiczny, a nie statyczny. Oznacza to, że na znaczenie słowa wpływ ma kontekst zdania w jakim słowo jest użyte. Wektor słowa \textit{zamek} w zdaniu \textit{„piękny średniowieczny zamek”} nie jest tym samym wektorem co w zdaniu \textit{„zamek w spodniach się zepsuł”}. Ostatnim etapem jest normalizacja (ang. L2 normalization), która przekształca każdy wektor do długości równej 1.
+Dzięki użyciu mechanizmu uwagi, embedding w modelach takich jak GPT-4 jest dynamiczny, a nie statyczny. Oznacza to, że na znaczenie słowa wpływ ma kontekst zdania w jakim słowo jest użyte. Wektor słowa \textit{zamek} w zdaniu \textit{„piękny średniowieczny zamek”} nie jest tym samym wektorem co w zdaniu \textit{„zamek w spodniach się zepsuł”}. Ostatnim etapem jest normalizacja (ang. L2 normalization), która przekształca każdy wektor do długości równej 1.
 
 Dzięki zastosowaniu normalizacji oraz wcześniejszym etapom, odległość między wektorami odzwierciedla stopień podobieństwa semantycznego. Przestrzeń, w której znajdują się te wektory i która jest uporządkowana według tego podobieństwa, nazywamy przestrzenią semantyczną. Do porównywania wektorów w tej przestrzeni powszechnie stosuje się podobieństwo cosinusowe (ang. cosine similarity), ponieważ uwzględnia ono wyłącznie kierunek wektorów, eliminując wpływ ich skali. Podobieństwo cosinusowe dla wektorów $u$, $v$ obliczamy ze wzoru:
 \begin{center}
@@ -324,11 +322,11 @@ Dzięki zastosowaniu normalizacji oraz wcześniejszym etapom, odległość międ
 Uzyskaną wartość interpretujemy w następujący sposób: wartość bliska 1 = wektory prawie identyczne (wysokie podobieństwo), 0 = brak korelacji, -1 = przeciwne znaczenie.
 
 \subsubsection{Mechanizm działania LLM}
-Wielkie modele językowe (LLM) takie jak Chat GPT działają na bazie architektury transformerów, które zostały wprowadzone w pracy „Attention is All You Need” \cite{attention_2023vaswani}. Transformer, zaprezentowany na rysunku \ref{fig:attention}, jest strukturą, która składa się z dwóch głównych komponentów: enkodera i dekodera. 
+Wielkie modele językowe (LLM) takie jak GPT-4 działają na bazie architektury transformerów, które zostały wprowadzone w pracy „Attention is All You Need” \cite{attention_2023vaswani}. Transformer, zaprezentowany na rysunku \ref{fig:attention}, jest strukturą, która składa się z dwóch głównych komponentów: enkodera i dekodera. 
 
 Enkoder przetwarza dane wejściowe i koduje je w wewnętrzną reprezentację wektorową. Reprezentacja wektorowa zachowuje kontekst oraz znaczenie co pozwala na dalszą analizę przez model. Struktura ta składa się z 6 identycznych warstw. Każda warstwa najpierw zawiera podwarstwę samouwagi (ang. Multi-Head Attention), która jest implementacją mechanizmu uwagi. Mechanizm ten pozwala modelowi skupić się na istotnych częściach sekwencji wejściowej podczas generowania sekwencji wyjściowej. Mechanizm uwagi umożliwia modelom językowym efektywne przetwarzanie sekwencji tekstowych poprzez przypisywanie różnym słowom w zdaniu różnych wag, co pozwala modelowi na zrozumienie kontekstu każdego słowa. Model „zwraca uwagę” na odpowiedni fragment tekstu, tak aby lepiej wychwycić kontekst zdania i znaczenie danego słowa. Druga podwarstwa to gęsto połączona sieć prosta, która przekształca każdą pozycję (token) niezależnie. Działa ona jak klasyczna sieć neuronowa, przekształcając dane przy pomocy liniowej transformacji i nieliniowej funkcji aktywacji, co umożliwia modelowi lepsze zrozumienie złożonych wzorców w danych wejściowych.
 
-Dekoder przetwarza reprezentację wektorową i na jej podstawie generuje odpowiedź. Dekoder składa się z 6 identycznych warstw. Każda warstwa składa się z 3 podwarstw. Pierwszą podwarstwą jest warstwa samouwagi z maską (ang. Masked Multi-Head Attention), która ogranicza podgląd modelu tylko do wygenerowanych wcześniej tokenów, bez możliwości „podejrzenia” tokenów przyszłych. Następne podwarstwy to warstwa samouwagi z koderem (ang. Multi-Head Attention with encoder) oraz gęsto połączona sieć prosta. W modelach Chat GPT używany jest głównie dekoder.
+Dekoder przetwarza reprezentację wektorową i na jej podstawie generuje odpowiedź. Dekoder składa się z 6 identycznych warstw. Każda warstwa składa się z 3 podwarstw. Pierwszą podwarstwą jest warstwa samouwagi z maską (ang. Masked Multi-Head Attention), która ogranicza podgląd modelu tylko do wygenerowanych wcześniej tokenów, bez możliwości „podejrzenia” tokenów przyszłych. Następne podwarstwy to warstwa samouwagi z koderem (ang. Multi-Head Attention with encoder) oraz gęsto połączona sieć prosta. W modelach GPT-4 używany jest głównie dekoder.
 
 \begin{figure}[H]
 \centering
@@ -344,38 +342,64 @@ Powyższe opisy dotyczą algorytmów używanych w etapie \textit{pre-treningu}, 
 
 Sukces wielkich modeli językowych możliwy jest przez zdolność do uogólniania wiedzy zdobytej podczas pre-treningu i jej zastosowania do nowych, nieznanych wcześniej zadań. Model może generować spójne i trafne teksty jednocześnie bez specjalistycznego procesu szkolenia.
 
+Duże modele językowe posiadają liczne korzyści między innymi są skalowalne oraz obsługują duże ilości danych \cite{zalety1}. Dodatkowo dzięki doszkalaniu (ang. fine-tuning) mogą być wykorzystane w wielu różnych dziedzinach \cite{zalety1}. Wiele LLM jest dostępnych przez interface graficzny np. modele GPT-3.5, GPT-4 są dostępne poprzez Chat GPT, dzięki czemu narzędzia te wyróżniają się niższym progiem wejścia od innych \cite{zalety2}. 
+
+Mimo licznych zalet LLM posiadają również wady takie jak ryzyko halucynacji czyli odpowiedzi poprawnych językowo i logicznie, które zawierają nieprawdziwe informacje \cite{zalety2}.  Warto dodatkowo zaznaczyć, że jakość odpowiedzi LLM zależy od jakości dostarczonych do szkolenia informacji.  LLM budzą wątpliwości dotyczące praw autorskich oraz ich wykorzystywania w sposób nieetyczny taki jak oszukiwanie na egzaminach \cite{prawo} .  Jedną z istotnych wad dużych modeli językowych jest fakt, że wiedza zakodowana w ich parametrach — w tym w embeddingach i wagach sieci — nie jest bezpośrednio dostępna ani łatwa do wydobycia \cite{ICE-2013}.  LLM posiadają ogromną liczbę paramentów, dzięki czemu mogą przechować znaczne ilości informacji. Wiedza zawarta w LLM ta ma charakter parametryczny czyli jest rozproszona i niejawna. W pracy \textit{Physics of Language Models: Part 3.1, Knowledge Storage and Extraction} autorzy zaznaczają, że wiedzę zawartą w LLM trudno pozyskać wykorzystując klasyczne metody takie jak linearny probing - czyli techniki, która weryfikuje czy określona informacja jest zapisana w reprezentacjach modelu (np. w embeddingach tokenów, warstwach ukrytych, aktywacjach) \cite{ICE-2013}.  Autorzy wskazują, że LLM przechowują wiedzę nieliniowo oraz niedostępnie co oznacza, że co oznacza, że nawet jeśli model „wie” pewien fakt, to nie potrafi go odzyskać ani wygenerować \cite{ICE-2013}. 
+
+Duże modele językowe posiadają szerokie zastosowania w wielu dziedzinach takich jak medycyna, edukacja, nauki społeczne czy marketing. Przykład zastosowania LLM został opisany w artykule \textit{Using Large Language Models to Support Content Analysis: A Case Study of ChatGPT for Adverse Event Detection}, gdzie autorzy tekstu opisują analizę dużych zbiorów danych medycznych przy użyciu LLM \cite{info:doi/10.2196/52499}. 
+Dodatkowo LLM mogą być wykorzystywane do wspomagania procesu analizy tekstu np. wpisów w mediach społęcznościowych lub odpowiedziach ankietowych \cite{info:doi/s00146-025-02487-4}.
+
+
+
+TODO: "struktura powinna być podobna do kg" 
+TODO:
+1. wady zalety llm
+2. W jakich dziedzinach mają zastosowanie llm?
+3. jaka jest roźnica miedzy wiedza zgromadzoną w kg a llm? - blackbox, wiedza zapisana niejawnie w wagach
+4. przyklady zastosowan;  jak sa wykorzystywane?
+
 \subsection{Metody połączenia KG i LLM}
-Integracja wielkich modeli językowych (LLM) z grafami wiedzy (KG) stanowi obecnie jedno z najbardziej obiecujących podejść w dziedzinie sztucznej inteligencji. LLM oferują zdolność do przetwarzania języka naturalnego, natomiast KG zapewniają strukturalną, precyzyjną i interpretowalną reprezentację wiedzy. W niniejszym rozdziale przedstawiono metaanalizę wybranych metod łączenia tych dwóch technologii (zaproponowanych w pracy \textit{Unifying Large Language Models and Knowledge Graphs: A Roadmap} (2024) \cite{graph:llm:roadmap}).
+Integracja wielkich modeli językowych (LLM) z grafami wiedzy (KG) stanowi obecnie jedno z najbardziej obiecujących podejść w dziedzinie sztucznej inteligencji. LLM oferują zdolność do przetwarzania języka naturalnego, natomiast KG zapewniają strukturalną, precyzyjną i interpretowalną reprezentację wiedzy. W niniejszym rozdziale przedstawiono analizę wybranych metod łączenia tych dwóch technologii (zaproponowanych w pracy \textit{Unifying Large Language Models and Knowledge Graphs: A Roadmap} (2024) \cite{graph:llm:roadmap}).
 
 \subsubsection{Tworzenie KG przy pomocy LLM (LLM-augmented KG construction)} % (5.3)
 
-KG są konstrukcją umożliwiającą ustrukzuryzowanie wiedzy, jednak konwencjonalne KG są często niekompletne i nie uwzględniają informacji tekstowych. Wykorzystanie LLM do pracy z KG pozwala na automatyczną konstrukcje KG z nieustrukturyzowanego tekstu.
-W podejściu tym LLM wykonuje następujące akcje:
+\textcolor{red}{TODO: poprawic | KG są konstrukcją umożliwiającą ustrukzuryzowanie wiedzy, jednak konwencjonalne KG są często niekompletne i nie uwzględniają informacji tekstowych.} 
+Wykorzystanie LLM do pracy z KG pozwala na automatyczną konstrukcje KG z nieustrukturyzowanego tekstu.
+W podejściu tym LLM wykonuje następujące akcje (przy czym każdą może wykonać pojedynczo -- osobne prompty, może dwie lub więcej wykonać w tym samym poleceniu, a może też te wszystkie zadania dostać do wykonania jednocześnie w jednym prompcie):
 \begin{itemize}
-    \item \textbf{rozpoznawania encji} (ang. Named Entity Recognition, NER) -- automatyczne identyfikowanie w źródle nazw własnych lub istotnych pojęć np. osób, organizacji czy terminów naukowych. 
+    \item \textbf{rozpoznawania encji} (ang. Named Entity Recognition, NER) -- automatyczne identyfikowanie w danych podanych w prompcie nazw własnych lub istotnych pojęć np. osób, organizacji czy terminów naukowych. 
+    Przykładowy propmt: \textit{„\textcolor{red}{TODO:}”}
     
     \item \textbf{rozpoznawania relacji} (ang. Relation Extraction, RE) -- wykrywanie semantycznych zależności między wcześniej rozpoznanymi encjami.
+    Przykładowy propmt: \textit{„\textcolor{red}{TODO:}”}
     
     \item \textbf{rozwiązywania koreferencji} (ang. Corefernce Resolution, CR) -- identyfikacja przypadków, gdy do opisu encji używa się zaimków osobowych (np. ona, on) lub dzierżawczych (np. jej, jego).
+    Przykładowy propmt: \textit{„\textcolor{red}{TODO:}”}
     
     \item \textbf{generowania trójek wiedzy} (h, r, t) -- reprezentacja faktów w postaci trójek: head (h) - encja początkowa, relation (r) - typ relacji, oraz tail (t) - encja docelowa.
+    Przykładowy propmt: \textit{„\textcolor{red}{TODO:}”}
 \end{itemize}
 
-Taką konstrukcją grafu zajmuje się np. \textbf{AutoKG} \cite{kg:autoKG}. Metoda ta wykorzystuje LLM (np. Chat GPT) do generowania trójek wiedzy na podstawie zaprojektowanych promptów pod konkretną wiedzę dziedzinową np. medyczną, techniczną czy encyklopedyczną. W odróżnieniu od klastycznego sposobu generowania, ta nie wymaga wcześniej zbudowanej ontologii, stąd słowo „Auto” (pol. automatyczny) w nazwie metody. Metoda ta świetnie nadaje się do zastosowań w systemach eksperckich, rekomendacji czy systemach pytanie - odpowiedź (ang. question answering, QA), gdzie użytkownik nie musi mieć technicznych zdolności do zbudowania ontologii czy innej oczekiwanej struktury danych, wystarczy że opisze w prompcie na jakich informacjach LLM powinien się skupić.
+Taką konstrukcją grafu, gdzie wszystkie akcje są oczekiwane od LLM w pojedynczym prompcie, zajmuje się np. metoda \textbf{AutoKG} \cite{kg:autoKG}. Wykorzystuje ona LLM do generowania trójek wiedzy na podstawie promptów zaprojektowanych pod konkretną wiedzę dziedzinową np. medyczną, techniczną czy encyklopedyczną. 
+Metoda ta nie wymaga wcześniej zbudowanej ontologii, stąd słowo „Auto” (pol. automatyczny) w nazwie metody. 
+Metoda ta świetnie nadaje się do zastosowań w systemach eksperckich, rekomendacji czy systemach pytanie - odpowiedź (ang. question answering, QA), gdzie użytkownik nie musi mieć technicznych zdolności do zbudowania ontologii czy innej oczekiwanej struktury danych, wystarczy że opisze w prompcie na jakich informacjach LLM powinien się skupić. 
+Przykładowy propmt: \textit{„\textcolor{red}{TODO:}”}
 
-Inne sposób prezentuje metoda \textbf{Grapher} \cite{kg:grapher}, w której LLM przetwarza tekst wieloetapowo. Najpierw identyfikuje pojedyncze encje, a następnie dedykowany moduł konstruuje relacje między nimi. Podobnie jak AutoKG, tworzy to zintegrowany proces przetwarzania (tak zwany end-to-end pipeline), który nie wymaga ręcznego oznaczania danych.
+Inne sposób prezentuje metoda \textbf{Grapher} \cite{kg:grapher}, w której LLM przetwarza tekst wieloetapowo. Najpierw identyfikuje pojedyncze encje, a następnie dedykowany moduł konstruuje relacje między nimi, a więc wykorzystuje różne prompty do wykonania różnych akcji. Podobnie jak AutoKG, tworzy to zintegrowany proces przetwarzania (tak zwany end-to-end pipeline), który nie wymaga ręcznego identyfikowania encji, koreferencji i relacji przez człowieka.
 
 Dwie poprzednie metody bazują na już użyciu już wytrenowanego LLM, natomiast \textbf{COMET} (\textbf{COM}mons\textbf{E}nse \textbf{T}ransformers) \cite{kg:comet}, prezentuje całkowicie odmienne podejście, ponieważ zakłada wytrenowanie nowego generatywnego modelu opartego na architekturze transformera.
 %, co częściowo powiązane z podrozdziałem „\nameref{sec:sub:sub:llm-kg-pre-training}” z dalszej części pracy.
-W przeciwieństwie do innych powszechnych transformerów, takich jak Chat GPT, jego celem nie jest generowanie odpowiedzi w języku naturalnym, lecz generowanie „zdroworozsądkowych trójek wiedzy” (ang. commonsense knowledge triples) - czyli struktur opisujących codzienne zależności między zdarzeniami, intencjami, emocjami i skutkami. Co ciekawe COMET został wytrenowany na wcześniej już wspominanych źródłach danych \textbf{ConceptNet} \cite{kg:conceptnet} oraz \textbf{ATOMIC} \cite{kg:ATOMIC}. 
+W przeciwieństwie do innych powszechnych transformerów, takich jak GPT-4, jego celem nie jest generowanie odpowiedzi w języku naturalnym, lecz generowanie „zdroworozsądkowych trójek wiedzy” (ang. commonsense knowledge triples) - czyli struktur opisujących codzienne zależności między zdarzeniami, intencjami, emocjami i skutkami. 
+Przykładowy propmt: \textit{„\textcolor{red}{TODO:}”} i wygenerowane trójki: \textit{„\textcolor{red}{TODO:}”}.
+Co ciekawe COMET został wytrenowany na wcześniej już wspominanych źródłach danych \textbf{ConceptNet} \cite{kg:conceptnet} oraz \textbf{ATOMIC} \cite{kg:ATOMIC}. 
 
-Użycie LLM pozwala na uogólnienie i uzupełnienie brakujących informacji w KG, jednak warto zwrócić uwagę na zagrożenia związane z tą metodą takie jak trudność w walidacji generowanej wiedzy. Jakość generowanych trójek zależy w dużej mierze zarówno od promtów jak i doboru odpowiedniego LLM. Wykorzystanie tego rozwiązania warto wzbogacić o dodatkowe mechanizmy weryfikacji i ewentualnie korekty, które sprawdzają, czy fakty wygenerowane lub uzupełnione przez model są poprawne, spójne i zgodne z ontologią grafu wiedzy. Jedynym z mechanizmów automatycznej weryfikacji i edycji KG jest PiVE \cite{kg:pive}, który dodaje pętlę kontrolną (ang. Prompt-in-the-loop Verification and Editing), aby ograniczeniczyć tzw. problem halucynacji LLM (ang. hallucination problem) -- czyli sytuacji, w której model generuje poprawnie brzmiące, lecz fałszywe informacje. 
+Użycie LLM pozwala na uogólnienie i uzupełnienie brakujących informacji w KG, jednak warto zwrócić uwagę na zagrożenia związane z tą metodą takie jak trudność w walidacji generowanej wiedzy. Jakość generowanych trójek zależy w dużej mierze zarówno od promtów jak i doboru odpowiedniego LLM. Proces uzupełniania brakujących informacji warto wzbogacić o dodatkowe mechanizmy weryfikacji i ewentualnej korekty, które sprawdzają, czy fakty wygenerowane lub uzupełnione przez model są poprawne, a w przypadku jeśli graf ma ściśle określony schemat np. poprzez ontologię, to należy dodatkowo zweryfikować spójność i zgodność wygenerowanych trójek z tą ontologią. Jedynym z mechanizmów automatycznej weryfikacji i edycji KG jest PiVE \cite{kg:pive}, który dodaje pętlę kontrolną (ang. Prompt-in-the-loop Verification and Editing), aby ograniczyć tzw. problem halucynacji LLM (ang. hallucination problem) -- czyli sytuacji, w której model generuje poprawnie brzmiące, lecz fałszywe informacje. \textcolor{red}{TODO: lepiej wyjaśnić co robi pive}
 % pętla:
 % 1. LLM generuje nową trójkę wiedzy lub fakt.
 % 2. Następnie inny prompt (lub ten sam model w trybie weryfikacyjnym) ocenia poprawność, spójność logiczną i zgodność z istniejącym grafem.
 % 3. Jeśli wynik jest niepewny, system może odrzucić, poprawić lub ponownie wygenerować dany fakt.
 
-Podsumowując wielkie modele językowe nadają się do konstruowania grafów wiedzy przy użyciu odpowiednich podejść. Metody AutoKG czy Grapher znajdą swoje zastosowanie w tworzeniu i aktualizowaniu danych w grafie dla systemów eksperckich czy pytanie-odpowiedź nastawionych na operowanie w konkretnej dziedzinie lub dziedzinach wiedzy, jako że są nastawione na fakty i encyklopedyczną strukturę. Transformery takie jak COMET będą świetnym wyborem w rozwiązaniach wspierających tworzenie narracji i pisanie dialogów, jako że jest nastawiony na zależności między zdarzeniami, intencjami, emocjami i skutkami.
+Podsumowując wielkie modele językowe nadają się do konstruowania grafów wiedzy przy użyciu odpowiednich podejść. Metody AutoKG czy Grapher znajdą swoje zastosowanie w tworzeniu i aktualizowaniu danych w grafie dla systemów eksperckich czy pytanie-odpowiedź nastawionych na operowanie w konkretnej dziedzinie lub dziedzinach wiedzy, jako że \textcolor{red}{TODO: lepiej wyjaśnić | są nastawione na fakty i encyklopedyczną strukturę}. Transformery takie jak COMET będą świetnym wyborem w rozwiązaniach wspierających tworzenie narracji i pisanie dialogów, jako że jest nastawiony na zależności między zdarzeniami, intencjami, emocjami i skutkami.
 Rozwiązania te nie są jednak nie omylne, w związku z czym warto rozważyć dodanie do nich mechanizmów weryfikujących poprawność takich jak PiVE. 
 
 \subsubsection{Wydobywanie wiedzy z KG przy pomocy LLM (KG-enhanced LLM Inference)} % (4.2)
@@ -489,9 +513,9 @@ Graph RAG bazuje na architekturze RAG, w związku z czym najpierw omówimy tą p
 
 \textbf{RAG (Retrieval-Augmented Generation)} to zaawansowana technika przetwarzania języka naturalnego, która łączy dwa kluczowe komponenty: wyszukiwanie informacji (\textit{retrieval}) i generowanie tekstu (\textit{generation}). Celem RAG jest poprawa jakości generowanych odpowiedzi poprzez wykorzystanie zewnętrznych źródeł wiedzy, co pozwala na bardziej trafne i kontekstowe odpowiedzi na pytania użytkowników. Koncepcja ta stanowi istotny postęp w dziedzinie QA systems (systemy pytanie - odpowiedź) oraz aplikacji NLP, gdzie istotne jest nie tylko rozumienie pytania, ale także dostarczenie precyzyjnych informacji opartych na dużych bazach danych \cite{rag}. 
 
-W klasycznym podejściu do generowania tekstu, modele językowe bazują wyłącznie na wewnętrznej wiedzy zdobytej podczas treningu na ogromnych zbiorach danych. Modele takie jak Chat GPT od OpenAI mają ograniczenia związane z ich statycznym charakterem. Nie są w stanie dynamicznie uwzględniać nowych informacji, które pojawiły się po zakończeniu treningu. Ten problem można rozwiązać przez zastosowanie RAG, który integruje komponent wyszukiwania informacji, umożliwiając modelowi dostęp do najnowszych danych z zewnętrznych źródeł, takich jak bazy danych, artykuły, dokumenty czy strony internetowe.
+W klasycznym podejściu do generowania tekstu, modele językowe bazują wyłącznie na wewnętrznej wiedzy zdobytej podczas treningu na ogromnych zbiorach danych. Modele takie jak GPT-4 od OpenAI mają ograniczenia związane z ich statycznym charakterem. Nie są w stanie dynamicznie uwzględniać nowych informacji, które pojawiły się po zakończeniu treningu. Ten problem można rozwiązać przez zastosowanie RAG, który integruje komponent wyszukiwania informacji, umożliwiając modelowi dostęp do najnowszych danych z zewnętrznych źródeł, takich jak bazy danych, artykuły, dokumenty czy strony internetowe.
 
-Problem stateczności modelu został rozwiązany w systemie Chat GPT-4 oraz Chat GPT-5, które to mają dostęp do tworzenia zapytań w internecie \cite{openai:chatgpt:truth}. W dokumentacji OpenAI nie jest jawnie stwierdzone, czy Chat GPT-4 lub GPT-5 korzystają z RAG-a, ale zawarta jest informacja, że Chat GPT-4 może korzystać z systemów lub narzędzi, wspomagających tworzenie odpowiedzi \cite{openai:chatgpt:dev}.
+Problem stateczności modelu został rozwiązany w systemie Chat GPT, gdzie LLMy takie jak GPT-3.5 czy GPT-4, mają dostęp do tworzenia zapytań w internecie \cite{openai:chatgpt:truth}. W dokumentacji OpenAI nie jest jawnie stwierdzone, czy Chat GPT korzysta z RAG-a, ale zawarta jest informacja, że Chat GPT-4 może korzystać z systemów lub narzędzi, wspomagających tworzenie odpowiedzi \cite{openai:chatgpt:dev}.
 
 Dzięki zdolności do łączenia statycznej wiedzy modeli językowych z dynamicznymi informacjami z zewnętrznych źródeł, RAG stanowi potężne narzędzie, które znacząco zwiększa efektywność i użyteczność aplikacji NLP.
 
@@ -594,6 +618,10 @@ Grafy wiedzy używane są przez wiele firm oraz instytucji państwowych. Firma R
 \newpage
 
 \section{Część eksperymentalna}
+
+\textcolor{red}{\textit{TODO:}\\
+przedstawienie i przetestowanie różnych możliwości wykorzystania grafów wiedzy w połączeniu z wielkimi modelami językowymi
+}
 
 \subsection{Opis zbioru danych (dane o filmach)}
 
@@ -1490,7 +1518,11 @@ analiza dla grup pytań przeprowadzona przez człowieka
 
 
 \subsubsection{Analiza zalet i wad obu podejść}
-\textcolor{red}{\textit{TODO: napisać ...}}
+\textcolor{red}{\textit{TODO: napisać ...}\\
+Praca skupi się na analizie, jak te dwa podejścia mogą wzajemnie się uzupełniać, 
+a także na identyfikacji konkretnych scenariuszy aplikacyjnych, w których ich integracja jest szczególnie korzystna.
+}
+
 
 \section{Podsumowanie}
 \textcolor{red}{\textit{TODO: napisać ...}}
