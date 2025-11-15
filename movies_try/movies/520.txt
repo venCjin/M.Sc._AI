@@ -1,0 +1,10 @@
+Movie name: True Romance
+Released year: 1993
+Runtime: 119 min
+Genres: Crime, Drama, Romance
+Rating: 7.9
+Short description: In Detroit, a lonely pop culture geek marries a call girl, steals cocaine from her pimp, and tries to sell it in Hollywood. Meanwhile, the owners of the cocaine, the Mob, track them down in an attempt to reclaim it.
+Director: Tony Scott
+Actors: Christian Slater, Patricia Arquette, Dennis Hopper, Val Kilmer
+No of rating votes: 206918
+Gross revenue: 12281500

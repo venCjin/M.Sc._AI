@@ -1,0 +1,10 @@
+Movie name: Dark City
+Released year: 1998
+Runtime: 100 min
+Genres: Mystery, Sci-Fi, Thriller
+Rating: 7.6
+Short description: A man struggles with memories of his past, which include a wife he cannot remember and a nightmarish world no one else ever seems to wake up from.
+Director: Alex Proyas
+Actors: Rufus Sewell, Kiefer Sutherland, Jennifer Connelly, William Hurt
+No of rating votes: 187927
+Gross revenue: 14378331

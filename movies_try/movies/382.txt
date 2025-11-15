@@ -1,0 +1,10 @@
+Movie name: Donnie Darko
+Released year: 2001
+Runtime: 113 min
+Genres: Drama, Mystery, Sci-Fi
+Rating: 8.0
+Short description: After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a man in a large rabbit suit who manipulates him to commit a series of crimes.
+Director: Richard Kelly
+Actors: Jake Gyllenhaal, Jena Malone, Mary McDonnell, Holmes Osborne
+No of rating votes: 740086
+Gross revenue: 1480006

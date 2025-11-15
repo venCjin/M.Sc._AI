@@ -1,0 +1,9 @@
+Movie name: Anand
+Released year: 1971
+Runtime: 122 min
+Genres: Drama, Musical
+Rating: 8.4
+Short description: The story of a terminally ill man who wishes to live life to the fullest before the inevitable occurs, as told by his best friend.
+Director: Hrishikesh Mukherjee
+Actors: Rajesh Khanna, Amitabh Bachchan, Sumita Sanyal, Ramesh Deo
+No of rating votes: 30273

@@ -1,0 +1,10 @@
+Movie name: Talvar
+Released year: 2015
+Runtime: 132 min
+Genres: Crime, Drama, Mystery
+Rating: 8.2
+Short description: An experienced investigator confronts several conflicting theories about the perpetrators of a violent double homicide.
+Director: Meghna Gulzar
+Actors: Irrfan Khan, Konkona Sen Sharma, Neeraj Kabi, Sohum Shah
+No of rating votes: 31142
+Gross revenue: 342370

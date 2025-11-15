@@ -1,0 +1,10 @@
+Movie name: Mr. Smith Goes to Washington
+Released year: 1939
+Runtime: 129 min
+Genres: Comedy, Drama
+Rating: 8.1
+Short description: A naive man is appointed to fill a vacancy in the United States Senate. His plans promptly collide with political corruption, but he doesn't back down.
+Director: Frank Capra
+Actors: James Stewart, Jean Arthur, Claude Rains, Edward Arnold
+No of rating votes: 107017
+Gross revenue: 9600000

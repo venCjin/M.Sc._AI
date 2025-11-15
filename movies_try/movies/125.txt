@@ -1,0 +1,10 @@
+Movie name: M - Eine Stadt sucht einen Mörder
+Released year: 1931
+Runtime: 117 min
+Genres: Crime, Mystery, Thriller
+Rating: 8.3
+Short description: When the police in a German city are unable to catch a child-murderer, other criminals join in the manhunt.
+Director: Fritz Lang
+Actors: Peter Lorre, Ellen Widmann, Inge Landgut, Otto Wernicke
+No of rating votes: 143434
+Gross revenue: 28877

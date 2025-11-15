@@ -1,0 +1,10 @@
+Movie name: The Best Years of Our Lives
+Released year: 1946
+Runtime: 170 min
+Genres: Drama, Romance, War
+Rating: 8.0
+Short description: Three World War II veterans return home to small-town America to discover that they and their families have been irreparably changed.
+Director: William Wyler
+Actors: Myrna Loy, Dana Andrews, Fredric March, Teresa Wright
+No of rating votes: 57259
+Gross revenue: 23650000

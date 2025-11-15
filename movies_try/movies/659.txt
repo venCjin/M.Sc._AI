@@ -1,0 +1,10 @@
+Movie name: Tombstone
+Released year: 1993
+Runtime: 130 min
+Genres: Action, Biography, Drama
+Rating: 7.8
+Short description: A successful lawman's plans to retire anonymously in Tombstone, Arizona are disrupted by the kind of outlaws he was famous for eliminating.
+Director: George P. Cosmatos
+Actors: Kevin Jarre, Kurt Russell, Val Kilmer, Sam Elliott
+No of rating votes: 126871
+Gross revenue: 56505065

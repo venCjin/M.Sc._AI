@@ -1,0 +1,10 @@
+Movie name: Lord of War
+Released year: 2005
+Runtime: 122 min
+Genres: Action, Crime, Drama
+Rating: 7.6
+Short description: An arms dealer confronts the morality of his work as he is being chased by an INTERPOL Agent.
+Director: Andrew Niccol
+Actors: Nicolas Cage, Ethan Hawke, Jared Leto, Bridget Moynahan
+No of rating votes: 294140
+Gross revenue: 24149632

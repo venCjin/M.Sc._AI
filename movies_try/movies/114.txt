@@ -1,0 +1,10 @@
+Movie name: 2001: A Space Odyssey
+Released year: 1968
+Runtime: 149 min
+Genres: Adventure, Sci-Fi
+Rating: 8.3
+Short description: After discovering a mysterious artifact buried beneath the Lunar surface, mankind sets off on a quest to find its origins with help from intelligent supercomputer H.A.L. 9000.
+Director: Stanley Kubrick
+Actors: Keir Dullea, Gary Lockwood, William Sylvester, Daniel Richter
+No of rating votes: 603517
+Gross revenue: 56954992

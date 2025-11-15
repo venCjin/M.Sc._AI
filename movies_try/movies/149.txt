@@ -1,0 +1,10 @@
+Movie name: There Will Be Blood
+Released year: 2007
+Runtime: 158 min
+Genres: Drama
+Rating: 8.2
+Short description: A story of family, religion, hatred, oil and madness, focusing on a turn-of-the-century prospector in the early days of the business.
+Director: Paul Thomas Anderson
+Actors: Daniel Day-Lewis, Paul Dano, Ciarán Hinds, Martin Stringer
+No of rating votes: 517359
+Gross revenue: 40222514

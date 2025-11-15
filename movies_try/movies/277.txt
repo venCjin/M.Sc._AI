@@ -1,0 +1,10 @@
+Movie name: Life of Brian
+Released year: 1979
+Runtime: 94 min
+Genres: Comedy
+Rating: 8.1
+Short description: Born on the original Christmas in the stable next door to Jesus Christ, Brian of Nazareth spends his life being mistaken for a messiah.
+Director: Terry Jones
+Actors: Graham Chapman, John Cleese, Michael Palin, Terry Gilliam
+No of rating votes: 367250
+Gross revenue: 20045115

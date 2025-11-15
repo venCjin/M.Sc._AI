@@ -1,0 +1,10 @@
+Movie name: Y tu mamá también
+Released year: 2001
+Runtime: 106 min
+Genres: Drama
+Rating: 7.6
+Short description: In Mexico, two teenage boys and an attractive older woman embark on a road trip and learn a thing or two about life, friendship, sex, and each other.
+Director: Alfonso Cuarón
+Actors: Maribel Verdú, Gael García Bernal, Daniel Giménez Cacho, Ana López Mercado
+No of rating votes: 115827
+Gross revenue: 13622333

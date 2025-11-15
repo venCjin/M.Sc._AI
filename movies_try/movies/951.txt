@@ -1,0 +1,10 @@
+Movie name: Minority Report
+Released year: 2002
+Runtime: 145 min
+Genres: Action, Crime, Mystery
+Rating: 7.6
+Short description: In a future where a special police unit is able to arrest murderers before they commit their crimes, an officer from that unit is himself accused of a future murder.
+Director: Steven Spielberg
+Actors: Tom Cruise, Colin Farrell, Samantha Morton, Max von Sydow
+No of rating votes: 508417
+Gross revenue: 132072926

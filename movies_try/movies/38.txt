@@ -1,0 +1,10 @@
+Movie name: The Pianist
+Released year: 2002
+Runtime: 150 min
+Genres: Biography, Drama, Music
+Rating: 8.5
+Short description: A Polish Jewish musician struggles to survive the destruction of the Warsaw ghetto of World War II.
+Director: Roman Polanski
+Actors: Adrien Brody, Thomas Kretschmann, Frank Finlay, Emilia Fox
+No of rating votes: 729603
+Gross revenue: 32572577

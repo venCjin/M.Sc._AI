@@ -1,0 +1,10 @@
+Movie name: Fiddler on the Roof
+Released year: 1971
+Runtime: 181 min
+Genres: Drama, Family, Musical
+Rating: 8.0
+Short description: In prerevolutionary Russia, a Jewish peasant contends with marrying off three of his daughters while growing anti-Semitic sentiment threatens his village.
+Director: Norman Jewison
+Actors: Topol, Norma Crane, Leonard Frey, Molly Picon
+No of rating votes: 39491
+Gross revenue: 80500000

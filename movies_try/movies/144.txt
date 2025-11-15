@@ -1,0 +1,10 @@
+Movie name: Warrior
+Released year: 2011
+Runtime: 140 min
+Genres: Action, Drama, Sport
+Rating: 8.2
+Short description: The youngest son of an alcoholic former boxer returns home, where he's trained by his father for competition in a mixed martial arts tournament - a path that puts the fighter on a collision course with his estranged, older brother.
+Director: Gavin O'Connor
+Actors: Tom Hardy, Nick Nolte, Joel Edgerton, Jennifer Morrison
+No of rating votes: 435950
+Gross revenue: 13657115

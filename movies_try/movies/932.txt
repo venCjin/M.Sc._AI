@@ -1,0 +1,10 @@
+Movie name: Saw
+Released year: 2004
+Runtime: 103 min
+Genres: Horror, Mystery, Thriller
+Rating: 7.6
+Short description: Two strangers awaken in a room with no recollection of how they got there, and soon discover they're pawns in a deadly game perpetrated by a notorious serial killer.
+Director: James Wan
+Actors: Cary Elwes, Leigh Whannell, Danny Glover, Ken Leung
+No of rating votes: 379020
+Gross revenue: 56000369

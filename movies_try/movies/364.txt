@@ -1,0 +1,10 @@
+Movie name: Sin City
+Released year: 2005
+Runtime: 124 min
+Genres: Crime, Thriller
+Rating: 8.0
+Short description: A movie that explores the dark and miserable town, Basin City, tells the story of three different people, all caught up in violent corruption.
+Director: Frank Miller
+Actors: Quentin Tarantino, Robert Rodriguez, Mickey Rourke, Clive Owen
+No of rating votes: 738512
+Gross revenue: 74103820

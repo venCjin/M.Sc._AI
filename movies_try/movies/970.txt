@@ -1,0 +1,10 @@
+Movie name: My Cousin Vinny
+Released year: 1992
+Runtime: 120 min
+Genres: Comedy, Crime
+Rating: 7.6
+Short description: Two New Yorkers accused of murder in rural Alabama while on their way back to college call in the help of one of their cousins, a loudmouth lawyer with no trial experience.
+Director: Jonathan Lynn
+Actors: Joe Pesci, Marisa Tomei, Ralph Macchio, Mitchell Whitfield
+No of rating votes: 107325
+Gross revenue: 52929168

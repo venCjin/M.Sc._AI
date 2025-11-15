@@ -1,0 +1,9 @@
+Movie name: A Wednesday
+Released year: 2008
+Runtime: 104 min
+Genres: Action, Crime, Drama
+Rating: 8.1
+Short description: A retiring police officer reminisces about the most astounding day of his career. About a case that was never filed but continues to haunt him in his memories - the case of a man and a Wednesday.
+Director: Neeraj Pandey
+Actors: Anupam Kher, Naseeruddin Shah, Jimmy Sheirgill, Aamir Bashir
+No of rating votes: 73891

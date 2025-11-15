@@ -1,0 +1,10 @@
+Movie name: The Fall
+Released year: 2006
+Runtime: 117 min
+Genres: Adventure, Drama, Fantasy
+Rating: 7.9
+Short description: In a hospital on the outskirts of 1920s Los Angeles, an injured stuntman begins to tell a fellow patient, a little girl with a broken arm, a fantastic story of five mythical heroes. Thanks to his fractured state of mind and her vivid imagination, the line between fiction and reality blurs as the tale advances.
+Director: Tarsem Singh
+Actors: Lee Pace, Catinca Untaru, Justine Waddell, Kim Uylenbroek
+No of rating votes: 107290
+Gross revenue: 2280348

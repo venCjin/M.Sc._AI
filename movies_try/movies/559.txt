@@ -1,0 +1,10 @@
+Movie name: Notorious
+Released year: 1946
+Runtime: 102 min
+Genres: Drama, Film-Noir, Romance
+Rating: 7.9
+Short description: A woman is asked to spy on a group of Nazi friends in South America. How far will she have to go to ingratiate herself with them?
+Director: Alfred Hitchcock
+Actors: Cary Grant, Ingrid Bergman, Claude Rains, Louis Calhern
+No of rating votes: 92306
+Gross revenue: 10464000

@@ -1,0 +1,10 @@
+Movie name: The Fighter
+Released year: 2010
+Runtime: 116 min
+Genres: Biography, Drama, Sport
+Rating: 7.8
+Short description: Based on the story of Micky Ward, a fledgling boxer who tries to escape the shadow of his more famous but troubled older boxing brother and get his own shot at greatness.
+Director: David O. Russell
+Actors: Mark Wahlberg, Christian Bale, Amy Adams, Melissa Leo
+No of rating votes: 340584
+Gross revenue: 93617009

@@ -1,0 +1,10 @@
+Movie name: I Am Sam
+Released year: 2001
+Runtime: 132 min
+Genres: Drama
+Rating: 7.7
+Short description: A mentally handicapped man fights for custody of his 7-year-old daughter and in the process teaches his cold-hearted lawyer the value of love and family.
+Director: Jessie Nelson
+Actors: Sean Penn, Michelle Pfeiffer, Dakota Fanning, Dianne Wiest
+No of rating votes: 142863
+Gross revenue: 40311852

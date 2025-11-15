@@ -1,0 +1,10 @@
+Movie name: Zodiac
+Released year: 2007
+Runtime: 157 min
+Genres: Crime, Drama, Mystery
+Rating: 7.7
+Short description: In the late 1960s/early 1970s, a San Francisco cartoonist becomes an amateur detective obsessed with tracking down the Zodiac Killer, an unidentified individual who terrorizes Northern California with a killing spree.
+Director: David Fincher
+Actors: Jake Gyllenhaal, Robert Downey Jr., Mark Ruffalo, Anthony Edwards
+No of rating votes: 466080
+Gross revenue: 33080084

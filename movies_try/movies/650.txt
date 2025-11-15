@@ -1,0 +1,10 @@
+Movie name: October Sky
+Released year: 1999
+Runtime: 108 min
+Genres: Biography, Drama, Family
+Rating: 7.8
+Short description: The true story of Homer Hickam, a coal miner's son who was inspired by the first Sputnik launch to take up rocketry against his father's wishes.
+Director: Joe Johnston
+Actors: Jake Gyllenhaal, Chris Cooper, Laura Dern, Chris Owen
+No of rating votes: 82855
+Gross revenue: 32481825

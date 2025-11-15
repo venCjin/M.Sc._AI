@@ -1,0 +1,10 @@
+Movie name: Edward Scissorhands
+Released year: 1990
+Runtime: 105 min
+Genres: Drama, Fantasy, Romance
+Rating: 7.9
+Short description: An artificial man, who was incompletely constructed and has scissors for hands, leads a solitary life. Then one day, a suburban lady meets him and introduces him to her world.
+Director: Tim Burton
+Actors: Johnny Depp, Winona Ryder, Dianne Wiest, Anthony Michael Hall
+No of rating votes: 447368
+Gross revenue: 56362352

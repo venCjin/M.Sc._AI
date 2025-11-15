@@ -1,0 +1,10 @@
+Movie name: Sleuth
+Released year: 1972
+Runtime: 138 min
+Genres: Mystery, Thriller
+Rating: 8.0
+Short description: A man who loves games and theater invites his wife's lover to meet him, setting up a battle of wits with potentially deadly results.
+Director: Joseph L. Mankiewicz
+Actors: Laurence Olivier, Michael Caine, Alec Cawthorne, John Matthews
+No of rating votes: 44748
+Gross revenue: 4081254

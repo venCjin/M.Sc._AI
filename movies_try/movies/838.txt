@@ -1,0 +1,10 @@
+Movie name: The Verdict
+Released year: 1982
+Runtime: 129 min
+Genres: Drama
+Rating: 7.7
+Short description: A lawyer sees the chance to salvage his career and self-respect by taking a medical malpractice case to trial rather than settling.
+Director: Sidney Lumet
+Actors: Paul Newman, Charlotte Rampling, Jack Warden, James Mason
+No of rating votes: 36096
+Gross revenue: 54000000

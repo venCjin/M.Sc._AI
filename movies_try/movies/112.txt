@@ -1,0 +1,10 @@
+Movie name: The Sting
+Released year: 1973
+Runtime: 129 min
+Genres: Comedy, Crime, Drama
+Rating: 8.3
+Short description: Two grifters team up to pull off the ultimate con.
+Director: George Roy Hill
+Actors: Paul Newman, Robert Redford, Robert Shaw, Charles Durning
+No of rating votes: 241513
+Gross revenue: 159600000

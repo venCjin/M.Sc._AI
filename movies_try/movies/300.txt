@@ -1,0 +1,10 @@
+Movie name: Ben-Hur
+Released year: 1959
+Runtime: 212 min
+Genres: Adventure, Drama, History
+Rating: 8.1
+Short description: After a Jewish prince is betrayed and sent into slavery by a Roman friend, he regains his freedom and comes back for revenge.
+Director: William Wyler
+Actors: Charlton Heston, Jack Hawkins, Stephen Boyd, Haya Harareet
+No of rating votes: 219466
+Gross revenue: 74700000

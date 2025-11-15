@@ -1,0 +1,9 @@
+Movie name: Roma
+Released year: 2018
+Runtime: 135 min
+Genres: Drama
+Rating: 7.7
+Short description: A year in the life of a middle-class family's maid in Mexico City in the early 1970s.
+Director: Alfonso Cuarón
+Actors: Yalitza Aparicio, Marina de Tavira, Diego Cortina Autrey, Carlos Peralta
+No of rating votes: 140375

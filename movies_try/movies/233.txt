@@ -1,0 +1,10 @@
+Movie name: Lage Raho Munna Bhai
+Released year: 2006
+Runtime: 144 min
+Genres: Comedy, Drama, Romance
+Rating: 8.1
+Short description: Munna Bhai embarks on a journey with Mahatma Gandhi in order to fight against a corrupt property dealer.
+Director: Rajkumar Hirani
+Actors: Sanjay Dutt, Arshad Warsi, Vidya Balan, Boman Irani
+No of rating votes: 43137
+Gross revenue: 2217561

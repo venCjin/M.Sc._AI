@@ -1,0 +1,10 @@
+Movie name: Fargo
+Released year: 1996
+Runtime: 98 min
+Genres: Crime, Drama, Thriller
+Rating: 8.1
+Short description: Jerry Lundegaard's inept crime falls apart due to his and his henchmen's bungling and the persistent police work of the quite pregnant Marge Gunderson.
+Director: Joel Coen
+Actors: Ethan Coen, William H. Macy, Frances McDormand, Steve Buscemi
+No of rating votes: 617444
+Gross revenue: 24611975

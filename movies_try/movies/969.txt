@@ -1,0 +1,10 @@
+Movie name: Dazed and Confused
+Released year: 1993
+Runtime: 102 min
+Genres: Comedy
+Rating: 7.6
+Short description: The adventures of high school and junior high students on the last day of school in May 1976.
+Director: Richard Linklater
+Actors: Jason London, Wiley Wiggins, Matthew McConaughey, Rory Cochrane
+No of rating votes: 165465
+Gross revenue: 7993039

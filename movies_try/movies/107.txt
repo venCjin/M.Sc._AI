@@ -1,0 +1,10 @@
+Movie name: Amadeus
+Released year: 1984
+Runtime: 160 min
+Genres: Biography, Drama, History
+Rating: 8.3
+Short description: The life, success and troubles of Wolfgang Amadeus Mozart, as told by Antonio Salieri, the contemporaneous composer who was insanely jealous of Mozart's talent and claimed to have murdered him.
+Director: Milos Forman
+Actors: F. Murray Abraham, Tom Hulce, Elizabeth Berridge, Roy Dotrice
+No of rating votes: 369007
+Gross revenue: 51973029

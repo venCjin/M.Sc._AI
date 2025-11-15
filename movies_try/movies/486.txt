@@ -1,0 +1,10 @@
+Movie name: Moon
+Released year: 2009
+Runtime: 97 min
+Genres: Drama, Mystery, Sci-Fi
+Rating: 7.9
+Short description: Astronaut Sam Bell has a quintessentially personal encounter toward the end of his three-year stint on the Moon, where he, working alongside his computer, GERTY, sends back to Earth parcels of a resource that has helped diminish our planet's power problems.
+Director: Duncan Jones
+Actors: Sam Rockwell, Kevin Spacey, Dominique McElligott, Rosie Shaw
+No of rating votes: 335152
+Gross revenue: 5009677

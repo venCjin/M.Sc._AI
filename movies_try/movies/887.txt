@@ -1,0 +1,10 @@
+Movie name: Guardians of the Galaxy Vol. 2
+Released year: 2017
+Runtime: 136 min
+Genres: Action, Adventure, Comedy
+Rating: 7.6
+Short description: The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father the ambitious celestial being Ego.
+Director: James Gunn
+Actors: Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel
+No of rating votes: 569974
+Gross revenue: 389813101

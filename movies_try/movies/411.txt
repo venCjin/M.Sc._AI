@@ -1,0 +1,10 @@
+Movie name: Gandhi
+Released year: 1982
+Runtime: 191 min
+Genres: Biography, Drama, History
+Rating: 8.0
+Short description: The life of the lawyer who became the famed leader of the Indian revolts against the British rule through his philosophy of nonviolent protest.
+Director: Richard Attenborough
+Actors: Ben Kingsley, John Gielgud, Rohini Hattangadi, Roshan Seth
+No of rating votes: 217664
+Gross revenue: 52767889

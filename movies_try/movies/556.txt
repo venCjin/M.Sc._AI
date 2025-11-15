@@ -1,0 +1,10 @@
+Movie name: Strangers on a Train
+Released year: 1951
+Runtime: 101 min
+Genres: Crime, Film-Noir, Thriller
+Rating: 7.9
+Short description: A psychopath forces a tennis star to comply with his theory that two strangers can get away with murder.
+Director: Alfred Hitchcock
+Actors: Farley Granger, Robert Walker, Ruth Roman, Leo G. Carroll
+No of rating votes: 123341
+Gross revenue: 7630000

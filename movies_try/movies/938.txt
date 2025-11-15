@@ -1,0 +1,10 @@
+Movie name: 21 Grams
+Released year: 2003
+Runtime: 124 min
+Genres: Crime, Drama, Thriller
+Rating: 7.6
+Short description: A freak accident brings together a critically ill mathematician, a grieving mother, and a born-again ex-con.
+Director: Alejandro G. Iñárritu
+Actors: Sean Penn, Benicio Del Toro, Naomi Watts, Danny Huston
+No of rating votes: 224545
+Gross revenue: 16290476

@@ -1,0 +1,10 @@
+Movie name: The Hateful Eight
+Released year: 2015
+Runtime: 168 min
+Genres: Crime, Drama, Mystery
+Rating: 7.8
+Short description: In the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter in a cabin currently inhabited by a collection of nefarious characters.
+Director: Quentin Tarantino
+Actors: Samuel L. Jackson, Kurt Russell, Jennifer Jason Leigh, Walton Goggins
+No of rating votes: 517059
+Gross revenue: 54117416

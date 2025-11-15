@@ -1,0 +1,9 @@
+Movie name: The Trial of the Chicago 7
+Released year: 2020
+Runtime: 129 min
+Genres: Drama, History, Thriller
+Rating: 7.8
+Short description: The story of 7 people on trial stemming from various charges surrounding the uprising at the 1968 Democratic National Convention in Chicago, Illinois.
+Director: Aaron Sorkin
+Actors: Eddie Redmayne, Alex Sharp, Sacha Baron Cohen, Jeremy Strong
+No of rating votes: 89896

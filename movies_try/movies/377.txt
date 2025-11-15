@@ -1,0 +1,10 @@
+Movie name: Big Fish
+Released year: 2003
+Runtime: 125 min
+Genres: Adventure, Drama, Fantasy
+Rating: 8.0
+Short description: A frustrated son tries to determine the fact from fiction in his dying father's life.
+Director: Tim Burton
+Actors: Ewan McGregor, Albert Finney, Billy Crudup, Jessica Lange
+No of rating votes: 415218
+Gross revenue: 66257002

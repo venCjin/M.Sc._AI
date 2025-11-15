@@ -1,0 +1,10 @@
+Movie name: Her
+Released year: 2013
+Runtime: 126 min
+Genres: Drama, Romance, Sci-Fi
+Rating: 8.0
+Short description: In a near future, a lonely writer develops an unlikely relationship with an operating system designed to meet his every need.
+Director: Spike Jonze
+Actors: Joaquin Phoenix, Amy Adams, Scarlett Johansson, Rooney Mara
+No of rating votes: 540772
+Gross revenue: 25568251

@@ -1,0 +1,10 @@
+Movie name: Little Women
+Released year: 2019
+Runtime: 135 min
+Genres: Drama, Romance
+Rating: 7.8
+Short description: Jo March reflects back and forth on her life, telling the beloved story of the March sisters - four young women, each determined to live life on her own terms.
+Director: Greta Gerwig
+Actors: Saoirse Ronan, Emma Watson, Florence Pugh, Eliza Scanlen
+No of rating votes: 143250
+Gross revenue: 108101214

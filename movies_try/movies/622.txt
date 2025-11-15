@@ -1,0 +1,10 @@
+Movie name: American Gangster
+Released year: 2007
+Runtime: 157 min
+Genres: Biography, Crime, Drama
+Rating: 7.8
+Short description: An outcast New York City cop is charged with bringing down Harlem drug lord Frank Lucas, whose real life inspired this partly biographical film.
+Director: Ridley Scott
+Actors: Denzel Washington, Russell Crowe, Chiwetel Ejiofor, Josh Brolin
+No of rating votes: 392449
+Gross revenue: 130164645

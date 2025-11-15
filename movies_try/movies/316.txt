@@ -1,0 +1,10 @@
+Movie name: It Happened One Night
+Released year: 1934
+Runtime: 105 min
+Genres: Comedy, Romance
+Rating: 8.1
+Short description: A renegade reporter and a crazy young heiress meet on a bus heading for New York, and end up stuck with each other when the bus leaves them behind at one of the stops.
+Director: Frank Capra
+Actors: Clark Gable, Claudette Colbert, Walter Connolly, Roscoe Karns
+No of rating votes: 94016
+Gross revenue: 4360000

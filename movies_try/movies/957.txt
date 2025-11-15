@@ -1,0 +1,10 @@
+Movie name: Fear and Loathing in Las Vegas
+Released year: 1998
+Runtime: 118 min
+Genres: Adventure, Comedy, Drama
+Rating: 7.6
+Short description: An oddball journalist and his psychopathic lawyer travel to Las Vegas for a series of psychedelic escapades.
+Director: Terry Gilliam
+Actors: Johnny Depp, Benicio Del Toro, Tobey Maguire, Michael Lee Gogin
+No of rating votes: 259753
+Gross revenue: 10680275

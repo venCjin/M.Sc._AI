@@ -1,0 +1,10 @@
+Movie name: Cast Away
+Released year: 2000
+Runtime: 143 min
+Genres: Adventure, Drama, Romance
+Rating: 7.8
+Short description: A FedEx executive undergoes a physical and emotional transformation after crash landing on a deserted island.
+Director: Robert Zemeckis
+Actors: Tom Hanks, Helen Hunt, Paul Sanchez, Lari White
+No of rating votes: 524235
+Gross revenue: 233632142

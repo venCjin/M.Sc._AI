@@ -1,0 +1,10 @@
+Movie name: Gladiator
+Released year: 2000
+Runtime: 155 min
+Genres: Action, Adventure, Drama
+Rating: 8.5
+Short description: A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.
+Director: Ridley Scott
+Actors: Russell Crowe, Joaquin Phoenix, Connie Nielsen, Oliver Reed
+No of rating votes: 1341460
+Gross revenue: 187705427

@@ -1,0 +1,10 @@
+Movie name: The Godfather: Part III
+Released year: 1990
+Runtime: 162 min
+Genres: Crime, Drama
+Rating: 7.6
+Short description: Follows Michael Corleone, now in his 60s, as he seeks to free his family from crime and find a suitable successor to his empire.
+Director: Francis Ford Coppola
+Actors: Al Pacino, Diane Keaton, Andy Garcia, Talia Shire
+No of rating votes: 359809
+Gross revenue: 66666062

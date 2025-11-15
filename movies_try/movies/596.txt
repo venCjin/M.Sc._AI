@@ -1,0 +1,10 @@
+Movie name: Toy Story 4
+Released year: 2019
+Runtime: 100 min
+Genres: Animation, Adventure, Comedy
+Rating: 7.8
+Short description: When a new toy called "Forky" joins Woody and the gang, a road trip alongside old and new friends reveals how big the world can be for a toy.
+Director: Josh Cooley
+Actors: Tom Hanks, Tim Allen, Annie Potts, Tony Hale
+No of rating votes: 203177
+Gross revenue: 434038008

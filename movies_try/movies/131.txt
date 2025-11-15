@@ -1,0 +1,10 @@
+Movie name: Green Book
+Released year: 2018
+Runtime: 130 min
+Genres: Biography, Comedy, Drama
+Rating: 8.2
+Short description: A working-class Italian-American bouncer becomes the driver of an African-American classical pianist on a tour of venues through the 1960s American South.
+Director: Peter Farrelly
+Actors: Viggo Mortensen, Mahershala Ali, Linda Cardellini, Sebastian Maniscalco
+No of rating votes: 377884
+Gross revenue: 85080171

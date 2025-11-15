@@ -1,0 +1,10 @@
+Movie name: The Boondock Saints
+Released year: 1999
+Runtime: 108 min
+Genres: Action, Crime, Thriller
+Rating: 7.8
+Short description: Two Irish Catholic brothers become vigilantes and wipe out Boston's criminal underworld in the name of God.
+Director: Troy Duffy
+Actors: Willem Dafoe, Sean Patrick Flanery, Norman Reedus, David Della Rocco
+No of rating votes: 227143
+Gross revenue: 25812

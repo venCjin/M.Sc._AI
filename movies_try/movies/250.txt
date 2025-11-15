@@ -1,0 +1,10 @@
+Movie name: The Truman Show
+Released year: 1998
+Runtime: 103 min
+Genres: Comedy, Drama
+Rating: 8.1
+Short description: An insurance salesman discovers his whole life is actually a reality TV show.
+Director: Peter Weir
+Actors: Jim Carrey, Ed Harris, Laura Linney, Noah Emmerich
+No of rating votes: 939631
+Gross revenue: 125618201

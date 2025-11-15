@@ -1,0 +1,10 @@
+Movie name: Se7en
+Released year: 1995
+Runtime: 127 min
+Genres: Crime, Drama, Mystery
+Rating: 8.6
+Short description: Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.
+Director: David Fincher
+Actors: Morgan Freeman, Brad Pitt, Kevin Spacey, Andrew Kevin Walker
+No of rating votes: 1445096
+Gross revenue: 100125643

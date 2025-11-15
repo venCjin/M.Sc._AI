@@ -1,0 +1,10 @@
+Movie name: Akira
+Released year: 1988
+Runtime: 124 min
+Genres: Animation, Action, Sci-Fi
+Rating: 8.0
+Short description: A secret military project endangers Neo-Tokyo when it turns a biker gang member into a rampaging psychic psychopath who can only be stopped by two teenagers and a group of psychics.
+Director: Katsuhiro Ôtomo
+Actors: Mitsuo Iwata, Nozomu Sasaki, Mami Koyama, Tesshô Genda
+No of rating votes: 164918
+Gross revenue: 553171

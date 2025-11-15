@@ -1,0 +1,10 @@
+Movie name: Training Day
+Released year: 2001
+Runtime: 122 min
+Genres: Crime, Drama, Thriller
+Rating: 7.7
+Short description: A rookie cop spends his first day as a Los Angeles narcotics officer with a rogue detective who isn't what he appears to be.
+Director: Antoine Fuqua
+Actors: Denzel Washington, Ethan Hawke, Scott Glenn, Tom Berenger
+No of rating votes: 390247
+Gross revenue: 76631907

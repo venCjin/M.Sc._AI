@@ -1,0 +1,10 @@
+Movie name: The Odd Couple
+Released year: 1968
+Runtime: 105 min
+Genres: Comedy
+Rating: 7.7
+Short description: Two friends try sharing an apartment, but their ideas of housekeeping and lifestyles are as different as night and day.
+Director: Gene Saks
+Actors: Jack Lemmon, Walter Matthau, John Fiedler, Herb Edelman
+No of rating votes: 31572
+Gross revenue: 44527234

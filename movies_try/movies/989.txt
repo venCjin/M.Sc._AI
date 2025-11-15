@@ -1,0 +1,10 @@
+Movie name: The Long Goodbye
+Released year: 1973
+Runtime: 112 min
+Genres: Comedy, Crime, Drama
+Rating: 7.6
+Short description: Private investigator Philip Marlowe helps a friend out of a jam, but in doing so gets implicated in his wife's murder.
+Director: Robert Altman
+Actors: Elliott Gould, Nina van Pallandt, Sterling Hayden, Mark Rydell
+No of rating votes: 26337
+Gross revenue: 959000

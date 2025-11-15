@@ -1,0 +1,10 @@
+Movie name: The Godfather: Part II
+Released year: 1974
+Runtime: 202 min
+Genres: Crime, Drama
+Rating: 9.0
+Short description: The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.
+Director: Francis Ford Coppola
+Actors: Al Pacino, Robert De Niro, Robert Duvall, Diane Keaton
+No of rating votes: 1129952
+Gross revenue: 57300000

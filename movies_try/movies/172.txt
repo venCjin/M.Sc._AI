@@ -1,0 +1,10 @@
+Movie name: Ran
+Released year: 1985
+Runtime: 162 min
+Genres: Action, Drama, War
+Rating: 8.2
+Short description: In Medieval Japan, an elderly warlord retires, handing over his empire to his three sons. However, he vastly underestimates how the new-found power will corrupt them and cause them to turn on each other...and him.
+Director: Akira Kurosawa
+Actors: Tatsuya Nakadai, Akira Terao, Jinpachi Nezu, Daisuke Ryû
+No of rating votes: 112505
+Gross revenue: 4135750

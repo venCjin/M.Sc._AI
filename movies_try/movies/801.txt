@@ -1,0 +1,10 @@
+Movie name: Happiness
+Released year: 1998
+Runtime: 134 min
+Genres: Comedy, Drama
+Rating: 7.7
+Short description: The lives of several individuals intertwine as they go about their lives in their own unique ways, engaging in acts society as a whole might find disturbing in a desperate search for human connection.
+Director: Todd Solondz
+Actors: Jane Adams, Jon Lovitz, Philip Seymour Hoffman, Dylan Baker
+No of rating votes: 66408
+Gross revenue: 2807390

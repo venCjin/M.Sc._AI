@@ -1,0 +1,10 @@
+Movie name: Ghostbusters
+Released year: 1984
+Runtime: 105 min
+Genres: Action, Comedy, Fantasy
+Rating: 7.8
+Short description: Three former parapsychology professors set up shop as a unique ghost removal service.
+Director: Ivan Reitman
+Actors: Bill Murray, Dan Aykroyd, Sigourney Weaver, Harold Ramis
+No of rating votes: 355413
+Gross revenue: 238632124

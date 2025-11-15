@@ -1,0 +1,9 @@
+Movie name: El ángel exterminador
+Released year: 1962
+Runtime: 95 min
+Genres: Drama, Fantasy
+Rating: 8.1
+Short description: The guests at an upper-class dinner party find themselves unable to leave.
+Director: Luis Buñuel
+Actors: Silvia Pinal, Jacqueline Andere, Enrique Rambal, José Baviera
+No of rating votes: 29682

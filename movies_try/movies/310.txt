@@ -1,0 +1,10 @@
+Movie name: The Red Shoes
+Released year: 1948
+Runtime: 135 min
+Genres: Drama, Music, Romance
+Rating: 8.1
+Short description: A young ballet dancer is torn between the man she loves and her pursuit to become a prima ballerina.
+Director: Michael Powell
+Actors: Emeric Pressburger, Anton Walbrook, Marius Goring, Moira Shearer
+No of rating votes: 30935
+Gross revenue: 10900000

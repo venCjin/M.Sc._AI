@@ -1,0 +1,10 @@
+Movie name: All the President's Men
+Released year: 1976
+Runtime: 138 min
+Genres: Biography, Drama, History
+Rating: 7.9
+Short description: "The Washington Post" reporters Bob Woodward and Carl Bernstein uncover the details of the Watergate scandal that leads to President Richard Nixon's resignation.
+Director: Alan J. Pakula
+Actors: Dustin Hoffman, Robert Redford, Jack Warden, Martin Balsam
+No of rating votes: 103031
+Gross revenue: 70600000

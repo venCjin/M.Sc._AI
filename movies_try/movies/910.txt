@@ -1,0 +1,10 @@
+Movie name: Moneyball
+Released year: 2011
+Runtime: 133 min
+Genres: Biography, Drama, Sport
+Rating: 7.6
+Short description: Oakland A's general manager Billy Beane's successful attempt to assemble a baseball team on a lean budget by employing computer-generated analysis to acquire new players.
+Director: Bennett Miller
+Actors: Brad Pitt, Robin Wright, Jonah Hill, Philip Seymour Hoffman
+No of rating votes: 369529
+Gross revenue: 75605492

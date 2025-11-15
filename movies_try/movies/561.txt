@@ -1,0 +1,10 @@
+Movie name: The Lost Weekend
+Released year: 1945
+Runtime: 101 min
+Genres: Drama, Film-Noir
+Rating: 7.9
+Short description: The desperate life of a chronic alcoholic is followed through a four-day drinking bout.
+Director: Billy Wilder
+Actors: Ray Milland, Jane Wyman, Phillip Terry, Howard Da Silva
+No of rating votes: 33549
+Gross revenue: 9460000

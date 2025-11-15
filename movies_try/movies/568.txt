@@ -1,0 +1,9 @@
+Movie name: Nosferatu
+Released year: 1922
+Runtime: 94 min
+Genres: Fantasy, Horror
+Rating: 7.9
+Short description: Vampire Count Orlok expresses interest in a new residence and real estate agent Hutter's wife.
+Director: F.W. Murnau
+Actors: Max Schreck, Alexander Granach, Gustav von Wangenheim, Greta Schröder
+No of rating votes: 88794

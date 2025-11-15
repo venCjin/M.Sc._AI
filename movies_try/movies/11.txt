@@ -1,0 +1,10 @@
+Movie name: Forrest Gump
+Released year: 1994
+Runtime: 142 min
+Genres: Drama, Romance
+Rating: 8.8
+Short description: The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate and other historical events unfold through the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.
+Director: Robert Zemeckis
+Actors: Tom Hanks, Robin Wright, Gary Sinise, Sally Field
+No of rating votes: 1809221
+Gross revenue: 330252182

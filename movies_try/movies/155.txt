@@ -1,0 +1,10 @@
+Movie name: Batman Begins
+Released year: 2005
+Runtime: 140 min
+Genres: Action, Adventure
+Rating: 8.2
+Short description: After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from corruption.
+Director: Christopher Nolan
+Actors: Christian Bale, Michael Caine, Ken Watanabe, Liam Neeson
+No of rating votes: 1308302
+Gross revenue: 206852432

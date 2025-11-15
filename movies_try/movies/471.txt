@@ -1,0 +1,10 @@
+Movie name: Captain Fantastic
+Released year: 2016
+Runtime: 118 min
+Genres: Comedy, Drama
+Rating: 7.9
+Short description: In the forests of the Pacific Northwest, a father devoted to raising his six kids with a rigorous physical and intellectual education is forced to leave his paradise and enter the world, challenging his idea of what it means to be a parent.
+Director: Matt Ross
+Actors: Viggo Mortensen, George MacKay, Samantha Isler, Annalise Basso
+No of rating votes: 189400
+Gross revenue: 5875006

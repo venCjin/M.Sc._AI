@@ -1,0 +1,10 @@
+Movie name: Close Encounters of the Third Kind
+Released year: 1977
+Runtime: 138 min
+Genres: Drama, Sci-Fi
+Rating: 7.6
+Short description: Roy Neary, an electric lineman, watches how his quiet and ordinary daily life turns upside down after a close encounter with a UFO.
+Director: Steven Spielberg
+Actors: Richard Dreyfuss, François Truffaut, Teri Garr, Melinda Dillon
+No of rating votes: 184966
+Gross revenue: 132088635

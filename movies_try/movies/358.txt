@@ -1,0 +1,10 @@
+Movie name: Persepolis
+Released year: 2007
+Runtime: 96 min
+Genres: Animation, Biography, Drama
+Rating: 8.0
+Short description: A precocious and outspoken Iranian girl grows up during the Islamic Revolution.
+Director: Vincent Paronnaud
+Actors: Marjane Satrapi, Chiara Mastroianni, Catherine Deneuve, Gena Rowlands
+No of rating votes: 88656
+Gross revenue: 4445756

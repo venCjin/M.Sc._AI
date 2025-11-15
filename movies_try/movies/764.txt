@@ -1,0 +1,10 @@
+Movie name: Ex Machina
+Released year: 2014
+Runtime: 108 min
+Genres: Drama, Sci-Fi, Thriller
+Rating: 7.7
+Short description: A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I.
+Director: Alex Garland
+Actors: Alicia Vikander, Domhnall Gleeson, Oscar Isaac, Sonoya Mizuno
+No of rating votes: 474141
+Gross revenue: 25442958

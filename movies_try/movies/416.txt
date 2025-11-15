@@ -1,0 +1,10 @@
+Movie name: Dog Day Afternoon
+Released year: 1975
+Runtime: 125 min
+Genres: Biography, Crime, Drama
+Rating: 8.0
+Short description: Three amateur bank robbers plan to hold up a bank. A nice simple robbery: Walk in, take the money, and run. Unfortunately, the supposedly uncomplicated heist suddenly becomes a bizarre nightmare as everything that could go wrong does.
+Director: Sidney Lumet
+Actors: Al Pacino, John Cazale, Penelope Allen, Sully Boyar
+No of rating votes: 235652
+Gross revenue: 50000000

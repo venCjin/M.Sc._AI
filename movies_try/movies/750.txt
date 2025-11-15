@@ -1,0 +1,10 @@
+Movie name: The Hangover
+Released year: 2009
+Runtime: 100 min
+Genres: Comedy
+Rating: 7.7
+Short description: Three buddies wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing. They make their way around the city in order to find their friend before his wedding.
+Director: Todd Phillips
+Actors: Zach Galifianakis, Bradley Cooper, Justin Bartha, Ed Helms
+No of rating votes: 717559
+Gross revenue: 277322503

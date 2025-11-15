@@ -1,0 +1,10 @@
+Movie name: Mary Poppins
+Released year: 1964
+Runtime: 139 min
+Genres: Comedy, Family, Fantasy
+Rating: 7.8
+Short description: In turn of the century London, a magical nanny employs music and adventure to help two neglected children become closer to their father.
+Director: Robert Stevenson
+Actors: Julie Andrews, Dick Van Dyke, David Tomlinson, Glynis Johns
+No of rating votes: 158029
+Gross revenue: 102272727

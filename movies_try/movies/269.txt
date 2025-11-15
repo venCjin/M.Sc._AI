@@ -1,0 +1,10 @@
+Movie name: Paris, Texas
+Released year: 1984
+Runtime: 145 min
+Genres: Drama
+Rating: 8.1
+Short description: Travis Henderson, an aimless drifter who has been missing for four years, wanders out of the desert and must reconnect with society, himself, his life, and his family.
+Director: Wim Wenders
+Actors: Harry Dean Stanton, Nastassja Kinski, Dean Stockwell, Aurore Clément
+No of rating votes: 91188
+Gross revenue: 2181987

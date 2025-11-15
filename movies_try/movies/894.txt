@@ -1,0 +1,10 @@
+Movie name: Creed
+Released year: 2015
+Runtime: 133 min
+Genres: Drama, Sport
+Rating: 7.6
+Short description: The former World Heavyweight Champion Rocky Balboa serves as a trainer and mentor to Adonis Johnson, the son of his late friend and former rival Apollo Creed.
+Director: Ryan Coogler
+Actors: Michael B. Jordan, Sylvester Stallone, Tessa Thompson, Phylicia Rashad
+No of rating votes: 247666
+Gross revenue: 109767581

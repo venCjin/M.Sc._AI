@@ -1,0 +1,10 @@
+Movie name: Philadelphia
+Released year: 1993
+Runtime: 125 min
+Genres: Drama
+Rating: 7.7
+Short description: When a man with HIV is fired by his law firm because of his condition, he hires a homophobic small time lawyer as the only willing advocate for a wrongful dismissal suit.
+Director: Jonathan Demme
+Actors: Tom Hanks, Denzel Washington, Roberta Maxwell, Buzz Kilman
+No of rating votes: 224169
+Gross revenue: 77324422

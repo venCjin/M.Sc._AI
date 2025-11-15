@@ -1,0 +1,10 @@
+Movie name: Shrek
+Released year: 2001
+Runtime: 90 min
+Genres: Animation, Adventure, Comedy
+Rating: 7.8
+Short description: A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.
+Director: Andrew Adamson
+Actors: Vicky Jenson, Mike Myers, Eddie Murphy, Cameron Diaz
+No of rating votes: 613941
+Gross revenue: 267665011

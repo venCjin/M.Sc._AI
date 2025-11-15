@@ -1,0 +1,10 @@
+Movie name: Rain Man
+Released year: 1988
+Runtime: 133 min
+Genres: Drama
+Rating: 8.0
+Short description: Selfish yuppie Charlie Babbitt's father left a fortune to his savant brother Raymond and a pittance to Charlie; they travel cross-country.
+Director: Barry Levinson
+Actors: Dustin Hoffman, Tom Cruise, Valeria Golino, Gerald R. Molen
+No of rating votes: 473064
+Gross revenue: 178800000

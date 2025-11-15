@@ -1,0 +1,116 @@
+{
+  "node_props": {
+    "Year": [
+      {
+        "property": "id",
+        "type": "STRING"
+      }
+    ],
+    "Actor": [
+      {
+        "property": "id",
+        "type": "STRING"
+      }
+    ],
+    "Description": [
+      {
+        "property": "id",
+        "type": "STRING"
+      }
+    ],
+    "Runtime": [
+      {
+        "property": "id",
+        "type": "STRING"
+      }
+    ],
+    "Director": [
+      {
+        "property": "id",
+        "type": "STRING"
+      }
+    ],
+    "NumberOfRatingVotes": [
+      {
+        "property": "id",
+        "type": "STRING"
+      }
+    ],
+    "Genre": [
+      {
+        "property": "id",
+        "type": "STRING"
+      }
+    ],
+    "GrossRevenue": [
+      {
+        "property": "id",
+        "type": "STRING"
+      }
+    ],
+    "Rating": [
+      {
+        "property": "id",
+        "type": "STRING"
+      }
+    ],
+    "Movie": [
+      {
+        "property": "id",
+        "type": "STRING"
+      }
+    ]
+  },
+  "rel_props": {},
+  "relationships": [
+    {
+      "start": "Actor",
+      "type": "ACTED_IN",
+      "end": "Movie"
+    },
+    {
+      "start": "Movie",
+      "type": "HAS_GROSS_REVENUE",
+      "end": "GrossRevenue"
+    },
+    {
+      "start": "Movie",
+      "type": "RELEASED_IN",
+      "end": "Year"
+    },
+    {
+      "start": "Movie",
+      "type": "HAS_RUNTIME",
+      "end": "Runtime"
+    },
+    {
+      "start": "Movie",
+      "type": "IN_GENRE",
+      "end": "Genre"
+    },
+    {
+      "start": "Movie",
+      "type": "HAS_RATING",
+      "end": "Rating"
+    },
+    {
+      "start": "Movie",
+      "type": "HAS_DESCRIPTION",
+      "end": "Description"
+    },
+    {
+      "start": "Movie",
+      "type": "DIRECTED_BY",
+      "end": "Director"
+    },
+    {
+      "start": "Movie",
+      "type": "HAS_NUMBER_OF_RATING_VOTES",
+      "end": "NumberOfRatingVotes"
+    }
+  ],
+  "metadata": {
+    "constraint": [],
+    "index": []
+  }
+}

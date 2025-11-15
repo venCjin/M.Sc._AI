@@ -1,0 +1,10 @@
+Movie name: Joker
+Released year: 2019
+Runtime: 122 min
+Genres: Crime, Drama, Thriller
+Rating: 8.5
+Short description: In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.
+Director: Todd Phillips
+Actors: Joaquin Phoenix, Robert De Niro, Zazie Beetz, Frances Conroy
+No of rating votes: 939252
+Gross revenue: 335451311

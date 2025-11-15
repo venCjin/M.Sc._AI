@@ -1,0 +1,10 @@
+Movie name: Isle of Dogs
+Released year: 2018
+Runtime: 101 min
+Genres: Animation, Adventure, Comedy
+Rating: 7.9
+Short description: Set in Japan, Isle of Dogs follows a boy's odyssey in search of his lost dog.
+Director: Wes Anderson
+Actors: Bryan Cranston, Koyu Rankin, Edward Norton, Bob Balaban
+No of rating votes: 139114
+Gross revenue: 32015231

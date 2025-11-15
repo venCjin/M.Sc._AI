@@ -1,0 +1,10 @@
+Movie name: Blue Velvet
+Released year: 1986
+Runtime: 120 min
+Genres: Drama, Mystery, Thriller
+Rating: 7.7
+Short description: The discovery of a severed human ear found in a field leads a young man on an investigation related to a beautiful, mysterious nightclub singer and a group of psychopathic criminals who have kidnapped her child.
+Director: David Lynch
+Actors: Isabella Rossellini, Kyle MacLachlan, Dennis Hopper, Laura Dern
+No of rating votes: 181285
+Gross revenue: 8551228

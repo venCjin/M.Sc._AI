@@ -1,0 +1,9 @@
+Movie name: Persona
+Released year: 1966
+Runtime: 85 min
+Genres: Drama, Thriller
+Rating: 8.1
+Short description: A nurse is put in charge of a mute actress and finds that their personae are melding together.
+Director: Ingmar Bergman
+Actors: Bibi Andersson, Liv Ullmann, Margaretha Krook, Gunnar Björnstrand
+No of rating votes: 103191

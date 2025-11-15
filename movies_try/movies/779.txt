@@ -1,0 +1,10 @@
+Movie name: Ray
+Released year: 2004
+Runtime: 152 min
+Genres: Biography, Drama, Music
+Rating: 7.7
+Short description: The story of the life and career of the legendary rhythm and blues musician Ray Charles, from his humble beginnings in the South, where he went blind at age seven, to his meteoric rise to stardom during the 1950s and 1960s.
+Director: Taylor Hackford
+Actors: Jamie Foxx, Regina King, Kerry Washington, Clifton Powell
+No of rating votes: 138356
+Gross revenue: 75331600

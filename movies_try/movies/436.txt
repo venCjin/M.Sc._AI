@@ -1,0 +1,10 @@
+Movie name: Rio Bravo
+Released year: 1959
+Runtime: 141 min
+Genres: Action, Drama, Western
+Rating: 8.0
+Short description: A small-town sheriff in the American West enlists the help of a cripple, a drunk, and a young gunfighter in his efforts to hold in jail the brother of the local bad guy.
+Director: Howard Hawks
+Actors: John Wayne, Dean Martin, Ricky Nelson, Angie Dickinson
+No of rating votes: 56305
+Gross revenue: 12535000

@@ -1,0 +1,10 @@
+Movie name: High Noon
+Released year: 1952
+Runtime: 85 min
+Genres: Drama, Thriller, Western
+Rating: 7.9
+Short description: A town Marshal, despite the disagreements of his newlywed bride and the townspeople around him, must face a gang of deadly killers alone at high noon when the gang leader, an outlaw he sent up years ago, arrives on the noon train.
+Director: Fred Zinnemann
+Actors: Gary Cooper, Grace Kelly, Thomas Mitchell, Lloyd Bridges
+No of rating votes: 97222
+Gross revenue: 9450000

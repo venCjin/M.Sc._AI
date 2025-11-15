@@ -1,0 +1,10 @@
+Movie name: The Artist
+Released year: 2011
+Runtime: 100 min
+Genres: Comedy, Drama, Romance
+Rating: 7.9
+Short description: An egomaniacal film star develops a relationship with a young dancer against the backdrop of Hollywood's silent era.
+Director: Michel Hazanavicius
+Actors: Jean Dujardin, Bérénice Bejo, John Goodman, James Cromwell
+No of rating votes: 230624
+Gross revenue: 44671682

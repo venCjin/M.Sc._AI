@@ -1,0 +1,10 @@
+Movie name: Inside Man
+Released year: 2006
+Runtime: 129 min
+Genres: Crime, Drama, Mystery
+Rating: 7.6
+Short description: A police detective, a bank robber, and a high-power broker enter high-stakes negotiations after the criminal's brilliant heist spirals into a hostage situation.
+Director: Spike Lee
+Actors: Denzel Washington, Clive Owen, Jodie Foster, Christopher Plummer
+No of rating votes: 339757
+Gross revenue: 88513495

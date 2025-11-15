@@ -1,0 +1,10 @@
+Movie name: Harry Potter and the Deathly Hallows: Part 1
+Released year: 2010
+Runtime: 146 min
+Genres: Adventure, Family, Fantasy
+Rating: 7.7
+Short description: As Harry, Ron, and Hermione race against time and evil to destroy the Horcruxes, they uncover the existence of the three most powerful objects in the wizarding world: the Deathly Hallows.
+Director: David Yates
+Actors: Daniel Radcliffe, Emma Watson, Rupert Grint, Bill Nighy
+No of rating votes: 479120
+Gross revenue: 295983305

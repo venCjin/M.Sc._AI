@@ -1,0 +1,10 @@
+Movie name: Star Wars: Episode VII - The Force Awakens
+Released year: 2015
+Runtime: 138 min
+Genres: Action, Adventure, Sci-Fi
+Rating: 7.9
+Short description: As a new threat to the galaxy rises, Rey, a desert scavenger, and Finn, an ex-stormtrooper, must join Han Solo and Chewbacca to search for the one hope of restoring peace.
+Director: J.J. Abrams
+Actors: Daisy Ridley, John Boyega, Oscar Isaac, Domhnall Gleeson
+No of rating votes: 860823
+Gross revenue: 936662225

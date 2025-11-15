@@ -1,0 +1,9 @@
+Movie name: Airlift
+Released year: 2016
+Runtime: 130 min
+Genres: Drama, History
+Rating: 8.0
+Short description: When Iraq invades Kuwait in August 1990, a callous Indian businessman becomes the spokesperson for more than 170,000 stranded countrymen.
+Director: Raja Menon
+Actors: Akshay Kumar, Nimrat Kaur, Kumud Mishra, Prakash Belawadi
+No of rating votes: 52897

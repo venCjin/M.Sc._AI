@@ -1,0 +1,10 @@
+Movie name: Amélie
+Released year: 2001
+Runtime: 122 min
+Genres: Comedy, Romance
+Rating: 8.3
+Short description: Amélie is an innocent and naive girl in Paris with her own sense of justice. She decides to help those around her and, along the way, discovers love.
+Director: Jean-Pierre Jeunet
+Actors: Audrey Tautou, Mathieu Kassovitz, Rufus, Lorella Cravotta
+No of rating votes: 703810
+Gross revenue: 33225499

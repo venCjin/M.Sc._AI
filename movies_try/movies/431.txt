@@ -1,0 +1,10 @@
+Movie name: Per un pugno di dollari
+Released year: 1964
+Runtime: 99 min
+Genres: Action, Drama, Western
+Rating: 8.0
+Short description: A wandering gunfighter plays two rival families against each other in a town torn apart by greed, pride, and revenge.
+Director: Sergio Leone
+Actors: Clint Eastwood, Gian Maria Volontè, Marianne Koch, Wolfgang Lukschy
+No of rating votes: 198219
+Gross revenue: 14500000

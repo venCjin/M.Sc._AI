@@ -1,0 +1,10 @@
+Movie name: Star Trek
+Released year: 2009
+Runtime: 127 min
+Genres: Action, Adventure, Sci-Fi
+Rating: 7.9
+Short description: The brash James T. Kirk tries to live up to his father's legacy with Mr. Spock keeping him in check as a vengeful Romulan from the future creates black holes to destroy the Federation one planet at a time.
+Director: J.J. Abrams
+Actors: Chris Pine, Zachary Quinto, Simon Pegg, Leonard Nimoy
+No of rating votes: 577336
+Gross revenue: 257730019

@@ -1,0 +1,9 @@
+Movie name: Ivanovo detstvo
+Released year: 1962
+Runtime: 95 min
+Genres: Drama, War
+Rating: 8.1
+Short description: In WW2, twelve year old Soviet orphan Ivan Bondarev works for the Soviet army as a scout behind the German lines and strikes a friendship with three sympathetic Soviet officers.
+Director: Andrei Tarkovsky
+Actors: Eduard Abalov, Nikolay Burlyaev, Valentin Zubkov, Evgeniy Zharikov
+No of rating votes: 31728

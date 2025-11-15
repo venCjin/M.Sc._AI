@@ -1,0 +1,10 @@
+Movie name: Taken
+Released year: 2008
+Runtime: 90 min
+Genres: Action, Thriller
+Rating: 7.8
+Short description: A retired CIA agent travels across Europe and relies on his old skills to save his estranged daughter, who has been kidnapped while on a trip to Paris.
+Director: Pierre Morel
+Actors: Liam Neeson, Maggie Grace, Famke Janssen, Leland Orser
+No of rating votes: 564791
+Gross revenue: 145000989

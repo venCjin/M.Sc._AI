@@ -1,0 +1,10 @@
+Movie name: The Magnificent Seven
+Released year: 1960
+Runtime: 128 min
+Genres: Action, Adventure, Western
+Rating: 7.7
+Short description: Seven gunfighters are hired by Mexican peasants to liberate their village from oppressive bandits.
+Director: John Sturges
+Actors: Yul Brynner, Steve McQueen, Charles Bronson, Eli Wallach
+No of rating votes: 87719
+Gross revenue: 4905000

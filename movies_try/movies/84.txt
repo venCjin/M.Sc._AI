@@ -1,0 +1,10 @@
+Movie name: 1917
+Released year: 2019
+Runtime: 119 min
+Genres: Drama, Thriller, War
+Rating: 8.3
+Short description: April 6th, 1917. As a regiment assembles to wage war deep in enemy territory, two soldiers are assigned to race against time and deliver a message that will stop 1,600 men from walking straight into a deadly trap.
+Director: Sam Mendes
+Actors: Dean-Charles Chapman, George MacKay, Daniel Mays, Colin Firth
+No of rating votes: 425844
+Gross revenue: 159227644

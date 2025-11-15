@@ -1,0 +1,10 @@
+Movie name: The Visitor
+Released year: 2007
+Runtime: 104 min
+Genres: Drama
+Rating: 7.6
+Short description: A college professor travels to New York City to attend a conference and finds a young couple living in his apartment.
+Director: Tom McCarthy
+Actors: Richard Jenkins, Haaz Sleiman, Danai Gurira, Hiam Abbass
+No of rating votes: 41544
+Gross revenue: 9422422

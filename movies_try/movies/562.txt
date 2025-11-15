@@ -1,0 +1,9 @@
+Movie name: The Philadelphia Story
+Released year: 1940
+Runtime: 112 min
+Genres: Comedy, Romance
+Rating: 7.9
+Short description: When a rich woman's ex-husband and a tabloid-type reporter turn up just before her planned remarriage, she begins to learn the truth about herself.
+Director: George Cukor
+Actors: Cary Grant, Katharine Hepburn, James Stewart, Ruth Hussey
+No of rating votes: 63550

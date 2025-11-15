@@ -1,0 +1,9 @@
+Movie name: Rosemary's Baby
+Released year: 1968
+Runtime: 137 min
+Genres: Drama, Horror
+Rating: 8.0
+Short description: A young couple trying for a baby move into a fancy apartment surrounded by peculiar neighbors.
+Director: Roman Polanski
+Actors: Mia Farrow, John Cassavetes, Ruth Gordon, Sidney Blackmer
+No of rating votes: 193674

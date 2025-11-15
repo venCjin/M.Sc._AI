@@ -1,0 +1,10 @@
+Movie name: The Hobbit: An Unexpected Journey
+Released year: 2012
+Runtime: 169 min
+Genres: Adventure, Fantasy
+Rating: 7.8
+Short description: A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.
+Director: Peter Jackson
+Actors: Martin Freeman, Ian McKellen, Richard Armitage, Andy Serkis
+No of rating votes: 757377
+Gross revenue: 303003568

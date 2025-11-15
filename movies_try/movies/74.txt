@@ -1,0 +1,10 @@
+Movie name: Apocalypse Now
+Released year: 1979
+Runtime: 147 min
+Genres: Drama, Mystery, War
+Rating: 8.4
+Short description: A U.S. Army officer serving in Vietnam is tasked with assassinating a renegade Special Forces Colonel who sees himself as a god.
+Director: Francis Ford Coppola
+Actors: Martin Sheen, Marlon Brando, Robert Duvall, Frederic Forrest
+No of rating votes: 606398
+Gross revenue: 83471511

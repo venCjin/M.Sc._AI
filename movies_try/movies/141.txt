@@ -1,0 +1,10 @@
+Movie name: Udaan
+Released year: 2010
+Runtime: 134 min
+Genres: Drama
+Rating: 8.2
+Short description: Expelled from his school, a 16-year old boy returns home to his abusive and oppressive father.
+Director: Vikramaditya Motwane
+Actors: Rajat Barmecha, Ronit Roy, Manjot Singh, Ram Kapoor
+No of rating votes: 42341
+Gross revenue: 7461

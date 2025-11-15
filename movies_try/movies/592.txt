@@ -1,0 +1,10 @@
+Movie name: Big Hero 6
+Released year: 2014
+Runtime: 102 min
+Genres: Animation, Action, Adventure
+Rating: 7.8
+Short description: A special bond develops between plus-sized inflatable robot Baymax and prodigy Hiro Hamada, who together team up with a group of friends to form a band of high-tech heroes.
+Director: Don Hall
+Actors: Chris Williams, Ryan Potter, Scott Adsit, Jamie Chung
+No of rating votes: 410983
+Gross revenue: 222527828

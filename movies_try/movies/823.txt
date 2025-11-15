@@ -1,0 +1,10 @@
+Movie name: Glengarry Glen Ross
+Released year: 1992
+Runtime: 100 min
+Genres: Crime, Drama, Mystery
+Rating: 7.7
+Short description: An examination of the machinations behind the scenes at a real estate office.
+Director: James Foley
+Actors: Al Pacino, Jack Lemmon, Alec Baldwin, Alan Arkin
+No of rating votes: 95826
+Gross revenue: 10725228

@@ -1,0 +1,10 @@
+Movie name: Thor: Ragnarok
+Released year: 2017
+Runtime: 130 min
+Genres: Action, Adventure, Comedy
+Rating: 7.9
+Short description: Imprisoned on the planet Sakaar, Thor must race against time to return to Asgard and stop Ragnarök, the destruction of his world, at the hands of the powerful and ruthless villain Hela.
+Director: Taika Waititi
+Actors: Chris Hemsworth, Tom Hiddleston, Cate Blanchett, Mark Ruffalo
+No of rating votes: 587775
+Gross revenue: 315058289

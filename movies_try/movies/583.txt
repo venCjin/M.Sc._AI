@@ -1,0 +1,10 @@
+Movie name: Captain America: Civil War
+Released year: 2016
+Runtime: 147 min
+Genres: Action, Adventure, Sci-Fi
+Rating: 7.8
+Short description: Political involvement in the Avengers' affairs causes a rift between Captain America and Iron Man.
+Director: Anthony Russo
+Actors: Joe Russo, Chris Evans, Robert Downey Jr., Scarlett Johansson
+No of rating votes: 663649
+Gross revenue: 408084349

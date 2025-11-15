@@ -1,0 +1,10 @@
+Movie name: Hamlet
+Released year: 1996
+Runtime: 242 min
+Genres: Drama
+Rating: 7.7
+Short description: Hamlet, Prince of Denmark, returns home to find his father murdered and his mother remarrying the murderer, his uncle. Meanwhile, war is brewing.
+Director: Kenneth Branagh
+Actors: Kenneth Branagh, Julie Christie, Derek Jacobi, Kate Winslet
+No of rating votes: 35991
+Gross revenue: 4414535

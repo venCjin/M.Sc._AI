@@ -1,0 +1,10 @@
+Movie name: When Harry Met Sally...
+Released year: 1989
+Runtime: 95 min
+Genres: Comedy, Drama, Romance
+Rating: 7.6
+Short description: Harry and Sally have known each other for years, and are very good friends, but they fear sex would ruin the friendship.
+Director: Rob Reiner
+Actors: Billy Crystal, Meg Ryan, Carrie Fisher, Bruno Kirby
+No of rating votes: 195663
+Gross revenue: 92823600

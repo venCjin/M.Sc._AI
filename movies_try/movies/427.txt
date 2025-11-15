@@ -1,0 +1,10 @@
+Movie name: The Graduate
+Released year: 1967
+Runtime: 106 min
+Genres: Comedy, Drama, Romance
+Rating: 8.0
+Short description: A disillusioned college graduate finds himself torn between his older lover and her daughter.
+Director: Mike Nichols
+Actors: Dustin Hoffman, Anne Bancroft, Katharine Ross, William Daniels
+No of rating votes: 253676
+Gross revenue: 104945305

@@ -1,0 +1,10 @@
+Movie name: Underground
+Released year: 1995
+Runtime: 170 min
+Genres: Comedy, Drama, War
+Rating: 8.1
+Short description: A group of Serbian socialists prepares for the war in a surreal underground filled by parties, tragedies, love and hate.
+Director: Emir Kusturica
+Actors: Predrag 'Miki' Manojlovic, Lazar Ristovski, Mirjana Jokovic, Slavko Stimac
+No of rating votes: 55220
+Gross revenue: 171082

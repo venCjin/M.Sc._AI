@@ -1,0 +1,10 @@
+Movie name: Spartacus
+Released year: 1960
+Runtime: 197 min
+Genres: Adventure, Biography, Drama
+Rating: 7.9
+Short description: The slave Spartacus leads a violent revolt against the decadent Roman Republic.
+Director: Stanley Kubrick
+Actors: Kirk Douglas, Laurence Olivier, Jean Simmons, Charles Laughton
+No of rating votes: 124339
+Gross revenue: 30000000

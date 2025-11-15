@@ -1,0 +1,10 @@
+Movie name: Kelly's Heroes
+Released year: 1970
+Runtime: 144 min
+Genres: Adventure, Comedy, War
+Rating: 7.6
+Short description: A group of U.S. soldiers sneaks across enemy lines to get their hands on a secret stash of Nazi treasure.
+Director: Brian G. Hutton
+Actors: Clint Eastwood, Telly Savalas, Don Rickles, Carroll O'Connor
+No of rating votes: 45338
+Gross revenue: 1378435

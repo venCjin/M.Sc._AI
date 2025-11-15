@@ -1,0 +1,10 @@
+Movie name: La battaglia di Algeri
+Released year: 1966
+Runtime: 121 min
+Genres: Drama, War
+Rating: 8.1
+Short description: In the 1950s, fear and violence escalate as the people of Algiers fight for independence from the French government.
+Director: Gillo Pontecorvo
+Actors: Brahim Hadjadj, Jean Martin, Yacef Saadi, Samia Kerbash
+No of rating votes: 53089
+Gross revenue: 55908

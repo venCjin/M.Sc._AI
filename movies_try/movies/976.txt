@@ -1,0 +1,10 @@
+Movie name: The Little Mermaid
+Released year: 1989
+Runtime: 83 min
+Genres: Animation, Family, Fantasy
+Rating: 7.6
+Short description: A mermaid princess makes a Faustian bargain in an attempt to become human and win a prince's love.
+Director: Ron Clements
+Actors: John Musker, Jodi Benson, Samuel E. Wright, Rene Auberjonois
+No of rating votes: 237696
+Gross revenue: 111543479

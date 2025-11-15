@@ -1,0 +1,10 @@
+Movie name: The Usual Suspects
+Released year: 1995
+Runtime: 106 min
+Genres: Crime, Mystery, Thriller
+Rating: 8.5
+Short description: A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which began when five criminals met at a seemingly random police lineup.
+Director: Bryan Singer
+Actors: Kevin Spacey, Gabriel Byrne, Chazz Palminteri, Stephen Baldwin
+No of rating votes: 991208
+Gross revenue: 23341568

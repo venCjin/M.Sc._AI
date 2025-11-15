@@ -1,0 +1,10 @@
+Movie name: V for Vendetta
+Released year: 2005
+Runtime: 132 min
+Genres: Action, Drama, Sci-Fi
+Rating: 8.2
+Short description: In a future British tyranny, a shadowy freedom fighter, known only by the alias of "V", plots to overthrow it with the help of a young woman.
+Director: James McTeigue
+Actors: Hugo Weaving, Natalie Portman, Rupert Graves, Stephen Rea
+No of rating votes: 1032749
+Gross revenue: 70511035

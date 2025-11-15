@@ -1,0 +1,9 @@
+Movie name: To Be or Not to Be
+Released year: 1942
+Runtime: 99 min
+Genres: Comedy, War
+Rating: 8.2
+Short description: During the Nazi occupation of Poland, an acting troupe becomes embroiled in a Polish soldier's efforts to track down a German spy.
+Director: Ernst Lubitsch
+Actors: Carole Lombard, Jack Benny, Robert Stack, Felix Bressart
+No of rating votes: 29915

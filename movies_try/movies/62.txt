@@ -1,0 +1,10 @@
+Movie name: Django Unchained
+Released year: 2012
+Runtime: 165 min
+Genres: Drama, Western
+Rating: 8.4
+Short description: With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.
+Director: Quentin Tarantino
+Actors: Jamie Foxx, Christoph Waltz, Leonardo DiCaprio, Kerry Washington
+No of rating votes: 1357682
+Gross revenue: 162805434

@@ -1,0 +1,10 @@
+Movie name: The Big Lebowski
+Released year: 1998
+Runtime: 117 min
+Genres: Comedy, Crime, Sport
+Rating: 8.1
+Short description: Jeff "The Dude" Lebowski, mistaken for a millionaire of the same name, seeks restitution for his ruined rug and enlists his bowling buddies to help get it.
+Director: Joel Coen
+Actors: Ethan Coen, Jeff Bridges, John Goodman, Julianne Moore
+No of rating votes: 732620
+Gross revenue: 17498804

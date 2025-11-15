@@ -1,0 +1,10 @@
+Movie name: Goodfellas
+Released year: 1990
+Runtime: 146 min
+Genres: Biography, Crime, Drama
+Rating: 8.7
+Short description: The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.
+Director: Martin Scorsese
+Actors: Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco
+No of rating votes: 1020727
+Gross revenue: 46836394

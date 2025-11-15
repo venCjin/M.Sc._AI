@@ -1,0 +1,10 @@
+Movie name: Kick-Ass
+Released year: 2010
+Runtime: 117 min
+Genres: Action, Comedy, Crime
+Rating: 7.6
+Short description: Dave Lizewski is an unnoticed high school student and comic book fan who one day decides to become a superhero, even though he has no powers, training or meaningful reason to do so.
+Director: Matthew Vaughn
+Actors: Aaron Taylor-Johnson, Nicolas Cage, Chloë Grace Moretz, Garrett M. Brown
+No of rating votes: 524081
+Gross revenue: 48071303

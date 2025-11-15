@@ -1,0 +1,10 @@
+Movie name: Spotlight
+Released year: 2015
+Runtime: 129 min
+Genres: Biography, Crime, Drama
+Rating: 8.1
+Short description: The true story of how the Boston Globe uncovered the massive scandal of child molestation and cover-up within the local Catholic Archdiocese, shaking the entire Catholic Church to its core.
+Director: Tom McCarthy
+Actors: Mark Ruffalo, Michael Keaton, Rachel McAdams, Liev Schreiber
+No of rating votes: 420316
+Gross revenue: 45055776

@@ -1,0 +1,10 @@
+Movie name: Casablanca
+Released year: 1942
+Runtime: 102 min
+Genres: Drama, Romance, War
+Rating: 8.5
+Short description: A cynical expatriate American cafe owner struggles to decide whether or not to help his former lover and her fugitive husband escape the Nazis in French Morocco.
+Director: Michael Curtiz
+Actors: Humphrey Bogart, Ingrid Bergman, Paul Henreid, Claude Rains
+No of rating votes: 522093
+Gross revenue: 1024560

@@ -1,0 +1,10 @@
+Movie name: Memento
+Released year: 2000
+Runtime: 113 min
+Genres: Mystery, Thriller
+Rating: 8.4
+Short description: A man with short-term memory loss attempts to track down his wife's murderer.
+Director: Christopher Nolan
+Actors: Guy Pearce, Carrie-Anne Moss, Joe Pantoliano, Mark Boone Junior
+No of rating votes: 1125712
+Gross revenue: 25544867

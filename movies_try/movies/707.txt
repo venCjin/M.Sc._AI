@@ -1,0 +1,10 @@
+Movie name: The Innocents
+Released year: 1961
+Runtime: 100 min
+Genres: Horror
+Rating: 7.8
+Short description: A young governess for two children becomes convinced that the house and grounds are haunted.
+Director: Jack Clayton
+Actors: Deborah Kerr, Peter Wyngarde, Megs Jenkins, Michael Redgrave
+No of rating votes: 27007
+Gross revenue: 2616000

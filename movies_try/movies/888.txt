@@ -1,0 +1,10 @@
+Movie name: Baby Driver
+Released year: 2017
+Runtime: 113 min
+Genres: Action, Crime, Drama
+Rating: 7.6
+Short description: After being coerced into working for a crime boss, a young getaway driver finds himself taking part in a heist doomed to fail.
+Director: Edgar Wright
+Actors: Ansel Elgort, Jon Bernthal, Jon Hamm, Eiza González
+No of rating votes: 439406
+Gross revenue: 107825862

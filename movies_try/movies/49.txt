@@ -1,0 +1,10 @@
+Movie name: Psycho
+Released year: 1960
+Runtime: 109 min
+Genres: Horror, Mystery, Thriller
+Rating: 8.5
+Short description: A Phoenix secretary embezzles $40,000 from her employer's client, goes on the run, and checks into a remote motel run by a young man under the domination of his mother.
+Director: Alfred Hitchcock
+Actors: Anthony Perkins, Janet Leigh, Vera Miles, John Gavin
+No of rating votes: 604211
+Gross revenue: 32000000

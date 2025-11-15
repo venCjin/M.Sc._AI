@@ -1,0 +1,10 @@
+Movie name: PK
+Released year: 2014
+Runtime: 153 min
+Genres: Comedy, Drama, Musical
+Rating: 8.1
+Short description: An alien on Earth loses the only device he can use to communicate with his spaceship. His innocent nature and child-like questions force the country to evaluate the impact of religion on its people.
+Director: Rajkumar Hirani
+Actors: Aamir Khan, Anushka Sharma, Sanjay Dutt, Boman Irani
+No of rating votes: 163061
+Gross revenue: 10616104

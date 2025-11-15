@@ -1,0 +1,10 @@
+Movie name: Rockstar
+Released year: 2011
+Runtime: 159 min
+Genres: Drama, Music, Musical
+Rating: 7.7
+Short description: Janardhan Jakhar chases his dreams of becoming a big Rock star, during which he falls in love with Heer.
+Director: Imtiaz Ali
+Actors: Ranbir Kapoor, Nargis Fakhri, Shammi Kapoor, Kumud Mishra
+No of rating votes: 39501
+Gross revenue: 985912

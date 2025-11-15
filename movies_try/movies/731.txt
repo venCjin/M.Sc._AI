@@ -1,0 +1,10 @@
+Movie name: The Fault in Our Stars
+Released year: 2014
+Runtime: 126 min
+Genres: Drama, Romance
+Rating: 7.7
+Short description: Two teenage cancer patients begin a life-affirming journey to visit a reclusive author in Amsterdam.
+Director: Josh Boone
+Actors: Shailene Woodley, Ansel Elgort, Nat Wolff, Laura Dern
+No of rating votes: 344312
+Gross revenue: 124872350

@@ -1,0 +1,10 @@
+Movie name: La planète sauvage
+Released year: 1973
+Runtime: 72 min
+Genres: Animation, Sci-Fi
+Rating: 7.8
+Short description: On a faraway planet where blue giants rule, oppressed humanoids rebel against their machine-like leaders.
+Director: René Laloux
+Actors: Barry Bostwick, Jennifer Drake, Eric Baugin, Jean Topart
+No of rating votes: 25229
+Gross revenue: 193817

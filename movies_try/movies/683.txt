@@ -1,0 +1,10 @@
+Movie name: The Breakfast Club
+Released year: 1985
+Runtime: 97 min
+Genres: Comedy, Drama
+Rating: 7.8
+Short description: Five high school students meet in Saturday detention and discover how they have a lot more in common than they thought.
+Director: John Hughes
+Actors: Emilio Estevez, Judd Nelson, Molly Ringwald, Ally Sheedy
+No of rating votes: 357026
+Gross revenue: 45875171

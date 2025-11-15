@@ -1,0 +1,10 @@
+Movie name: Gone Girl
+Released year: 2014
+Runtime: 149 min
+Genres: Drama, Mystery, Thriller
+Rating: 8.1
+Short description: With his wife's disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it's suspected that he may not be innocent.
+Director: David Fincher
+Actors: Ben Affleck, Rosamund Pike, Neil Patrick Harris, Tyler Perry
+No of rating votes: 859695
+Gross revenue: 167767189

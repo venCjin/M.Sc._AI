@@ -1,0 +1,9 @@
+Movie name: Solaris
+Released year: 1972
+Runtime: 167 min
+Genres: Drama, Mystery, Sci-Fi
+Rating: 8.1
+Short description: A psychologist is sent to a station orbiting a distant planet in order to discover what has caused the crew to go insane.
+Director: Andrei Tarkovsky
+Actors: Natalya Bondarchuk, Donatas Banionis, Jüri Järvet, Vladislav Dvorzhetskiy
+No of rating votes: 81021

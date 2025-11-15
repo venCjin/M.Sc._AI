@@ -1,0 +1,10 @@
+Movie name: All That Jazz
+Released year: 1979
+Runtime: 123 min
+Genres: Drama, Music, Musical
+Rating: 7.9
+Short description: Director/choreographer Bob Fosse tells his own life story as he details the sordid career of Joe Gideon, a womanizing, drug-using dancer.
+Director: Bob Fosse
+Actors: Roy Scheider, Jessica Lange, Ann Reinking, Leland Palmer
+No of rating votes: 28223
+Gross revenue: 37823676

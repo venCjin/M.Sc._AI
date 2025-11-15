@@ -1,0 +1,10 @@
+Movie name: Coco
+Released year: 2017
+Runtime: 105 min
+Genres: Animation, Adventure, Family
+Rating: 8.4
+Short description: Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.
+Director: Lee Unkrich
+Actors: Adrian Molina, Anthony Gonzalez, Gael García Bernal, Benjamin Bratt
+No of rating votes: 384171
+Gross revenue: 209726015

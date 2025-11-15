@@ -1,0 +1,10 @@
+Movie name: Captain Phillips
+Released year: 2013
+Runtime: 134 min
+Genres: Adventure, Biography, Crime
+Rating: 7.8
+Short description: The true story of Captain Richard Phillips and the 2009 hijacking by Somali pirates of the U.S.-flagged MV Maersk Alabama, the first American cargo ship to be hijacked in two hundred years.
+Director: Paul Greengrass
+Actors: Tom Hanks, Barkhad Abdi, Barkhad Abdirahman, Catherine Keener
+No of rating votes: 421244
+Gross revenue: 107100855

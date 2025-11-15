@@ -1,0 +1,10 @@
+Movie name: Blade Runner 2049
+Released year: 2017
+Runtime: 164 min
+Genres: Action, Drama, Mystery
+Rating: 8.0
+Short description: Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.
+Director: Denis Villeneuve
+Actors: Harrison Ford, Ryan Gosling, Ana de Armas, Dave Bautista
+No of rating votes: 461823
+Gross revenue: 92054159

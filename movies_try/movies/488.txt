@@ -1,0 +1,10 @@
+Movie name: District 9
+Released year: 2009
+Runtime: 112 min
+Genres: Action, Sci-Fi, Thriller
+Rating: 7.9
+Short description: Violence ensues after an extraterrestrial race forced to live in slum-like conditions on Earth finds a kindred spirit in a government agent exposed to their biotechnology.
+Director: Neill Blomkamp
+Actors: Sharlto Copley, David James, Jason Cope, Nathalie Boltt
+No of rating votes: 638202
+Gross revenue: 115646235

@@ -1,0 +1,10 @@
+Movie name: Captain America: The Winter Soldier
+Released year: 2014
+Runtime: 136 min
+Genres: Action, Adventure, Sci-Fi
+Rating: 7.7
+Short description: As Steve Rogers struggles to embrace his role in the modern world, he teams up with a fellow Avenger and S.H.I.E.L.D agent, Black Widow, to battle a new threat from history: an assassin known as the Winter Soldier.
+Director: Anthony Russo
+Actors: Joe Russo, Chris Evans, Samuel L. Jackson, Scarlett Johansson
+No of rating votes: 736182
+Gross revenue: 259766572

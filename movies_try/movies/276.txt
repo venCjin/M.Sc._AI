@@ -1,0 +1,9 @@
+Movie name: The Elephant Man
+Released year: 1980
+Runtime: 124 min
+Genres: Biography, Drama
+Rating: 8.1
+Short description: A Victorian surgeon rescues a heavily disfigured man who is mistreated while scraping a living as a side-show freak. Behind his monstrous façade, there is revealed a person of kindness, intelligence and sophistication.
+Director: David Lynch
+Actors: Anthony Hopkins, John Hurt, Anne Bancroft, John Gielgud
+No of rating votes: 220078

@@ -1,0 +1,10 @@
+Movie name: Kill Bill: Vol. 1
+Released year: 2003
+Runtime: 111 min
+Genres: Action, Crime, Drama
+Rating: 8.1
+Short description: After awakening from a four-year coma, a former assassin wreaks vengeance on the team of assassins who betrayed her.
+Director: Quentin Tarantino
+Actors: Uma Thurman, David Carradine, Daryl Hannah, Michael Madsen
+No of rating votes: 1000639
+Gross revenue: 70099045

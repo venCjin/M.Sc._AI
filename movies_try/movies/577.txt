@@ -1,0 +1,9 @@
+Movie name: Udta Punjab
+Released year: 2016
+Runtime: 148 min
+Genres: Action, Crime, Drama
+Rating: 7.8
+Short description: A story that revolves around drug abuse in the affluent north Indian State of Punjab and how the youth there have succumbed to it en-masse resulting in a socio-economic decline.
+Director: Abhishek Chaubey
+Actors: Shahid Kapoor, Alia Bhatt, Kareena Kapoor, Diljit Dosanjh
+No of rating votes: 27175

@@ -1,0 +1,10 @@
+Movie name: Dawn of the Dead
+Released year: 1978
+Runtime: 127 min
+Genres: Action, Adventure, Horror
+Rating: 7.9
+Short description: Following an ever-growing epidemic of zombies that have risen from the dead, two Philadelphia S.W.A.T. team members, a traffic reporter, and his television executive girlfriend seek refuge in a secluded shopping mall.
+Director: George A. Romero
+Actors: David Emge, Ken Foree, Scott H. Reiniger, Gaylen Ross
+No of rating votes: 111512
+Gross revenue: 5100000

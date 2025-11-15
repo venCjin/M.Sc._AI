@@ -1,0 +1,10 @@
+Movie name: Goldfinger
+Released year: 1964
+Runtime: 110 min
+Genres: Action, Adventure, Thriller
+Rating: 7.7
+Short description: While investigating a gold magnate's smuggling, James Bond uncovers a plot to contaminate the Fort Knox gold reserve.
+Director: Guy Hamilton
+Actors: Sean Connery, Gert Fröbe, Honor Blackman, Shirley Eaton
+No of rating votes: 174119
+Gross revenue: 51081062

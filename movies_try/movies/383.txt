@@ -1,0 +1,10 @@
+Movie name: Magnolia
+Released year: 1999
+Runtime: 188 min
+Genres: Drama
+Rating: 8.0
+Short description: An epic mosaic of interrelated characters in search of love, forgiveness, and meaning in the San Fernando Valley.
+Director: Paul Thomas Anderson
+Actors: Tom Cruise, Jason Robards, Julianne Moore, Philip Seymour Hoffman
+No of rating votes: 289742
+Gross revenue: 22455976

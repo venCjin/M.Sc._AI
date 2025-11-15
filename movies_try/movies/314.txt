@@ -1,0 +1,10 @@
+Movie name: Gone with the Wind
+Released year: 1939
+Runtime: 238 min
+Genres: Drama, History, Romance
+Rating: 8.1
+Short description: A manipulative woman and a roguish man conduct a turbulent romance during the American Civil War and Reconstruction periods.
+Director: Victor Fleming
+Actors: George Cukor, Sam Wood, Clark Gable, Vivien Leigh
+No of rating votes: 290074
+Gross revenue: 198676459

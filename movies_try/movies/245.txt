@@ -1,0 +1,10 @@
+Movie name: Monsters, Inc.
+Released year: 2001
+Runtime: 92 min
+Genres: Animation, Adventure, Comedy
+Rating: 8.1
+Short description: In order to power the city, monsters have to scare children so that they scream. However, the children are toxic to the monsters, and after a child gets through, 2 monsters realize things may not be what they think.
+Director: Pete Docter
+Actors: David Silverman, Lee Unkrich, Billy Crystal, John Goodman
+No of rating votes: 815505
+Gross revenue: 289916256

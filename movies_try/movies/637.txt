@@ -1,0 +1,10 @@
+Movie name: The Notebook
+Released year: 2004
+Runtime: 123 min
+Genres: Drama, Romance
+Rating: 7.8
+Short description: A poor yet passionate young man falls in love with a rich young woman, giving her a sense of freedom, but they are soon separated because of their social differences.
+Director: Nick Cassavetes
+Actors: Gena Rowlands, James Garner, Rachel McAdams, Ryan Gosling
+No of rating votes: 520284
+Gross revenue: 81001787

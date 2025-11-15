@@ -1,0 +1,9 @@
+Movie name: The Day the Earth Stood Still
+Released year: 1951
+Runtime: 92 min
+Genres: Drama, Sci-Fi
+Rating: 7.7
+Short description: An alien lands and tells the people of Earth that they must live peacefully or be destroyed as a danger to other planets.
+Director: Robert Wise
+Actors: Michael Rennie, Patricia Neal, Hugh Marlowe, Sam Jaffe
+No of rating votes: 76315

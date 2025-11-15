@@ -1,0 +1,10 @@
+Movie name: Ford v Ferrari
+Released year: 2019
+Runtime: 152 min
+Genres: Action, Biography, Drama
+Rating: 8.1
+Short description: American car designer Carroll Shelby and driver Ken Miles battle corporate interference and the laws of physics to build a revolutionary race car for Ford in order to defeat Ferrari at the 24 Hours of Le Mans in 1966.
+Director: James Mangold
+Actors: Matt Damon, Christian Bale, Jon Bernthal, Caitriona Balfe
+No of rating votes: 291289
+Gross revenue: 117624028

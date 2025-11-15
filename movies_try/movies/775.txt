@@ -1,0 +1,10 @@
+Movie name: Crash
+Released year: 2004
+Runtime: 112 min
+Genres: Crime, Drama, Thriller
+Rating: 7.7
+Short description: Los Angeles citizens with vastly separate lives collide in interweaving stories of race, loss and redemption.
+Director: Paul Haggis
+Actors: Don Cheadle, Sandra Bullock, Thandie Newton, Karina Arroyave
+No of rating votes: 419483
+Gross revenue: 54580300

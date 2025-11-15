@@ -1,0 +1,10 @@
+Movie name: The Jungle Book
+Released year: 1967
+Runtime: 78 min
+Genres: Animation, Adventure, Family
+Rating: 7.6
+Short description: Bagheera the Panther and Baloo the Bear have a difficult time trying to convince a boy to leave the jungle for human civilization.
+Director: Wolfgang Reitherman
+Actors: Phil Harris, Sebastian Cabot, Louis Prima, Bruce Reitherman
+No of rating votes: 166409
+Gross revenue: 141843612

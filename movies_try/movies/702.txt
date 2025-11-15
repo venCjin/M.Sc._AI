@@ -1,0 +1,9 @@
+Movie name: Bonnie and Clyde
+Released year: 1967
+Runtime: 111 min
+Genres: Action, Biography, Crime
+Rating: 7.8
+Short description: Bored waitress Bonnie Parker falls in love with an ex-con named Clyde Barrow and together they start a violent crime spree through the country, stealing cars and robbing banks.
+Director: Arthur Penn
+Actors: Warren Beatty, Faye Dunaway, Michael J. Pollard, Gene Hackman
+No of rating votes: 102415

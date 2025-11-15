@@ -1,0 +1,9 @@
+Movie name: The Manchurian Candidate
+Released year: 1962
+Runtime: 126 min
+Genres: Drama, Thriller
+Rating: 7.9
+Short description: A former prisoner of war is brainwashed as an unwitting assassin for an international Communist conspiracy.
+Director: John Frankenheimer
+Actors: Frank Sinatra, Laurence Harvey, Janet Leigh, Angela Lansbury
+No of rating votes: 71122

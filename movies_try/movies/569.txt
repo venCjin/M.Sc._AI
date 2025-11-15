@@ -1,0 +1,9 @@
+Movie name: The Gentlemen
+Released year: 2019
+Runtime: 113 min
+Genres: Action, Comedy, Crime
+Rating: 7.8
+Short description: An American expat tries to sell off his highly profitable marijuana empire in London, triggering plots, schemes, bribery and blackmail in an attempt to steal his domain out from under him.
+Director: Guy Ritchie
+Actors: Matthew McConaughey, Charlie Hunnam, Michelle Dockery, Jeremy Strong
+No of rating votes: 237392

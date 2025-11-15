@@ -1,0 +1,10 @@
+Movie name: La La Land
+Released year: 2016
+Runtime: 128 min
+Genres: Comedy, Drama, Music
+Rating: 8.0
+Short description: While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.
+Director: Damien Chazelle
+Actors: Ryan Gosling, Emma Stone, Rosemarie DeWitt, J.K. Simmons
+No of rating votes: 505918
+Gross revenue: 151101803

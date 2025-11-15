@@ -1,0 +1,10 @@
+Movie name: Trainspotting
+Released year: 1996
+Runtime: 93 min
+Genres: Drama
+Rating: 8.1
+Short description: Renton, deeply immersed in the Edinburgh drug scene, tries to clean up and get out, despite the allure of the drugs and influence of friends.
+Director: Danny Boyle
+Actors: Ewan McGregor, Ewen Bremner, Jonny Lee Miller, Kevin McKidd
+No of rating votes: 634716
+Gross revenue: 16501785

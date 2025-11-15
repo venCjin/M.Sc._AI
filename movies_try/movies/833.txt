@@ -1,0 +1,10 @@
+Movie name: Der Name der Rose
+Released year: 1986
+Runtime: 130 min
+Genres: Crime, Drama, Mystery
+Rating: 7.7
+Short description: An intellectually nonconformist friar investigates a series of mysterious deaths in an isolated abbey.
+Director: Jean-Jacques Annaud
+Actors: Sean Connery, Christian Slater, Helmut Qualtinger, Elya Baskin
+No of rating votes: 102031
+Gross revenue: 7153487

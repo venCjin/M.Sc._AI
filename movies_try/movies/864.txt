@@ -1,0 +1,10 @@
+Movie name: Peeping Tom
+Released year: 1960
+Runtime: 101 min
+Genres: Drama, Horror, Thriller
+Rating: 7.7
+Short description: A young man murders women, using a movie camera to film their dying expressions of terror.
+Director: Michael Powell
+Actors: Karlheinz Böhm, Anna Massey, Moira Shearer, Maxine Audley
+No of rating votes: 31354
+Gross revenue: 83957

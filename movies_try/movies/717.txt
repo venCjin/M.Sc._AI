@@ -1,0 +1,9 @@
+Movie name: Duck Soup
+Released year: 1933
+Runtime: 69 min
+Genres: Comedy, Musical, War
+Rating: 7.8
+Short description: Rufus T. Firefly is named president/dictator of bankrupt Freedonia and declares war on neighboring Sylvania over the love of wealthy Mrs. Teasdale.
+Director: Leo McCarey
+Actors: Groucho Marx, Harpo Marx, Chico Marx, Zeppo Marx
+No of rating votes: 55581

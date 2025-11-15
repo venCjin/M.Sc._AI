@@ -1,0 +1,9 @@
+Movie name: White Heat
+Released year: 1949
+Runtime: 114 min
+Genres: Action, Crime, Drama
+Rating: 8.1
+Short description: A psychopathic criminal with a mother complex makes a daring break from prison and leads his old gang in a chemical plant payroll heist.
+Director: Raoul Walsh
+Actors: James Cagney, Virginia Mayo, Edmond O'Brien, Margaret Wycherly
+No of rating votes: 29807

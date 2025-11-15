@@ -1,0 +1,10 @@
+Movie name: The Terminator
+Released year: 1984
+Runtime: 107 min
+Genres: Action, Sci-Fi
+Rating: 8.0
+Short description: A human soldier is sent from 2029 to 1984 to stop an almost indestructible cyborg killing machine, sent from the same year, which has been programmed to execute a young woman whose unborn son is the key to humanity's future salvation.
+Director: James Cameron
+Actors: Arnold Schwarzenegger, Linda Hamilton, Michael Biehn, Paul Winfield
+No of rating votes: 799795
+Gross revenue: 38400000

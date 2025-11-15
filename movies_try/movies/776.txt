@@ -1,0 +1,10 @@
+Movie name: Kung fu
+Released year: 2004
+Runtime: 99 min
+Genres: Action, Comedy, Fantasy
+Rating: 7.7
+Short description: In Shanghai, China in the 1940s, a wannabe gangster aspires to join the notorious "Axe Gang" while residents of a housing complex exhibit extraordinary powers in defending their turf.
+Director: Stephen Chow
+Actors: Stephen Chow, Wah Yuen, Qiu Yuen, Siu-Lung Leung
+No of rating votes: 127250
+Gross revenue: 17108591

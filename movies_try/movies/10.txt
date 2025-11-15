@@ -1,0 +1,10 @@
+Movie name: The Lord of the Rings: The Fellowship of the Ring
+Released year: 2001
+Runtime: 178 min
+Genres: Action, Adventure, Drama
+Rating: 8.8
+Short description: A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.
+Director: Peter Jackson
+Actors: Elijah Wood, Ian McKellen, Orlando Bloom, Sean Bean
+No of rating votes: 1661481
+Gross revenue: 315544750

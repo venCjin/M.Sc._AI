@@ -1,0 +1,10 @@
+Movie name: Brazil
+Released year: 1985
+Runtime: 132 min
+Genres: Drama, Sci-Fi
+Rating: 7.9
+Short description: A bureaucrat in a dystopic society becomes an enemy of the state as he pursues the woman of his dreams.
+Director: Terry Gilliam
+Actors: Jonathan Pryce, Kim Greist, Robert De Niro, Katherine Helmond
+No of rating votes: 187567
+Gross revenue: 9929135

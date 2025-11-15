@@ -1,0 +1,9 @@
+Movie name: Network
+Released year: 1976
+Runtime: 121 min
+Genres: Drama
+Rating: 8.1
+Short description: A television network cynically exploits a deranged former anchor's ravings and revelations about the news media for its own profit.
+Director: Sidney Lumet
+Actors: Faye Dunaway, William Holden, Peter Finch, Robert Duvall
+No of rating votes: 144911

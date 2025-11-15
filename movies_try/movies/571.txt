@@ -1,0 +1,9 @@
+Movie name: Sound of Metal
+Released year: 2019
+Runtime: 120 min
+Genres: Drama, Music
+Rating: 7.8
+Short description: A heavy-metal drummer's life is thrown into freefall when he begins to lose his hearing.
+Director: Darius Marder
+Actors: Riz Ahmed, Olivia Cooke, Paul Raci, Lauren Ridloff
+No of rating votes: 27187

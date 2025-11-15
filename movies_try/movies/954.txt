@@ -1,0 +1,10 @@
+Movie name: Lola rennt
+Released year: 1998
+Runtime: 81 min
+Genres: Crime, Drama, Thriller
+Rating: 7.6
+Short description: After a botched money delivery, Lola has 20 minutes to come up with 100,000 Deutschmarks.
+Director: Tom Tykwer
+Actors: Franka Potente, Moritz Bleibtreu, Herbert Knaup, Nina Petri
+No of rating votes: 188317
+Gross revenue: 7267585

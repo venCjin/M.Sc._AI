@@ -1,0 +1,9 @@
+Movie name: Victoria
+Released year: 2015
+Runtime: 138 min
+Genres: Crime, Drama, Romance
+Rating: 7.6
+Short description: A young Spanish woman who has recently moved to Berlin finds her flirtation with a local guy turn potentially deadly as their night out with his friends reveals a dangerous secret.
+Director: Sebastian Schipper
+Actors: Laia Costa, Frederick Lau, Franz Rogowski, Burak Yigit
+No of rating votes: 52903

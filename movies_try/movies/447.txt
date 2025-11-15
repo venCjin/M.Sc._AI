@@ -1,0 +1,10 @@
+Movie name: A Streetcar Named Desire
+Released year: 1951
+Runtime: 122 min
+Genres: Drama
+Rating: 8.0
+Short description: Disturbed Blanche DuBois moves in with her sister in New Orleans and is tormented by her brutish brother-in-law while her reality crumbles around her.
+Director: Elia Kazan
+Actors: Vivien Leigh, Marlon Brando, Kim Hunter, Karl Malden
+No of rating votes: 99182
+Gross revenue: 8000000

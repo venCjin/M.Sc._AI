@@ -1,0 +1,10 @@
+Movie name: Singin' in the Rain
+Released year: 1952
+Runtime: 103 min
+Genres: Comedy, Musical, Romance
+Rating: 8.3
+Short description: A silent film production company and cast make a difficult transition to sound.
+Director: Stanley Donen
+Actors: Gene Kelly, Gene Kelly, Donald O'Connor, Debbie Reynolds
+No of rating votes: 218957
+Gross revenue: 8819028

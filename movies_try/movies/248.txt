@@ -1,0 +1,10 @@
+Movie name: The Sixth Sense
+Released year: 1999
+Runtime: 107 min
+Genres: Drama, Mystery, Thriller
+Rating: 8.1
+Short description: A boy who communicates with spirits seeks the help of a disheartened child psychologist.
+Director: M. Night Shyamalan
+Actors: Bruce Willis, Haley Joel Osment, Toni Collette, Olivia Williams
+No of rating votes: 911573
+Gross revenue: 293506292

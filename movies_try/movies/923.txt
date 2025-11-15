@@ -1,0 +1,10 @@
+Movie name: La Vie En Rose
+Released year: 2007
+Runtime: 140 min
+Genres: Biography, Drama, Music
+Rating: 7.6
+Short description: Biopic of the iconic French singer Édith Piaf. Raised by her grandmother in a brothel, she was discovered while singing on a street corner at the age of 19. Despite her success, Piaf's life was filled with tragedy.
+Director: Olivier Dahan
+Actors: Marion Cotillard, Sylvie Testud, Pascal Greggory, Emmanuelle Seigner
+No of rating votes: 82781
+Gross revenue: 10301706

@@ -1,0 +1,10 @@
+Movie name: Jurassic Park
+Released year: 1993
+Runtime: 127 min
+Genres: Action, Adventure, Sci-Fi
+Rating: 8.1
+Short description: A pragmatic paleontologist visiting an almost complete theme park is tasked with protecting a couple of kids after a power failure causes the park's cloned dinosaurs to run loose.
+Director: Steven Spielberg
+Actors: Sam Neill, Laura Dern, Jeff Goldblum, Richard Attenborough
+No of rating votes: 867615
+Gross revenue: 402453882

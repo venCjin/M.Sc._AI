@@ -1,0 +1,10 @@
+Movie name: The Fifth Element
+Released year: 1997
+Runtime: 126 min
+Genres: Action, Adventure, Sci-Fi
+Rating: 7.7
+Short description: In the colorful future, a cab driver unwittingly becomes the central figure in the search for a legendary cosmic weapon to keep Evil and Mr. Zorg at bay.
+Director: Luc Besson
+Actors: Bruce Willis, Milla Jovovich, Gary Oldman, Ian Holm
+No of rating votes: 434125
+Gross revenue: 63540020

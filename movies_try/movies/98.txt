@@ -1,0 +1,10 @@
+Movie name: American Beauty
+Released year: 1999
+Runtime: 122 min
+Genres: Drama
+Rating: 8.3
+Short description: A sexually frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.
+Director: Sam Mendes
+Actors: Kevin Spacey, Annette Bening, Thora Birch, Wes Bentley
+No of rating votes: 1069738
+Gross revenue: 130096601

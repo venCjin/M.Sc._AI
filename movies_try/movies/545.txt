@@ -1,0 +1,10 @@
+Movie name: The Lion in Winter
+Released year: 1968
+Runtime: 134 min
+Genres: Biography, Drama, History
+Rating: 7.9
+Short description: 1183 A.D.: King Henry II's three sons all want to inherit the throne, but he won't commit to a choice. They and his wife variously plot to force him.
+Director: Anthony Harvey
+Actors: Peter O'Toole, Katharine Hepburn, Anthony Hopkins, John Castle
+No of rating votes: 29003
+Gross revenue: 22276975

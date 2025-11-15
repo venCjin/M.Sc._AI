@@ -1,0 +1,10 @@
+Movie name: The Sound of Music
+Released year: 1965
+Runtime: 172 min
+Genres: Biography, Drama, Family
+Rating: 8.0
+Short description: A woman leaves an Austrian convent to become a governess to the children of a Naval officer widower.
+Director: Robert Wise
+Actors: Julie Andrews, Christopher Plummer, Eleanor Parker, Richard Haydn
+No of rating votes: 205425
+Gross revenue: 163214286

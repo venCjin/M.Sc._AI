@@ -1,0 +1,10 @@
+Movie name: The Thing
+Released year: 1982
+Runtime: 109 min
+Genres: Horror, Mystery, Sci-Fi
+Rating: 8.1
+Short description: A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims.
+Director: John Carpenter
+Actors: Kurt Russell, Wilford Brimley, Keith David, Richard Masur
+No of rating votes: 371271
+Gross revenue: 13782838

@@ -1,0 +1,9 @@
+Movie name: The Invisible Man
+Released year: 1933
+Runtime: 71 min
+Genres: Horror, Sci-Fi
+Rating: 7.7
+Short description: A scientist finds a way of becoming invisible, but in doing so, he becomes murderously insane.
+Director: James Whale
+Actors: Claude Rains, Gloria Stuart, William Harrigan, Henry Travers
+No of rating votes: 30683

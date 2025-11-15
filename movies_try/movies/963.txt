@@ -1,0 +1,10 @@
+Movie name: Die Hard: With a Vengeance
+Released year: 1995
+Runtime: 128 min
+Genres: Action, Adventure, Thriller
+Rating: 7.6
+Short description: John McClane and a Harlem store owner are targeted by German terrorist Simon in New York City, where he plans to rob the Federal Reserve Building.
+Director: John McTiernan
+Actors: Bruce Willis, Jeremy Irons, Samuel L. Jackson, Graham Greene
+No of rating votes: 364420
+Gross revenue: 100012499

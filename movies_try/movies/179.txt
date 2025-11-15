@@ -1,0 +1,10 @@
+Movie name: The Great Escape
+Released year: 1963
+Runtime: 172 min
+Genres: Adventure, Drama, History
+Rating: 8.2
+Short description: Allied prisoners of war plan for several hundred of their number to escape from a German camp during World War II.
+Director: John Sturges
+Actors: Steve McQueen, James Garner, Richard Attenborough, Charles Bronson
+No of rating votes: 224730
+Gross revenue: 12100000

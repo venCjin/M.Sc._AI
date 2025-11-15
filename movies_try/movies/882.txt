@@ -1,0 +1,9 @@
+Movie name: Just Mercy
+Released year: 2019
+Runtime: 137 min
+Genres: Biography, Crime, Drama
+Rating: 7.6
+Short description: World-renowned civil rights defense attorney Bryan Stevenson works to free a wrongly condemned death row prisoner.
+Director: Destin Daniel Cretton
+Actors: Michael B. Jordan, Jamie Foxx, Brie Larson, Charlie Pye Jr.
+No of rating votes: 46739

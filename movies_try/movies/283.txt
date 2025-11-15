@@ -1,0 +1,10 @@
+Movie name: Chinatown
+Released year: 1974
+Runtime: 130 min
+Genres: Drama, Mystery, Thriller
+Rating: 8.1
+Short description: A private detective hired to expose an adulterer finds himself caught up in a web of deceit, corruption, and murder.
+Director: Roman Polanski
+Actors: Jack Nicholson, Faye Dunaway, John Huston, Perry Lopez
+No of rating votes: 294230
+Gross revenue: 29000000

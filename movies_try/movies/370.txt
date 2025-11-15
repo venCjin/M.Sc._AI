@@ -1,0 +1,10 @@
+Movie name: Vozvrashchenie
+Released year: 2003
+Runtime: 110 min
+Genres: Drama
+Rating: 8.0
+Short description: In the Russian wilderness, two brothers face a range of new, conflicting emotions when their father - a man they know only through a single photograph - resurfaces.
+Director: Andrey Zvyagintsev
+Actors: Vladimir Garin, Ivan Dobronravov, Konstantin Lavronenko, Nataliya Vdovina
+No of rating votes: 42399
+Gross revenue: 502028

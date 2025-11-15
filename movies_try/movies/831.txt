@@ -1,0 +1,10 @@
+Movie name: The Last Emperor
+Released year: 1987
+Runtime: 163 min
+Genres: Biography, Drama, History
+Rating: 7.7
+Short description: The story of the final Emperor of China.
+Director: Bernardo Bertolucci
+Actors: John Lone, Joan Chen, Peter O'Toole, Ruocheng Ying
+No of rating votes: 94326
+Gross revenue: 43984230

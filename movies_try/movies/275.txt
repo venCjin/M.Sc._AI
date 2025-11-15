@@ -1,0 +1,10 @@
+Movie name: Blade Runner
+Released year: 1982
+Runtime: 117 min
+Genres: Action, Sci-Fi, Thriller
+Rating: 8.1
+Short description: A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.
+Director: Ridley Scott
+Actors: Harrison Ford, Rutger Hauer, Sean Young, Edward James Olmos
+No of rating votes: 693827
+Gross revenue: 32868943

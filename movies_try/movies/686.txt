@@ -1,0 +1,10 @@
+Movie name: The Right Stuff
+Released year: 1983
+Runtime: 193 min
+Genres: Adventure, Biography, Drama
+Rating: 7.8
+Short description: The story of the original Mercury 7 astronauts and their macho, seat-of-the-pants approach to the space program.
+Director: Philip Kaufman
+Actors: Sam Shepard, Scott Glenn, Ed Harris, Dennis Quaid
+No of rating votes: 56235
+Gross revenue: 21500000

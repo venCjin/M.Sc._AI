@@ -1,0 +1,10 @@
+Movie name: Planet of the Apes
+Released year: 1968
+Runtime: 112 min
+Genres: Adventure, Sci-Fi
+Rating: 8.0
+Short description: An astronaut crew crash-lands on a planet in the distant future where intelligent talking apes are the dominant species, and humans are the oppressed and enslaved.
+Director: Franklin J. Schaffner
+Actors: Charlton Heston, Roddy McDowall, Kim Hunter, Maurice Evans
+No of rating votes: 165167
+Gross revenue: 33395426

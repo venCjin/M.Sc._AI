@@ -1,0 +1,10 @@
+Movie name: City Lights
+Released year: 1931
+Runtime: 87 min
+Genres: Comedy, Drama, Romance
+Rating: 8.5
+Short description: With the aid of a wealthy erratic tippler, a dewy-eyed tramp who has fallen in love with a sightless flower girl accumulates money to be able to help her medically.
+Director: Charles Chaplin
+Actors: Charles Chaplin, Virginia Cherrill, Florence Lee, Harry Myers
+No of rating votes: 167839
+Gross revenue: 19181

@@ -1,0 +1,10 @@
+Movie name: Harry Potter and the Deathly Hallows: Part 2
+Released year: 2011
+Runtime: 130 min
+Genres: Adventure, Drama, Fantasy
+Rating: 8.1
+Short description: Harry, Ron, and Hermione search for Voldemort's remaining Horcruxes in their effort to destroy the Dark Lord as the final battle rages on at Hogwarts.
+Director: David Yates
+Actors: Daniel Radcliffe, Emma Watson, Rupert Grint, Michael Gambon
+No of rating votes: 764493
+Gross revenue: 381011219

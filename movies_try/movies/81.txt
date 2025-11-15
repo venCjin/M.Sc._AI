@@ -1,0 +1,10 @@
+Movie name: Rear Window
+Released year: 1954
+Runtime: 112 min
+Genres: Mystery, Thriller
+Rating: 8.4
+Short description: A wheelchair-bound photographer spies on his neighbors from his apartment window and becomes convinced one of them has committed murder.
+Director: Alfred Hitchcock
+Actors: James Stewart, Grace Kelly, Wendell Corey, Thelma Ritter
+No of rating votes: 444074
+Gross revenue: 36764313

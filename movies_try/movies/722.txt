@@ -1,0 +1,10 @@
+Movie name: Deadpool 2
+Released year: 2018
+Runtime: 119 min
+Genres: Action, Adventure, Comedy
+Rating: 7.7
+Short description: Foul-mouthed mutant mercenary Wade Wilson (a.k.a. Deadpool), brings together a team of fellow mutant rogues to protect a young boy with supernatural abilities from the brutal, time-traveling cyborg Cable.
+Director: David Leitch
+Actors: Ryan Reynolds, Josh Brolin, Morena Baccarin, Julian Dennison
+No of rating votes: 478586
+Gross revenue: 324591735

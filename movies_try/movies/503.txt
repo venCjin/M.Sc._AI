@@ -1,0 +1,10 @@
+Movie name: Shaun of the Dead
+Released year: 2004
+Runtime: 99 min
+Genres: Comedy, Horror
+Rating: 7.9
+Short description: A man's uneventful life is disrupted by the zombie apocalypse.
+Director: Edgar Wright
+Actors: Simon Pegg, Nick Frost, Kate Ashfield, Lucy Davis
+No of rating votes: 512249
+Gross revenue: 13542874

@@ -1,0 +1,10 @@
+Movie name: Fantasia
+Released year: 1940
+Runtime: 125 min
+Genres: Animation, Family, Fantasy
+Rating: 7.7
+Short description: A collection of animated interpretations of great works of Western classical music.
+Director: James Algar
+Actors: Samuel Armstrong, Ford Beebe Jr., Norman Ferguson, David Hand
+No of rating votes: 88662
+Gross revenue: 76408097

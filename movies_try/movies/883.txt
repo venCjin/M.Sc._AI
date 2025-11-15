@@ -1,0 +1,10 @@
+Movie name: Gifted
+Released year: 2017
+Runtime: 101 min
+Genres: Drama
+Rating: 7.6
+Short description: Frank, a single man raising his child prodigy niece Mary, is drawn into a custody battle with his mother.
+Director: Marc Webb
+Actors: Chris Evans, Mckenna Grace, Lindsay Duncan, Octavia Spencer
+No of rating votes: 99643
+Gross revenue: 24801212

@@ -1,0 +1,10 @@
+Movie name: The Fugitive
+Released year: 1993
+Runtime: 130 min
+Genres: Action, Crime, Drama
+Rating: 7.8
+Short description: Dr. Richard Kimble, unjustly accused of murdering his wife, must find the real killer while being the target of a nationwide manhunt led by a seasoned U.S. Marshal.
+Director: Andrew Davis
+Actors: Harrison Ford, Tommy Lee Jones, Sela Ward, Julianne Moore
+No of rating votes: 267684
+Gross revenue: 183875760

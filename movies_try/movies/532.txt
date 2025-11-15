@@ -1,0 +1,10 @@
+Movie name: The Blues Brothers
+Released year: 1980
+Runtime: 133 min
+Genres: Action, Adventure, Comedy
+Rating: 7.9
+Short description: Jake Blues, just released from prison, puts together his old band to save the Catholic home where he and his brother Elwood were raised.
+Director: John Landis
+Actors: John Belushi, Dan Aykroyd, Cab Calloway, John Candy
+No of rating votes: 183182
+Gross revenue: 57229890

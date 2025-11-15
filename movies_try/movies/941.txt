@@ -1,0 +1,10 @@
+Movie name: 25th Hour
+Released year: 2002
+Runtime: 135 min
+Genres: Drama
+Rating: 7.6
+Short description: Cornered by the DEA, convicted New York drug dealer Montgomery Brogan reevaluates his life in the 24 remaining hours before facing a seven-year jail term.
+Director: Spike Lee
+Actors: Edward Norton, Barry Pepper, Philip Seymour Hoffman, Rosario Dawson
+No of rating votes: 169708
+Gross revenue: 13060843

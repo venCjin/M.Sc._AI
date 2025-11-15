@@ -1,0 +1,10 @@
+Movie name: The Dark Knight Rises
+Released year: 2012
+Runtime: 164 min
+Genres: Action, Adventure
+Rating: 8.4
+Short description: Eight years after the Joker's reign of anarchy, Batman, with the help of the enigmatic Catwoman, is forced from his exile to save Gotham City from the brutal guerrilla terrorist Bane.
+Director: Christopher Nolan
+Actors: Christian Bale, Tom Hardy, Anne Hathaway, Gary Oldman
+No of rating votes: 1516346
+Gross revenue: 448139099

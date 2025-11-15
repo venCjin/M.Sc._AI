@@ -1,0 +1,10 @@
+Movie name: JFK
+Released year: 1991
+Runtime: 189 min
+Genres: Drama, History, Thriller
+Rating: 8.0
+Short description: New Orleans District Attorney Jim Garrison discovers there's more to the Kennedy assassination than the official story.
+Director: Oliver Stone
+Actors: Kevin Costner, Gary Oldman, Jack Lemmon, Walter Matthau
+No of rating votes: 142110
+Gross revenue: 70405498

@@ -1,0 +1,10 @@
+Movie name: Avatar
+Released year: 2009
+Runtime: 162 min
+Genres: Action, Adventure, Fantasy
+Rating: 7.8
+Short description: A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.
+Director: James Cameron
+Actors: Sam Worthington, Zoe Saldana, Sigourney Weaver, Michelle Rodriguez
+No of rating votes: 1118998
+Gross revenue: 760507625

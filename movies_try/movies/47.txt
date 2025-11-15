@@ -1,0 +1,10 @@
+Movie name: Back to the Future
+Released year: 1985
+Runtime: 116 min
+Genres: Adventure, Comedy, Sci-Fi
+Rating: 8.5
+Short description: Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the eccentric scientist Doc Brown.
+Director: Robert Zemeckis
+Actors: Michael J. Fox, Christopher Lloyd, Lea Thompson, Crispin Glover
+No of rating votes: 1058081
+Gross revenue: 210609762

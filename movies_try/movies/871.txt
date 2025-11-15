@@ -1,0 +1,10 @@
+Movie name: The Quiet Man
+Released year: 1952
+Runtime: 129 min
+Genres: Comedy, Drama, Romance
+Rating: 7.7
+Short description: A retired American boxer returns to the village of his birth in Ireland, where he falls for a spirited redhead whose brother is contemptuous of their union.
+Director: John Ford
+Actors: John Wayne, Maureen O'Hara, Barry Fitzgerald, Ward Bond
+No of rating votes: 34677
+Gross revenue: 10550000

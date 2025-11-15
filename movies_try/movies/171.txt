@@ -1,0 +1,10 @@
+Movie name: Die Hard
+Released year: 1988
+Runtime: 132 min
+Genres: Action, Thriller
+Rating: 8.2
+Short description: An NYPD officer tries to save his wife and several others taken hostage by German terrorists during a Christmas party at the Nakatomi Plaza in Los Angeles.
+Director: John McTiernan
+Actors: Bruce Willis, Alan Rickman, Bonnie Bedelia, Reginald VelJohnson
+No of rating votes: 793164
+Gross revenue: 83008852

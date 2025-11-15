@@ -1,0 +1,10 @@
+Movie name: Rogue One
+Released year: 2016
+Runtime: 133 min
+Genres: Action, Adventure, Sci-Fi
+Rating: 7.8
+Short description: The daughter of an Imperial scientist joins the Rebel Alliance in a risky move to steal the plans for the Death Star.
+Director: Gareth Edwards
+Actors: Felicity Jones, Diego Luna, Alan Tudyk, Donnie Yen
+No of rating votes: 556608
+Gross revenue: 532177324

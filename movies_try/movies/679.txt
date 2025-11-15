@@ -1,0 +1,10 @@
+Movie name: Ferris Bueller's Day Off
+Released year: 1986
+Runtime: 103 min
+Genres: Comedy
+Rating: 7.8
+Short description: A high school wise guy is determined to have a day off from school, despite what the Principal thinks of that.
+Director: John Hughes
+Actors: Matthew Broderick, Alan Ruck, Mia Sara, Jeffrey Jones
+No of rating votes: 321382
+Gross revenue: 70136369

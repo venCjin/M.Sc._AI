@@ -1,0 +1,10 @@
+Movie name: The Muppet Christmas Carol
+Released year: 1992
+Runtime: 85 min
+Genres: Comedy, Drama, Family
+Rating: 7.7
+Short description: The Muppet characters tell their version of the classic tale of an old and bitter miser's redemption on Christmas Eve.
+Director: Brian Henson
+Actors: Michael Caine, Kermit the Frog, Dave Goelz, Miss Piggy
+No of rating votes: 50298
+Gross revenue: 27281507

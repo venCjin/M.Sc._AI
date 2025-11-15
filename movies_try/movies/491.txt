@@ -1,0 +1,10 @@
+Movie name: Boyhood
+Released year: 2014
+Runtime: 165 min
+Genres: Drama
+Rating: 7.9
+Short description: The life of Mason, from early childhood to his arrival at college.
+Director: Richard Linklater
+Actors: Ellar Coltrane, Patricia Arquette, Ethan Hawke, Elijah Smith
+No of rating votes: 335533
+Gross revenue: 25379975

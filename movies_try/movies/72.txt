@@ -1,0 +1,10 @@
+Movie name: Raiders of the Lost Ark
+Released year: 1981
+Runtime: 115 min
+Genres: Action, Adventure
+Rating: 8.4
+Short description: In 1936, archaeologist and adventurer Indiana Jones is hired by the U.S. government to find the Ark of the Covenant before Adolf Hitler's Nazis can obtain its awesome powers.
+Director: Steven Spielberg
+Actors: Harrison Ford, Karen Allen, Paul Freeman, John Rhys-Davies
+No of rating votes: 884112
+Gross revenue: 248159971

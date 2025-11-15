@@ -1,0 +1,10 @@
+Movie name: Argo
+Released year: 2012
+Runtime: 120 min
+Genres: Biography, Drama, Thriller
+Rating: 7.7
+Short description: Acting under the cover of a Hollywood producer scouting a location for a science fiction film, a CIA agent launches a dangerous operation to rescue six Americans in Tehran during the U.S. hostage crisis in Iran in 1979.
+Director: Ben Affleck
+Actors: Ben Affleck, Bryan Cranston, John Goodman, Alan Arkin
+No of rating votes: 572581
+Gross revenue: 136025503

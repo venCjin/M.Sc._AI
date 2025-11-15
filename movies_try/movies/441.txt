@@ -1,0 +1,9 @@
+Movie name: The Killing
+Released year: 1956
+Runtime: 84 min
+Genres: Crime, Drama, Film-Noir
+Rating: 8.0
+Short description: Crook Johnny Clay assembles a five man team to plan and execute a daring race-track robbery.
+Director: Stanley Kubrick
+Actors: Sterling Hayden, Coleen Gray, Vince Edwards, Jay C. Flippen
+No of rating votes: 81702

@@ -1,0 +1,10 @@
+Movie name: Room
+Released year: 2015
+Runtime: 118 min
+Genres: Drama, Thriller
+Rating: 8.1
+Short description: Held captive for 7 years in an enclosed space, a woman and her young son finally gain their freedom, allowing the boy to experience the outside world for the first time.
+Director: Lenny Abrahamson
+Actors: Brie Larson, Jacob Tremblay, Sean Bridgers, Wendy Crewson
+No of rating votes: 371538
+Gross revenue: 14677674

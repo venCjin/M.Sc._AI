@@ -1,0 +1,9 @@
+Movie name: Blowup
+Released year: 1966
+Runtime: 111 min
+Genres: Drama, Mystery, Thriller
+Rating: 7.6
+Short description: A fashion photographer unknowingly captures a death on film after following two lovers in a park.
+Director: Michelangelo Antonioni
+Actors: David Hemmings, Vanessa Redgrave, Sarah Miles, John Castle
+No of rating votes: 56513

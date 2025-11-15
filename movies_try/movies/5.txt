@@ -1,0 +1,10 @@
+Movie name: The Lord of the Rings: The Return of the King
+Released year: 2003
+Runtime: 201 min
+Genres: Action, Adventure, Drama
+Rating: 8.9
+Short description: Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.
+Director: Peter Jackson
+Actors: Elijah Wood, Viggo Mortensen, Ian McKellen, Orlando Bloom
+No of rating votes: 1642758
+Gross revenue: 377845905

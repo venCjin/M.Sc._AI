@@ -1,0 +1,10 @@
+Movie name: Three Billboards Outside Ebbing, Missouri
+Released year: 2017
+Runtime: 115 min
+Genres: Comedy, Crime, Drama
+Rating: 8.2
+Short description: A mother personally challenges the local authorities to solve her daughter's murder when they fail to catch the culprit.
+Director: Martin McDonagh
+Actors: Frances McDormand, Woody Harrelson, Sam Rockwell, Caleb Landry Jones
+No of rating votes: 432610
+Gross revenue: 54513740

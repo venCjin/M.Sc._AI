@@ -1,0 +1,10 @@
+Movie name: Withnail & I
+Released year: 1987
+Runtime: 107 min
+Genres: Comedy, Drama
+Rating: 7.7
+Short description: In 1969, two substance-abusing, unemployed actors retreat to the countryside for a holiday that proves disastrous.
+Director: Bruce Robinson
+Actors: Richard E. Grant, Paul McGann, Richard Griffiths, Ralph Brown
+No of rating votes: 40396
+Gross revenue: 1544889

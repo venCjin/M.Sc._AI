@@ -1,0 +1,9 @@
+Movie name: The Taking of Pelham One Two Three
+Released year: 1974
+Runtime: 104 min
+Genres: Action, Crime, Thriller
+Rating: 7.7
+Short description: In New York, armed men hijack a subway car and demand a ransom for the passengers. Even if it's paid, how could they get away?
+Director: Joseph Sargent
+Actors: Walter Matthau, Robert Shaw, Martin Balsam, Hector Elizondo
+No of rating votes: 26729

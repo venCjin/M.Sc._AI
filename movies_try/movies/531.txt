@@ -1,0 +1,10 @@
+Movie name: A Christmas Story
+Released year: 1983
+Runtime: 93 min
+Genres: Comedy, Family
+Rating: 7.9
+Short description: In the 1940s, a young boy named Ralphie attempts to convince his parents, his teacher and Santa that a Red Ryder BB gun really is the perfect Christmas gift.
+Director: Bob Clark
+Actors: Peter Billingsley, Melinda Dillon, Darren McGavin, Scott Schwartz
+No of rating votes: 132947
+Gross revenue: 20605209

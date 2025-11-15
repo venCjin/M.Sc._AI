@@ -1,0 +1,10 @@
+Movie name: The King of Comedy
+Released year: 1982
+Runtime: 109 min
+Genres: Comedy, Crime, Drama
+Rating: 7.8
+Short description: Rupert Pupkin is a passionate yet unsuccessful comic who craves nothing more than to be in the spotlight and to achieve this, he stalks and kidnaps his idol to take the spotlight for himself.
+Director: Martin Scorsese
+Actors: Robert De Niro, Jerry Lewis, Diahnne Abbott, Sandra Bernhard
+No of rating votes: 88511
+Gross revenue: 2500000

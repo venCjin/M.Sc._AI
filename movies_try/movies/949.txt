@@ -1,0 +1,10 @@
+Movie name: Blow
+Released year: 2001
+Runtime: 124 min
+Genres: Biography, Crime, Drama
+Rating: 7.6
+Short description: The story of how George Jung, along with the Medellín Cartel headed by Pablo Escobar, established the American cocaine market in the 1970s in the United States.
+Director: Ted Demme
+Actors: Johnny Depp, Penélope Cruz, Franka Potente, Rachel Griffiths
+No of rating votes: 240714
+Gross revenue: 52990775

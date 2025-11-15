@@ -1,0 +1,10 @@
+Movie name: Enter the Dragon
+Released year: 1973
+Runtime: 102 min
+Genres: Action, Crime, Drama
+Rating: 7.7
+Short description: A secret agent comes to an opium lord's island fortress with other fighters for a martial-arts tournament.
+Director: Robert Clouse
+Actors: Bruce Lee, John Saxon, Jim Kelly, Ahna Capri
+No of rating votes: 96561
+Gross revenue: 25000000

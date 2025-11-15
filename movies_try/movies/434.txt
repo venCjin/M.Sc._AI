@@ -1,0 +1,10 @@
+Movie name: The Hustler
+Released year: 1961
+Runtime: 134 min
+Genres: Drama, Sport
+Rating: 8.0
+Short description: An up-and-coming pool player plays a long-time champion in a single high-stakes match.
+Director: Robert Rossen
+Actors: Paul Newman, Jackie Gleason, Piper Laurie, George C. Scott
+No of rating votes: 75067
+Gross revenue: 8284000

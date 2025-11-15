@@ -1,0 +1,10 @@
+Movie name: Zelig
+Released year: 1983
+Runtime: 79 min
+Genres: Comedy
+Rating: 7.7
+Short description: "Documentary" about a man who can look and act like whoever he's around, and meets various famous people.
+Director: Woody Allen
+Actors: Woody Allen, Mia Farrow, Patrick Horgan, John Buckwalter
+No of rating votes: 39881
+Gross revenue: 11798616

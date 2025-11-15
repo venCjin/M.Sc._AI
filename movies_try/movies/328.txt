@@ -1,0 +1,10 @@
+Movie name: Lion
+Released year: 2016
+Runtime: 118 min
+Genres: Biography, Drama
+Rating: 8.0
+Short description: A five-year-old Indian boy is adopted by an Australian couple after getting lost hundreds of kilometers from home. 25 years later, he sets out to find his lost family.
+Director: Garth Davis
+Actors: Dev Patel, Nicole Kidman, Rooney Mara, Sunny Pawar
+No of rating votes: 213970
+Gross revenue: 51739495

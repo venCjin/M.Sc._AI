@@ -1,0 +1,9 @@
+Movie name: It's a Wonderful Life
+Released year: 1946
+Runtime: 130 min
+Genres: Drama, Family, Fantasy
+Rating: 8.6
+Short description: An angel is sent from Heaven to help a desperately frustrated businessman by showing him what life would have been like if he had never existed.
+Director: Frank Capra
+Actors: James Stewart, Donna Reed, Lionel Barrymore, Thomas Mitchell
+No of rating votes: 405801

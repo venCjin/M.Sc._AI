@@ -1,0 +1,10 @@
+Movie name: American History X
+Released year: 1998
+Runtime: 119 min
+Genres: Drama
+Rating: 8.5
+Short description: A former neo-nazi skinhead tries to prevent his younger brother from going down the same wrong path that he did.
+Director: Tony Kaye
+Actors: Edward Norton, Edward Furlong, Beverly D'Angelo, Jennifer Lien
+No of rating votes: 1034705
+Gross revenue: 6719864

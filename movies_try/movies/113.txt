@@ -1,0 +1,10 @@
+Movie name: A Clockwork Orange
+Released year: 1971
+Runtime: 136 min
+Genres: Crime, Drama, Sci-Fi
+Rating: 8.3
+Short description: In the future, a sadistic gang leader is imprisoned and volunteers for a conduct-aversion experiment, but it doesn't go as planned.
+Director: Stanley Kubrick
+Actors: Malcolm McDowell, Patrick Magee, Michael Bates, Warren Clarke
+No of rating votes: 757904
+Gross revenue: 6207725

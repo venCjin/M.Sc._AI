@@ -1,0 +1,10 @@
+Movie name: Star Trek II: The Wrath of Khan
+Released year: 1982
+Runtime: 113 min
+Genres: Action, Adventure, Sci-Fi
+Rating: 7.7
+Short description: With the assistance of the Enterprise crew, Admiral Kirk must stop an old nemesis, Khan Noonien Singh, from using the life-generating Genesis Device as the ultimate weapon.
+Director: Nicholas Meyer
+Actors: William Shatner, Leonard Nimoy, DeForest Kelley, James Doohan
+No of rating votes: 112704
+Gross revenue: 78912963

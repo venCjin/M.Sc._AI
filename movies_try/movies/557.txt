@@ -1,0 +1,9 @@
+Movie name: Harvey
+Released year: 1950
+Runtime: 104 min
+Genres: Comedy, Drama, Fantasy
+Rating: 7.9
+Short description: Due to his insistence that he has an invisible six foot-tall rabbit for a best friend, a whimsical middle-aged man is thought by his family to be insane - but he may be wiser than anyone knows.
+Director: Henry Koster
+Actors: James Stewart, Wallace Ford, William H. Lynn, Victoria Horne
+No of rating votes: 52573

@@ -1,0 +1,10 @@
+Movie name: Mission: Impossible - Fallout
+Released year: 2018
+Runtime: 147 min
+Genres: Action, Adventure, Thriller
+Rating: 7.7
+Short description: Ethan Hunt and his IMF team, along with some familiar allies, race against time after a mission gone wrong.
+Director: Christopher McQuarrie
+Actors: Tom Cruise, Henry Cavill, Ving Rhames, Simon Pegg
+No of rating votes: 291257
+Gross revenue: 220159104

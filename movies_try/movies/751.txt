@@ -1,0 +1,10 @@
+Movie name: Skyfall
+Released year: 2012
+Runtime: 143 min
+Genres: Action, Adventure, Thriller
+Rating: 7.7
+Short description: James Bond's loyalty to M is tested when her past comes back to haunt her. When MI6 comes under attack, 007 must track down and destroy the threat, no matter how personal the cost.
+Director: Sam Mendes
+Actors: Daniel Craig, Javier Bardem, Naomie Harris, Judi Dench
+No of rating votes: 630614
+Gross revenue: 304360277

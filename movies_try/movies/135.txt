@@ -1,0 +1,9 @@
+Movie name: Klaus
+Released year: 2019
+Runtime: 96 min
+Genres: Animation, Adventure, Comedy
+Rating: 8.2
+Short description: A simple act of kindness always sparks another, even in a frozen, faraway place. When Smeerensburg's new postman, Jesper, befriends toymaker Klaus, their gifts melt an age-old feud and deliver a sleigh full of holiday traditions.
+Director: Sergio Pablos
+Actors: Carlos Martínez López, Jason Schwartzman, J.K. Simmons, Rashida Jones
+No of rating votes: 104761

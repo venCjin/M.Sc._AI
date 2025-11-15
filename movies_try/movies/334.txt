@@ -1,0 +1,10 @@
+Movie name: Gully Boy
+Released year: 2019
+Runtime: 154 min
+Genres: Drama, Music, Romance
+Rating: 8.0
+Short description: A coming-of-age story based on the lives of street rappers in Mumbai.
+Director: Zoya Akhtar
+Actors: Vijay Varma, Nakul Roshan Sahdev, Ranveer Singh, Vijay Raaz
+No of rating votes: 31886
+Gross revenue: 5566534

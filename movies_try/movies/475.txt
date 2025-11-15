@@ -1,0 +1,10 @@
+Movie name: Jojo Rabbit
+Released year: 2019
+Runtime: 108 min
+Genres: Comedy, Drama, War
+Rating: 7.9
+Short description: A young boy in Hitler's army finds out his mother is hiding a Jewish girl in their home.
+Director: Taika Waititi
+Actors: Roman Griffin Davis, Thomasin McKenzie, Scarlett Johansson, Taika Waititi
+No of rating votes: 297918
+Gross revenue: 349555

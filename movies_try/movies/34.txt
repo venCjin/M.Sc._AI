@@ -1,0 +1,10 @@
+Movie name: Whiplash
+Released year: 2014
+Runtime: 106 min
+Genres: Drama, Music
+Rating: 8.5
+Short description: A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.
+Director: Damien Chazelle
+Actors: Miles Teller, J.K. Simmons, Melissa Benoist, Paul Reiser
+No of rating votes: 717585
+Gross revenue: 13092000

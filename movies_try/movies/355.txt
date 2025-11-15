@@ -1,0 +1,10 @@
+Movie name: Black Swan
+Released year: 2010
+Runtime: 108 min
+Genres: Drama, Thriller
+Rating: 8.0
+Short description: A committed dancer struggles to maintain her sanity after winning the lead role in a production of Tchaikovsky's "Swan Lake".
+Director: Darren Aronofsky
+Actors: Natalie Portman, Mila Kunis, Vincent Cassel, Winona Ryder
+No of rating votes: 699673
+Gross revenue: 106954678

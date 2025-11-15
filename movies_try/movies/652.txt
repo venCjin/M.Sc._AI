@@ -1,0 +1,10 @@
+Movie name: Titanic
+Released year: 1997
+Runtime: 194 min
+Genres: Drama, Romance
+Rating: 7.8
+Short description: A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.
+Director: James Cameron
+Actors: Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates
+No of rating votes: 1046089
+Gross revenue: 659325379

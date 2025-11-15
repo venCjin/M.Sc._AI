@@ -1,0 +1,10 @@
+Movie name: Kahaani
+Released year: 2012
+Runtime: 122 min
+Genres: Mystery, Thriller
+Rating: 8.1
+Short description: A pregnant woman's search for her missing husband takes her from London to Kolkata, but everyone she questions denies having ever met him.
+Director: Sujoy Ghosh
+Actors: Vidya Balan, Parambrata Chattopadhyay, Indraneil Sengupta, Nawazuddin Siddiqui
+No of rating votes: 57806
+Gross revenue: 1035953

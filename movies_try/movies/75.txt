@@ -1,0 +1,10 @@
+Movie name: Alien
+Released year: 1979
+Runtime: 117 min
+Genres: Horror, Sci-Fi
+Rating: 8.4
+Short description: After a space merchant vessel receives an unknown transmission as a distress call, one of the crew is attacked by a mysterious life form and they soon realize that its life cycle has merely begun.
+Director: Ridley Scott
+Actors: Sigourney Weaver, Tom Skerritt, John Hurt, Veronica Cartwright
+No of rating votes: 787806
+Gross revenue: 78900000

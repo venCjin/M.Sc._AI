@@ -1,0 +1,10 @@
+Movie name: En man som heter Ove
+Released year: 2015
+Runtime: 116 min
+Genres: Comedy, Drama, Romance
+Rating: 7.7
+Short description: Ove, an ill-tempered, isolated retiree who spends his days enforcing block association rules and visiting his wife's grave, has finally given up on life just as an unlikely friendship develops with his boisterous new neighbors.
+Director: Hannes Holm
+Actors: Rolf Lassgård, Bahar Pars, Filip Berg, Ida Engvoll
+No of rating votes: 47444
+Gross revenue: 3358518

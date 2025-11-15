@@ -1,0 +1,9 @@
+Movie name: Badlands
+Released year: 1973
+Runtime: 94 min
+Genres: Action, Crime, Drama
+Rating: 7.8
+Short description: An impressionable teenage girl from a dead-end town and her older greaser boyfriend embark on a killing spree in the South Dakota badlands.
+Director: Terrence Malick
+Actors: Martin Sheen, Sissy Spacek, Warren Oates, Ramon Bieri
+No of rating votes: 66009

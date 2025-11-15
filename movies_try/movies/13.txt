@@ -1,0 +1,10 @@
+Movie name: The Lord of the Rings: The Two Towers
+Released year: 2002
+Runtime: 179 min
+Genres: Action, Adventure, Drama
+Rating: 8.7
+Short description: While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.
+Director: Peter Jackson
+Actors: Elijah Wood, Ian McKellen, Viggo Mortensen, Orlando Bloom
+No of rating votes: 1485555
+Gross revenue: 342551365

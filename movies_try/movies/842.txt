@@ -1,0 +1,10 @@
+Movie name: Airplane!
+Released year: 1980
+Runtime: 88 min
+Genres: Comedy
+Rating: 7.7
+Short description: A man afraid to fly must ensure that a plane lands safely after the pilots become sick.
+Director: Jim Abrahams
+Actors: David Zucker, Jerry Zucker, Robert Hays, Julie Hagerty
+No of rating votes: 214882
+Gross revenue: 83400000

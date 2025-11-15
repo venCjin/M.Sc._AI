@@ -1,0 +1,10 @@
+Movie name: Queen
+Released year: 2013
+Runtime: 146 min
+Genres: Adventure, Comedy, Drama
+Rating: 8.2
+Short description: A Delhi girl from a traditional family sets out on a solo honeymoon after her marriage gets cancelled.
+Director: Vikas Bahl
+Actors: Kangana Ranaut, Rajkummar Rao, Lisa Haydon, Jeffrey Ho
+No of rating votes: 60701
+Gross revenue: 1429534

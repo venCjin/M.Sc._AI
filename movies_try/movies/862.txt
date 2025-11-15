@@ -1,0 +1,10 @@
+Movie name: The Birds
+Released year: 1963
+Runtime: 119 min
+Genres: Drama, Horror, Mystery
+Rating: 7.7
+Short description: A wealthy San Francisco socialite pursues a potential boyfriend to a small Northern California town that slowly takes a turn for the bizarre when birds of all kinds suddenly begin to attack people.
+Director: Alfred Hitchcock
+Actors: Rod Taylor, Tippi Hedren, Jessica Tandy, Suzanne Pleshette
+No of rating votes: 171739
+Gross revenue: 11403529

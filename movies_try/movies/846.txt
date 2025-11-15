@@ -1,0 +1,9 @@
+Movie name: Love and Death
+Released year: 1975
+Runtime: 85 min
+Genres: Comedy, War
+Rating: 7.7
+Short description: In czarist Russia, a neurotic soldier and his distant cousin formulate a plot to assassinate Napoleon.
+Director: Woody Allen
+Actors: Woody Allen, Diane Keaton, Georges Adet, Frank Adu
+No of rating votes: 36037

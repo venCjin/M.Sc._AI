@@ -1,0 +1,10 @@
+Movie name: Aliens
+Released year: 1986
+Runtime: 137 min
+Genres: Action, Adventure, Sci-Fi
+Rating: 8.3
+Short description: Fifty-seven years after surviving an apocalyptic attack aboard her space vessel by merciless space creatures, Officer Ripley awakens from hyper-sleep and tries to warn anyone who will listen about the predators.
+Director: James Cameron
+Actors: Sigourney Weaver, Michael Biehn, Carrie Henn, Paul Reiser
+No of rating votes: 652719
+Gross revenue: 85160248

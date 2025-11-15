@@ -1,0 +1,10 @@
+Movie name: Nelyubov
+Released year: 2017
+Runtime: 127 min
+Genres: Drama
+Rating: 7.6
+Short description: A couple going through a divorce must team up to find their son who has disappeared during one of their bitter arguments.
+Director: Andrey Zvyagintsev
+Actors: Maryana Spivak, Aleksey Rozin, Matvey Novikov, Marina Vasileva
+No of rating votes: 29765
+Gross revenue: 566356

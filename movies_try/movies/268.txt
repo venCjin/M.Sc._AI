@@ -1,0 +1,10 @@
+Movie name: Platoon
+Released year: 1986
+Runtime: 120 min
+Genres: Drama, War
+Rating: 8.1
+Short description: Chris Taylor, a neophyte recruit in Vietnam, finds himself caught in a battle of wills between two sergeants, one good and the other evil. A shrewd examination of the brutality of war and the duality of man in conflict.
+Director: Oliver Stone
+Actors: Charlie Sheen, Tom Berenger, Willem Dafoe, Keith David
+No of rating votes: 381222
+Gross revenue: 138530565

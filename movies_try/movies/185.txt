@@ -1,0 +1,9 @@
+Movie name: Det sjunde inseglet
+Released year: 1957
+Runtime: 96 min
+Genres: Drama, Fantasy, History
+Rating: 8.2
+Short description: A man seeks answers about life, death, and the existence of God as he plays chess against the Grim Reaper during the Black Plague.
+Director: Ingmar Bergman
+Actors: Max von Sydow, Gunnar Björnstrand, Bengt Ekerot, Nils Poppe
+No of rating votes: 164939

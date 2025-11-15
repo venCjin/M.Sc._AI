@@ -1,0 +1,10 @@
+Movie name: Planes, Trains & Automobiles
+Released year: 1987
+Runtime: 93 min
+Genres: Comedy, Drama
+Rating: 7.6
+Short description: A man must struggle to travel home for Thanksgiving with a lovable oaf of a shower curtain ring salesman as his only companion.
+Director: John Hughes
+Actors: Steve Martin, John Candy, Laila Robins, Michael McKean
+No of rating votes: 124773
+Gross revenue: 49530280

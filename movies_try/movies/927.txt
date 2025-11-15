@@ -1,0 +1,10 @@
+Movie name: Harry Potter and the Half-Blood Prince
+Released year: 2009
+Runtime: 153 min
+Genres: Action, Adventure, Family
+Rating: 7.6
+Short description: As Harry Potter begins his sixth year at Hogwarts, he discovers an old book marked as "the property of the Half-Blood Prince" and begins to learn more about Lord Voldemort's dark past.
+Director: David Yates
+Actors: Daniel Radcliffe, Emma Watson, Rupert Grint, Michael Gambon
+No of rating votes: 474827
+Gross revenue: 301959197

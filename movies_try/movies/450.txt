@@ -1,0 +1,9 @@
+Movie name: Rope
+Released year: 1948
+Runtime: 80 min
+Genres: Crime, Drama, Mystery
+Rating: 8.0
+Short description: Two men attempt to prove they committed the perfect crime by hosting a dinner party after strangling their former classmate to death.
+Director: Alfred Hitchcock
+Actors: James Stewart, John Dall, Farley Granger, Dick Hogan
+No of rating votes: 129783

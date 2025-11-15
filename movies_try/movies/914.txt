@@ -1,0 +1,10 @@
+Movie name: Sherlock Holmes
+Released year: 2009
+Runtime: 128 min
+Genres: Action, Adventure, Mystery
+Rating: 7.6
+Short description: Detective Sherlock Holmes and his stalwart partner Watson engage in a battle of wits and brawn with a nemesis whose plot is a threat to all of England.
+Director: Guy Ritchie
+Actors: Robert Downey Jr., Jude Law, Rachel McAdams, Mark Strong
+No of rating votes: 583158
+Gross revenue: 209028679

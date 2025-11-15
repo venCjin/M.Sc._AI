@@ -1,0 +1,10 @@
+Movie name: The Peanut Butter Falcon
+Released year: 2019
+Runtime: 97 min
+Genres: Adventure, Comedy, Drama
+Rating: 7.6
+Short description: Zak runs away from his care home to make his dream of becoming a wrestler come true.
+Director: Tyler Nilson
+Actors: Michael Schwartz, Zack Gottsagen, Ann Owens, Dakota Johnson
+No of rating votes: 66346
+Gross revenue: 13122642

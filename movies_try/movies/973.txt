@@ -1,0 +1,10 @@
+Movie name: Home Alone
+Released year: 1990
+Runtime: 103 min
+Genres: Comedy, Family
+Rating: 7.6
+Short description: An eight-year-old troublemaker must protect his house from a pair of burglars when he is accidentally left home alone by his family during Christmas vacation.
+Director: Chris Columbus
+Actors: Macaulay Culkin, Joe Pesci, Daniel Stern, John Heard
+No of rating votes: 488817
+Gross revenue: 285761243

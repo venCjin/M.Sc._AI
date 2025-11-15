@@ -1,0 +1,10 @@
+Movie name: Unforgiven
+Released year: 1992
+Runtime: 130 min
+Genres: Drama, Western
+Rating: 8.2
+Short description: Retired Old West gunslinger William Munny reluctantly takes on one last job, with the help of his old partner Ned Logan and a young man, The "Schofield Kid."
+Director: Clint Eastwood
+Actors: Clint Eastwood, Gene Hackman, Morgan Freeman, Richard Harris
+No of rating votes: 375935
+Gross revenue: 101157447

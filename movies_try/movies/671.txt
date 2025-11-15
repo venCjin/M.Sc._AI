@@ -1,0 +1,10 @@
+Movie name: Awakenings
+Released year: 1990
+Runtime: 121 min
+Genres: Biography, Drama
+Rating: 7.8
+Short description: The victims of an encephalitis epidemic many years ago have been catatonic ever since, but now a new drug offers the prospect of reviving them.
+Director: Penny Marshall
+Actors: Robert De Niro, Robin Williams, Julie Kavner, Ruth Nelson
+No of rating votes: 125276
+Gross revenue: 52096475

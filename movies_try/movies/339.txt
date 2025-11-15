@@ -1,0 +1,10 @@
+Movie name: Guardians of the Galaxy
+Released year: 2014
+Runtime: 121 min
+Genres: Action, Adventure, Comedy
+Rating: 8.0
+Short description: A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.
+Director: James Gunn
+Actors: Chris Pratt, Vin Diesel, Bradley Cooper, Zoe Saldana
+No of rating votes: 1043455
+Gross revenue: 333176600

@@ -1,0 +1,9 @@
+Movie name: Gilda
+Released year: 1946
+Runtime: 110 min
+Genres: Drama, Film-Noir, Romance
+Rating: 7.7
+Short description: A small-time gambler hired to work in a Buenos Aires casino discovers his employer's new wife is his former lover.
+Director: Charles Vidor
+Actors: Rita Hayworth, Glenn Ford, George Macready, Joseph Calleia
+No of rating votes: 27991

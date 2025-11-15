@@ -1,0 +1,10 @@
+Movie name: Donnie Brasco
+Released year: 1997
+Runtime: 127 min
+Genres: Biography, Crime, Drama
+Rating: 7.7
+Short description: An FBI undercover agent infiltrates the mob and finds himself identifying more with the mafia life, at the expense of his regular one.
+Director: Mike Newell
+Actors: Al Pacino, Johnny Depp, Michael Madsen, Bruno Kirby
+No of rating votes: 279318
+Gross revenue: 41909762

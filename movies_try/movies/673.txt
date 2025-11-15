@@ -1,0 +1,10 @@
+Movie name: Glory
+Released year: 1989
+Runtime: 122 min
+Genres: Biography, Drama, History
+Rating: 7.8
+Short description: Robert Gould Shaw leads the U.S. Civil War's first all-black volunteer company, fighting prejudices from both his own Union Army, and the Confederates.
+Director: Edward Zwick
+Actors: Matthew Broderick, Denzel Washington, Cary Elwes, Morgan Freeman
+No of rating votes: 122779
+Gross revenue: 26830000

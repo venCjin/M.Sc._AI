@@ -1,0 +1,10 @@
+Movie name: Nebraska
+Released year: 2013
+Runtime: 115 min
+Genres: Adventure, Comedy, Drama
+Rating: 7.7
+Short description: An aging, booze-addled father makes the trip from Montana to Nebraska with his estranged son in order to claim a million-dollar Mega Sweepstakes Marketing prize.
+Director: Alexander Payne
+Actors: Bruce Dern, Will Forte, June Squibb, Bob Odenkirk
+No of rating votes: 112298
+Gross revenue: 17654912

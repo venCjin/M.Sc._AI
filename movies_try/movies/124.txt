@@ -1,0 +1,10 @@
+Movie name: Citizen Kane
+Released year: 1941
+Runtime: 119 min
+Genres: Drama, Mystery
+Rating: 8.3
+Short description: Following the death of publishing tycoon Charles Foster Kane, reporters scramble to uncover the meaning of his final utterance; 'Rosebud'.
+Director: Orson Welles
+Actors: Orson Welles, Joseph Cotten, Dorothy Comingore, Agnes Moorehead
+No of rating votes: 403351
+Gross revenue: 1585634

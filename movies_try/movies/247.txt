@@ -1,0 +1,10 @@
+Movie name: Lagaan: Once Upon a Time in India
+Released year: 2001
+Runtime: 224 min
+Genres: Adventure, Drama, Musical
+Rating: 8.1
+Short description: The people of a small village in Victorian India stake their future on a game of cricket against their ruthless British rulers.
+Director: Ashutosh Gowariker
+Actors: Aamir Khan, Raghuvir Yadav, Gracy Singh, Rachel Shelley
+No of rating votes: 105036
+Gross revenue: 70147

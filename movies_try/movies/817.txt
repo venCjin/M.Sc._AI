@@ -1,0 +1,10 @@
+Movie name: Short Cuts
+Released year: 1993
+Runtime: 188 min
+Genres: Comedy, Drama
+Rating: 7.7
+Short description: The day-to-day lives of several suburban Los Angeles residents.
+Director: Robert Altman
+Actors: Andie MacDowell, Julianne Moore, Tim Robbins, Bruce Davison
+No of rating votes: 42275
+Gross revenue: 6110979

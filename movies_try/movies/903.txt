@@ -1,0 +1,10 @@
+Movie name: A Star Is Born
+Released year: 2018
+Runtime: 136 min
+Genres: Drama, Music, Romance
+Rating: 7.6
+Short description: A musician helps a young singer find fame as age and alcoholism send his own career into a downward spiral.
+Director: Bradley Cooper
+Actors: Lady Gaga, Bradley Cooper, Sam Elliott, Greg Grunberg
+No of rating votes: 334312
+Gross revenue: 215288866

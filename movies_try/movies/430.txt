@@ -1,0 +1,10 @@
+Movie name: Doctor Zhivago
+Released year: 1965
+Runtime: 197 min
+Genres: Drama, Romance, War
+Rating: 8.0
+Short description: The life of a Russian physician and poet who, although married to another, falls in love with a political activist's wife and experiences hardship during World War I and then the October Revolution.
+Director: David Lean
+Actors: Omar Sharif, Julie Christie, Geraldine Chaplin, Rod Steiger
+No of rating votes: 69903
+Gross revenue: 111722000

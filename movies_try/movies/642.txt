@@ -1,0 +1,10 @@
+Movie name: The Count of Monte Cristo
+Released year: 2002
+Runtime: 131 min
+Genres: Action, Adventure, Drama
+Rating: 7.8
+Short description: A young man, falsely imprisoned by his jealous "friend", escapes and uses a hidden treasure to exact his revenge.
+Director: Kevin Reynolds
+Actors: Jim Caviezel, Guy Pearce, Christopher Adamson, JB Blanc
+No of rating votes: 129022
+Gross revenue: 54234062

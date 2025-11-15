@@ -1,0 +1,10 @@
+Movie name: Anatomy of a Murder
+Released year: 1959
+Runtime: 161 min
+Genres: Crime, Drama, Mystery
+Rating: 8.0
+Short description: In a murder trial, the defendant says he suffered temporary insanity after the victim raped his wife. What is the truth, and will he win his case?
+Director: Otto Preminger
+Actors: James Stewart, Lee Remick, Ben Gazzara, Arthur O'Connell
+No of rating votes: 59847
+Gross revenue: 11900000

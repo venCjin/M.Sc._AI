@@ -1,0 +1,10 @@
+Movie name: Waking Life
+Released year: 2001
+Runtime: 99 min
+Genres: Animation, Drama, Fantasy
+Rating: 7.8
+Short description: A man shuffles through a dream meeting various people and discussing the meanings and purposes of the universe.
+Director: Richard Linklater
+Actors: Ethan Hawke, Trevor Jack Brooks, Lorelei Linklater, Wiley Wiggins
+No of rating votes: 60684
+Gross revenue: 2892011

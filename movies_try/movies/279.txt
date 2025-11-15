@@ -1,0 +1,10 @@
+Movie name: Rocky
+Released year: 1976
+Runtime: 120 min
+Genres: Drama, Sport
+Rating: 8.1
+Short description: A small-time boxer gets a supremely rare chance to fight a heavy-weight champion in a bout in which he strives to go the distance for his self-respect.
+Director: John G. Avildsen
+Actors: Sylvester Stallone, Talia Shire, Burt Young, Carl Weathers
+No of rating votes: 518546
+Gross revenue: 117235247

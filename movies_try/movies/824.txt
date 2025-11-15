@@ -1,0 +1,10 @@
+Movie name: A Few Good Men
+Released year: 1992
+Runtime: 138 min
+Genres: Drama, Thriller
+Rating: 7.7
+Short description: Military lawyer Lieutenant Daniel Kaffee defends Marines accused of murder. They contend they were acting under orders.
+Director: Rob Reiner
+Actors: Tom Cruise, Jack Nicholson, Demi Moore, Kevin Bacon
+No of rating votes: 235388
+Gross revenue: 141340178

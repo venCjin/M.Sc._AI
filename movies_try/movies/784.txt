@@ -1,0 +1,10 @@
+Movie name: The Last Samurai
+Released year: 2003
+Runtime: 154 min
+Genres: Action, Drama
+Rating: 7.7
+Short description: An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.
+Director: Edward Zwick
+Actors: Tom Cruise, Ken Watanabe, Billy Connolly, William Atherton
+No of rating votes: 400049
+Gross revenue: 111110575

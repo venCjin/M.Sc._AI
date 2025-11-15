@@ -1,0 +1,10 @@
+Movie name: The Apartment
+Released year: 1960
+Runtime: 125 min
+Genres: Comedy, Drama, Romance
+Rating: 8.3
+Short description: A man tries to rise in his company by letting its executives use his apartment for trysts, but complications and a romance of his own ensue.
+Director: Billy Wilder
+Actors: Jack Lemmon, Shirley MacLaine, Fred MacMurray, Ray Walston
+No of rating votes: 164363
+Gross revenue: 18600000

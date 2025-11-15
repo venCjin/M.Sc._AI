@@ -1,0 +1,9 @@
+Movie name: Judgment at Nuremberg
+Released year: 1961
+Runtime: 179 min
+Genres: Drama, War
+Rating: 8.2
+Short description: In 1948, an American court in occupied Germany tries four Nazis judged for war crimes.
+Director: Stanley Kramer
+Actors: Spencer Tracy, Burt Lancaster, Richard Widmark, Marlene Dietrich
+No of rating votes: 69458

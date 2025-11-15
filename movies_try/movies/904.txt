@@ -1,0 +1,10 @@
+Movie name: True Grit
+Released year: 2010
+Runtime: 110 min
+Genres: Drama, Western
+Rating: 7.6
+Short description: A stubborn teenager enlists the help of a tough U.S. Marshal to track down her father's murderer.
+Director: Ethan Coen
+Actors: Joel Coen, Jeff Bridges, Matt Damon, Hailee Steinfeld
+No of rating votes: 311822
+Gross revenue: 171243005

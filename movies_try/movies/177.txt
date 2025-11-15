@@ -1,0 +1,9 @@
+Movie name: Sholay
+Released year: 1975
+Runtime: 204 min
+Genres: Action, Adventure, Comedy
+Rating: 8.2
+Short description: After his family is murdered by a notorious and ruthless bandit, a former police officer enlists the services of two outlaws to capture the bandit.
+Director: Ramesh Sippy
+Actors: Sanjeev Kumar, Dharmendra, Amitabh Bachchan, Amjad Khan
+No of rating votes: 51284

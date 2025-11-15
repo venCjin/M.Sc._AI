@@ -1,0 +1,10 @@
+Movie name: The Martian
+Released year: 2015
+Runtime: 144 min
+Genres: Adventure, Drama, Sci-Fi
+Rating: 8.0
+Short description: An astronaut becomes stranded on Mars after his team assume him dead, and must rely on his ingenuity to find a way to signal to Earth that he is alive.
+Director: Ridley Scott
+Actors: Matt Damon, Jessica Chastain, Kristen Wiig, Kate Mara
+No of rating votes: 760094
+Gross revenue: 228433663

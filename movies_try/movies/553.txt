@@ -1,0 +1,9 @@
+Movie name: The Searchers
+Released year: 1956
+Runtime: 119 min
+Genres: Adventure, Drama, Western
+Rating: 7.9
+Short description: An American Civil War veteran embarks on a journey to rescue his niece from the Comanches.
+Director: John Ford
+Actors: John Wayne, Jeffrey Hunter, Vera Miles, Ward Bond
+No of rating votes: 80316

@@ -1,0 +1,10 @@
+Movie name: Jaws
+Released year: 1975
+Runtime: 124 min
+Genres: Adventure, Thriller
+Rating: 8.0
+Short description: When a killer shark unleashes chaos on a beach community, it's up to a local sheriff, a marine biologist, and an old seafarer to hunt the beast down.
+Director: Steven Spielberg
+Actors: Roy Scheider, Robert Shaw, Richard Dreyfuss, Lorraine Gary
+No of rating votes: 543388
+Gross revenue: 260000000

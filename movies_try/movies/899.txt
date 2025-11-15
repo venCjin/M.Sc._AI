@@ -1,0 +1,9 @@
+Movie name: El cuerpo
+Released year: 2012
+Runtime: 112 min
+Genres: Mystery, Thriller
+Rating: 7.6
+Short description: A detective searches for the body of a femme fatale which has gone missing from a morgue.
+Director: Oriol Paulo
+Actors: Jose Coronado, Hugo Silva, Belén Rueda, Aura Garrido
+No of rating votes: 57549

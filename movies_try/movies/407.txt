@@ -1,0 +1,10 @@
+Movie name: Der Himmel über Berlin
+Released year: 1987
+Runtime: 128 min
+Genres: Drama, Fantasy, Romance
+Rating: 8.0
+Short description: An angel tires of overseeing human activity and wishes to become human when he falls in love with a mortal.
+Director: Wim Wenders
+Actors: Bruno Ganz, Solveig Dommartin, Otto Sander, Curt Bois
+No of rating votes: 64722
+Gross revenue: 3333969

@@ -1,0 +1,10 @@
+Movie name: Shutter Island
+Released year: 2010
+Runtime: 138 min
+Genres: Mystery, Thriller
+Rating: 8.2
+Short description: In 1954, a U.S. Marshal investigates the disappearance of a murderer who escaped from a hospital for the criminally insane.
+Director: Martin Scorsese
+Actors: Leonardo DiCaprio, Emily Mortimer, Mark Ruffalo, Ben Kingsley
+No of rating votes: 1129894
+Gross revenue: 128012934

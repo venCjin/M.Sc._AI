@@ -1,0 +1,10 @@
+Movie name: Dead Poets Society
+Released year: 1989
+Runtime: 128 min
+Genres: Comedy, Drama
+Rating: 8.1
+Short description: Maverick teacher John Keating uses poetry to embolden his boarding school students to new heights of self-expression.
+Director: Peter Weir
+Actors: Robin Williams, Robert Sean Leonard, Ethan Hawke, Josh Charles
+No of rating votes: 425457
+Gross revenue: 95860116

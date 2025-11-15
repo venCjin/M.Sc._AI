@@ -1,0 +1,10 @@
+Movie name: Star Trek Into Darkness
+Released year: 2013
+Runtime: 132 min
+Genres: Action, Adventure, Sci-Fi
+Rating: 7.7
+Short description: After the crew of the Enterprise find an unstoppable force of terror from within their own organization, Captain Kirk leads a manhunt to a war-zone world to capture a one-man weapon of mass destruction.
+Director: J.J. Abrams
+Actors: Chris Pine, Zachary Quinto, Zoe Saldana, Benedict Cumberbatch
+No of rating votes: 463188
+Gross revenue: 228778661

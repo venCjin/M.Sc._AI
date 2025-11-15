@@ -1,0 +1,10 @@
+Movie name: Hidden Figures
+Released year: 2016
+Runtime: 127 min
+Genres: Biography, Drama, History
+Rating: 7.8
+Short description: The story of a team of female African-American mathematicians who served a vital role in NASA during the early years of the U.S. space program.
+Director: Theodore Melfi
+Actors: Taraji P. Henson, Octavia Spencer, Janelle Monáe, Kevin Costner
+No of rating votes: 200876
+Gross revenue: 169607287

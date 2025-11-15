@@ -1,0 +1,10 @@
+Movie name: A Man for All Seasons
+Released year: 1966
+Runtime: 120 min
+Genres: Biography, Drama, History
+Rating: 7.7
+Short description: The story of Sir Thomas More, who stood up to King Henry VIII when the King rejected the Roman Catholic Church to obtain a divorce and remarry.
+Director: Fred Zinnemann
+Actors: Paul Scofield, Wendy Hiller, Robert Shaw, Leo McKern
+No of rating votes: 31222
+Gross revenue: 28350000

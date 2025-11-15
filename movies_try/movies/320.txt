@@ -1,0 +1,10 @@
+Movie name: The General
+Released year: 1926
+Runtime: 67 min
+Genres: Action, Adventure, Comedy
+Rating: 8.1
+Short description: When Union spies steal an engineer's beloved locomotive, he pursues it single-handedly and straight through enemy lines.
+Director: Clyde Bruckman
+Actors: Buster Keaton, Buster Keaton, Marion Mack, Glen Cavender
+No of rating votes: 81156
+Gross revenue: 1033895

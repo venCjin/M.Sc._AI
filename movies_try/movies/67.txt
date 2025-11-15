@@ -1,0 +1,10 @@
+Movie name: The Lives of Others
+Released year: 2006
+Runtime: 137 min
+Genres: Drama, Mystery, Thriller
+Rating: 8.4
+Short description: In 1984 East Berlin, an agent of the secret police, conducting surveillance on a writer and his lover, finds himself becoming increasingly absorbed by their lives.
+Director: Florian Henckel von Donnersmarck
+Actors: Ulrich Mühe, Martina Gedeck, Sebastian Koch, Ulrich Tukur
+No of rating votes: 358685
+Gross revenue: 11286112

@@ -1,0 +1,10 @@
+Movie name: In the Heat of the Night
+Released year: 1967
+Runtime: 110 min
+Genres: Crime, Drama, Mystery
+Rating: 7.9
+Short description: A black police detective is asked to investigate a murder in a racially hostile southern town.
+Director: Norman Jewison
+Actors: Sidney Poitier, Rod Steiger, Warren Oates, Lee Grant
+No of rating votes: 67804
+Gross revenue: 24379978

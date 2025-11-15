@@ -1,0 +1,10 @@
+Movie name: Birdman or (The Unexpected Virtue of Ignorance)
+Released year: 2014
+Runtime: 119 min
+Genres: Comedy, Drama
+Rating: 7.7
+Short description: A washed-up superhero actor attempts to revive his fading career by writing, directing, and starring in a Broadway production.
+Director: Alejandro G. Iñárritu
+Actors: Michael Keaton, Zach Galifianakis, Edward Norton, Andrea Riseborough
+No of rating votes: 580291
+Gross revenue: 42340598

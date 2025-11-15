@@ -1,0 +1,10 @@
+Movie name: Trois couleurs: Rouge
+Released year: 1994
+Runtime: 99 min
+Genres: Drama, Mystery, Romance
+Rating: 8.1
+Short description: A model discovers a retired judge is keen on invading people's privacy.
+Director: Krzysztof Kieslowski
+Actors: Irène Jacob, Jean-Louis Trintignant, Frédérique Feder, Jean-Pierre Lorit
+No of rating votes: 90729
+Gross revenue: 4043686

@@ -1,0 +1,10 @@
+Movie name: The Girl with the Dragon Tattoo
+Released year: 2011
+Runtime: 158 min
+Genres: Crime, Drama, Mystery
+Rating: 7.8
+Short description: Journalist Mikael Blomkvist is aided in his search for a woman who has been missing for forty years by Lisbeth Salander, a young computer hacker.
+Director: David Fincher
+Actors: Daniel Craig, Rooney Mara, Christopher Plummer, Stellan Skarsgård
+No of rating votes: 423010
+Gross revenue: 102515793

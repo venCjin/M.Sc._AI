@@ -1,0 +1,10 @@
+Movie name: The Day of the Jackal
+Released year: 1973
+Runtime: 143 min
+Genres: Crime, Drama, Thriller
+Rating: 7.8
+Short description: A professional assassin codenamed "Jackal" plots to kill Charles de Gaulle, the President of France.
+Director: Fred Zinnemann
+Actors: Edward Fox, Terence Alexander, Michel Auclair, Alan Badel
+No of rating votes: 37445
+Gross revenue: 16056255

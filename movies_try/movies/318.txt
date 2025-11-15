@@ -1,0 +1,9 @@
+Movie name: The Circus
+Released year: 1928
+Runtime: 72 min
+Genres: Comedy, Romance
+Rating: 8.1
+Short description: The Tramp finds work and the girl of his dreams at a circus.
+Director: Charles Chaplin
+Actors: Charles Chaplin, Merna Kennedy, Al Ernest Garcia, Harry Crocker
+No of rating votes: 30205

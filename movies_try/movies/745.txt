@@ -1,0 +1,10 @@
+Movie name: Gravity
+Released year: 2013
+Runtime: 91 min
+Genres: Drama, Sci-Fi, Thriller
+Rating: 7.7
+Short description: Two astronauts work together to survive after an accident leaves them stranded in space.
+Director: Alfonso Cuarón
+Actors: Sandra Bullock, George Clooney, Ed Harris, Orto Ignatiussen
+No of rating votes: 769145
+Gross revenue: 274092705

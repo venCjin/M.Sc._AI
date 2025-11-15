@@ -1,0 +1,10 @@
+Movie name: First Blood
+Released year: 1982
+Runtime: 93 min
+Genres: Action, Adventure
+Rating: 7.7
+Short description: A veteran Green Beret is forced by a cruel Sheriff and his deputies to flee into the mountains and wage an escalating one-man war against his pursuers.
+Director: Ted Kotcheff
+Actors: Sylvester Stallone, Brian Dennehy, Richard Crenna, Bill McKinney
+No of rating votes: 226541
+Gross revenue: 47212904

@@ -1,0 +1,10 @@
+Movie name: Harry Potter and the Prisoner of Azkaban
+Released year: 2004
+Runtime: 142 min
+Genres: Adventure, Family, Fantasy
+Rating: 7.9
+Short description: Harry Potter, Ron and Hermione return to Hogwarts School of Witchcraft and Wizardry for their third year of study, where they delve into the mystery surrounding an escaped prisoner who poses a dangerous threat to the young wizard.
+Director: Alfonso Cuarón
+Actors: Daniel Radcliffe, Emma Watson, Rupert Grint, Richard Griffiths
+No of rating votes: 552493
+Gross revenue: 249358727

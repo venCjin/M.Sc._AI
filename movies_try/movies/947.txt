@@ -1,0 +1,10 @@
+Movie name: Harry Potter and the Sorcerer's Stone
+Released year: 2001
+Runtime: 152 min
+Genres: Adventure, Family, Fantasy
+Rating: 7.6
+Short description: An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.
+Director: Chris Columbus
+Actors: Daniel Radcliffe, Rupert Grint, Richard Harris, Maggie Smith
+No of rating votes: 658185
+Gross revenue: 317575550

@@ -1,0 +1,10 @@
+Movie name: The Nightmare Before Christmas
+Released year: 1993
+Runtime: 76 min
+Genres: Animation, Family, Fantasy
+Rating: 8.0
+Short description: Jack Skellington, king of Halloween Town, discovers Christmas Town, but his attempts to bring Christmas to his home causes confusion.
+Director: Henry Selick
+Actors: Danny Elfman, Chris Sarandon, Catherine O'Hara, William Hickey
+No of rating votes: 300208
+Gross revenue: 75082668

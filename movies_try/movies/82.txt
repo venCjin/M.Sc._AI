@@ -1,0 +1,9 @@
+Movie name: Sunset Blvd.
+Released year: 1950
+Runtime: 110 min
+Genres: Drama, Film-Noir
+Rating: 8.4
+Short description: A screenwriter develops a dangerous relationship with a faded film star determined to make a triumphant return.
+Director: Billy Wilder
+Actors: William Holden, Gloria Swanson, Erich von Stroheim, Nancy Olson
+No of rating votes: 201632

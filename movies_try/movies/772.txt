@@ -1,0 +1,10 @@
+Movie name: Zwartboek
+Released year: 2006
+Runtime: 145 min
+Genres: Drama, Thriller, War
+Rating: 7.7
+Short description: In the Nazi-occupied Netherlands during World War II, a Jewish singer infiltrates the regional Gestapo headquarters for the Dutch resistance.
+Director: Paul Verhoeven
+Actors: Carice van Houten, Sebastian Koch, Thom Hoffman, Halina Reijn
+No of rating votes: 72643
+Gross revenue: 4398392

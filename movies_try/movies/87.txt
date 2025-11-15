@@ -1,0 +1,9 @@
+Movie name: Drishyam
+Released year: 2013
+Runtime: 160 min
+Genres: Crime, Drama, Thriller
+Rating: 8.3
+Short description: A man goes to extreme lengths to save his family from punishment after the family commits an accidental crime.
+Director: Jeethu Joseph
+Actors: Mohanlal, Meena, Asha Sharath, Ansiba
+No of rating votes: 30722

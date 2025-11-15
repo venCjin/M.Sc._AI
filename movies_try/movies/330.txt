@@ -1,0 +1,10 @@
+Movie name: Zootopia
+Released year: 2016
+Runtime: 108 min
+Genres: Animation, Adventure, Comedy
+Rating: 8.0
+Short description: In a city of anthropomorphic animals, a rookie bunny cop and a cynical con artist fox must work together to uncover a conspiracy.
+Director: Byron Howard
+Actors: Rich Moore, Jared Bush, Ginnifer Goodwin, Jason Bateman
+No of rating votes: 434143
+Gross revenue: 341268248

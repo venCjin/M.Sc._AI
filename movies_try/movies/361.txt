@@ -1,0 +1,10 @@
+Movie name: Blood Diamond
+Released year: 2006
+Runtime: 143 min
+Genres: Adventure, Drama, Thriller
+Rating: 8.0
+Short description: A fisherman, a smuggler, and a syndicate of businessmen match wits over the possession of a priceless diamond.
+Director: Edward Zwick
+Actors: Leonardo DiCaprio, Djimon Hounsou, Jennifer Connelly, Kagiso Kuypers
+No of rating votes: 499439
+Gross revenue: 57366262

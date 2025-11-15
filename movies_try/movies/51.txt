@@ -1,0 +1,10 @@
+Movie name: Modern Times
+Released year: 1936
+Runtime: 87 min
+Genres: Comedy, Drama, Family
+Rating: 8.5
+Short description: The Tramp struggles to live in modern industrial society with the help of a young homeless woman.
+Director: Charles Chaplin
+Actors: Charles Chaplin, Paulette Goddard, Henry Bergman, Tiny Sandford
+No of rating votes: 217881
+Gross revenue: 163245

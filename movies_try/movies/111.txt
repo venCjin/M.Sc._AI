@@ -1,0 +1,10 @@
+Movie name: Taxi Driver
+Released year: 1976
+Runtime: 114 min
+Genres: Crime, Drama
+Rating: 8.3
+Short description: A mentally unstable veteran works as a nighttime taxi driver in New York City, where the perceived decadence and sleaze fuels his urge for violent action by attempting to liberate a presidential campaign worker and an underage prostitute.
+Director: Martin Scorsese
+Actors: Robert De Niro, Jodie Foster, Cybill Shepherd, Albert Brooks
+No of rating votes: 724636
+Gross revenue: 28262574

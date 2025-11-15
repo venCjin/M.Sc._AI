@@ -1,0 +1,10 @@
+Movie name: Night on Earth
+Released year: 1991
+Runtime: 129 min
+Genres: Comedy, Drama
+Rating: 7.8
+Short description: An anthology of 5 different cab drivers in 5 American and European cities and their remarkable fares on the same eventful night.
+Director: Jim Jarmusch
+Actors: Winona Ryder, Gena Rowlands, Lisanne Falk, Alan Randolph Scott
+No of rating votes: 55362
+Gross revenue: 2015810

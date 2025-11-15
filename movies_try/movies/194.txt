@@ -1,0 +1,10 @@
+Movie name: Sherlock Jr.
+Released year: 1924
+Runtime: 45 min
+Genres: Action, Comedy, Romance
+Rating: 8.2
+Short description: A film projectionist longs to be a detective, and puts his meagre skills to work when he is framed by a rival for stealing his girlfriend's father's pocketwatch.
+Director: Buster Keaton
+Actors: Buster Keaton, Kathryn McGuire, Joe Keaton, Erwin Connelly
+No of rating votes: 41985
+Gross revenue: 977375

@@ -1,0 +1,10 @@
+Movie name: Million Dollar Baby
+Released year: 2004
+Runtime: 132 min
+Genres: Drama, Sport
+Rating: 8.1
+Short description: A determined woman works with a hardened boxing trainer to become a professional.
+Director: Clint Eastwood
+Actors: Hilary Swank, Clint Eastwood, Morgan Freeman, Jay Baruchel
+No of rating votes: 635975
+Gross revenue: 100492203

@@ -1,0 +1,10 @@
+Movie name: Ocean's Eleven
+Released year: 2001
+Runtime: 116 min
+Genres: Crime, Thriller
+Rating: 7.7
+Short description: Danny Ocean and his ten accomplices plan to rob three Las Vegas casinos simultaneously.
+Director: Steven Soderbergh
+Actors: George Clooney, Brad Pitt, Julia Roberts, Matt Damon
+No of rating votes: 516372
+Gross revenue: 183417150

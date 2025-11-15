@@ -1,0 +1,10 @@
+Movie name: Heat
+Released year: 1995
+Runtime: 170 min
+Genres: Crime, Drama, Thriller
+Rating: 8.2
+Short description: A group of professional bank robbers start to feel the heat from police when they unknowingly leave a clue at their latest heist.
+Director: Michael Mann
+Actors: Al Pacino, Robert De Niro, Val Kilmer, Jon Voight
+No of rating votes: 577113
+Gross revenue: 67436818

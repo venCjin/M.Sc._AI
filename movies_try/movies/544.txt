@@ -1,0 +1,10 @@
+Movie name: Night of the Living Dead
+Released year: 1968
+Runtime: 96 min
+Genres: Horror, Thriller
+Rating: 7.9
+Short description: A ragtag group of Pennsylvanians barricade themselves in an old farmhouse to remain safe from a horde of flesh-eating ghouls that are ravaging the East Coast of the United States.
+Director: George A. Romero
+Actors: Duane Jones, Judith O'Dea, Karl Hardman, Marilyn Eastman
+No of rating votes: 116557
+Gross revenue: 89029

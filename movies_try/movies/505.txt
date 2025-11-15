@@ -1,0 +1,10 @@
+Movie name: Mystic River
+Released year: 2003
+Runtime: 138 min
+Genres: Crime, Drama, Mystery
+Rating: 7.9
+Short description: The lives of three men who were childhood friends are shattered when one of them has a family tragedy.
+Director: Clint Eastwood
+Actors: Sean Penn, Tim Robbins, Kevin Bacon, Emmy Rossum
+No of rating votes: 419420
+Gross revenue: 90135191

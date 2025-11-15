@@ -1,0 +1,10 @@
+Movie name: Midnight Cowboy
+Released year: 1969
+Runtime: 113 min
+Genres: Drama
+Rating: 7.8
+Short description: A naive hustler travels from Texas to New York City to seek personal fortune, finding a new friend in the process.
+Director: John Schlesinger
+Actors: Dustin Hoffman, Jon Voight, Sylvia Miles, John McGiver
+No of rating votes: 101124
+Gross revenue: 44785053

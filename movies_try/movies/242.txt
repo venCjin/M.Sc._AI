@@ -1,0 +1,10 @@
+Movie name: Finding Nemo
+Released year: 2003
+Runtime: 100 min
+Genres: Animation, Adventure, Comedy
+Rating: 8.1
+Short description: After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.
+Director: Andrew Stanton
+Actors: Lee Unkrich, Albert Brooks, Ellen DeGeneres, Alexander Gould
+No of rating votes: 949565
+Gross revenue: 380843261

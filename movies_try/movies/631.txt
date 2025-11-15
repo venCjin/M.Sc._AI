@@ -1,0 +1,10 @@
+Movie name: Pride & Prejudice
+Released year: 2005
+Runtime: 129 min
+Genres: Drama, Romance
+Rating: 7.8
+Short description: Sparks fly when spirited Elizabeth Bennet meets single, rich, and proud Mr. Darcy. But Mr. Darcy reluctantly finds himself falling in love with a woman beneath his class. Can each overcome their own pride and prejudice?
+Director: Joe Wright
+Actors: Keira Knightley, Matthew Macfadyen, Brenda Blethyn, Donald Sutherland
+No of rating votes: 258924
+Gross revenue: 38405088

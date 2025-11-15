@@ -1,0 +1,10 @@
+Movie name: Searching
+Released year: 2018
+Runtime: 102 min
+Genres: Drama, Mystery, Thriller
+Rating: 7.6
+Short description: After his teenage daughter goes missing, a desperate father tries to find clues on her laptop.
+Director: Aneesh Chaganty
+Actors: John Cho, Debra Messing, Joseph Lee, Michelle La
+No of rating votes: 140840
+Gross revenue: 26020957

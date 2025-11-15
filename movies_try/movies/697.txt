@@ -1,0 +1,10 @@
+Movie name: Cabaret
+Released year: 1972
+Runtime: 124 min
+Genres: Drama, Music, Musical
+Rating: 7.8
+Short description: A female girlie club entertainer in Weimar Republic era Berlin romances two men while the Nazi Party rises to power around them.
+Director: Bob Fosse
+Actors: Liza Minnelli, Michael York, Helmut Griem, Joel Grey
+No of rating votes: 48334
+Gross revenue: 42765000

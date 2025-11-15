@@ -1,0 +1,10 @@
+Movie name: Ed Wood
+Released year: 1994
+Runtime: 127 min
+Genres: Biography, Comedy, Drama
+Rating: 7.8
+Short description: Ambitious but troubled movie director Edward D. Wood Jr. tries his best to fulfill his dreams, despite his lack of talent.
+Director: Tim Burton
+Actors: Johnny Depp, Martin Landau, Sarah Jessica Parker, Patricia Arquette
+No of rating votes: 164937
+Gross revenue: 5887457

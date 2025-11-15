@@ -1,0 +1,10 @@
+Movie name: Get Out
+Released year: 2017
+Runtime: 104 min
+Genres: Horror, Mystery, Thriller
+Rating: 7.7
+Short description: A young African-American visits his white girlfriend's parents for the weekend, where his simmering uneasiness about their reception of him eventually reaches a boiling point.
+Director: Jordan Peele
+Actors: Daniel Kaluuya, Allison Williams, Bradley Whitford, Catherine Keener
+No of rating votes: 492851
+Gross revenue: 176040665

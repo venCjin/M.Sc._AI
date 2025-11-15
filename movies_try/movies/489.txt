@@ -1,0 +1,10 @@
+Movie name: The Wrestler
+Released year: 2008
+Runtime: 109 min
+Genres: Drama, Sport
+Rating: 7.9
+Short description: A faded professional wrestler must retire, but finds his quest for a new life outside the ring a dispiriting struggle.
+Director: Darren Aronofsky
+Actors: Mickey Rourke, Marisa Tomei, Evan Rachel Wood, Mark Margolis
+No of rating votes: 289415
+Gross revenue: 26236603

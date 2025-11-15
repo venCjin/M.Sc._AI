@@ -1,0 +1,10 @@
+Movie name: Watchmen
+Released year: 2009
+Runtime: 162 min
+Genres: Action, Drama, Mystery
+Rating: 7.6
+Short description: In 1985 where former superheroes exist, the murder of a colleague sends active vigilante Rorschach into his own sprawling investigation, uncovering something that could completely change the course of history as we know it.
+Director: Zack Snyder
+Actors: Jackie Earle Haley, Patrick Wilson, Carla Gugino, Malin Akerman
+No of rating votes: 500799
+Gross revenue: 107509799

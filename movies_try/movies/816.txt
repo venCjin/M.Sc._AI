@@ -1,0 +1,10 @@
+Movie name: Clerks
+Released year: 1994
+Runtime: 92 min
+Genres: Comedy
+Rating: 7.7
+Short description: A day in the lives of two convenience clerks named Dante and Randal as they annoy customers, discuss movies, and play hockey on the store roof.
+Director: Kevin Smith
+Actors: Brian O'Halloran, Jeff Anderson, Marilyn Ghigliotti, Lisa Spoonauer
+No of rating votes: 211450
+Gross revenue: 3151130

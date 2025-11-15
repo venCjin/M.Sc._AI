@@ -1,0 +1,9 @@
+Movie name: Watership Down
+Released year: 1978
+Runtime: 91 min
+Genres: Animation, Adventure, Drama
+Rating: 7.6
+Short description: Hoping to escape destruction by human developers and save their community, a colony of rabbits, led by Hazel and Fiver, seek out a safe place to set up a new warren.
+Director: Martin Rosen
+Actors: John Hubley, John Hurt, Richard Briers, Ralph Richardson
+No of rating votes: 33656

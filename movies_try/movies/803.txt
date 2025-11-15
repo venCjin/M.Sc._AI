@@ -1,0 +1,10 @@
+Movie name: Rushmore
+Released year: 1998
+Runtime: 93 min
+Genres: Comedy, Drama, Romance
+Rating: 7.7
+Short description: The extracurricular king of Rushmore Preparatory School is put on academic probation.
+Director: Wes Anderson
+Actors: Jason Schwartzman, Bill Murray, Olivia Williams, Seymour Cassel
+No of rating votes: 169229
+Gross revenue: 17105219

@@ -1,0 +1,10 @@
+Movie name: My Fair Lady
+Released year: 1964
+Runtime: 170 min
+Genres: Drama, Family, Musical
+Rating: 7.8
+Short description: Snobbish phonetics Professor Henry Higgins agrees to a wager that he can make flower girl Eliza Doolittle presentable in high society.
+Director: George Cukor
+Actors: Audrey Hepburn, Rex Harrison, Stanley Holloway, Wilfrid Hyde-White
+No of rating votes: 86525
+Gross revenue: 72000000

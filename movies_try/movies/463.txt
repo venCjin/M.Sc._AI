@@ -1,0 +1,10 @@
+Movie name: Knives Out
+Released year: 2019
+Runtime: 130 min
+Genres: Comedy, Crime, Drama
+Rating: 7.9
+Short description: A detective investigates the death of a patriarch of an eccentric, combative family.
+Director: Rian Johnson
+Actors: Daniel Craig, Chris Evans, Ana de Armas, Jamie Lee Curtis
+No of rating votes: 454203
+Gross revenue: 165359751

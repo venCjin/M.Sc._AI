@@ -1,0 +1,10 @@
+Movie name: Ladri di biciclette
+Released year: 1948
+Runtime: 89 min
+Genres: Drama
+Rating: 8.3
+Short description: In post-war Italy, a working-class man's bicycle is stolen. He and his son set out to find it.
+Director: Vittorio De Sica
+Actors: Lamberto Maggiorani, Enzo Staiola, Lianella Carell, Elena Altieri
+No of rating votes: 146427
+Gross revenue: 332930

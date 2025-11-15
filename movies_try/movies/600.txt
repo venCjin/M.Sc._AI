@@ -1,0 +1,10 @@
+Movie name: The Big Short
+Released year: 2015
+Runtime: 130 min
+Genres: Biography, Comedy, Drama
+Rating: 7.8
+Short description: In 2006-2007 a group of investors bet against the US mortgage market. In their research they discover how flawed and corrupt the market is.
+Director: Adam McKay
+Actors: Christian Bale, Steve Carell, Ryan Gosling, Brad Pitt
+No of rating votes: 362942
+Gross revenue: 70259870

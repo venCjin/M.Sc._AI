@@ -1,0 +1,10 @@
+Movie name: Andrei Rublev
+Released year: 1966
+Runtime: 205 min
+Genres: Biography, Drama, History
+Rating: 8.1
+Short description: The life, times and afflictions of the fifteenth-century Russian iconographer St. Andrei Rublev.
+Director: Andrei Tarkovsky
+Actors: Anatoliy Solonitsyn, Ivan Lapikov, Nikolay Grinko, Nikolay Sergeev
+No of rating votes: 46947
+Gross revenue: 102021

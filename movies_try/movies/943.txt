@@ -1,0 +1,10 @@
+Movie name: 28 Days Later...
+Released year: 2002
+Runtime: 113 min
+Genres: Drama, Horror, Sci-Fi
+Rating: 7.6
+Short description: Four weeks after a mysterious, incurable virus spreads throughout the UK, a handful of survivors try to find sanctuary.
+Director: Danny Boyle
+Actors: Cillian Murphy, Naomie Harris, Christopher Eccleston, Alex Palmer
+No of rating votes: 376853
+Gross revenue: 45064915

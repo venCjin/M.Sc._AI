@@ -1,0 +1,10 @@
+Movie name: Office Space
+Released year: 1999
+Runtime: 89 min
+Genres: Comedy
+Rating: 7.7
+Short description: Three company workers who hate their jobs decide to rebel against their greedy boss.
+Director: Mike Judge
+Actors: Ron Livingston, Jennifer Aniston, David Herman, Ajay Naidu
+No of rating votes: 241575
+Gross revenue: 10824921

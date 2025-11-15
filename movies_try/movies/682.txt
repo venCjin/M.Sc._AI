@@ -1,0 +1,10 @@
+Movie name: The Color Purple
+Released year: 1985
+Runtime: 154 min
+Genres: Drama
+Rating: 7.8
+Short description: A black Southern woman struggles to find her identity after suffering abuse from her father and others over four decades.
+Director: Steven Spielberg
+Actors: Danny Glover, Whoopi Goldberg, Oprah Winfrey, Margaret Avery
+No of rating votes: 78321
+Gross revenue: 98467863

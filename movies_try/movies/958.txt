@@ -1,0 +1,9 @@
+Movie name: Funny Games
+Released year: 1997
+Runtime: 108 min
+Genres: Crime, Drama, Thriller
+Rating: 7.6
+Short description: Two violent young men take a mother, father, and son hostage in their vacation cabin and force them to play sadistic "games" with one another for their own amusement.
+Director: Michael Haneke
+Actors: Susanne Lothar, Ulrich Mühe, Arno Frisch, Frank Giering
+No of rating votes: 65058

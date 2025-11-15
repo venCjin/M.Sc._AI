@@ -1,0 +1,9 @@
+Movie name: Inherit the Wind
+Released year: 1960
+Runtime: 128 min
+Genres: Biography, Drama, History
+Rating: 8.1
+Short description: Based on a real-life case in 1925, two great lawyers argue the case for and against a science teacher accused of the crime of teaching evolution.
+Director: Stanley Kramer
+Actors: Spencer Tracy, Fredric March, Gene Kelly, Dick York
+No of rating votes: 27254

@@ -1,0 +1,9 @@
+Movie name: East of Eden
+Released year: 1955
+Runtime: 118 min
+Genres: Drama
+Rating: 7.9
+Short description: Two brothers struggle to maintain their strict, Bible-toting father's favor.
+Director: Elia Kazan
+Actors: James Dean, Raymond Massey, Julie Harris, Burl Ives
+No of rating votes: 40313

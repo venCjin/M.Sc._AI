@@ -1,0 +1,10 @@
+Movie name: The Royal Tenenbaums
+Released year: 2001
+Runtime: 110 min
+Genres: Comedy, Drama
+Rating: 7.6
+Short description: The eccentric members of a dysfunctional family reluctantly gather under the same roof for various reasons.
+Director: Wes Anderson
+Actors: Gene Hackman, Gwyneth Paltrow, Anjelica Huston, Ben Stiller
+No of rating votes: 266842
+Gross revenue: 52364010

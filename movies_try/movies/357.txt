@@ -1,0 +1,10 @@
+Movie name: The Avengers
+Released year: 2012
+Runtime: 143 min
+Genres: Action, Adventure, Sci-Fi
+Rating: 8.0
+Short description: Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.
+Director: Joss Whedon
+Actors: Robert Downey Jr., Chris Evans, Scarlett Johansson, Jeremy Renner
+No of rating votes: 1260806
+Gross revenue: 623279547

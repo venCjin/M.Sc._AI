@@ -1,0 +1,10 @@
+Movie name: Inception
+Released year: 2010
+Runtime: 148 min
+Genres: Action, Adventure, Sci-Fi
+Rating: 8.8
+Short description: A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.
+Director: Christopher Nolan
+Actors: Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Ken Watanabe
+No of rating votes: 2067042
+Gross revenue: 292576195

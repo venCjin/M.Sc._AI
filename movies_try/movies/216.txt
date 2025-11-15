@@ -1,0 +1,10 @@
+Movie name: Rush
+Released year: 2013
+Runtime: 123 min
+Genres: Action, Biography, Drama
+Rating: 8.1
+Short description: The merciless 1970s rivalry between Formula One rivals James Hunt and Niki Lauda.
+Director: Ron Howard
+Actors: Daniel Brühl, Chris Hemsworth, Olivia Wilde, Alexandra Maria Lara
+No of rating votes: 432811
+Gross revenue: 26947624

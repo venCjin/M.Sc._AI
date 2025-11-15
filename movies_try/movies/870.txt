@@ -1,0 +1,9 @@
+Movie name: Sabrina
+Released year: 1954
+Runtime: 113 min
+Genres: Comedy, Drama, Romance
+Rating: 7.7
+Short description: A playboy becomes interested in the daughter of his family's chauffeur, but it's his more serious brother who would be the better man for her.
+Director: Billy Wilder
+Actors: Humphrey Bogart, Audrey Hepburn, William Holden, Walter Hampden
+No of rating votes: 59415

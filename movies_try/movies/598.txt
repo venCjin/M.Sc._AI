@@ -1,0 +1,10 @@
+Movie name: Moonrise Kingdom
+Released year: 2012
+Runtime: 94 min
+Genres: Comedy, Drama, Romance
+Rating: 7.8
+Short description: A pair of young lovers flee their New England town, which causes a local search party to fan out to find them.
+Director: Wes Anderson
+Actors: Jared Gilman, Kara Hayward, Bruce Willis, Bill Murray
+No of rating votes: 318789
+Gross revenue: 45512466

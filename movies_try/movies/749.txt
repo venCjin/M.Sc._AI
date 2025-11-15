@@ -1,0 +1,10 @@
+Movie name: X: First Class
+Released year: 2011
+Runtime: 131 min
+Genres: Action, Adventure, Sci-Fi
+Rating: 7.7
+Short description: In the 1960s, superpowered humans Charles Xavier and Erik Lensherr work together to find others like them, but Erik's vengeful pursuit of an ambitious mutant who ruined his life causes a schism to divide them.
+Director: Matthew Vaughn
+Actors: James McAvoy, Michael Fassbender, Jennifer Lawrence, Kevin Bacon
+No of rating votes: 645512
+Gross revenue: 146408305

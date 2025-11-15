@@ -1,0 +1,9 @@
+Movie name: To Kill a Mockingbird
+Released year: 1962
+Runtime: 129 min
+Genres: Crime, Drama
+Rating: 8.2
+Short description: Atticus Finch, a lawyer in the Depression-era South, defends a black man against an undeserved rape charge, and his children against prejudice.
+Director: Robert Mulligan
+Actors: Gregory Peck, John Megna, Frank Overton, Rosemary Murphy
+No of rating votes: 293811

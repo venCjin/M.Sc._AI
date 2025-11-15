@@ -1,0 +1,10 @@
+Movie name: The Adventures of Robin Hood
+Released year: 1938
+Runtime: 102 min
+Genres: Action, Adventure, Romance
+Rating: 7.9
+Short description: When Prince John and the Norman Lords begin oppressing the Saxon masses in King Richard's absence, a Saxon lord fights back as the outlaw leader of a rebel guerrilla army.
+Director: Michael Curtiz
+Actors: William Keighley, Errol Flynn, Olivia de Havilland, Basil Rathbone
+No of rating votes: 47175
+Gross revenue: 3981000

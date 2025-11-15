@@ -1,0 +1,10 @@
+Movie name: The Untouchables
+Released year: 1987
+Runtime: 119 min
+Genres: Crime, Drama, Thriller
+Rating: 7.9
+Short description: During the era of Prohibition in the United States, Federal Agent Eliot Ness sets out to stop ruthless Chicago gangster Al Capone and, because of rampant corruption, assembles a small, hand-picked team to help him.
+Director: Brian De Palma
+Actors: Kevin Costner, Sean Connery, Robert De Niro, Charles Martin Smith
+No of rating votes: 281842
+Gross revenue: 76270454

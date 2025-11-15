@@ -1,0 +1,10 @@
+Movie name: Lawrence of Arabia
+Released year: 1962
+Runtime: 228 min
+Genres: Adventure, Biography, Drama
+Rating: 8.3
+Short description: The story of T.E. Lawrence, the English officer who successfully united and led the diverse, often warring, Arab tribes during World War I in order to fight the Turks.
+Director: David Lean
+Actors: Peter O'Toole, Alec Guinness, Anthony Quinn, Jack Hawkins
+No of rating votes: 268085
+Gross revenue: 44824144

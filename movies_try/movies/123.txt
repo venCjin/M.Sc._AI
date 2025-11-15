@@ -1,0 +1,10 @@
+Movie name: Double Indemnity
+Released year: 1944
+Runtime: 107 min
+Genres: Crime, Drama, Film-Noir
+Rating: 8.3
+Short description: An insurance representative lets himself be talked by a seductive housewife into a murder/insurance fraud scheme that arouses the suspicion of an insurance investigator.
+Director: Billy Wilder
+Actors: Fred MacMurray, Barbara Stanwyck, Edward G. Robinson, Byron Barr
+No of rating votes: 143525
+Gross revenue: 5720000

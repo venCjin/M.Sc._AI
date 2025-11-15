@@ -1,0 +1,10 @@
+Movie name: Wonder
+Released year: 2017
+Runtime: 113 min
+Genres: Drama, Family
+Rating: 8.0
+Short description: Based on the New York Times bestseller, this movie tells the incredibly inspiring and heartwarming story of August Pullman, a boy with facial differences who enters the fifth grade, attending a mainstream elementary school for the first time.
+Director: Stephen Chbosky
+Actors: Jacob Tremblay, Owen Wilson, Izabela Vidovic, Julia Roberts
+No of rating votes: 141923
+Gross revenue: 132422809

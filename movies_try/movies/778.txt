@@ -1,0 +1,10 @@
+Movie name: The Machinist
+Released year: 2004
+Runtime: 101 min
+Genres: Drama, Thriller
+Rating: 7.7
+Short description: An industrial worker who hasn't slept in a year begins to doubt his own sanity.
+Director: Brad Anderson
+Actors: Christian Bale, Jennifer Jason Leigh, Aitana Sánchez-Gijón, John Sharian
+No of rating votes: 358432
+Gross revenue: 1082715

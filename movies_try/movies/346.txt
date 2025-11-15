@@ -1,0 +1,10 @@
+Movie name: The King's Speech
+Released year: 2010
+Runtime: 118 min
+Genres: Biography, Drama, History
+Rating: 8.0
+Short description: The story of King George VI, his impromptu ascension to the throne of the British Empire in 1936, and the speech therapist who helped the unsure monarch overcome his stammer.
+Director: Tom Hooper
+Actors: Colin Firth, Geoffrey Rush, Helena Bonham Carter, Derek Jacobi
+No of rating votes: 639603
+Gross revenue: 138797449

@@ -1,0 +1,10 @@
+Movie name: Back to the Future Part II
+Released year: 1989
+Runtime: 108 min
+Genres: Adventure, Comedy, Sci-Fi
+Rating: 7.8
+Short description: After visiting 2015, Marty McFly must repeat his visit to 1955 to prevent disastrous changes to 1985...without interfering with his first trip.
+Director: Robert Zemeckis
+Actors: Michael J. Fox, Christopher Lloyd, Lea Thompson, Thomas F. Wilson
+No of rating votes: 481918
+Gross revenue: 118500000

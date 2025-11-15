@@ -1,0 +1,10 @@
+Movie name: The Lion King
+Released year: 1994
+Runtime: 88 min
+Genres: Animation, Adventure, Drama
+Rating: 8.5
+Short description: Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.
+Director: Roger Allers
+Actors: Rob Minkoff, Matthew Broderick, Jeremy Irons, James Earl Jones
+No of rating votes: 942045
+Gross revenue: 422783777

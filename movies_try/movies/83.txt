@@ -1,0 +1,10 @@
+Movie name: The Great Dictator
+Released year: 1940
+Runtime: 125 min
+Genres: Comedy, Drama, War
+Rating: 8.4
+Short description: Dictator Adenoid Hynkel tries to expand his empire while a poor Jewish barber tries to avoid persecution from Hynkel's regime.
+Director: Charles Chaplin
+Actors: Charles Chaplin, Paulette Goddard, Jack Oakie, Reginald Gardiner
+No of rating votes: 203150
+Gross revenue: 288475

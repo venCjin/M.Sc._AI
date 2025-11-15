@@ -1,0 +1,10 @@
+Movie name: The Last Picture Show
+Released year: 1971
+Runtime: 118 min
+Genres: Drama, Romance
+Rating: 8.0
+Short description: In 1951, a group of high schoolers come of age in a bleak, isolated, atrophied North Texas town that is slowly dying, both culturally and economically.
+Director: Peter Bogdanovich
+Actors: Timothy Bottoms, Jeff Bridges, Cybill Shepherd, Ben Johnson
+No of rating votes: 42456
+Gross revenue: 29133000

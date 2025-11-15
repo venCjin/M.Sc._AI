@@ -1,0 +1,10 @@
+Movie name: Casino Royale
+Released year: 2006
+Runtime: 144 min
+Genres: Action, Adventure, Thriller
+Rating: 8.0
+Short description: After earning 00 status and a licence to kill, Secret Agent James Bond sets out on his first mission as 007. Bond must defeat a private banker funding terrorists in a high-stakes game of poker at Casino Royale, Montenegro.
+Director: Martin Campbell
+Actors: Daniel Craig, Eva Green, Judi Dench, Jeffrey Wright
+No of rating votes: 582239
+Gross revenue: 167445960

@@ -1,0 +1,10 @@
+Movie name: Sicario
+Released year: 2015
+Runtime: 121 min
+Genres: Action, Crime, Drama
+Rating: 7.6
+Short description: An idealistic FBI agent is enlisted by a government task force to aid in the escalating war against drugs at the border area between the U.S. and Mexico.
+Director: Denis Villeneuve
+Actors: Emily Blunt, Josh Brolin, Benicio Del Toro, Jon Bernthal
+No of rating votes: 371291
+Gross revenue: 46889293

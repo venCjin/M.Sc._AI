@@ -1,0 +1,10 @@
+Movie name: Das Experiment
+Released year: 2001
+Runtime: 120 min
+Genres: Drama, Thriller
+Rating: 7.7
+Short description: For two weeks, 20 male participants are hired to play prisoners and guards in a prison. The "prisoners" have to follow seemingly mild rules, and the "guards" are told to retain order without using physical violence.
+Director: Oliver Hirschbiegel
+Actors: Moritz Bleibtreu, Christian Berkel, Oliver Stokowski, Wotan Wilke Möhring
+No of rating votes: 90842
+Gross revenue: 141072

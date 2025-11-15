@@ -1,0 +1,9 @@
+Movie name: Cape Fear
+Released year: 1962
+Runtime: 106 min
+Genres: Drama, Thriller
+Rating: 7.7
+Short description: A lawyer's family is stalked by a man he once helped put in jail.
+Director: J. Lee Thompson
+Actors: Gregory Peck, Robert Mitchum, Polly Bergen, Lori Martin
+No of rating votes: 26457

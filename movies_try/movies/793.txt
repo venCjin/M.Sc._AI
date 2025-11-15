@@ -1,0 +1,10 @@
+Movie name: Billy Elliot
+Released year: 2000
+Runtime: 110 min
+Genres: Drama, Music
+Rating: 7.7
+Short description: A talented young boy becomes torn between his unexpected love of dance and the disintegration of his family.
+Director: Stephen Daldry
+Actors: Jamie Bell, Julie Walters, Jean Heywood, Jamie Draven
+No of rating votes: 126770
+Gross revenue: 21995263

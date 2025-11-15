@@ -1,0 +1,10 @@
+Movie name: The Lego Movie
+Released year: 2014
+Runtime: 100 min
+Genres: Animation, Action, Adventure
+Rating: 7.7
+Short description: An ordinary LEGO construction worker, thought to be the prophesied as "special", is recruited to join a quest to stop an evil tyrant from gluing the LEGO universe into eternal stasis.
+Director: Christopher Miller
+Actors: Phil Lord, Chris Pratt, Will Ferrell, Elizabeth Banks
+No of rating votes: 323982
+Gross revenue: 257760692

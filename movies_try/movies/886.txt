@@ -1,0 +1,10 @@
+Movie name: Mustang
+Released year: 2015
+Runtime: 97 min
+Genres: Drama
+Rating: 7.6
+Short description: When five orphan girls are seen innocently playing with boys on a beach, their scandalized conservative guardians confine them while forced marriages are arranged.
+Director: Deniz Gamze Ergüven
+Actors: Günes Sensoy, Doga Zeynep Doguslu, Tugba Sunguroglu, Elit Iscan
+No of rating votes: 35785
+Gross revenue: 845464

@@ -1,0 +1,9 @@
+Movie name: Les quatre cents coups
+Released year: 1959
+Runtime: 99 min
+Genres: Crime, Drama
+Rating: 8.1
+Short description: A young boy, left without attention, delves into a life of petty crime.
+Director: François Truffaut
+Actors: Jean-Pierre Léaud, Albert Rémy, Claire Maurier, Guy Decomble
+No of rating votes: 105291

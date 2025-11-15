@@ -1,0 +1,10 @@
+Movie name: Moana
+Released year: 2016
+Runtime: 107 min
+Genres: Animation, Adventure, Comedy
+Rating: 7.6
+Short description: In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches Moana's island, she answers the Ocean's call to seek out the Demigod to set things right.
+Director: Ron Clements
+Actors: John Musker, Don Hall, Chris Williams, Auli'i Cravalho
+No of rating votes: 272784
+Gross revenue: 248757044

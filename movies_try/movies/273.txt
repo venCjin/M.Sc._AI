@@ -1,0 +1,9 @@
+Movie name: Fitzcarraldo
+Released year: 1982
+Runtime: 158 min
+Genres: Adventure, Drama
+Rating: 8.1
+Short description: The story of Brian Sweeney Fitzgerald, an extremely determined man who intends to build an opera house in the middle of a jungle.
+Director: Werner Herzog
+Actors: Klaus Kinski, Claudia Cardinale, José Lewgoy, Miguel Ángel Fuentes
+No of rating votes: 31595

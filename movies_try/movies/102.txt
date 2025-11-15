@@ -1,0 +1,10 @@
+Movie name: Braveheart
+Released year: 1995
+Runtime: 178 min
+Genres: Biography, Drama, History
+Rating: 8.3
+Short description: Scottish warrior William Wallace leads his countrymen in a rebellion to free his homeland from the tyranny of King Edward I of England.
+Director: Mel Gibson
+Actors: Mel Gibson, Sophie Marceau, Patrick McGoohan, Angus Macfadyen
+No of rating votes: 959181
+Gross revenue: 75600000

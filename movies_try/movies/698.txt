@@ -1,0 +1,10 @@
+Movie name: Willy Wonka & the Chocolate Factory
+Released year: 1971
+Runtime: 100 min
+Genres: Family, Fantasy, Musical
+Rating: 7.8
+Short description: A poor but hopeful boy seeks one of the five coveted golden tickets that will send him on a tour of Willy Wonka's mysterious chocolate factory.
+Director: Mel Stuart
+Actors: Gene Wilder, Jack Albertson, Peter Ostrum, Roy Kinnear
+No of rating votes: 178731
+Gross revenue: 4000000

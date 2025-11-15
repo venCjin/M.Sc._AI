@@ -1,0 +1,10 @@
+Movie name: Halloween
+Released year: 1978
+Runtime: 91 min
+Genres: Horror, Thriller
+Rating: 7.7
+Short description: Fifteen years after murdering his sister on Halloween night 1963, Michael Myers escapes from a mental hospital and returns to the small town of Haddonfield, Illinois to kill again.
+Director: John Carpenter
+Actors: Donald Pleasence, Jamie Lee Curtis, Tony Moran, Nancy Kyes
+No of rating votes: 233106
+Gross revenue: 47000000

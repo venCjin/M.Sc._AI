@@ -1,0 +1,10 @@
+Movie name: L.A. Confidential
+Released year: 1997
+Runtime: 138 min
+Genres: Crime, Drama, Mystery
+Rating: 8.2
+Short description: As corruption grows in 1950s Los Angeles, three policemen - one strait-laced, one brutal, and one sleazy - investigate a series of murders with their own brand of justice.
+Director: Curtis Hanson
+Actors: Kevin Spacey, Russell Crowe, Guy Pearce, Kim Basinger
+No of rating votes: 531967
+Gross revenue: 64616940

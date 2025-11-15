@@ -1,0 +1,10 @@
+Movie name: The Thin Red Line
+Released year: 1998
+Runtime: 170 min
+Genres: Drama, War
+Rating: 7.6
+Short description: Adaptation of James Jones' autobiographical 1962 novel, focusing on the conflict at Guadalcanal during the second World War.
+Director: Terrence Malick
+Actors: Jim Caviezel, Sean Penn, Nick Nolte, Kirk Acevedo
+No of rating votes: 172710
+Gross revenue: 36400491

@@ -1,0 +1,9 @@
+Movie name: Frankenstein
+Released year: 1931
+Runtime: 70 min
+Genres: Drama, Horror, Sci-Fi
+Rating: 7.8
+Short description: Dr. Frankenstein dares to tamper with life and death by creating a human monster out of lifeless body parts.
+Director: James Whale
+Actors: Colin Clive, Mae Clarke, Boris Karloff, John Boles
+No of rating votes: 65341

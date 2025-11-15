@@ -1,0 +1,9 @@
+Movie name: Togo
+Released year: 2019
+Runtime: 113 min
+Genres: Adventure, Biography, Drama
+Rating: 8.0
+Short description: The story of Togo, the sled dog who led the 1925 serum run yet was considered by most to be too small and weak to lead such an intense race.
+Director: Ericson Core
+Actors: Willem Dafoe, Julianne Nicholson, Christopher Heyerdahl, Richard Dormer
+No of rating votes: 37556

@@ -1,0 +1,10 @@
+Movie name: Dial M for Murder
+Released year: 1954
+Runtime: 105 min
+Genres: Crime, Thriller
+Rating: 8.2
+Short description: A former tennis player tries to arrange his wife's murder after learning of her affair.
+Director: Alfred Hitchcock
+Actors: Ray Milland, Grace Kelly, Robert Cummings, John Williams
+No of rating votes: 158335
+Gross revenue: 12562

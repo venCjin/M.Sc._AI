@@ -1,0 +1,9 @@
+Movie name: L'avventura
+Released year: 1960
+Runtime: 144 min
+Genres: Drama, Mystery
+Rating: 7.9
+Short description: A woman disappears during a Mediterranean boating trip. During the search, her lover and her best friend become attracted to each other.
+Director: Michelangelo Antonioni
+Actors: Gabriele Ferzetti, Monica Vitti, Lea Massari, Dominique Blanchar
+No of rating votes: 26542

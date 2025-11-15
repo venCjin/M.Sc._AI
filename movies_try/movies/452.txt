@@ -1,0 +1,9 @@
+Movie name: Brief Encounter
+Released year: 1945
+Runtime: 86 min
+Genres: Drama, Romance
+Rating: 8.0
+Short description: Meeting a stranger in a railway station, a woman is tempted to cheat on her husband.
+Director: David Lean
+Actors: Celia Johnson, Trevor Howard, Stanley Holloway, Joyce Carey
+No of rating votes: 35601

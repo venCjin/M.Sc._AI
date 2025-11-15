@@ -1,0 +1,10 @@
+Movie name: Seven Pounds
+Released year: 2008
+Runtime: 123 min
+Genres: Drama
+Rating: 7.6
+Short description: A man with a fateful secret embarks on an extraordinary journey of redemption by forever changing the lives of seven strangers.
+Director: Gabriele Muccino
+Actors: Will Smith, Rosario Dawson, Woody Harrelson, Michael Ealy
+No of rating votes: 286770
+Gross revenue: 69951824

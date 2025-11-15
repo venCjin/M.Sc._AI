@@ -1,0 +1,10 @@
+Movie name: Aladdin
+Released year: 1992
+Runtime: 90 min
+Genres: Animation, Adventure, Comedy
+Rating: 8.0
+Short description: A kindhearted street urchin and a power-hungry Grand Vizier vie for a magic lamp that has the power to make their deepest wishes come true.
+Director: Ron Clements
+Actors: John Musker, Scott Weinger, Robin Williams, Linda Larkin
+No of rating votes: 373845
+Gross revenue: 217350219

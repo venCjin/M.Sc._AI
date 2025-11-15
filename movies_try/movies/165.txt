@@ -1,0 +1,10 @@
+Movie name: Casino
+Released year: 1995
+Runtime: 178 min
+Genres: Crime, Drama
+Rating: 8.2
+Short description: A tale of greed, deception, money, power, and murder occur between two best friends: a mafia enforcer and a casino executive compete against each other over a gambling empire, and over a fast-living and fast-loving socialite.
+Director: Martin Scorsese
+Actors: Robert De Niro, Sharon Stone, Joe Pesci, James Woods
+No of rating votes: 466276
+Gross revenue: 42438300

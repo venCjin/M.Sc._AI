@@ -1,0 +1,10 @@
+Movie name: Mississippi Burning
+Released year: 1988
+Runtime: 128 min
+Genres: Crime, Drama, History
+Rating: 7.8
+Short description: Two F.B.I. Agents with wildly different styles arrive in Mississippi to investigate the disappearance of some civil rights activists.
+Director: Alan Parker
+Actors: Gene Hackman, Willem Dafoe, Frances McDormand, Brad Dourif
+No of rating votes: 88214
+Gross revenue: 34603943

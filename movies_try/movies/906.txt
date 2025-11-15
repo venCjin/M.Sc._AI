@@ -1,0 +1,10 @@
+Movie name: Despicable Me
+Released year: 2010
+Runtime: 95 min
+Genres: Animation, Comedy, Crime
+Rating: 7.6
+Short description: When a criminal mastermind uses a trio of orphan girls as pawns for a grand scheme, he finds their love is profoundly changing him for the better.
+Director: Pierre Coffin
+Actors: Chris Renaud, Steve Carell, Jason Segel, Russell Brand
+No of rating votes: 500851
+Gross revenue: 251513985

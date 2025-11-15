@@ -1,0 +1,10 @@
+Movie name: Lethal Weapon
+Released year: 1987
+Runtime: 109 min
+Genres: Action, Crime, Thriller
+Rating: 7.6
+Short description: Two newly paired cops who are complete opposites must put aside their differences in order to catch a gang of drug smugglers.
+Director: Richard Donner
+Actors: Mel Gibson, Danny Glover, Gary Busey, Mitchell Ryan
+No of rating votes: 236894
+Gross revenue: 65207127

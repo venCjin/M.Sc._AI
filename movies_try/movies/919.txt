@@ -1,0 +1,10 @@
+Movie name: Stardust
+Released year: 2007
+Runtime: 127 min
+Genres: Adventure, Family, Fantasy
+Rating: 7.6
+Short description: In a countryside town bordering on a magical land, a young man makes a promise to his beloved that he'll retrieve a fallen star by venturing into the magical realm.
+Director: Matthew Vaughn
+Actors: Charlie Cox, Claire Danes, Sienna Miller, Ian McKellen
+No of rating votes: 255036
+Gross revenue: 38634938

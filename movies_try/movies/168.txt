@@ -1,0 +1,10 @@
+Movie name: Indiana Jones and the Last Crusade
+Released year: 1989
+Runtime: 127 min
+Genres: Action, Adventure
+Rating: 8.2
+Short description: In 1938, after his father Professor Henry Jones, Sr. goes missing while pursuing the Holy Grail, Professor Henry "Indiana" Jones, Jr. finds himself up against Adolf Hitler's Nazis again to stop them from obtaining its powers.
+Director: Steven Spielberg
+Actors: Harrison Ford, Sean Connery, Alison Doody, Denholm Elliott
+No of rating votes: 692366
+Gross revenue: 197171806

@@ -1,0 +1,9 @@
+Movie name: Das Cabinet des Dr. Caligari
+Released year: 1920
+Runtime: 76 min
+Genres: Fantasy, Horror, Mystery
+Rating: 8.1
+Short description: Hypnotist Dr. Caligari uses a somnambulist, Cesare, to commit murders.
+Director: Robert Wiene
+Actors: Werner Krauss, Conrad Veidt, Friedrich Feher, Lil Dagover
+No of rating votes: 57428

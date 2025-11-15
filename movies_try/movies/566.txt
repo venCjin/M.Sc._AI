@@ -1,0 +1,10 @@
+Movie name: King Kong
+Released year: 1933
+Runtime: 100 min
+Genres: Adventure, Horror, Sci-Fi
+Rating: 7.9
+Short description: A film crew goes to a tropical island for an exotic location shoot and discovers a colossal ape who takes a shine to their female blonde star. He is then captured and brought back to New York City for public exhibition.
+Director: Merian C. Cooper
+Actors: Ernest B. Schoedsack, Fay Wray, Robert Armstrong, Bruce Cabot
+No of rating votes: 78991
+Gross revenue: 10000000

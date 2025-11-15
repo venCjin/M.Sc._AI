@@ -1,0 +1,10 @@
+Movie name: Schindler's List
+Released year: 1993
+Runtime: 195 min
+Genres: Biography, Drama, History
+Rating: 8.9
+Short description: In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.
+Director: Steven Spielberg
+Actors: Liam Neeson, Ralph Fiennes, Ben Kingsley, Caroline Goodall
+No of rating votes: 1213505
+Gross revenue: 96898818

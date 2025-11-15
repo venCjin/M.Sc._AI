@@ -1,0 +1,10 @@
+Movie name: Toy Story 2
+Released year: 1999
+Runtime: 92 min
+Genres: Animation, Adventure, Comedy
+Rating: 7.9
+Short description: When Woody is stolen by a toy collector, Buzz and his friends set out on a rescue mission to save Woody before he becomes a museum toy property with his roundup gang Jessie, Prospector, and Bullseye.
+Director: John Lasseter
+Actors: Ash Brannon, Lee Unkrich, Tom Hanks, Tim Allen
+No of rating votes: 527512
+Gross revenue: 245852179

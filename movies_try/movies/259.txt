@@ -1,0 +1,10 @@
+Movie name: Before Sunrise
+Released year: 1995
+Runtime: 101 min
+Genres: Drama, Romance
+Rating: 8.1
+Short description: A young man and woman meet on a train in Europe, and wind up spending one evening together in Vienna. Unfortunately, both know that this will probably be their only night together.
+Director: Richard Linklater
+Actors: Ethan Hawke, Julie Delpy, Andrea Eckert, Hanno Pöschl
+No of rating votes: 272291
+Gross revenue: 5535405

@@ -1,0 +1,9 @@
+Movie name: Lifeboat
+Released year: 1944
+Runtime: 97 min
+Genres: Drama, War
+Rating: 7.6
+Short description: Several survivors of a torpedoed merchant ship in World War II find themselves in the same lifeboat with one of the crew members of the U-boat that sank their ship.
+Director: Alfred Hitchcock
+Actors: Tallulah Bankhead, John Hodiak, Walter Slezak, William Bendix
+No of rating votes: 26471

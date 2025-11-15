@@ -1,0 +1,10 @@
+Movie name: Fantastic Mr. Fox
+Released year: 2009
+Runtime: 87 min
+Genres: Animation, Adventure, Comedy
+Rating: 7.9
+Short description: An urbane fox cannot resist returning to his farm raiding ways and then must help his community survive the farmers' retaliation.
+Director: Wes Anderson
+Actors: George Clooney, Meryl Streep, Bill Murray, Jason Schwartzman
+No of rating votes: 199696
+Gross revenue: 21002919

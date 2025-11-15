@@ -1,0 +1,10 @@
+Movie name: Vertigo
+Released year: 1958
+Runtime: 128 min
+Genres: Mystery, Romance, Thriller
+Rating: 8.3
+Short description: A former police detective juggles wrestling with his personal demons and becoming obsessed with a hauntingly beautiful woman.
+Director: Alfred Hitchcock
+Actors: James Stewart, Kim Novak, Barbara Bel Geddes, Tom Helmore
+No of rating votes: 364368
+Gross revenue: 3200000

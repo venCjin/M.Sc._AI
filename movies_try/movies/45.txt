@@ -1,0 +1,10 @@
+Movie name: Nuovo Cinema Paradiso
+Released year: 1988
+Runtime: 155 min
+Genres: Drama, Romance
+Rating: 8.5
+Short description: A filmmaker recalls his childhood when falling in love with the pictures at the cinema of his home village and forms a deep friendship with the cinema's projectionist.
+Director: Giuseppe Tornatore
+Actors: Philippe Noiret, Enzo Cannavale, Antonella Attili, Isa Danieli
+No of rating votes: 230763
+Gross revenue: 11990401

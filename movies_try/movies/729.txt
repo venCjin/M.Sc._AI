@@ -1,0 +1,10 @@
+Movie name: The Theory of Everything
+Released year: 2014
+Runtime: 123 min
+Genres: Biography, Drama, Romance
+Rating: 7.7
+Short description: A look at the relationship between the famous physicist Stephen Hawking and his wife.
+Director: James Marsh
+Actors: Eddie Redmayne, Felicity Jones, Tom Prior, Sophie Perry
+No of rating votes: 404182
+Gross revenue: 35893537

@@ -1,0 +1,10 @@
+Movie name: The Dirty Dozen
+Released year: 1967
+Runtime: 150 min
+Genres: Action, Adventure, War
+Rating: 7.7
+Short description: During World War II, a rebellious U.S. Army Major is assigned a dozen convicted murderers to train and lead them into a mass assassination mission of German officers.
+Director: Robert Aldrich
+Actors: Lee Marvin, Ernest Borgnine, Charles Bronson, John Cassavetes
+No of rating votes: 67183
+Gross revenue: 45300000

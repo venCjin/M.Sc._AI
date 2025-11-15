@@ -1,0 +1,10 @@
+Movie name: Deadpool
+Released year: 2016
+Runtime: 108 min
+Genres: Action, Adventure, Comedy
+Rating: 8.0
+Short description: A wisecracking mercenary gets experimented on and becomes immortal but ugly, and sets out to track down the man who ruined his looks.
+Director: Tim Miller
+Actors: Ryan Reynolds, Morena Baccarin, T.J. Miller, Ed Skrein
+No of rating votes: 902669
+Gross revenue: 363070709

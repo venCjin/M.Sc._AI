@@ -1,0 +1,10 @@
+Movie name: Once Upon a Time in the West
+Released year: 1968
+Runtime: 165 min
+Genres: Western
+Rating: 8.5
+Short description: A mysterious stranger with a harmonica joins forces with a notorious desperado to protect a beautiful widow from a ruthless assassin working for the railroad.
+Director: Sergio Leone
+Actors: Henry Fonda, Charles Bronson, Claudia Cardinale, Jason Robards
+No of rating votes: 302844
+Gross revenue: 5321508

@@ -1,0 +1,10 @@
+Movie name: Arrival
+Released year: 2016
+Runtime: 116 min
+Genres: Drama, Sci-Fi
+Rating: 7.9
+Short description: A linguist works with the military to communicate with alien lifeforms after twelve mysterious spacecrafts appear around the world.
+Director: Denis Villeneuve
+Actors: Amy Adams, Jeremy Renner, Forest Whitaker, Michael Stuhlbarg
+No of rating votes: 594181
+Gross revenue: 100546139

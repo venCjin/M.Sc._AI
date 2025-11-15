@@ -1,0 +1,10 @@
+Movie name: Logan
+Released year: 2017
+Runtime: 137 min
+Genres: Action, Drama, Sci-Fi
+Rating: 8.1
+Short description: In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety.
+Director: James Mangold
+Actors: Hugh Jackman, Patrick Stewart, Dafne Keen, Boyd Holbrook
+No of rating votes: 647884
+Gross revenue: 226277068

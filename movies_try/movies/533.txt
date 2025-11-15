@@ -1,0 +1,10 @@
+Movie name: Manhattan
+Released year: 1979
+Runtime: 96 min
+Genres: Comedy, Drama, Romance
+Rating: 7.9
+Short description: The life of a divorced television writer dating a teenage girl is further complicated when he falls in love with his best friend's mistress.
+Director: Woody Allen
+Actors: Woody Allen, Diane Keaton, Mariel Hemingway, Michael Murphy
+No of rating votes: 131436
+Gross revenue: 45700000

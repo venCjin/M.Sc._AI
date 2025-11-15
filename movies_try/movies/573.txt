@@ -1,0 +1,10 @@
+Movie name: Dunkirk
+Released year: 2017
+Runtime: 106 min
+Genres: Action, Drama, History
+Rating: 7.8
+Short description: Allied soldiers from Belgium, the British Empire, and France are surrounded by the German Army and evacuated during a fierce battle in World War II.
+Director: Christopher Nolan
+Actors: Fionn Whitehead, Barry Keoghan, Mark Rylance, Tom Hardy
+No of rating votes: 555092
+Gross revenue: 188373161

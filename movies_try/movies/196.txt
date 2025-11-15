@@ -1,0 +1,10 @@
+Movie name: Pink
+Released year: 2016
+Runtime: 136 min
+Genres: Drama, Thriller
+Rating: 8.1
+Short description: When three young women are implicated in a crime, a retired lawyer steps forward to help them clear their names.
+Director: Aniruddha Roy Chowdhury
+Actors: Taapsee Pannu, Amitabh Bachchan, Kirti Kulhari, Andrea Tariang
+No of rating votes: 39216
+Gross revenue: 1241223

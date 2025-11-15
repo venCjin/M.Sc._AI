@@ -1,0 +1,10 @@
+Movie name: Serpico
+Released year: 1973
+Runtime: 130 min
+Genres: Biography, Crime, Drama
+Rating: 7.7
+Short description: An honest New York cop named Frank Serpico blows the whistle on rampant corruption in the force only to have his comrades turn against him.
+Director: Sidney Lumet
+Actors: Al Pacino, John Randolph, Jack Kehoe, Biff McGuire
+No of rating votes: 109941
+Gross revenue: 29800000

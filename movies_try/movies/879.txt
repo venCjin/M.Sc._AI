@@ -1,0 +1,10 @@
+Movie name: Once Upon a Time... in Hollywood
+Released year: 2019
+Runtime: 161 min
+Genres: Comedy, Drama
+Rating: 7.6
+Short description: A faded television actor and his stunt double strive to achieve fame and success in the final years of Hollywood's Golden Age in 1969 Los Angeles.
+Director: Quentin Tarantino
+Actors: Leonardo DiCaprio, Brad Pitt, Margot Robbie, Emile Hirsch
+No of rating votes: 551309
+Gross revenue: 142502728

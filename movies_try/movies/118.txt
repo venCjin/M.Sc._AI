@@ -1,0 +1,10 @@
+Movie name: North by Northwest
+Released year: 1959
+Runtime: 136 min
+Genres: Adventure, Mystery, Thriller
+Rating: 8.3
+Short description: A New York City advertising executive goes on the run after being mistaken for a government agent by a group of foreign spies.
+Director: Alfred Hitchcock
+Actors: Cary Grant, Eva Marie Saint, James Mason, Jessie Royce Landis
+No of rating votes: 299198
+Gross revenue: 13275000

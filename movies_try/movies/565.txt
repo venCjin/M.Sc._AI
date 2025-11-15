@@ -1,0 +1,10 @@
+Movie name: A Night at the Opera
+Released year: 1935
+Runtime: 96 min
+Genres: Comedy, Music, Musical
+Rating: 7.9
+Short description: A sly business manager and two wacky friends of two opera singers help them achieve success while humiliating their stuffy and snobbish enemies.
+Director: Sam Wood
+Actors: Edmund Goulding, Groucho Marx, Chico Marx, Harpo Marx
+No of rating votes: 30580
+Gross revenue: 2537520

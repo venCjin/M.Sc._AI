@@ -1,0 +1,10 @@
+Movie name: Frost/Nixon
+Released year: 2008
+Runtime: 122 min
+Genres: Biography, Drama, History
+Rating: 7.7
+Short description: A dramatic retelling of the post-Watergate television interviews between British talk-show host David Frost and former president Richard Nixon.
+Director: Ron Howard
+Actors: Frank Langella, Michael Sheen, Kevin Bacon, Sam Rockwell
+No of rating votes: 103330
+Gross revenue: 18593156

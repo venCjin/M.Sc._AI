@@ -1,0 +1,10 @@
+Movie name: Once Upon a Time in America
+Released year: 1984
+Runtime: 229 min
+Genres: Crime, Drama
+Rating: 8.4
+Short description: A former Prohibition-era Jewish gangster returns to the Lower East Side of Manhattan over thirty years later, where he once again must confront the ghosts and regrets of his old life.
+Director: Sergio Leone
+Actors: Robert De Niro, James Woods, Elizabeth McGovern, Treat Williams
+No of rating votes: 311365
+Gross revenue: 5321508

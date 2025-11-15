@@ -1,0 +1,10 @@
+Movie name: Synecdoche, New York
+Released year: 2008
+Runtime: 124 min
+Genres: Drama
+Rating: 7.6
+Short description: A theatre director struggles with his work, and the women in his life, as he creates a life-size replica of New York City inside a warehouse as part of his new play.
+Director: Charlie Kaufman
+Actors: Philip Seymour Hoffman, Samantha Morton, Michelle Williams, Catherine Keener
+No of rating votes: 83158
+Gross revenue: 3081925

@@ -1,0 +1,10 @@
+Movie name: Festen
+Released year: 1998
+Runtime: 105 min
+Genres: Drama
+Rating: 8.0
+Short description: At Helge's 60th birthday party, some unpleasant family truths are revealed.
+Director: Thomas Vinterberg
+Actors: Ulrich Thomsen, Henning Moritzen, Thomas Bo Larsen, Paprika Steen
+No of rating votes: 78341
+Gross revenue: 1647780

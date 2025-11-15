@@ -1,0 +1,9 @@
+Movie name: The Thin Man
+Released year: 1934
+Runtime: 91 min
+Genres: Comedy, Crime, Mystery
+Rating: 8.0
+Short description: Former detective Nick Charles and his wealthy wife Nora investigate a murder case, mostly for the fun of it.
+Director: W.S. Van Dyke
+Actors: William Powell, Myrna Loy, Maureen O'Sullivan, Nat Pendleton
+No of rating votes: 26642

@@ -1,0 +1,10 @@
+Movie name: The Muppet Movie
+Released year: 1979
+Runtime: 95 min
+Genres: Adventure, Comedy, Family
+Rating: 7.6
+Short description: Kermit and his newfound friends trek across America to find success in Hollywood, but a frog legs merchant is after Kermit.
+Director: James Frawley
+Actors: Jim Henson, Frank Oz, Jerry Nelson, Richard Hunt
+No of rating votes: 32802
+Gross revenue: 76657000

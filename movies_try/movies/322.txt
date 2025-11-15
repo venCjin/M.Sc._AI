@@ -1,0 +1,9 @@
+Movie name: Badhaai ho
+Released year: 2018
+Runtime: 124 min
+Genres: Comedy, Drama
+Rating: 8.0
+Short description: A man is embarrassed when he finds out his mother is pregnant.
+Director: Amit Ravindernath Sharma
+Actors: Ayushmann Khurrana, Neena Gupta, Gajraj Rao, Sanya Malhotra
+No of rating votes: 27978

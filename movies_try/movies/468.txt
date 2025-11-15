@@ -1,0 +1,10 @@
+Movie name: I, Daniel Blake
+Released year: 2016
+Runtime: 100 min
+Genres: Drama
+Rating: 7.9
+Short description: After having suffered a heart-attack, a 59-year-old carpenter must fight the bureaucratic forces of the system in order to receive Employment and Support Allowance.
+Director: Ken Loach
+Actors: Laura Obiols, Dave Johns, Hayley Squires, Sharon Percy
+No of rating votes: 53818
+Gross revenue: 258168

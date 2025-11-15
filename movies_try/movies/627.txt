@@ -1,0 +1,10 @@
+Movie name: Hot Fuzz
+Released year: 2007
+Runtime: 121 min
+Genres: Action, Comedy, Mystery
+Rating: 7.8
+Short description: A skilled London police officer is transferred to a small town with a dark secret.
+Director: Edgar Wright
+Actors: Simon Pegg, Nick Frost, Martin Freeman, Bill Nighy
+No of rating votes: 463466
+Gross revenue: 23637265

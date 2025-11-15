@@ -1,0 +1,10 @@
+Movie name: Rebecca
+Released year: 1940
+Runtime: 130 min
+Genres: Drama, Mystery, Romance
+Rating: 8.1
+Short description: A self-conscious woman juggles adjusting to her new role as an aristocrat's wife and avoiding being intimidated by his first wife's spectral presence.
+Director: Alfred Hitchcock
+Actors: Laurence Olivier, Joan Fontaine, George Sanders, Judith Anderson
+No of rating votes: 123942
+Gross revenue: 4360000

@@ -1,0 +1,10 @@
+Movie name: The Irishman
+Released year: 2019
+Runtime: 209 min
+Genres: Biography, Crime, Drama
+Rating: 7.9
+Short description: An old man recalls his time painting houses for his friend, Jimmy Hoffa, through the 1950-70s.
+Director: Martin Scorsese
+Actors: Robert De Niro, Al Pacino, Joe Pesci, Harvey Keitel
+No of rating votes: 324720
+Gross revenue: 7000000

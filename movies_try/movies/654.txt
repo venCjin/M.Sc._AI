@@ -1,0 +1,10 @@
+Movie name: Gattaca
+Released year: 1997
+Runtime: 106 min
+Genres: Drama, Sci-Fi, Thriller
+Rating: 7.8
+Short description: A genetically inferior man assumes the identity of a superior one in order to pursue his lifelong dream of space travel.
+Director: Andrew Niccol
+Actors: Ethan Hawke, Uma Thurman, Jude Law, Gore Vidal
+No of rating votes: 280845
+Gross revenue: 12339633

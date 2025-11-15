@@ -1,0 +1,10 @@
+Movie name: Harry Potter and the Goblet of Fire
+Released year: 2005
+Runtime: 157 min
+Genres: Adventure, Family, Fantasy
+Rating: 7.7
+Short description: Harry Potter finds himself competing in a hazardous tournament between rival schools of magic, but he is distracted by recurring nightmares.
+Director: Mike Newell
+Actors: Daniel Radcliffe, Emma Watson, Rupert Grint, Eric Sykes
+No of rating votes: 548619
+Gross revenue: 290013036

@@ -1,0 +1,10 @@
+Movie name: Laura
+Released year: 1944
+Runtime: 88 min
+Genres: Drama, Film-Noir, Mystery
+Rating: 8.0
+Short description: A police detective falls in love with the woman whose murder he is investigating.
+Director: Otto Preminger
+Actors: Gene Tierney, Dana Andrews, Clifton Webb, Vincent Price
+No of rating votes: 42725
+Gross revenue: 4360000

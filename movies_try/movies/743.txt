@@ -1,0 +1,10 @@
+Movie name: Midnight in Paris
+Released year: 2011
+Runtime: 96 min
+Genres: Comedy, Fantasy, Romance
+Rating: 7.7
+Short description: While on a trip to Paris with his fiancée's family, a nostalgic screenwriter finds himself mysteriously going back to the 1920s every day at midnight.
+Director: Woody Allen
+Actors: Owen Wilson, Rachel McAdams, Kathy Bates, Kurt Fuller
+No of rating votes: 388089
+Gross revenue: 56816662

@@ -1,0 +1,10 @@
+Movie name: Twelve Monkeys
+Released year: 1995
+Runtime: 129 min
+Genres: Mystery, Sci-Fi, Thriller
+Rating: 8.0
+Short description: In a future world devastated by disease, a convict is sent back in time to gather information about the man-made virus that wiped out most of the human population on the planet.
+Director: Terry Gilliam
+Actors: Bruce Willis, Madeleine Stowe, Brad Pitt, Joseph Melito
+No of rating votes: 578443
+Gross revenue: 57141459

@@ -1,0 +1,10 @@
+Movie name: Once
+Released year: 2007
+Runtime: 86 min
+Genres: Drama, Music, Romance
+Rating: 7.8
+Short description: A modern-day musical about a busker and an immigrant and their eventful week in Dublin, as they write, rehearse and record songs that tell their love story.
+Director: John Carney
+Actors: Glen Hansard, Markéta Irglová, Hugh Walsh, Gerard Hendrick
+No of rating votes: 110656
+Gross revenue: 9439923

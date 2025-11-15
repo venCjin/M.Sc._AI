@@ -1,0 +1,9 @@
+Movie name: La Strada
+Released year: 1954
+Runtime: 108 min
+Genres: Drama
+Rating: 8.0
+Short description: A care-free girl is sold to a traveling entertainer, consequently enduring physical and emotional pain along the way.
+Director: Federico Fellini
+Actors: Anthony Quinn, Giulietta Masina, Richard Basehart, Aldo Silvani
+No of rating votes: 58314

@@ -1,0 +1,10 @@
+Movie name: The Wizard of Oz
+Released year: 1939
+Runtime: 102 min
+Genres: Adventure, Family, Fantasy
+Rating: 8.0
+Short description: Dorothy Gale is swept away from a farm in Kansas to a magical land of Oz in a tornado and embarks on a quest with her new friends to see the Wizard who can help her return home to Kansas and help her friends as well.
+Director: Victor Fleming
+Actors: George Cukor, Mervyn LeRoy, Norman Taurog, Richard Thorpe
+No of rating votes: 371379
+Gross revenue: 2076020
