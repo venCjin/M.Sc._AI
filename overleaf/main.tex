@@ -19,7 +19,7 @@ bmargin=2.8cm,
 \date{Wrzesień 2025}
 
 %%% dodatki
-% \linebreak % - przerywa linie nie przerywając justowania
+% \linebreak{} % - przerywa linie nie przerywając justowania
 %%% dodatki
 
 \usepackage[T1]{fontenc}
@@ -302,7 +302,7 @@ Kolejne rozwiązania bazowały na łańcuchach Markowa, które są ciągiem zdar
 
 Następnie powstała długa pamięć krótkotrwała (ang. long short-term memory, LSTM), specjalny rodzaj rekurencyjnej sieci neuronowej (ang. recurrent neural network, RNN), który został zaprojektowany, aby lepiej radzić sobie z długodystansowymi zależnościami, dzięki mechanizmom „zapamiętywania” i „zapominania” informacji. LSTM odniosły wielki sukces w zadaniach takich jak tłumaczenie maszynowe, przetwarzanie mowy i klasyfikacja tekstu (wczesny Google Translate). W miarę jak sieci neuronowe zdobywały popularność, opracowano metody reprezentowania słów w postaci wektorów. Najpopularniejszą metodą były word embeddings, z których najbardziej znanymi były Word2Vec oraz GloVe.
 
-Największą rewolucję w przetwarzaniu języka przyniosło wprowadzenie mechanizmu\linebreak
+Największą rewolucję w przetwarzaniu języka przyniosło wprowadzenie mechanizmu\linebreak{}
 uwagi (attention mechanism), który pozwolił modelom efektywnie radzić sobie z długodystansowymi zależnościami między słowami w zdaniu. Najbardziej przełomowym krokiem w tej ewolucji było wprowadzenie modelu Transformer w artykule \textit{Attention is All You Need} (2017) \cite{attention_2023vaswani}.
 
 \subsubsection{Embedding}
@@ -449,7 +449,7 @@ Pierwszym podejściem do tego zagadnienia jest wykorzystanie \textbf{LLM jako en
 Drugim podejściem jest wykorzystanie \textbf{LLM jako generatora (ang. LLM as generator)}, gdzie model językowy wykorzystywany jest do oceniania faktów, ale również do generowania nowych trójek wiedzy. Nauka LLM następuje poprzez zastosowanie maskowania. Model otrzymuje fragment tekstu lub część trójki z brakującym elementem, np.: trójka (Albert Einstein, zawód, [MASK]), gdzie model generuje brakujący element, w powyższym przykładzie \textit{fizyk}. W niektórych podejściach model może tworzyć również całe nowe trójki lub opisy, które następnie są konwertowane do formy strukturalnej w grafie. Implementację tego podejścia przedstawiają m.in niżej wymienione metody. \textbf{GenKGC} \cite{kg:genKGC} traktuje uzupełnianie grafu jako zadanie generacji tekstu. \textbf{KGT5} \cite{kg:kgt5} używa architektury T5 (\textit{Text-to-Text Transfer Transformer}) i jest trenowany do przewidywania brakujących elementów trójki w formie naturalnego języka. \textbf{KG-S2S (Knowledge Graph Sequence-to-Sequence)} \cite{kg:kg-s2s} przekształca dane grafowe w sekwencje tekstowe i uczy model seq2seq przewidywania nowych relacji.
 \newpage
 
-Ostatnim podejściem jest wykorzystanie LLM w ramach \textbf{generacji opartej na promptach (ang. Prompt-based Generation)}, które jest najnowszym podejściem wśród wyżej wymienionych. Podejście to nie wymaga dodatkowego trenowania LLM na KG, lecz użycia promptów, które opisując zadanie i kierują uwagę modelu na odpowiednią część jego wewnętrznej wiedzy, pozwalając wydobyć brakujące fakty i relacje. Przykładem realizacji tego podejścia jest\linebreak\textbf{AutoKG} \cite{kg:autoKG}, które wykorzystuje gotowe modele (np. GPT-3 czy T5) i specjalnie zaprojektowane prompty, by automatycznie generować brakujące encje lub relacje.
+Ostatnim podejściem jest wykorzystanie LLM w ramach \textbf{generacji opartej na promptach (ang. Prompt-based Generation)}, które jest najnowszym podejściem wśród wyżej wymienionych. Podejście to nie wymaga dodatkowego trenowania LLM na KG, lecz użycia promptów, które opisując zadanie i kierują uwagę modelu na odpowiednią część jego wewnętrznej wiedzy, pozwalając wydobyć brakujące fakty i relacje. Przykładem realizacji tego podejścia jest\linebreak{}\textbf{AutoKG} \cite{kg:autoKG}, które wykorzystuje gotowe modele (np. GPT-3 czy T5) i specjalnie zaprojektowane prompty, by automatycznie generować brakujące encje lub relacje.
 
 Jedną z głównych zalet wykorzystania LLM w uzupełnianiu grafów wiedzy jest możliwość automatycznego pozyskiwania nowych faktów bez potrzeby ręcznego analizowania danych. Zastosowanie automatycznych metod pozwala na szybszy i bardziej elastyczny proces generowania grafu, również w przypadku rzadkich i nowych encji. Ważne jest jednak zwrócenie uwagi, że podejście to nie jest wolne od halucynacji modelu. Wygenerowane przez model fakty wymagają weryfikacji przed dodaniem do grafu, co stanowi poważne wyzwanie techniczne. Nie wszystkie relacje można łatwo sprawdzić automatycznie, część z nich wymaga porównania z zewnętrznymi źródłami lub oceny eksperta. Ponadto model może wytwarzać nowe encje (np. imiona, organizacje), które nie istnieją w strukturze grafu, co moze doprowadzić do jego rozbieżności i niespójności, wobec czego należy rozważyć zastosowanie mechanizmów ograniczających generację do istniejących encji lub mechanizmów weryfikujących jak wcześniej omawiany PiVE \cite{kg:pive}.
 
@@ -535,7 +535,7 @@ Ostatni krok - \textit{generation} to generowanie odpowiedzi na podstawie inform
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{images/fig/rag.png}
 \vspace*{-10mm}
-\caption{Przykład procesu RAG zastosowanego do odpowiadania na pytania. Składa się głównie z 3 kroków. \textbf{1) Indexing}: Dokumenty są podzielone na kawałki, zakodowane w wektorach i przechowywane w bazie danych wektorów. \textbf{2) Retrieval}: Pobierz najważniejsze chunki najbardziej odpowiednie dla pytania w oparciu o podobieństwo semantyczne. \linebreak\textbf{3) Generation}: Wprowadź pierwotne pytanie i pobrane informacje do LLM, aby wygenerować ostateczną odpowiedź \cite{rag:survey}.}
+\caption{Przykład procesu RAG zastosowanego do odpowiadania na pytania. Składa się głównie z 3 kroków. \textbf{1) Indexing}: Dokumenty są podzielone na kawałki, zakodowane w wektorach i przechowywane w bazie danych wektorów. \textbf{2) Retrieval}: Pobierz najważniejsze chunki najbardziej odpowiednie dla pytania w oparciu o podobieństwo semantyczne. \linebreak{}\textbf{3) Generation}: Wprowadź pierwotne pytanie i pobrane informacje do LLM, aby wygenerować ostateczną odpowiedź \cite{rag:survey}.}
 \label{fig:rag}
 \end{figure}
 
@@ -572,7 +572,7 @@ RAG jest innowacyjnym narzędziem, które pozwala na optymalizację odpowiedzi L
 
 Głównymi zaletami RAG jest dostarczanie bardziej trafnych odpowiedzi oraz możliwość rozszerzenia wiedzy zawartej w modelu o nowe informacje. Tradycyjne modele językowe są ograniczone do wiedzy zdobytej podczas treningu, co oznacza, że nie mogą dynamicznie reagować na nowe informacje pojawiające się po zakończeniu procesu treningowego. RAG rozwiązuje ten problem, łącząc generowanie tekstu z dynamicznym wyszukiwaniem informacji. Dzięki temu odpowiedzi generowane przez RAG są bardziej aktualne, precyzyjne i kontekstowe, co jest szczególnie istotne w szybko zmieniających się dziedzinach, takich jak medycyna, technologia czy finanse.
 
-W pracy \textit{Retrieval-Augmented Generation for Large Language Models: A Survey} (2024) \cite{rag:survey} omówione zostały następujące wady oraz zalety pracy z RAG. Głównym pojawiającym się\linebreak problemem w architekturze jest skalowalność oraz integracja komponentów \textit{retrievera} \linebreak i \textit{generatora}. Proces ten wymaga precyzyjnego dostosowania obu komponentów, aby działały one harmonijnie i efektywnie.
+W pracy \textit{Retrieval-Augmented Generation for Large Language Models: A Survey} (2024) \cite{rag:survey} omówione zostały następujące wady oraz zalety pracy z RAG. Głównym pojawiającym się\linebreak{} problemem w architekturze jest skalowalność oraz integracja komponentów \textit{retrievera}\linebreak{} i \textit{generatora}. Proces ten wymaga precyzyjnego dostosowania obu komponentów, aby działały one harmonijnie i efektywnie.
 
 Następne wyzwanie pojawia się na etapie \textit{retrievalu}, gdzie mogą występować problemy z precyzją i podobieństwem wektorowym zapytania i kontekstu, co prowadzi do wyszukania niespójnych lub nieistotnych \textit{chunków} tekstu. 
 
@@ -654,7 +654,7 @@ Gross revenue: 28341469
 
 Dane tekstowe w takim formacie (etykieta: wartość) nadają się do wysłania w zapytaniu do LLM, ponieważ minimalizują możliwość błędnej interpretacji wartości.
 
-Dane te symulują przypadek, gdy przeprowadzony zostanie web scraping (programowe,\linebreak algorytmiczne odczytywanie informacji ze stron internetowych) danych z serwisów filmowych typu Filmweb, IMDB. Dane w analogiczny sposób można wydobyć z plików pdf, czy nawet filmów (przy czym dla filmów jest to zadanie znacznie bardziej skomplikowane, wymagające dużej mocy obliczeniowej i czasu działania oraz ze względu na proces transkrypcji -- bardzo podatne na błędy identyfikacji słów czy wyrażeń). W niniejszej pracy krok ten nie jest wykonywany (a jego wynik jest symulowany w wyżej opisany sposób), ponieważ nie jest on przedmiotem badania tej pracy i nie jest wymagany do jej realizacji.
+Dane te symulują przypadek, gdy przeprowadzony zostanie web scraping (programowe,\linebreak{} algorytmiczne odczytywanie informacji ze stron internetowych) danych z serwisów filmowych typu Filmweb, IMDB. Dane w analogiczny sposób można wydobyć z plików pdf, czy nawet filmów (przy czym dla filmów jest to zadanie znacznie bardziej skomplikowane, wymagające dużej mocy obliczeniowej i czasu działania oraz ze względu na proces transkrypcji -- bardzo podatne na błędy identyfikacji słów czy wyrażeń). W niniejszej pracy krok ten nie jest wykonywany (a jego wynik jest symulowany w wyżej opisany sposób), ponieważ nie jest on przedmiotem badania tej pracy i nie jest wymagany do jej realizacji.
 
 Tekst z wybranego zbioru jest w języku angielskim, dlatego też dane te są dalej etykietowane w tym języku i w nim też będą odbywały się zapytania. W związku z tym należy zaznaczyć, że zarówno modele LLM jak i modele wektoryzujące są w znacznej większości trenowane na danych anglojęzycznych co ma znaczący wpływ na jakość i dokładność ich odpowiedzi. Należy zatem odnotować, że rozważane badania RAG vs Graph RAG są najlepszym wariantem danych wejściowych dla modeli LLM i wektoryzujących.
 
@@ -688,7 +688,7 @@ gpt4 = ChatOpenAI(
 )
 \end{python}
 
-Na wybranym fragmencie kodu widać, jak zostały utworzone połączenia do modeli\linebreak GPT-4.1 i Llama 3.1. Ważny jest tutaj parametr \textit{temperature}, który to kontroluje losowość lub „kreatywność” wyników modelu i przyjmuje wartości z zakresu 0.0 do 1.0. Niższa temperatura skutkuje bardziej przewidywalnymi i ukierunkowanymi reakcjami, podczas gdy wyższa temperatura sprzyja bardziej zróżnicowanym i potencjalnie kreatywnym wynikom. Parametr ten został ustawiony na wartość 0, ponieważ w niniejszej pracy zależy nam, żeby model dokładnie wykonywał instrukcje i korzystał z wiedzy, którą dostarczamy w procesie \textit{augmentation}.
+Na wybranym fragmencie kodu widać, jak zostały utworzone połączenia do modeli\linebreak{} GPT-4.1 i Llama 3.1. Ważny jest tutaj parametr \textit{temperature}, który to kontroluje losowość lub „kreatywność” wyników modelu i przyjmuje wartości z zakresu 0.0 do 1.0. Niższa temperatura skutkuje bardziej przewidywalnymi i ukierunkowanymi reakcjami, podczas gdy wyższa temperatura sprzyja bardziej zróżnicowanym i potencjalnie kreatywnym wynikom. Parametr ten został ustawiony na wartość 0, ponieważ w niniejszej pracy zależy nam, żeby model dokładnie wykonywał instrukcje i korzystał z wiedzy, którą dostarczamy w procesie \textit{augmentation}.
 
 
 \subsubsection{LLM Chains: koncepcja i przykłady zastosowania}
@@ -724,7 +724,7 @@ Zupełnie inny sposób działania ma metoda \textbf{Refine Chain}. Dane w tej me
 
 Ostatnią z głównych klasycznych typów LLM Chains jest \textbf{Iterative / Self-Ask Chain}, czyli metoda, gdzie model sam generuje pytania pomocnicze i generuje odpowiedź krok po kroku. 
 
-W powyższym omówiliśmy tylko najbardziej klasyczne typy LLM Chains. Poszczególne składowe kroków, mogą się różnić w zależności od zadania oraz możliwości. LLM Chains mogą być stosowane między innymi w systemach rekomendacji. Przykładem może być platforma\linebreak e-commerce, gdzie pierwszy model analizuje historię zakupów i zachowania użytkownika, drugi model identyfikuje podobne produkty lub usługi, a trzeci model generuje spersonalizowane rekomendacje. Dzięki zastosowaniu łańcucha modeli, platforma może zapewnić bardziej trafne i spersonalizowane sugestie dla użytkowników. 
+W powyższym omówiliśmy tylko najbardziej klasyczne typy LLM Chains. Poszczególne składowe kroków, mogą się różnić w zależności od zadania oraz możliwości. LLM Chains mogą być stosowane między innymi w systemach rekomendacji. Przykładem może być platforma\linebreak{} e-commerce, gdzie pierwszy model analizuje historię zakupów i zachowania użytkownika, drugi model identyfikuje podobne produkty lub usługi, a trzeci model generuje spersonalizowane rekomendacje. Dzięki zastosowaniu łańcucha modeli, platforma może zapewnić bardziej trafne i spersonalizowane sugestie dla użytkowników. 
 
 Koncepcja LLM chains jest nie tylko potężnym narzędziem w kontekście przetwarzania języka naturalnego, ale także elastycznym podejściem, które może być dostosowane do różnych dziedzin i zastosowań. Dzięki możliwości segmentacji złożonych zadań na mniejsze, wyspecjalizowane etapy, LLM chains umożliwiają bardziej efektywne i precyzyjne przetwarzanie danych, co otwiera nowe możliwości dla zaawansowanych aplikacji w różnych sektorach.
 
@@ -837,7 +837,7 @@ def llm_extract_graph(llm, document_list, graph:Neo4jGraph)-> List[GraphDocument
 
 \end{python}
 
-Funkcja \pythoninline{llm_extract_graph(...)} dla danej listy dokumentów używa LLM, by wyekstrahować obiekty i relacje wynikające z zawartości danych tekstowych. W tym celu tworzymy obiekt \pythoninline{LLMGraphTransformer}, który wewnątrz jest prostym LLM chain i na podstawie domyślnego promptu i podanych przez nas dodatkowych instrukcji oraz wcześniej opisanych dozwolonych obiektów, właściwości i relacji, poprzez wywołanie metody \linebreak\pythoninline{convert_to_graph_documents(...)} tworzy odpowiednie elementy (dokumenty grafowe) możliwe do zapisania w bazie. 
+Funkcja \pythoninline{llm_extract_graph(...)} dla danej listy dokumentów używa LLM, by wyekstrahować obiekty i relacje wynikające z zawartości danych tekstowych. W tym celu tworzymy obiekt \pythoninline{LLMGraphTransformer}, który wewnątrz jest prostym LLM chain i na podstawie domyślnego promptu i podanych przez nas dodatkowych instrukcji oraz wcześniej opisanych dozwolonych obiektów, właściwości i relacji, poprzez wywołanie metody \linebreak{}\pythoninline{convert_to_graph_documents(...)} tworzy odpowiednie elementy (dokumenty grafowe) możliwe do zapisania w bazie. 
 
 W tym procesie może się zdarzyć, że wygenerowane nazwy obiektów czy relacji mogą zawierać dodatkowy znak ( \pythoninline{`} - odwrotny apostrof), dlatego dla każdego dokumentu grafowego usuwamy te znaki z nazw, jeśli występują. Dodatkowo z dokumentów grafowych usuwamy treść dokumentu źródłowego (\pythoninline{graph_document.source.page_content}), ponieważ w bazie Neo4j dane te chcemy mieć w postaci grafowej i nie potrzebujemy dodatkowo tekstu źródłowego.
 
@@ -941,7 +941,7 @@ text_splitter = RecursiveCharacterTextSplitter(
 )
 \end{python}
 
-W pierwszej kolejności definiujemy, że do embeddingu będziemy używać model\linebreak text-embedding-3-small i inicjalizujemy obiekt \pythoninline{embed}, który pozwoli nam wysyłać tekst i odbierać odpowiadający mu wektor.
+W pierwszej kolejności definiujemy, że do embeddingu będziemy używać model\linebreak{} text-embedding-3-small i inicjalizujemy obiekt \pythoninline{embed}, który pozwoli nam wysyłać tekst i odbierać odpowiadający mu wektor.
 
 Funkcja \pythoninline{tiktoken_len} oblicza jaką długość w tokenach ma podany jej tekst i jest potrzebna obiektowi \pythoninline{text_splitter}, który to będzie używany by podzielić tekst pojedynczego dokumentu na chunki, które zgodnie z ustawieniem, nie powinny być dłuższe niż 400 tokenów.
 
@@ -989,7 +989,7 @@ vector_store = PineconeVectorStore(
 )
 \end{python}
 
-Następnie otwieramy połączenie do Pinecone, by stworzyć bazę wektorową przy pomocy \linebreak\pythoninline{pc.create_index(...)} jeśli ta nie istnieje. W kolejnym kroku łączymy się do tej bazy (obiekt \pythoninline{index}), i otwieramy połączenie do wykonywania operacji retrieval poprzez obiekt\linebreak \pythoninline{vector_store}.
+Następnie otwieramy połączenie do Pinecone, by stworzyć bazę wektorową przy pomocy \linebreak{}\pythoninline{pc.create_index(...)} jeśli ta nie istnieje. W kolejnym kroku łączymy się do tej bazy (obiekt \pythoninline{index}), i otwieramy połączenie do wykonywania operacji retrieval poprzez obiekt \linebreak{}\pythoninline{vector_store}.
 
 Powyższe definicje wykorzystujemy w implementacji funkcji odpowiedzialnych za wektoryzację danych wejściowych (tekstów z informacjami o filmach) i zapisanie ich w bazie Pinecone. Implementacja ta różni się dla dwóch zaproponowanych rozwiązań: RAG v1 (tylko wyszukiwanie wektorowe na podstawie pytania użytkownika bez dodatkowych metadanych) oraz RAG v2 (dodatkowa możliwość filtrowania danych na podstawie wybranych wartości), i zostały przedstawione w dalszej części tekstu. 
 \newline\null
@@ -1320,7 +1320,7 @@ Pytania zostały skategoryzowane i podzielone na grupy. Grupy te zostaną opisan
     Przykład pytania: 
     \textit{Find all action movies longer than 2.5 hours.}
 
-    \item Pytania agregacyjne (ang. Aggregation Questions) -- Pytania wymagające obliczenia \linebreak
+    \item Pytania agregacyjne (ang. Aggregation Questions) -- Pytania wymagające obliczenia \linebreak{}
     zbiorczej wartości (suma, średnia, liczba). 
     Przykład pytania: 
     \textit{What is the average runtime of movies directed by Quentin Tarantino?}
