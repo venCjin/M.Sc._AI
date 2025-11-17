@@ -1504,7 +1504,8 @@ Podsumowując, wyniki potwierdzają przewagę metod grafowych nad klasycznym RAG
 
 \subsubsection{Analiza z użyciem LLM}
 %! \subsubsubsection{Analiza z użyciem LLM}
-Automatyczne analiza poprawności odpowiedzi przeprowadzona przez OpenAI GPT-4.1.\\
+Automatyczne analiza poprawności odpowiedzi przeprowadzona przez OpenAI GPT-4.1.\\ 
+\textbf{TO DO : WSTĘP PLUS JAK TO JEST ZROBIONE}
 
 W przypadku analizy przy użyciu LLM nie została zastosowana metoda zliczania „zwycięstw” modeli, którą została wykorzystana wcześniej w analizie embeddingowej. W analizie przy użyciu LLM bardzo często pojawiały się sytuacje, w których różne narzędzia otrzymywały identyczną ocenę, co prowadziło do licznych remisów. W efekcie wskaźnik liczby zwycięstw przestawał być rozróżniający i nie odzwierciedlał realnych różnic pomiędzy metodami, z tego powodu w tym podrozdziale zrezygnowano z jego stosowania.
 
@@ -1587,8 +1588,10 @@ Warto zauważyć również, że wyniki między analizą embeddingową a analizą
 
 \subsubsection{Analiza przeprowadzona przez człowieka}
 %! \subsubsubsection{Analiza przeprowadzona przez człowieka}
-Ręczna analiza poprawności odpowiedzi przeprowadzona przez człowieka.\\
 
+Analiza ekspercka została wprowadzona jako uzupełnienie dwóch poprzednich metod — oceny embeddingowej oraz analizy opartej na modelach LLM — w celu zapewnienia pełniejszej i bardziej wiarygodnej weryfikacji wyników. Podejście to pozwala skorygować potencjalne błędy automatycznych metod i dostarcza perspektywy opartej na ludzkim rozumieniu treści oraz kontekstu. Dzięki temu zestawienie trzech komplementarnych analiz umożliwia bardziej wszechstronną i zrównoważoną ocenę jakości odpowiedzi.
+
+W ocenie eksperckiej brano pod uwagę zarówno ogólną poprawność merytoryczną odpowiedzi, jak i – w przypadku pytań typu „wymień” – liczbę poprawnie przytoczonych faktów. Takie podejście pozwoliło nie tylko ocenić trafność odpowiedzi, ale również ich kompletność, co stanowi istotne uzupełnienie wyników uzyskanych metodami automatycznymi.
 
 W przypadku analizy eksperckiej nie została zastosowana metody zliczania „zwycięstw” modeli, którą została wykorzystana wcześniej w analizie embeddingowej. W analizie eksperckiej bardzo często pojawiały się sytuacje, w których różne narzędzia otrzymywały identyczną ocenę, co prowadziło do licznych remisów. W efekcie wskaźnik liczby zwycięstw przestawał być rozróżniający i nie odzwierciedlał realnych różnic pomiędzy metodami, z tego powodu w tym podrozdziale zrezygnowano z jego stosowania.
 
@@ -1605,10 +1608,10 @@ Poniżej znajduje się  \ref{tab:6}, w której zawarty jest średni wynik wskazu
     53\%& 57\%& 87\%\\
   \hline
 \end{tabular} 
-\caption{Średni wynik podobieństwa do odpowiedzi oczekiwanej}
+\caption{Średni wynik poprawności odpowiedzi.}
 \label{tab:6}
 \end{table}
-
+Tabela \ref{tab:5} zawiera medianę z oceny poprawności odpowiedzi poszczególnych metod. Mediana metody RAG\_v1 to 53,5\%, mediana RAG\_v2 to 70,2\%.  Mediana metody  Graph RAG wynosi 100\%. 
 
 
 \begin{table}[H]
@@ -1626,12 +1629,36 @@ Poniżej znajduje się  \ref{tab:6}, w której zawarty jest średni wynik wskazu
 \label{tab:7}
 \end{table}
 
+W tej metodzie analizy warto zauważyć, że średnia metody RAG\_v1 jest zbliżona do średniej.  W przypadku RAG\_v2 średnia wynosi 57\%, a mediana 72,2\%, co oznacza rozkład prawostronny danych. 
+analiza dla grup pytań przeprowadzona przez człowieka. Poniżej na rysunku\ref{fig:human_hist_rag_v1} znajduje się histogram RAG\_v1, na rysunku \ref{fig:human_hist_rag_v2} znajduje się histogram RAG\_v2. 
+Przy metodzie eksperckiej warto zauważyć, że więcej pytań zostało uznanych za poprawne. 
 
 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/fig/human_hist_rag_v1.png}
+    \caption{Enter Caption}
+    \label{fig:human_hist_rag_v1}
+\end{figure}
 
-analiza dla grup pytań przeprowadzona przez człowieka
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/fig/human_hist_rag_v2.png}
+    \caption{Enter Caption}
+    \label{fig:human_hist_rag_v2}
+\end{figure}
+
+W przypadku metody Graph RAG średnia wynosi 81\%, a mediana 100\%, co sugeruje rozkład prawostronny. Na rysunku \ref{fig:human_hist_graph} znajduje się histogram, reprezentujący rozkład odpowiedzi: większość pytań jest poprawna, zdarzają się pojedyncze nie pełne odpowiedzi oraz kilka nie poprawnych. Kolejnym krokiem będzie przyjrzenie się, w których zadania popełnił błędy. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/fig/human_hist_graph.png}
+    \caption{Enter Caption}
+    \label{fig:human_hist_graph}
+\end{figure}
 
 
+Podobnie jak w rozdziale dotyczącym analizy z zastosowaniem embeddingów, przejdziemy teraz do rozkładu wyników per grupy. Zastosowany podział jest ten sam  co w poprzednim rozdziale.  Na poniższym rysunku \ref{fig:gpt_eval} znajduje się średnia ocena poprawności per grupa dla każdego narzędzia. W wierszach znajdują się grupy pytań, kolumny to zastosowane metody. 
 
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{images/fig/human_eval.png}
@@ -1639,16 +1666,15 @@ analiza dla grup pytań przeprowadzona przez człowieka
 \caption{Ewaluacja wyników RAG v1, RAG v2, Graph RAG dla grup pytań przeprowadzona przez człowieka.}
 \label{fig:human_eval}
 \end{figure}
+We wszystkich trzech metodach najwyższą skuteczność obserwuje się w pytaniach prostych, faktograficznych oraz takich, które wymagają odnalezienia pojedynczej, jasno określonej informacji. Dotyczy to zwłaszcza kategorii \textit{Basic Factual Questions}, \textit{Director Focused Questions}, \textit{Exploratory Questions}, \textit{Comparative Questions} oraz \textit{Aggregation Questions}, gdzie również klasyczne warianty RAG osiągają dobre wyniki. W tych obszarach wszystkie analizowane systemy radzą sobie porównywalnie dobrze, a różnice między nimi są niewielkie.
 
+RAG\_v1 i RAG\_v2 prezentują zbliżony profil — radzą sobie dobrze w pytaniach prostych i jednoznacznych, jednak ich efektywność gwałtownie spada tam, gdzie niezbędne jest łączenie wielu faktów lub bardziej złożona struktura wiedzy. Warto również zauważyć, że różnice między RAG\_v1 i RAG\_v2 są stosunkowo niewielkie, co sugeruje, że ich ograniczenia mają charakter systemowy i wynikają z klasycznego podejścia do wyszukiwania danych według podobieństwa embeddingów.
 
+Klasyczne podejścia RAG\_v1 i RAG\_v2 utrzymują też dobrą skuteczność w pytaniach o umiarkowanej złożoności, takich jak \textit{Actor Focused}, \textit{Genre Specific} czy \textit{Range \& Filtering}. Są to kategorie, które wymagają odnalezienia kilku powiązanych informacji, ale nie angażują pełnego rozumowania wieloetapowego. W tych przypadkach RAG osiąga stabilne wyniki.
 
+Warto zauważyć, że w analizie wykonanej ekspercko wszystkie 3 metody osiągają dobre wyniki w kategorii \textit{Free Form/Natural Language Style}. 
 
-
-
-
-
-
-
+Analiza została przeprowadzona w sposób ekspercki, co pozwoliło na rzetelną i wiarygodną ocenę jakości odpowiedzi niezależnie od ograniczeń metod automatycznych. Dzięki ocenie człowieka uzyskane wyniki możemy traktować jako solidne odniesienie potwierdzające lub korygujące rezultaty embeddingów i modeli LLM. Jednocześnie należy podkreślić, że choć analiza ekspercka zapewnia wysoką precyzję, nie jest metodą skalowalną ani praktyczną do stosowania w realnych systemach, w których konieczna jest automatyczna i powtarzalna ewaluacja na dużą skalę.
 
 \subsubsection{Analiza zalet i wad obu podejść}
 \textcolor{red}{\textit{TODO: napisać ...}\\
@@ -1656,7 +1682,7 @@ Praca skupi się na analizie, jak te dwa podejścia mogą wzajemnie się uzupeł
 a także na identyfikacji konkretnych scenariuszy aplikacyjnych, w których ich integracja jest szczególnie korzystna.
 }
 
-Podsumowując, analiza tabeli potwierdza, że GraphRAG znacząco rozszerza możliwości klasycznych systemów RAG, szczególnie w zadaniach wymagających bardziej strukturalnego podejścia do wiedzy. W kontekście złożonych pytań i kategorii operujących na relacjach, związkach czasowych lub danych liczbowych, metoda grafowa okazuje się nie tylko bardziej precyzyjna, ale również zdecydowanie bardziej stabilna i konsekwentna niż tradycyjne podejścia oparte wyłącznie na wyszukiwaniu podobnych fragmentów.
+Podsumowując, wykonana analiza potwierdza, że GraphRAG znacząco rozszerza możliwości klasycznych systemów RAG, szczególnie w zadaniach wymagających bardziej strukturalnego podejścia do wiedzy. W kontekście złożonych pytań i kategorii operujących na relacjach, związkach czasowych lub danych liczbowych, metoda grafowa okazuje się nie tylko bardziej precyzyjna, ale również zdecydowanie bardziej stabilna i konsekwentna niż tradycyjne podejścia oparte wyłącznie na wyszukiwaniu podobnych fragmentów \cite{graphRAG}.
 
 
 
