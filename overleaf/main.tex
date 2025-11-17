@@ -287,19 +287,27 @@ Grafy wiedzy można podzielić na cztery grupy na podstawie przechowywanych w ni
     \end{figure}
 \end{itemize}
 
-\textcolor{red}{\textit{
-TODO:\\
-2. W jakich dziedzinach mają zastosowanie grafy?\\
-3. Do zapisu jakiej wiedzy najbardziej sie nadaja?\\
-4. przyklady zastosowan: google kg | istniejace kg - jak sa wykorzystywane?
-}}
-\\
-
 % zalety
 Grafy wiedzy są jednym z najskuteczniejszych sposobów reprezentacji informacji w postaci powiązanych ze sobą faktów. Ich główną zaletą jest strukturalność i przejrzystość -- dane są przedstawiane w postaci wierzchołków (bytów) i krawędzi (relacji), co umożliwia intuicyjne modelowanie złożonych zależności między obiekatmi. Dzięki temu możliwe jest wnioskowanie semantyczne, czyli odkrywanie nowych relacji na podstawie już istniejących powiązań. Grafy wiedzy cechują się także wysoką interpretowalnością, co oznacza, że procesy oparte na nich są bardziej zrozumiałe dla człowieka niż w przypadku modeli czysto statystycznych. Dodatkowo, w połączeniu z ontologiami i językami semantycznymi (np. RDF, OWL), grafy wiedzy umożliwiają integrowanie informacji z różnych źródeł i zapewniają spójność znaczeniową danych \cite{graph:llm:roadmap}.
 
 % wady
-Grafy wiedzy mają również pewne istotne ograniczenia. Jednym z głównych problemów jest niekompletność -- wiele grafów nie zawiera pełnej wiedzy o danym obszarze, co utrudnia wnioskowanie lub prowadzi do błędnych rezultatów. Trudności sprawia także utrzymanie aktualności takich struktur, ponieważ wiedza ulega zmianie, a ręczne lub półautomatyczne aktualizowanie grafu jest kosztowne i czasochłonne. Kolejnym ograniczeniem jest złożoność konstrukcji grafu, obejmująca procesy ekstrakcji bytów, relacji i ich walidacji, które często wymagają dużych nakładów pracy ekspertów lub zaawansowanych modeli NLP. Grafy wiedzy mają również ograniczoną zdolność do reprezentacji wiedzy niepewnej lub niejednoznacznej, co bywa problematyczne w zastosowaniach, w których kontekst i interpretacja odgrywają kluczową rolę \cite{graph:llm:roadmap}.
+Grafy wiedzy mają również pewne istotne ograniczenia. Jednym z głównych problemów jest niekompletność -- wiele grafów nie zawiera pełnej wiedzy o danym obszarze, co utrudnia wnioskowanie lub prowadzi do błędnych rezultatów. Trudności sprawia także utrzymanie aktualności takich struktur, ponieważ wiedza ulega zmianie, a ręczne lub półautomatyczne aktualizowanie grafu jest kosztowne i czasochłonne. Kolejnym ograniczeniem jest złożoność konstrukcji grafu, obejmująca procesy ekstrakcji bytów, relacji i ich walidacji, które często wymagają dużych nakładów pracy ekspertów. Grafy wiedzy mają również ograniczoną zdolność do reprezentacji wiedzy niepewnej lub niejednoznacznej, co bywa problematyczne w zastosowaniach, w których kontekst i interpretacja odgrywają kluczową rolę \cite{graph:llm:roadmap}.
+
+% zastosowania
+Grafy wiedzy znajdują zastosowanie w wielu obszarach, w tym w integracji danych przedsiębiorstw, gdzie umożliwiają łączenie rozproszonych zasobów, takich jak dokumenty, bazy danych czy systemy biznesowe, w jedną spójną strukturę relacji \cite{kg:buisness}. W usługach rekomendacyjnych pomagają zrozumieć powiązania między użytkownikami, kategoriami treści czy kontekstami, co przekłada się na bardziej trafne sugestie, w związku z czym jest bardzo użyteczne dla np. platform streamingowych takich jak Netflix, który to używa grafu wiedzy do analizy preferencji filmowych użytkowników, by móc proponować im filmy i seriale lepiej dopasowane do ich gustów \cite{kg:netflix}.
+W analizach finansowych i ekonometrycznych grafy wiedzy wspierają modelowanie złożonych zależności między firmami oraz badania nad zmiennością rynków \cite{kg:evolution}. 
+Grafy wiedzy są również obecne w popularnych wyszukiwarkach takich jak Google czy Bing (rysunek \ref{fig:googleBingKGpanel}), gdzie umożliwiają prezentowanie paneli wiedzy zawierających powiązane fakty dotyczące wyszukiwanej frazy, co ułatwia użytkownikowi szybki dostęp do podstawowych informacji \cite{kg:buisness}.
+
+% https://www.google.com/search?q=pulp+fiction&client=opera&sca_esv=747b26111898c262&biw=1620&bih=902&sxsrf=AE3TifMLceSf-GHSksng3l5B47ybMei45g%3A1763369833818&ei=aeMaaaXgMcej3QOGrty4Cw&ved=0ahUKEwjluLXE6PiQAxXHUXcKHQYXF7cQ4dUDCBE&uact=5&oq=pulp+fiction&gs_lp=Egxnd3Mtd2l6LXNlcnAiDHB1bHAgZmljdGlvbjIKECMYgAQYJxiKBTIIEC4YgAQYsQMyChAAGIAEGEMYigUyCBAAGIAEGLEDMgUQABiABDIFEAAYgAQyChAAGIAEGEMYigUyCxAAGIAEGLEDGIMBMgUQABiABDIKEC4YgAQYQxiKBTIXEC4YgAQYsQMYlwUY3AQY3gQY4ATYAQFIth1QoghY_BtwAXgBkAEAmAFVoAGSA6oBATW4AQPIAQD4AQGYAgagAscDwgIKEAAYsAMY1gQYR8ICDRAAGIAEGLADGEMYigXCAg4QABiwAxjkAhjWBNgBAcICExAuGIAEGLADGEMYyAMYigXYAQHCAgcQIxixAhgnwgIMEC4YgAQYsQMYChgLwgIMEAAYgAQYsQMYChgLwgIJEAAYgAQYChgLwgIPEAAYgAQYsQMYgwEYChgLwgIbEC4YgAQYsQMYChgLGJcFGNwEGN4EGOAE2AEBwgIHECMYsAIYJ8ICChAuGIAEGLEDGA3CAgoQABiABBixAxgNwgIHEAAYgAQYDcICDRAAGIAEGLEDGIMBGA3CAhkQLhiABBixAxgNGJcFGNwEGN4EGOAE2AEBmAMAiAYBkAYSugYGCAEQARgJkgcBNqAH1jayBwE1uAe4A8IHBTItNC4yyAcn&sclient=gws-wiz-serp&sei=AesaabiSMv-Dxc8Pt7eZ0Ag
+% https://www.bing.com/search?q=pulp+fiction&filters=ufn%3a%22Pulp+Fiction%22+sid%3a%22c917b21f-ea67-bb11-491a-71399cdf00f6%22&asbe=AS&qs=MB&pq=pulp+fic&sc=12-8&cvid=CBDD43DA0A3C432892F54821F04A5F44&FORM=QBLH&sp=1&ghc=1&lq=0
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{images/fig/googleBingKGpanel.png}
+    \vspace*{-8mm}
+    \caption{Przykład panelu wiedzy dla frazy „pulp fiction” w wyszukiwarkach Google (po lewej) oraz Bing (po prawej).}
+    \label{fig:googleBingKGpanel}
+\end{figure}
+
+Panel wiedzy prezentowany w wyszukiwarce Google korzysta z Google Knowledge Graph, rozbudowanego grafu wiedzy, w którym węzłami są encje – osoby, miejsca, obiekty czy pojęcia – a krawędziami relacje opisujące ich wzajemne powiązania. Projekt uruchomiono w 2012 roku, aby umożliwić wyszukiwarce przechodzenie od przetwarzania zapytań jako ciągów znaków do interpretowania ich jako odniesień do konkretnych encji w grafie. Dane zasilające graf pochodzą z wielu źródeł, takich jak Wikipedia, CIA World Factbook czy Freebase, a jego funkcjonalności obejmują m.in. generowanie paneli wiedzy, czy bardziej precyzyjne rozpoznawanie intencji użytkownika, co pozwala na dostarczenie trafniejszych odpowiedzi. Google udostępnia także API KG Search, umożliwiające programistom wyszukiwanie encji w Google Knowledge Graph, oraz umożliwia wykorzystanie tych zasobów w niestandardowych silnikach wyszukiwania. Technologie takie jak Google Knowledge Graph wzbogacają doświadczenie użytkowników, dostarczając kontekstowych informacji zamiast samych odnośników i zwiększając widoczność encji w sieci, co może pozytywnie wpływać na ich wiarygodność i rozpoznawalność \cite{kg:googlekg}.
 
 \subsection{Wielkie modele językowe -- LLM}
 
@@ -351,40 +359,26 @@ Powyższe opisy dotyczą algorytmów używanych w etapie \textit{pre-treningu}, 
 
 Sukces wielkich modeli językowych możliwy jest przez zdolność do uogólniania wiedzy zdobytej podczas pre-treningu i jej zastosowania do nowych, nieznanych wcześniej zadań. Model może generować spójne i trafne teksty jednocześnie bez specjalistycznego procesu szkolenia.
 
-\textit{\textcolor{red}{TODO: przeczytac w konteksice calego rozdziału i poprawic (na pewno zalety) -----v\\
-TODO: "struktura powinna być podobna do kg" (czy zrobione?)\\
-1. wady zalety llm\\
-2. W jakich dziedzinach mają zastosowanie llm?\\
-3. jaka jest roźnica miedzy wiedza zgromadzoną w kg a llm? - blackbox, wiedza zapisana niejawnie w wagach\\
-4. przyklady zastosowan;  jak sa wykorzystywane?\\
-}}
-
+% zalety
 Wielkie modele językowe posiadają liczne korzyści, między innymi są skalowalne oraz obsługują duże ilości danych \cite{zalety1}. Dodatkowo dzięki doszkalaniu (ang. fine-tuning) mogą być wykorzystane w wielu różnych dziedzinach \cite{zalety1}. Wiele LLM jest dostępnych przez interfejs graficzny np. modele GPT-3.5, GPT-4 są dostępne poprzez Chat GPT, dzięki czemu narzędzia te wyróżniają się niższym progiem wejścia od innych \cite{zalety2}. 
 
-Mimo licznych zalet LLM posiadają również wady, takie jak ryzyko halucynacji, czyli odpowiedzi poprawnych językowo i logicznie, zawierających nieprawdziwe informacje \cite{zalety2}. Warto dodatkowo zaznaczyć, że jakość odpowiedzi LLM zależy od jakości dostarczonych do szkolenia informacji. LLM budzą wątpliwości dotyczące praw autorskich oraz ich wykorzystywania w sposób nieetyczny taki jak oszukiwanie na egzaminach \cite{prawo}. Jedną z istotnych wad dużych modeli językowych jest fakt, że wiedza zakodowana w ich parametrach — w tym w embeddingach i wagach sieci — nie jest bezpośrednio dostępna ani łatwa do wydobycia \cite{llm:knowledge}. LLM posiadają ogromną liczbę paramentów, dzięki czemu mogą przechować znaczne ilości informacji. Wiedza zawarta w LLM ma charakter parametryczny, czyli jest rozproszona i niejawna. W pracy \textit{Physics of Language Models: Part 3.1, Knowledge Storage and Extraction} autorzy zaznaczają, że wiedzę zawartą w LLM trudno pozyskać wykorzystując metody takie jak sondowanie liniowe (ang. linear probing) - techniki, która weryfikuje czy określona informacja jest zapisana w reprezentacjach modelu (np. w embeddingach tokenów, warstwach ukrytych, aktywacjach) \cite{llm:knowledge}. Autorzy wskazują, że LLM przechowują wiedzę nieliniowo oraz niedostępnie, co oznacza, że nawet jeśli model ma zakodowany w sobie pewien fakt, to nie potrafimy go odzyskać ani wygenerować \cite{llm:knowledge}. 
+% wady
+Mimo licznych zalet LLM posiadają również wady, takie jak ryzyko halucynacji, czyli odpowiedzi poprawnych językowo i logicznie, zawierających nieprawdziwe informacje \cite{zalety2}. Warto dodatkowo zaznaczyć, że jakość odpowiedzi LLM zależy od jakości dostarczonych do szkolenia informacji. LLM budzą wątpliwości dotyczące praw autorskich oraz ich wykorzystywania w sposób nieetyczny taki jak oszukiwanie na egzaminach \cite{prawo}. Jedną z istotnych wad dużych modeli językowych jest fakt, że wiedza zakodowana w ich parametrach -- w tym w embeddingach i wagach sieci -- nie jest bezpośrednio dostępna ani łatwa do wydobycia \cite{llm:knowledge}. LLM posiadają ogromną liczbę paramentów, dzięki czemu mogą przechować znaczne ilości informacji. Wiedza zawarta w LLM ma charakter parametryczny, czyli jest rozproszona i niejawna. W pracy \textit{Physics of Language Models: Part 3.1, Knowledge Storage and Extraction} autorzy zaznaczają, że wiedzę zawartą w LLM trudno pozyskać wykorzystując metody takie jak sondowanie liniowe (ang. linear probing) -- techniki, która weryfikuje czy określona informacja jest zapisana w reprezentacjach modelu (np. w embeddingach tokenów, warstwach ukrytych, aktywacjach) \cite{llm:knowledge}. Autorzy wskazują, że LLM przechowują wiedzę nieliniowo oraz niedostępnie, co oznacza, że nawet jeśli model ma zakodowany w sobie pewien fakt, to nie potrafimy wskazać gdzie jest zapisany \cite{llm:knowledge}. W związku z tym nie mamy pewności jaka dokładnie wiedza jest zakodowana w modelu.
 
+% zastosowania
 Wielkie modele językowe posiadają szerokie zastosowania w wielu dziedzinach takich jak medycyna, edukacja, nauki społeczne czy marketing. Przykład zastosowania LLM został opisany w artykule \textit{Using Large Language Models to Support Content Analysis: A Case Study of ChatGPT for Adverse Event Detection}, gdzie autorzy tekstu opisują analizę dużych zbiorów danych medycznych przy użyciu LLM \cite{info:doi/10.2196/52499}. 
-Dodatkowo LLM mogą być wykorzystywane do wspomagania procesu analizy tekstu np. wpisów w mediach społęcznościowych lub odpowiedziach ankietowych \cite{info:doi/s00146-025-02487-4}.
-
-\textit{\textcolor{red}{TODO -----end}}\\
+Dodatkowo LLM mogą być wykorzystywane do wspomagania procesu analizy tekstu np. wpisów w mediach społecznościowych lub odpowiedziach ankietowych \cite{info:doi/s00146-025-02487-4}.
+Innym bardzo popularnym zastosowaniem LLM są chatboty takie jak OpenAI ChatGPT, Microsoft Copilot, Google Gemini -- systemy pytanie-odpowiedź, które pozwalają na „rozmowę” z modelem, ponieważ w prompocie poza wiadomością od użytkownika dołączają również poprzednie wiadomości użytkownika i odpowiedzi LLM \cite{llm:chatgptcopilotgemini}.
 
 \subsection{Metody połączenia KG i LLM}
-
-\textcolor{red}{\textit{TODO: zweryfikować}\\
-Praca skupi się na analizie, jak te dwa podejścia mogą wzajemnie się uzupełniać, a także na identyfikacji konkretnych scenariuszy aplikacyjnych, w których ich integracja jest szczególnie korzystna.
-}
 
 Integracja wielkich modeli językowych (LLM) z grafami wiedzy (KG) stanowi obecnie jedno z najbardziej obiecujących podejść w dziedzinie sztucznej inteligencji. LLM oferują zdolność do przetwarzania języka naturalnego, natomiast KG zapewniają strukturalną, precyzyjną i interpretowalną reprezentację wiedzy. W niniejszym rozdziale przedstawiono analizę wybranych metod łączenia tych dwóch technologii (zaproponowanych w pracy \textit{Unifying Large Language Models and Knowledge Graphs: A Roadmap} (2024) \cite{graph:llm:roadmap}).
 
 \subsubsection{Tworzenie KG przy pomocy LLM} % (5.3)
 
-Rozdział ten odnosi się do rozdziału \textit{„LLM-augmented KG construction”} z wcześniej cytowanej pracy \cite{graph:llm:roadmap}.
-
-\textcolor{red}{TODO: poprawic | KG są konstrukcją umożliwiającą ustrukzuryzowanie wiedzy, jednak konwencjonalne KG są często niekompletne i nie uwzględniają informacji tekstowych.} 
-Wykorzystanie LLM do pracy z KG pozwala na automatyczną konstrukcje KG z nieustrukturyzowanego tekstu.
-W podejściu tym LLM wykonuje następujące akcje (przy czym każdą może wykonać pojedynczo -- osobne prompty, może dwie lub więcej wykonać w tym samym poleceniu, a może też te wszystkie zadania dostać do wykonania jednocześnie w jednym prompcie):
+Współczesne podejścia do konstrukcji grafów wiedzy (KG) coraz częściej wykorzystują potencjał wielkich modeli językowych (LLM), które dzięki zdolności do rozumienia kontekstu i generowania semantycznych reprezentacji tekstu, umożliwiają automatyczne wydobywanie wiedzy z nieustrukturyzowanych danych. Podczas konstrukcji grafu, model językowy wykonuje następujące akcje (przy czym każdą może wykonać pojedynczo -- osobne prompty, może dwie lub więcej wykonać w tym samym poleceniu, a może też te wszystkie zadania dostać do wykonania jednocześnie w jednym prompcie):
 \begin{itemize}
-    \item \textbf{rozpoznawania encji} (ang. Named Entity Recognition, NER) -- automatyczne identyfikowanie w danych podanych w prompcie nazw własnych lub istotnych pojęć np. osób, organizacji czy terminów naukowych. 
+    \item \textbf{rozpoznawania encji} (ang. Named Entity Recognition, NER) -- automatyczne identyfikowanie, w danych podanych w prompcie, nazw własnych lub istotnych pojęć np. osób, organizacji czy terminów naukowych. 
     Przykładowy propmt: \textit{„\textcolor{red}{TODO:}”}
     
     \item \textbf{rozpoznawania relacji} (ang. Relation Extraction, RE) -- wykrywanie semantycznych zależności między wcześniej rozpoznanymi encjami.
@@ -405,61 +399,36 @@ Przykładowy propmt: \textit{„\textcolor{red}{TODO:}”}
 Inne sposób prezentuje metoda \textbf{Grapher} \cite{kg:grapher}, w której LLM przetwarza tekst wieloetapowo. Najpierw identyfikuje pojedyncze encje, a następnie dedykowany moduł konstruuje relacje między nimi, a więc wykorzystuje różne prompty do wykonania różnych akcji. Podobnie jak AutoKG, tworzy to zintegrowany proces przetwarzania (tak zwany end-to-end pipeline), który nie wymaga ręcznego identyfikowania encji, koreferencji i relacji przez człowieka.
 
 Dwie poprzednie metody bazują na już użyciu już wytrenowanego LLM, natomiast \textbf{COMET} (\textbf{COM}mons\textbf{E}nse \textbf{T}ransformers) \cite{kg:comet}, prezentuje całkowicie odmienne podejście, ponieważ zakłada wytrenowanie nowego generatywnego modelu opartego na architekturze transformera.
-% , co częściowo powiązane z podrozdziałem „\nameref{sec:sub:sub:llm-kg-pre-training}” z dalszej części pracy.
 W przeciwieństwie do innych powszechnych transformerów, takich jak GPT-4, jego celem nie jest generowanie odpowiedzi w języku naturalnym, lecz generowanie „zdroworozsądkowych trójek wiedzy” (ang. commonsense knowledge triples) - czyli struktur opisujących codzienne zależności między zdarzeniami, intencjami, emocjami i skutkami. 
 Przykładowy propmt: \textit{„\textcolor{red}{TODO:}”} i wygenerowane trójki: \textit{„\textcolor{red}{TODO:}”}.
 Co ciekawe COMET został wytrenowany na wcześniej już wspominanych źródłach danych \textbf{ConceptNet} \cite{kg:conceptnet} oraz \textbf{ATOMIC} \cite{kg:ATOMIC}. 
 
-Użycie LLM pozwala na uogólnienie i uzupełnienie brakujących informacji w KG, jednak warto zwrócić uwagę na zagrożenia związane z tą metodą takie jak trudność w walidacji generowanej wiedzy. Jakość generowanych trójek zależy w dużej mierze zarówno od promtów jak i doboru odpowiedniego LLM. Proces uzupełniania brakujących informacji warto wzbogacić o dodatkowe mechanizmy weryfikacji i ewentualnej korekty, które sprawdzają, czy fakty wygenerowane lub uzupełnione przez model są poprawne, a w przypadku jeśli graf ma ściśle określony schemat np. poprzez ontologię, to należy dodatkowo zweryfikować spójność i zgodność wygenerowanych trójek z tą ontologią. Jedynym z mechanizmów automatycznej weryfikacji i edycji KG jest PiVE \cite{kg:pive}, który dodaje pętlę kontrolną (ang. Prompt-in-the-loop Verification and Editing), aby ograniczyć tzw. problem halucynacji LLM (ang. hallucination problem) -- czyli sytuacji, w której model generuje poprawnie brzmiące, lecz fałszywe informacje. \textcolor{red}{TODO: lepiej wyjaśnić co robi pive}
-% pętla:
-% 1. LLM generuje nową trójkę wiedzy lub fakt.
-% 2. Następnie inny prompt (lub ten sam model w trybie weryfikacyjnym) ocenia poprawność, spójność logiczną i zgodność z istniejącym grafem.
-% 3. Jeśli wynik jest niepewny, system może odrzucić, poprawić lub ponownie wygenerować dany fakt.
+Wykorzystanie wielkich modeli językowych do tworzenia grafów wiedzy jest bardziej pożądane lub wręcz wymagane w sytuacjach, gdy zadanie ekstrakcji wiedzy wymaga głębokiego rozumienia semantycznego, rozpoznawania złożonych relacji, rozwiązywania koreferencji lub interpretacji wiedzy niejawnej i nieustrukturyzowanej. Przykładowo, w domenach takich jak medycyna, prawo czy nauki społeczne, gdzie teksty zawierają subtelne zależności i wieloznaczności, LLM dzięki swojej zdolności do uogólniania i rozumowania na poziomie kontekstowym jest w stanie takie szczegóły uwzględniać podczas generowania odpowiedzi \cite{kgllm:construction}.
 
-Podsumowując wielkie modele językowe nadają się do konstruowania grafów wiedzy przy użyciu odpowiednich podejść. Metody AutoKG czy Grapher znajdą swoje zastosowanie w tworzeniu i aktualizowaniu danych w grafie dla systemów eksperckich czy pytanie-odpowiedź nastawionych na operowanie w konkretnej dziedzinie lub dziedzinach wiedzy, jako że \textcolor{red}{TODO: lepiej wyjaśnić | są nastawione na fakty i encyklopedyczną strukturę}. Transformery takie jak COMET będą świetnym wyborem w rozwiązaniach wspierających tworzenie narracji i pisanie dialogów, jako że jest nastawiony na zależności między zdarzeniami, intencjami, emocjami i skutkami.
-Rozwiązania te nie są jednak nie omylne, w związku z czym warto rozważyć dodanie do nich mechanizmów weryfikujących poprawność takich jak PiVE. 
+Warto jednak zwrócić uwagę na zagrożenia związane z tą metodą, takie jak trudność w walidacji generowanej wiedzy \cite{kgllm:construction:hard}. Jakość generowanych trójek zależy w dużej mierze zarówno od promtów jak i doboru odpowiedniego LLM. Proces generowania informacji warto wzbogacić o dodatkowe mechanizmy weryfikacji i ewentualnej korekty, które sprawdzają, czy fakty wygenerowane lub uzupełnione przez model są poprawne. W przypadku jeśli graf ma ściśle określony schemat np. poprzez ontologię, to należy dodatkowo zweryfikować spójność i zgodność wygenerowanych trójek z tą ontologią. Jedynym z mechanizmów automatycznej weryfikacji i edycji KG jest PiVE \cite{kg:pive}, który dodaje pętlę kontrolną (ang. Prompt-in-the-loop Verification and Editing), aby ograniczyć tzw. problem halucynacji LLM (ang. hallucination problem) -- czyli sytuacji, w której model generuje poprawnie brzmiące, lecz fałszywe informacje. W metodzie PiVE najpierw LLM generuje nową trójkę wiedzy, a następnie poprzez inny prompt model ocenia poprawność, spójność logiczną i zgodność z istniejącym grafem tej trójki. Jeśli wynik jest niepewny, metoda może odrzucić trójkę lub uruchomić ponowną jej generację.
+
+Podsumowując wielkie modele językowe nadają się do konstruowania grafów wiedzy przy użyciu odpowiednich podejść. 
+% Metody takie jak AutoKG znajdą swoje zastosowanie w tworzeniu i aktualizowaniu danych w grafie dla systemów eksperckich czy pytanie-odpowiedź nastawionych na operowanie w konkretnej dziedzinie lub dziedzinach wiedzy, jako że nie wymagają stosowania ontologii, co upraszcza proces konstrukcji grafu. Transformery takie jak COMET będą świetnym wyborem w rozwiązaniach wspierających tworzenie narracji i pisanie dialogów, jako że jest nastawiony na zależności między zdarzeniami, intencjami, emocjami i skutkami.
+% Rozwiązania te nie są jednak nie omylne, w związku z czym warto rozważyć dodanie do nich mechanizmów weryfikujących poprawność takich jak PiVE.
+W medycynie LLM jest wykorzystywany do przetwarzania artykułów naukowych i podręczników medycznych w celu stworzenia medycznego (domenowego) grafu wiedzy \cite{kgllm:construction:med}. Dla przykładu w badaniu \textit{Large language model powered knowledge graph construction for mental health exploration} z czasopisma Nature opisano budowę grafu zaburzeń psychicznych, przy użyciu wielkiego modelu językowego. Zebrano tam wiedzę z aktualnej literatury medycznej, która jest rozbita na wiele m.in. badań i artykułów, w celu zintegrowania jej w jedną koherentną całość \cite{kgllm:construction:nature}.
+Z kolei w obszarze korporacyjnym stworzona została platforma \textit{NebulaGraph}, która pozwala użytkownikom wprowadzać dane i polecenia w języku naturalnym, a platforma, przy użyciu LLM, tworzy na ich podstawie graf wiedzy pozwalający później łatwiejsze znajdywanie informacji i dokumentów firmowych \cite{kgllm:construction:nebula}.
 
 % ! -------------------
-\subsubsubsection{Tworzenie KG przy pomocy LLM - drugie}
+% % \textbf{Lekka ekstrakcja grafowa z kontekstem}
 
-\textit{\textcolor{red}{TODO: przenieść do „3.3.1 Tworzenie KG przy pomocy LLM”}}
-
-Współczesne podejścia do konstrukcji grafów wiedzy (KG) coraz częściej wykorzystują potencjał wielkich modeli językowych (LLM), które dzięki zdolności do rozumienia kontekstu i generowania semantycznych reprezentacji tekstu, umożliwiają automatyczne wydobywanie wiedzy z nieustrukturyzowanych danych. W niniejszym rozdziale przedstawiono dwa komplementarne podejścia: ekstrakcję wiedzy przy użyciu LLM (LLM-augmented KG Construction) \cite{graph:llm:roadmap} oraz lekką ekstrakcję grafową z kontekstem (Context-integrated Graph Extraction) \cite{kg:extraction:lightKGG} z wykorzystaniem małych modeli językowych (SLM).
-
-% \subsubsubsection{Ekstrakcja wiedzy przy użyciu LLM}
-\textbf{Ekstrakcja wiedzy przy użyciu LLM}
-
-Podejście LLM-augmented KG Construction polega na wykorzystaniu LLM do realizacji zadań związanych z budową KG, takich jak:
-\begin{itemize}
-    \item \textbf{Embedding encji i relacji} -- LLM są wykorzystywane jako enkodery tekstu opisującego encje i relacje, co pozwala na wzbogacenie reprezentacji KG o informacje semantyczne. Przykładem jest Pretrain-KGE \cite{pretrain-kge}, który używa BERT do kodowania opisów encji i relacji.
+% Alternatywą dla podejść opartych na LLM jest metoda LightKGG \cite{kg:extraction:lightKGG}, która wykorzystuje małe modele językowe (SLM) do ekstrakcji wiedzy w sposób efektywny obliczeniowo. Kluczowym komponentem tej metody jest \textbf{kontekstowa ekstrakcja grafowa} (Context-integrated Graph Extraction), która polega na:
+% \begin{itemize}
+%     \item \textbf{Wydobywaniu trójek wiedzy z tekstu} z jednoczesnym zachowaniem metadanych kontekstowych (np. czasowych, przestrzennych). Przykładowo, z tekstu \textit{„Marie Curie discovered radium in 1898”} ekstrahowana jest trójka (\textit{Marie Curie}, \textit{discovered}, \textit{radium}) z adnotacją kontekstu: rok \textit{1898}.
     
-    \item \textbf{Uzupełnianie KG (KG Completion)} -- LLM mogą działać jako enkodery lub generatory, przewidując brakujące fakty w grafie. Modele takie jak KG-BERT \cite{kg:kgbert} czy GenKGC \cite{kg:genKGC} przekształcają trójki wiedzy w sekwencje tekstowe, które są następnie klasyfikowane lub generowane przez LLM.
+%     \item \textbf{Modelowaniu encji, relacji i kontekstu jako jednej struktury grafowej}, co pozwala na redukcję niejednoznaczności semantycznej bez potrzeby głębokiego rozumowania lingwistycznego.
     
-    \item \textbf{Konstrukcja KG} -- LLM wspierają proces wykrywania encji, rozpoznawania relacji oraz rozwiązywania koreferencji. System Grapher \cite{kg:grapher} generuje encje i relacje w sposób wieloetapowy, natomiast AutoKG \cite{kg:autoKG} wykorzystuje prompt engineering do generowania trójek wiedzy z tekstu.
+%     \item \textbf{Agregacji grafu} -- scalanie informacji z wielu źródeł tekstowych, przy zachowaniu komplementarnych atrybutów encji (np. \textit{Alan Turing} jako \textit{matematyk} i \textit{informatyk}).
     
-    \item \textbf{Distylacja wiedzy z LLM} -- niektóre metody, jak BertNet \cite{bertnet}, wykorzystują LLM do generowania nowych trójek wiedzy na podstawie istniejących danych wejściowych, tworząc KG bez potrzeby ręcznej anotacji, a inne jak COMET \cite{kg:comet}, który sam jest transformerem, pozwalają wydobyć nową wiedzę z siebie, w wyniku syntezy informacji, która nastapiła w procesie uczenia.
-    
-    \item \textbf{Generowanie tekstu z KG (KG-to-text)} -- LLM są używane do tworzenia opisów tekstowych na podstawie danych grafowych, co zwiększa ich użyteczność w zadaniach NLP. Przykładem jest JointGT \cite{jointGT}, który łączy reprezentacje grafowe i tekstowe w jednym modelu.
-\end{itemize}
+%     \item \textbf{Wnioskowaniu topologicznym} -- wykorzystanie cech strukturalnych grafu (np. gęstość połączeń, długość ścieżek, centralność wierzchołków) do identyfikacji relacji pośrednich i rozwiązywania niejednoznaczności encji (np. \textit{„Apple”} jako firma vs owoc).
+% \end{itemize}
 
-Wykorzystanie wielkich modeli językowych do tworzenia grafów wiedzy będzie bardziej pożądane lub wręcz wymagane w sytuacjach, gdy zadanie ekstrakcji wiedzy wymaga głębokiego rozumienia semantycznego, rozpoznawania złożonych relacji, rozwiązywania koreferencji lub interpretacji wiedzy niejawnej i nieustrukturyzowanej. Przykładowo, w domenach takich jak medycyna, prawo czy nauki społeczne, gdzie teksty zawierają subtelne zależności i wieloznaczności, LLM dzięki swojej zdolności do uogólniania i rozumowania na poziomie kontekstowym, przewyższają możliwości małych modeli językowych (SLM). Ponadto, LLM są niezbędne w zadaniach wymagających generowania nowych faktów, uzupełniania brakujących relacji w KG, czy tworzenia opisów tekstowych na podstawie danych grafowych. 
-
-% \subsubsubsection{Lekka ekstrakcja grafowa z kontekstem}
-\textbf{Lekka ekstrakcja grafowa z kontekstem}
-
-Alternatywą dla podejść opartych na LLM jest metoda LightKGG \cite{kg:extraction:lightKGG}, która wykorzystuje małe modele językowe (SLM) do ekstrakcji wiedzy w sposób efektywny obliczeniowo. Kluczowym komponentem tej metody jest \textbf{kontekstowa ekstrakcja grafowa} (Context-integrated Graph Extraction), która polega na:
-\begin{itemize}
-    \item \textbf{Wydobywaniu trójek wiedzy z tekstu} z jednoczesnym zachowaniem metadanych kontekstowych (np. czasowych, przestrzennych). Przykładowo, z tekstu \textit{„Marie Curie discovered radium in 1898”} ekstrahowana jest trójka (\textit{Marie Curie}, \textit{discovered}, \textit{radium}) z adnotacją kontekstu: rok \textit{1898}.
-    
-    \item \textbf{Modelowaniu encji, relacji i kontekstu jako jednej struktury grafowej}, co pozwala na redukcję niejednoznaczności semantycznej bez potrzeby głębokiego rozumowania lingwistycznego.
-    
-    \item \textbf{Agregacji grafu} -- scalanie informacji z wielu źródeł tekstowych, przy zachowaniu komplementarnych atrybutów encji (np. \textit{Alan Turing} jako \textit{matematyk} i \textit{informatyk}).
-    
-    \item \textbf{Wnioskowaniu topologicznym} -- wykorzystanie cech strukturalnych grafu (np. gęstość połączeń, długość ścieżek, centralność wierzchołków) do identyfikacji relacji pośrednich i rozwiązywania niejednoznaczności encji (np. \textit{„Apple”} jako firma vs owoc).
-\end{itemize}
-
-Podejście LightKGG pokazuje, że nawet małe modele językowe, wspierane przez analizę topologii grafu, mogą osiągać wyniki porównywalne z LLM w zadaniach o wysokim poziomie ustrukturyzowania danych wejściowych i tam, gdzie kontekst można zakotwiczyć topologicznie w grafie, bez potrzeby głębokiego rozumowania lingwistycznego.
-Podejście to generuje znacznie niższe koszty ze względu na niższe zapotrzebowanie na moc obliczeniową, co czyni je atrakcyjnym rozwiązaniem dla środowisk o ograniczonych zasobach.
+% Podejście LightKGG pokazuje, że nawet małe modele językowe, wspierane przez analizę topologii grafu, mogą osiągać wyniki porównywalne z LLM w zadaniach o wysokim poziomie ustrukturyzowania danych wejściowych i tam, gdzie kontekst można zakotwiczyć topologicznie w grafie, bez potrzeby głębokiego rozumowania lingwistycznego.
+% Podejście to generuje znacznie niższe koszty ze względu na niższe zapotrzebowanie na moc obliczeniową, co czyni je atrakcyjnym rozwiązaniem dla środowisk o ograniczonych zasobach.
 % ! -----------
 
 \subsubsection{Wydobywanie wiedzy z KG przy pomocy LLM} % (4.2)
@@ -1437,10 +1406,10 @@ Zgodnie z oczekiwaniami Graph RAG znacznie częściej uzyskuje wynik podobieńst
   \hline 
     \multicolumn{3}{|c|} {Wyższy wynik podobieństwa} \\
   \hline 
-    Graph RAG & RAG v2 & RAG v1 \\
-  \hline
-    78 & 15 & 13 \\
-  \hline
+    RAG v1 & RAG v2 & Graph RAG \\
+  \hline 
+    13 & 15 &78 \\
+  \hline 
 \end{tabular} 
 \caption{Liczba odpowiedzi dla których metoda uzyskała wyższy wynik niż pozostałe}
 \label{tab:1}
@@ -1454,10 +1423,10 @@ Poza samą ilością lepiej ocenionych odpowiedzi, należy również zwrócić u
   \hline 
     \multicolumn{3}{|c|} {Średni wynik podobieństwa} \\
   \hline 
-    Graph RAG & RAG v2 & RAG v1 \\
-  \hline
-    0,754 & 0,577 & 0,568 \\
-  \hline
+    RAG v1 & RAG v2 & Graph RAG \\
+  \hline 
+    56,8\%& 57,7\%&75,4\%\\
+  \hline 
 \end{tabular} 
 \caption{Średni wynik podobieństwa do odpowiedzi oczekiwanej}
 \label{tab:2}
@@ -1471,10 +1440,10 @@ Na korzyść Graph RAG przemawia również mediana wyników, przedstawiona w tab
   \hline 
     \multicolumn{3}{|c|} {Mediana} \\
   \hline 
-    Graph RAG & RAG v2 & RAG v1 \\
-  \hline
-    0,831 & 0,610 & 0,598 \\
-  \hline
+    RAG v1 & RAG v2 & Graph RAG \\
+  \hline 
+    59,8\%& 61,0\%&83,1\%\\
+  \hline 
 \end{tabular} 
 \caption{Mediana wyników podobieństwa do odpowiedzi oczekiwanej}
 \label{tab:3}
@@ -1492,26 +1461,97 @@ W przypadku metody \textbf{Graph RAG} obserwowana skośność rozkładu jest naj
 
 Warto zauważyć również, że stosunkowo wąski zakres wartości (niewielka rozpiętość między kwartylami) sugeruje ponadto stabilność działania modelu oraz konsekwentne utrzymywanie wysokiej jakości generowanych odpowiedzi.
 
+Przejdźmy teraz do analizy wyników w poszczególnych grupach pytań.  Pytania zostały skategoryzowane w 19 grup, zgodnie z tematyką oraz zgodnie z problemem merytorycznym, który jest poruszany. Grupy pytań wraz z przykładami zostały opisane w podrozdziale \textit{Opis grup pytań}. 
 
-\textcolor{red}{\textit{TODO: dokończyć ... ZMIENIĆ NAGŁÓWKI W TABELCE. ETYKIETY WIERSZY??????? ZAMIANA NA TYPY PYTAŃ!!!!!!!!!!!!!}}
-
-analiza dla grup pytań popraz \textit{embedding similarity}
+Na rysunku  \ref{fig:similarity_eval} przedstawiona jest tabela porównawcza wyników embedding similarity (średnich trafności/zgodności odpowiedzi) dla poszczególnych kategorii. Wiersze to kategorie pytań — np. \textit{Basic Factual}, \textit{Multi Hop}, \textit{Statistics and Summarization}, \textit{Time Based} itd. W zastosowanej metodologi 0\% oznacza brak dopasowania, 100\% oznacza dopasowanie całkowite.  Kolorowanie komórek wskazuje jakość wyników w danej kategorii: kolory są dobrane liniowo od 0\% do 50\% - kolor czerwony, od 50\% do 100\% kolor zielony. 
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{images/fig/similarity_eval.png}
 \vspace*{-8mm}
-\caption{Ewaluacja wyników RAG v1, RAG v2, Graph RAG dla grup pytań popraz \textit{embedding similarity}.}
+\caption{Ewaluacja wyników RAG v1, RAG v2, Graph RAG dla grup pytań poprzez \textit{embedding similarity}.}
 \label{fig:similarity_eval}
 \end{figure}
-Grupa pytań zaklasyfikowana jako Free Form/Natural Language Style została oceniona dużo gorzej niż pozostałe dla wszystkich rodzajów rozwiązań. Jest to dość logiczne, ponieważ w przypadku pytań otwartych z niejednoznaczną poprawną odpowiedziom trudno jest sprawdzić w ten sposób poprawność danych. Do oceny tego typu pytań najlepsza będzie analiza ekspercka aby jednoznacznie osądzić czy odpowiedzi są poprawne czy nie. 
+Analizując poszczególne kategorie można wysnuć następujący wniosek: RAG\_v1 i RAG\_v2 mają podobne średnie, ale różnią się w poszczególnych typach pytań. RAG\_v1 lepiej radzi sobie w zadaniach typu \textit{Free Form/Natural Language} oraz \textit{Superlative Questions }niż RAG\_v2. RAG\_v2 jest wyraźnie lepszy niż RAG\_v1 w zadaniach typu  \textit{Multi Hop Questions} oraz \textit{Aggregation questions. }
 
+GraphRAG osiąga o prawie 20 p.p. więcej na całości niz RAG\_v1 i RAG\_v2, przewaga GraphRAG  nie jest rozłożona równomiernie. GraphRAG radzi sobie najlepiej, zwłaszcza tam, gdzie wymagane jest łączenie relacji, hierarchii lub zależności czasowych, czyli kategoriach takich jak: \textit{Aggregation Questions}, \textit{Time Based Questions}, \textit{Challenging/Edge Case Questions}. 
 
+Wszystkie metody radzą sobie dobrze z kategoriami \textit{Basic Factual Questions, Aggregation Questions, Comparative Questions, Range \& Filtering Questions. }
+
+Grupa pytań zaklasyfikowana jako \textit{Free Form/Natural Language Style} została oceniona dużo gorzej niż pozostałe dla wszystkich rodzajów rozwiązań. Jest to dość logiczne, ponieważ w przypadku pytań otwartych z niejednoznaczną poprawną odpowiedziom trudno jest sprawdzić w ten sposób poprawność danych. Do oceny tego typu pytań najlepsza będzie analiza ekspercka aby jednoznacznie osądzić czy odpowiedzi są poprawne czy nie. 
+
+Warto podkreślić, że wykorzystanie\textit{ embedding similarity} jako automatycznej metody oceny jakości odpowiedzi, choć bardzo praktyczne i skalowalne, nie jest pozbawione ograniczeń. Miara ta nie zawsze potrafi jednoznacznie wychwycić poprawność semantyczną odpowiedzi – na przykład gdy dwa zdania są równoważne znaczeniowo, lecz różnią się konstrukcją, lub odwrotnie: mają wysokie podobieństwo embeddingów, ale faktycznie przekazują odmienne treści. Pomimo tych ograniczeń, metoda ta pozostaje niezwykle użyteczna, ponieważ umożliwia całkowicie automatyczną, powtarzalną i niezależną od człowieka ocenę na dużą skalę, co jest szczególnie cenne przy porównywaniu wielu modeli i tysięcy zapytań.
+
+Podsumowując, wyniki potwierdzają przewagę metod grafowych nad klasycznym RAG w zakresie złożonego rozumowania oraz analiz wymagających łączenia informacji z wielu źródeł. Jednocześnie automatyczna ocena embeddingowa, mimo swojej niedoskonałości, stanowi efektywne narzędzie do szybkiej i globalnej oceny jakości generowanej odpowiedzi, zapewniając spójny i praktyczny sposób porównywania systemów w dużej liczbie kategorii zadań.
 
 \subsubsection{Analiza z użyciem LLM}
 %! \subsubsubsection{Analiza z użyciem LLM}
 Automatyczne analiza poprawności odpowiedzi przeprowadzona przez OpenAI GPT-4.1.\\
-\textcolor{red}{\textit{TODO: napisać ...}}
 
-analiza dla grup pytań z użyciem OpenAI GPT-4.1
+W przypadku analizy przy użyciu LLM nie została zastosowana metoda zliczania „zwycięstw” modeli, którą została wykorzystana wcześniej w analizie embeddingowej. W analizie przy użyciu LLM bardzo często pojawiały się sytuacje, w których różne narzędzia otrzymywały identyczną ocenę, co prowadziło do licznych remisów. W efekcie wskaźnik liczby zwycięstw przestawał być rozróżniający i nie odzwierciedlał realnych różnic pomiędzy metodami, z tego powodu w tym podrozdziale zrezygnowano z jego stosowania.
+
+Poniżej znajduje się tabela \ref{tab:4} za pomocą, której przedstawione są średnie wyniki poprawności odpowiedzi. Średni wynik poprawności odpowiedzi  RAG v1 i RAG v2 to 44\%, średni  Graph RAG wynosi 79\%.  Metoda Graph RAG uzyskała wynik o 35 p.p. lepszy niż pozostałe metody. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+  \hline 
+    \multicolumn{3}{|c|} {Średni wynik poprawności odpowiedzi} \\
+  \hline 
+    RAG v1& RAG v2 & Graph RAG\\
+  \hline
+    44\%& 44\%& 79\%\\
+  \hline
+\end{tabular} 
+\caption{Średni wynik poprawności odpowiedzi per narzędzie.}
+\label{tab:4}
+\end{table}
+
+Tabela \ref{tab:5} zawiera medianę z oceny poprawności odpowiedzi poszczególnych metod. Mediany metod RAG V1 oraz RAG V2 są na podobnym poziomie około 30\%.  Mediana metody  Graph RAG wynosi 100\%. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+  \hline 
+    \multicolumn{3}{|c|} {Mediana} \\
+  \hline 
+    RAG v1& RAG v2 & Graph RAG\\
+  \hline
+    30\%& 31,50\%& 100\%\\
+  \hline
+\end{tabular} 
+\caption{Mediana wyników z }
+\label{tab:5}
+\end{table}
+
+Analizując powyższe tabele \ref{tab:4} oraz  \ref{tab:5} możemy zauważyć, że metody RAG v1 oraz RAG v2 mają wyższą średni niż medianę, co oznacza, że kilka wyników znacząco zawyża średnią. Powyższą tezę możemy potwierdzić analizując histogramy metod RAG v1 oraz RAG v2, które znajdują się odpowiednio na rysunku \ref{fig:llm_hist_rag_v1} oraz \ref{fig:llm_hist_rag_v2}. Histogram to graficzne przedstawienie danych ilościowych, składające się z prostokątnych słupków. Każdy słupek reprezentuje przedział wartości, a jego wysokość odpowiada liczbie obserwacji w tym przedziale.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{images/fig/llm_hist_rag_v1.png}
+    \caption{Enter Caption}
+    \label{fig:llm_hist_rag_v1}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{images/fig/llm_hist_rag_v2.png}
+    \caption{Enter Caption}
+    \label{fig:llm_hist_rag_v2}
+\end{figure}
+Analizując powyższe wykresy łatwo zauważyć, że największe słupki są przy wartościach 0 oraz 1, czyli metody  RAG v1 oraz RAG v2 najwięcej mają odpowiedzi błędnych i prawidłowych. 
+
+Metoda Graph RAG ma medianę wynoszącą 100\% i średnią wynoszącą 79\%, co oznacza, że większość odpowiedzi jest prawidłowa, a kilka odpowiedzi zaniża wynik. Potwierdzenie tego znajduje się poniżej na histogramie na rysunku \
+\ref{fig:llm_hist_Graphrag}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{images/fig/llm_hist_Graphrag.png}
+    \caption{Enter Caption}
+    \label{fig:llm_hist_Graphrag}
+\end{figure}
+Analizując powyższy histogram można zauważyć, że Graph RAG poprawnie odpowiedział na większość pytań i jest dość uniwersalny. Kolejnym krokiem będzie przyjrzenie się, w których zadania popełnił błędy. 
+
+Podobnie jak w rozdziale dotyczącym analizy z zastosowaniem embeddingów, przejdziemy teraz do rozkładu wyników per grupy. Zastosowany podział jest ten sam  co w poprzednim rozdziale.  Na poniższym rysunku \ref{fig:gpt_eval} znajduje się średnia ocena poprawności per grupa dla każdego narzędzia. W wierszach znajdują się grupy pytań, kolumny to zastosowane metody. 
+
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{images/fig/gpt_eval.png}
 \vspace*{-8mm}
@@ -1519,19 +1559,60 @@ analiza dla grup pytań z użyciem OpenAI GPT-4.1
 \label{fig:gpt_eval}
 \end{figure}
 
+Analizując powyższą tabelę można wysunąć następujący wniosek: metoda RAG\_v1 oraz RAG\_v2  radzi sobie dobrze w zadaniach takich jak \textit{Basic Factual Questions, Comparative Questions, Actor focused Question, Aggregation Questions} oraz \textit{Directon focused Question}. Oznacza to, że klasyczny RAG radzi sobie dobrze w zadaniach wymagających jednego, prostego dopasowania informacji, ale traci skuteczność, gdy konieczne jest łączenie wielu fragmentów wiedzy. 
 
+Graph RAG poradził sobie dobrze w większości typów zadań.  Szczególną różnicę między Graph a RAG\_1 oraz RAG\_v2 widać w zadaniach typu Superlative Questions, Multi Hop Questions, Time based Questions oraz Reasoning Questions. Najbardziej wyraźne różnice pojawiają się w obszarach wymagających złożonego rozumowania, takich jak zadania multi-hop, pytania o charakterze analitycznym, problemy związane z czasem, liczebnością czy statystyką. Podobne wnioski zawarte są w pracy  \textit{Retrieval-Augmented Generation with Graphs (GraphRAG)}, której autorzy wskazują, że GraphRAG lepiej radzi sobie w zadaniach wymagających relacyjnej struktury i logicznego połączenia informacji \cite{graphRAG}. 
 
-
-
-
-
+Warto zauważyć również, że wyniki między analizą embeddingową a analizą z zastosowaniem LLM różnią na poszczególnych grupach. LLM skupił się na analizie faktologicznej oraz czy zawarte informację są prawidłowe. 
 
 \subsubsection{Analiza przeprowadzona przez człowieka}
 %! \subsubsubsection{Analiza przeprowadzona przez człowieka}
 Ręczna analiza poprawności odpowiedzi przeprowadzona przez człowieka.\\
-\textcolor{red}{\textit{TODO: napisać ...}}
+
+
+W przypadku analizy eksperckiej nie została zastosowana metody zliczania „zwycięstw” modeli, którą została wykorzystana wcześniej w analizie embeddingowej. W analizie eksperckiej bardzo często pojawiały się sytuacje, w których różne narzędzia otrzymywały identyczną ocenę, co prowadziło do licznych remisów. W efekcie wskaźnik liczby zwycięstw przestawał być rozróżniający i nie odzwierciedlał realnych różnic pomiędzy metodami, z tego powodu w tym podrozdziale zrezygnowano z jego stosowania.
+
+Poniżej znajduje się  \ref{tab:6}, w której zawarty jest średni wynik wskazujący poprawność odpowiedzi. Metoda RAG\_v1 oraz RAG\_v2 uzyskały odpowiedzi na poziomie około 55\%. Metoda Graph RAG uzyskała odpowiedź na poziomie 87\%. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+  \hline 
+    \multicolumn{3}{|c|} {Średni wynik poprawności odpowiedzi} \\
+  \hline 
+    RAG v1& RAG v2 & Graph RAG\\
+  \hline
+    53\%& 57\%& 87\%\\
+  \hline
+\end{tabular} 
+\caption{Średni wynik podobieństwa do odpowiedzi oczekiwanej}
+\label{tab:6}
+\end{table}
+
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+  \hline 
+    \multicolumn{3}{|c|} {Mediana} \\
+  \hline 
+    RAG v1& RAG v2 & Graph RAG\\
+  \hline
+    53,5\%& 72,2\%& 100\%\\
+  \hline
+\end{tabular} 
+\caption{Mediana wyników podobieństwa do odpowiedzi oczekiwanej}
+\label{tab:7}
+\end{table}
+
+
+
 
 analiza dla grup pytań przeprowadzona przez człowieka
+
+
+
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{images/fig/human_eval.png}
 \vspace*{-8mm}
@@ -1555,6 +1636,11 @@ Praca skupi się na analizie, jak te dwa podejścia mogą wzajemnie się uzupeł
 a także na identyfikacji konkretnych scenariuszy aplikacyjnych, w których ich integracja jest szczególnie korzystna.
 }
 
+Podsumowując, analiza tabeli potwierdza, że GraphRAG znacząco rozszerza możliwości klasycznych systemów RAG, szczególnie w zadaniach wymagających bardziej strukturalnego podejścia do wiedzy. W kontekście złożonych pytań i kategorii operujących na relacjach, związkach czasowych lub danych liczbowych, metoda grafowa okazuje się nie tylko bardziej precyzyjna, ale również zdecydowanie bardziej stabilna i konsekwentna niż tradycyjne podejścia oparte wyłącznie na wyszukiwaniu podobnych fragmentów.
+
+
+
+W artykule \textit{Retrieval-Augmented Generation with Graphs (GraphRAG)} znajduje sie porównanie obud metod. 
 
 \section{Podsumowanie}
 \textcolor{red}{\textit{TODO: napisać ...}}
