@@ -389,29 +389,33 @@ Integracja wielkich modeli językowych (LLM) z grafami wiedzy (KG) stanowi obecn
 Współczesne podejścia do konstrukcji grafów wiedzy (KG) coraz częściej wykorzystują potencjał wielkich modeli językowych (LLM), które dzięki zdolności do rozumienia kontekstu i generowania semantycznych reprezentacji tekstu, umożliwiają automatyczne wydobywanie wiedzy z nieustrukturyzowanych danych. Podczas konstrukcji grafu, model językowy wykonuje następujące akcje (przy czym każdą może wykonać pojedynczo -- osobne prompty, może dwie lub więcej wykonać w tym samym poleceniu, a może też te wszystkie zadania dostać do wykonania jednocześnie w jednym prompcie):
 \begin{itemize}
     \item \textbf{rozpoznawania encji} (ang. Named Entity Recognition, NER) -- automatyczne identyfikowanie, w danych podanych w prompcie, nazw własnych lub istotnych pojęć np. osób, organizacji czy terminów naukowych. 
-    Przykładowy propmt: \textit{„\textcolor{red}{TODO:}”}
+    Przykładowy propmt: \textit{„Zidentyfikuj wszystkie encje występujące w poniższym tekście i podziel je na kategorie: osoby, organizacje, lokalizacje, obiekty, terminy naukowe. Tekst: \{text\}”}
     
     \item \textbf{rozpoznawania relacji} (ang. Relation Extraction, RE) -- wykrywanie semantycznych zależności między wcześniej rozpoznanymi encjami.
-    Przykładowy propmt: \textit{„\textcolor{red}{TODO:}”}
+    Przykładowy propmt: \textit{„Na podstawie podanych zdań wskaż wszystkie relacje semantyczne zachodzące pomiędzy rozpoznanymi encjami. Zwróć wyniki w formie: \textup{(}encja1, typ\_relacji, encja2\textup{)}. Tekst: \{text\}”}
     
     \item \textbf{rozwiązywania koreferencji} (ang. Corefernce Resolution, CR) -- identyfikacja przypadków, gdy do opisu encji używa się zaimków osobowych (np. ona, on) lub dzierżawczych (np. jej, jego).
-    Przykładowy propmt: \textit{„\textcolor{red}{TODO:}”}
+    Przykładowy propmt: \textit{„W poniższym tekście wskaż wszystkie przypadki koreferencji i określ, do których encji odnoszą się zaimki osobowe i dzierżawcze. Wynik przedstaw w formie mapowania: zaimek - encja. Tekst: \{text\}”}
     
     \item \textbf{generowania trójek wiedzy} (h, r, t) -- reprezentacja faktów w postaci trójek: head (h) - encja początkowa, relation (r) - typ relacji, oraz tail (t) - encja docelowa.
-    Przykładowy propmt: \textit{„\textcolor{red}{TODO:}”}
+    Przykładowy propmt: \textit{„Na podstawie poniższego tekstu wygeneruj trójki wiedzy 
+    \textup{(}h, r, t\textup{)}
+    , reprezentujące zawarte w nim fakty. Upewnij się, że każda trójka jest zgodna z kontekstem. Tekst: \{text\}”}
 \end{itemize}
 
 Taką konstrukcją grafu, gdzie wszystkie akcje są oczekiwane od LLM w pojedynczym prompcie, zajmuje się np. metoda \textbf{AutoKG} \cite{kg:autoKG}. Wykorzystuje ona LLM do generowania trójek wiedzy na podstawie promptów zaprojektowanych pod konkretną wiedzę dziedzinową np. medyczną, techniczną czy encyklopedyczną. 
 Metoda ta nie wymaga wcześniej zbudowanej ontologii, stąd słowo „Auto” (pol. automatyczny) w nazwie metody. 
 Metoda ta świetnie nadaje się do zastosowań w systemach eksperckich, rekomendacji czy systemach pytanie - odpowiedź (ang. question answering, QA), gdzie użytkownik nie musi mieć technicznych zdolności do zbudowania ontologii czy innej oczekiwanej struktury danych, wystarczy że opisze w prompcie na jakich informacjach LLM powinien się skupić. 
-Przykładowy propmt: \textit{„\textcolor{red}{TODO:}”}
+Przykładowy propmt: \textit{„Na podstawie poniższego tekstu wygeneruj kompletne trójki wiedzy \textup{(}h, r, t\textup{)} dotyczące kluczowych pojęć z danej dziedziny. Wykonaj jednocześnie: rozpoznawanie encji, identyfikację relacji, rozwiązywanie koreferencji oraz ekstrakcję faktów. Zwróć wynik w formacie:
+\textup{(}h, r, t\textup{)}; \textup{(}h, r, t\textup{)}; ...
+Tekst: \{text\}”}
 
 Inne sposób prezentuje metoda \textbf{Grapher} \cite{kg:grapher}, w której LLM przetwarza tekst wieloetapowo. Najpierw identyfikuje pojedyncze encje, a następnie dedykowany moduł konstruuje relacje między nimi, a więc wykorzystuje różne prompty do wykonania różnych akcji. Podobnie jak AutoKG, tworzy to zintegrowany proces przetwarzania (tak zwany end-to-end pipeline), który nie wymaga ręcznego identyfikowania encji, koreferencji i relacji przez człowieka.
 
-Dwie poprzednie metody bazują na już użyciu już wytrenowanego LLM, natomiast \textbf{COMET} (\textbf{COM}mons\textbf{E}nse \textbf{T}ransformers) \cite{kg:comet}, prezentuje całkowicie odmienne podejście, ponieważ zakłada wytrenowanie nowego generatywnego modelu opartego na architekturze transformera.
-W przeciwieństwie do innych powszechnych transformerów, takich jak GPT-4, jego celem nie jest generowanie odpowiedzi w języku naturalnym, lecz generowanie „zdroworozsądkowych trójek wiedzy” (ang. commonsense knowledge triples) - czyli struktur opisujących codzienne zależności między zdarzeniami, intencjami, emocjami i skutkami. 
-Przykładowy propmt: \textit{„\textcolor{red}{TODO:}”} i wygenerowane trójki: \textit{„\textcolor{red}{TODO:}”}.
-Co ciekawe COMET został wytrenowany na wcześniej już wspominanych źródłach danych \textbf{ConceptNet} \cite{kg:conceptnet} oraz \textbf{ATOMIC} \cite{kg:ATOMIC}. 
+% Dwie poprzednie metody bazują na już użyciu już wytrenowanego LLM, natomiast \textbf{COMET} (\textbf{COM}mons\textbf{E}nse \textbf{T}ransformers) \cite{kg:comet}, prezentuje całkowicie odmienne podejście, ponieważ zakłada wytrenowanie nowego generatywnego modelu opartego na architekturze transformera.
+% W przeciwieństwie do innych powszechnych transformerów, takich jak GPT-4, jego celem nie jest generowanie odpowiedzi w języku naturalnym, lecz generowanie „zdroworozsądkowych trójek wiedzy” (ang. commonsense knowledge triples) - czyli struktur opisujących codzienne zależności między zdarzeniami, intencjami, emocjami i skutkami. 
+% Przykładowy propmt: \textit{„\textcolor{red}{TODO:}”} i wygenerowane trójki: \textit{„\textcolor{red}{TODO:}”}.
+% Co ciekawe COMET został wytrenowany na wcześniej już wspominanych źródłach danych \textbf{ConceptNet} \cite{kg:conceptnet} oraz \textbf{ATOMIC} \cite{kg:ATOMIC}. 
 
 Wykorzystanie wielkich modeli językowych do tworzenia grafów wiedzy jest bardziej pożądane lub wręcz wymagane w sytuacjach, gdy zadanie ekstrakcji wiedzy wymaga głębokiego rozumienia semantycznego, rozpoznawania złożonych relacji, rozwiązywania koreferencji lub interpretacji wiedzy niejawnej i nieustrukturyzowanej. Przykładowo, w domenach takich jak medycyna, prawo czy nauki społeczne, gdzie teksty zawierają subtelne zależności i wieloznaczności, LLM dzięki swojej zdolności do uogólniania i rozumowania na poziomie kontekstowym jest w stanie takie szczegóły uwzględniać podczas generowania odpowiedzi \cite{kgllm:construction}.
 
