@@ -375,6 +375,7 @@ Innym bardzo popularnym zastosowaniem LLM są chatboty takie jak OpenAI ChatGPT,
 Integracja wielkich modeli językowych (LLM) z grafami wiedzy (KG) stanowi obecnie jedno z najbardziej obiecujących podejść w dziedzinie sztucznej inteligencji. LLM oferują zdolność do przetwarzania języka naturalnego, natomiast KG zapewniają strukturalną, precyzyjną i interpretowalną reprezentację wiedzy. W niniejszym rozdziale przedstawiono analizę wybranych metod łączenia tych dwóch technologii (zaproponowanych w pracy \textit{Unifying Large Language Models and Knowledge Graphs: A Roadmap} (2024) \cite{graph:llm:roadmap}).
 
 \subsubsection{Tworzenie KG przy pomocy LLM} % (5.3)
+\label{kgllm:construction}
 
 Współczesne podejścia do konstrukcji grafów wiedzy (KG) coraz częściej wykorzystują potencjał wielkich modeli językowych (LLM), które dzięki zdolności do rozumienia kontekstu i generowania semantycznych reprezentacji tekstu, umożliwiają automatyczne wydobywanie wiedzy z nieustrukturyzowanych danych. Podczas konstrukcji grafu, model językowy wykonuje następujące akcje (przy czym każdą może wykonać pojedynczo -- osobne prompty, może dwie lub więcej wykonać w tym samym poleceniu, a może też te wszystkie zadania dostać do wykonania jednocześnie w jednym prompcie):
 \begin{itemize}
@@ -650,6 +651,8 @@ przedstawienie i przetestowanie różnych możliwości wykorzystania grafów wie
 rozdizal wstepu, co wybralem, dlaczego, jakie problemy rozwiazuje, co chce osiągnąć, znalezc odp na pyt w jakich obszarach rynku moze sie okazac uzyteczne?, 
 }
 
+
+
 \subsection{Opis zbioru danych (dane o filmach)}
 
 \textcolor{red}{\textit{TODO:}\\
@@ -671,19 +674,18 @@ No of rating votes: 2343110
 Gross revenue: 28341469
 \end{codestyle}
 
-Dane tekstowe w takim formacie (etykieta: wartość) nadają się do wysłania w zapytaniu do LLM, ponieważ minimalizują możliwość błędnej interpretacji wartości.
+Dane tekstowe w takim formacie (etykieta: wartość) nadają się do wysłania w zapytaniu do LLM, ponieważ minimalizują możliwość błędnej interpretacji wartości (np. dla nazwy filmu z powyższego przykładu: etykieta to „Movie name”, a wartość to „The Shawshank Redemption”).
 
-Dane te symulują przypadek, gdy przeprowadzony zostanie web scraping (programowe,\linebreak{} algorytmiczne odczytywanie informacji ze stron internetowych) danych z serwisów filmowych typu Filmweb, IMDB. Dane w analogiczny sposób można wydobyć z plików pdf, czy nawet filmów (przy czym dla filmów jest to zadanie znacznie bardziej skomplikowane, wymagające dużej mocy obliczeniowej i czasu działania oraz ze względu na proces transkrypcji -- bardzo podatne na błędy identyfikacji słów czy wyrażeń). W niniejszej pracy krok ten nie jest wykonywany (a jego wynik jest symulowany w wyżej opisany sposób), ponieważ nie jest on przedmiotem badania tej pracy i nie jest wymagany do jej realizacji.
-
-Tekst z wybranego zbioru jest w języku angielskim, dlatego też dane te są dalej etykietowane w tym języku i w nim też będą odbywały się zapytania. W związku z tym należy zaznaczyć, że zarówno modele LLM jak i modele wektoryzujące są w znacznej większości trenowane na danych anglojęzycznych co ma znaczący wpływ na jakość i dokładność ich odpowiedzi. Należy zatem odnotować, że rozważane badania RAG vs Graph RAG są najlepszym wariantem danych wejściowych dla modeli LLM i wektoryzujących.
+Tekst z wybranego zbioru jest w języku angielskim, dlatego też dane te są dalej etykietowane w tym języku i w nim też będą odbywały się zapytania. W związku z tym należy zaznaczyć, że zarówno modele LLM jak i modele wektoryzujące są w znacznej większości trenowane na danych anglojęzycznych co ma znaczący wpływ na jakość i dokładność ich odpowiedzi. 
+% Należy zatem odnotować, że rozważane badania RAG vs Graph RAG są najlepszym wariantem danych wejściowych dla modeli LLM i wektoryzujących.
 
 \subsection{Wybrany LLM}
 
 Do realizacji algorytmów RAG i Graph RAG wybrany został jeden z najbardziej zaawansowanych wielkich modeli językowych w czasie realizacji tej pracy -- OpenAI GPT-4.1. Dostępny za darmo z limitem 250 tys. tokenów dziennie, pod warunkiem udzielenia przez użytkownika zgody, by OpenAI miało dostęp do jego zapytań i odpowiedzi LLM.
 
-W toku rozwoju pracy używane też były inne modele (Llama 3, Llama 3.1, Gemma2) z bazy publicznie dostępnych modeli LLM (Ollama) i używane one były na komputerze lokalnie. Niestety dostępny komputer nie był w stanie obsłużyć modeli większych niż 7B (7 miliardów aktywnych parametrów), co sprawiało że odpowiedzi LLM były niewystarczające (np. w przypadku tak trudnego zadania jak napisanie zapytania do bazy Neo4j w języku Cypher, gdzie owe „małe” modele często tworzyły zapytania nie dające poprawnych odpowiedzi z bazy). Zadecydowało to o tym, iż nie są one reprezentatywnym przykładem LLM do przedstawienia w tej pracy. W związku z tym warte odnotowania jest, iż o ile takie modele nie nadają się do tworzenia np. zapytań do bazy, to mogą okazać się wystarczające do wygenerowania finalnej odpowiedzi, w ostatnim etapie gdzie są już wyszukane dane (o ile cały dostarczony kontekst zmieści się w maksymalnej liczbie tokenów wejściowych dla tego modelu).
+W toku rozwoju pracy używane też były inne modele (Llama 3, Llama 3.1, Gemma2) z bazy publicznie dostępnych modeli LLM (Ollama) i używane one były na komputerze lokalnie. Niestety dostępny komputer nie był w stanie obsłużyć modeli większych niż 7B (7 miliardów aktywnych parametrów), co sprawiało że odpowiedzi LLM były niewystarczające (np. w przypadku tak trudnego zadania jak napisanie zapytania do bazy Neo4j w języku Cypher, gdzie owe „małe” modele często tworzyły zapytania nie dające poprawnych odpowiedzi z bazy). Zadecydowało to o tym, iż nie są one reprezentatywnym przykładem LLM do przedstawienia w tej pracy, ponieważ nie reprezentują pełnych możliwości modeli LLM i sztucznie zaniżałyby wyniki działania metody. Niemniej jednak warte odnotowania jest, iż o ile takie modele nie nadają się do tworzenia np. zapytań do bazy, to mogą okazać się wystarczające do wygenerowania finalnej odpowiedzi, w ostatnim etapie (\textit{augmented generation}) gdzie zostały już wyszukane dane (o ile cały dostarczony kontekst zmieści się w maksymalnej liczbie tokenów wejściowych dla tego modelu).
 
-\newpage
+% \newpage
 \begin{python}
 from langchain_openai import ChatOpenAI
 
@@ -707,13 +709,12 @@ gpt4 = ChatOpenAI(
 )
 \end{python}
 
-Na wybranym fragmencie kodu widać, jak zostały utworzone połączenia do modeli\linebreak{} GPT-4.1 i Llama 3.1. Ważny jest tutaj parametr \textit{temperature}, który to kontroluje losowość lub „kreatywność” wyników modelu i przyjmuje wartości z zakresu 0.0 do 1.0. Niższa temperatura skutkuje bardziej przewidywalnymi i ukierunkowanymi reakcjami, podczas gdy wyższa temperatura sprzyja bardziej zróżnicowanym i potencjalnie kreatywnym wynikom. Parametr ten został ustawiony na wartość 0, ponieważ w niniejszej pracy zależy nam, żeby model dokładnie wykonywał instrukcje i korzystał z wiedzy, którą dostarczamy w procesie \textit{augmentation}.
+Powyższy fragment kodu prezentuje, jak zostały utworzone połączenia do modeli\linebreak{} GPT-4.1 i Llama 3.1. Ważny jest tutaj parametr \textit{temperature}, który kontroluje losowość lub „kreatywność” wyników modelu i przyjmuje wartości z zakresu 0.0 do 2.0. Niższa temperatura skutkuje bardziej przewidywalnymi odpowiedziami, podczas gdy wyższa temperatura sprzyja bardziej zróżnicowanym i potencjalnie kreatywnym wynikom \cite{openai:temperature}. Parametr ten został ustawiony na wartość 0, ponieważ w niniejszej pracy zależy nam, żeby model dokładnie wykonywał instrukcje i korzystał z wiedzy, którą dostarczamy w procesie \textit{augmentation}.
 
 
 % \subsubsection{LLM Chains: koncepcja i przykłady zastosowania}
 
 % TODO: tutaj zmienić żeby pasowało
-
 
 % Mimo, że rozwój modeli językowych pozwolił na wykorzystanie ich do skomplikowanych zadań, nadal problem stanowi zachowanie kontekstu w długich tekstach. Rozwiązaniem tego problemu jest zastosowanie LLM Chain, czyli koncepcji, która realizuje złożone zadania przez podział na mniejsze etapy. Każdy z etapów obsługiwany jest przez odpowiednio przystosowany LLM. To podejście pozwala na zwiększenie precyzji i skuteczności przetwarzania złożonych zapytań \cite{llm_chains}.
 
@@ -756,15 +757,15 @@ Na wybranym fragmencie kodu widać, jak zostały utworzone połączenia do model
 
 \subsubsubsection{Grafowa baza danych -- Neo4j}
 
-W pracy wykorzystujemy grafową bazę danych Neo4j, ponieważ zapewnia ona funkcjonalności niezbędne do realizacji podejścia Graph RAG. U podstaw baza ta przechowuje dane w postaci węzłów i krawędzi opisujących relacje pomiędzy elementami wiedzy. Umożliwia to tworzenie i eksplorowanie grafów wiedzy, które są znacznie lepiej dostosowane do reprezentowania powiązań semantycznych niż tradycyjne bazy relacyjne czy wektorowe.
+W pracy wykorzystujemy grafową bazę danych Neo4j, ponieważ zapewnia ona funkcjonalności niezbędne do realizacji podejścia Graph RAG. U podstaw baza ta przechowuje dane w postaci węzłów i krawędzi opisujących relacje pomiędzy elementami wiedzy. Umożliwia to tworzenie i eksplorowanie grafów wiedzy, które są znacznie lepiej dostosowane do reprezentowania powiązań relacyjnych niż tradycyjne bazy SQL czy wektorowe.
 Podstawowa funkcjonalność Neo4j opiera się na zapytaniach w języku Cypher, który umożliwia wyszukiwanie informacji w kontekście relacji pomiędzy węzłami. 
 
-Podobnie jak opisana wcześniej baza Pinecone tak i ta baza oferuje wiele dodatkowych funkcjonalności takich jak skalowalność czy bezpieczeństwo danych i dostępu do nich. W tej pracy nie korzystamy z nich, lecz w komercyjnej realizacji projektu byłby niezwykle istotne. 
+Baza ta oferuje wiele dodatkowych funkcjonalności takich jak skalowalność czy bezpieczeństwo danych i dostępu do nich. W tej pracy nie korzystamy z nich, lecz w komercyjnej realizacji projektu byłby niezwykle istotne. 
 
 
 \subsubsubsection{Implementacja ekstrakcji obiektów i relacji do grafu}
 
-Zbudowane rozwiązanie jest autorską implementacją, jendak należy zaznaczyć, iż inspirowana była metodą \textbf{AutoKG} \cite{kg:autoKG}, uprzednio przedstawianą w niniejszej pracy.
+Zbudowane rozwiązanie jest autorską implementacją, jendak należy zaznaczyć, iż inspirowane było metodą \textbf{AutoKG} \cite{kg:autoKG}, przedstawianą w rozdziale \ref{kgllm:construction}.
 
 Implementację zaczynamy od stworzenia połączenia do bazy Neo4j - obiekt \pythoninline{graph}.
 
@@ -856,17 +857,22 @@ def llm_extract_graph(llm, document_list, graph:Neo4jGraph)-> List[GraphDocument
 
 \end{python}
 
-Funkcja \pythoninline{llm_extract_graph(...)} dla danej listy dokumentów używa LLM, by wyekstrahować obiekty i relacje wynikające z zawartości danych tekstowych. W tym celu tworzymy obiekt \pythoninline{LLMGraphTransformer}, który wewnątrz jest prostym LLM chain i na podstawie domyślnego promptu i podanych przez nas dodatkowych instrukcji oraz wcześniej opisanych dozwolonych obiektów, właściwości i relacji, poprzez wywołanie metody \linebreak{}\pythoninline{convert_to_graph_documents(...)} tworzy odpowiednie elementy (dokumenty grafowe) możliwe do zapisania w bazie. 
+Funkcja \pythoninline{llm_extract_graph} dla danej listy dokumentów (\pythoninline{document_list}) używa LLM, by wyekstrahować z ich treści obiekty i relacje. 
+W tym celu tworzymy obiekt \linebreak{}\pythoninline{LLMGraphTransformer}, który przyjmuje parametry takie jak dodatkowe instrukcje ekstracji oraz wcześniej opisane dozwolone obiekty, właściwości i relacje. 
+Wywołując na tym obiekcie metodę \pythoninline{convert_to_graph_documents} utworzone zostają odpowiednie obiekty i relacje do zapisania w bazie Neo4j. 
 
-W tym procesie może się zdarzyć, że wygenerowane nazwy obiektów czy relacji mogą zawierać dodatkowy znak ( \pythoninline{`} - odwrotny apostrof), dlatego dla każdego dokumentu grafowego usuwamy te znaki z nazw, jeśli występują. Dodatkowo z dokumentów grafowych usuwamy treść dokumentu źródłowego (\pythoninline{graph_document.source.page_content}), ponieważ w bazie Neo4j dane te chcemy mieć w postaci grafowej i nie potrzebujemy dodatkowo tekstu źródłowego.
+W procesie ekstrakcji może się zdarzyć, że wygenerowane nazwy obiektów czy relacji mogą zawierać dodatkowy znak ( \pythoninline{`} - odwrotny apostrof), dlatego dla każdego elementu usuwamy te znaki z nazw, jeśli występują. Dodatkowo usuwamy treść dokumentu źródłowego (\pythoninline{graph_document.source.page_content}), ponieważ w bazie Neo4j dane te chcemy mieć w postaci grafowej i nie potrzebujemy dodatkowo tekstu źródłowego.
 
 Finalnie zapisujemy wygenerowane przez LLM elementy grafowe do bazy Neo4j poprzez wywołanie 
-\pythoninline{graph.add_graph_documents(...)}.
+\pythoninline{graph.add_graph_documents}.
+
+\textcolor{red}{\textit{! TODO: [J] obrazek + tekst o wygenerowanym grafie z neo4j}}
 
 \subsubsection{Algorytm Graph RAG}
 % \textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ? co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
 
 \subsubsubsection{Implementacja Graph RAG}
+\textcolor{red}{\textit{! TODO: [J] nie zaczynac od kodu, jakims tekstem zacząć}}
 
 \begin{python}\\
 def process_graph_response(llm:ChatOpenAI, graph:Neo4jGraph, question:str, verbose:bool):
@@ -907,12 +913,21 @@ def process_graph_response(llm:ChatOpenAI, graph:Neo4jGraph, question:str, verbo
         print(f"Error processing graph response: {str(e)}")
 \end{python}
 
-Graph RAG realizuje przedstawiona funkcja \pythoninline{process_graph_response(...)}, dostarczamy jej model -- \pythoninline{llm}, który na podstawie informacji w grafowej bazie danych -- \pythoninline{graph}, ma udzielić odpowiedzi na zadane pytanie -- \pythoninline{question}. Pierwszym i najważniejszym elementem funkcji jest stworzenie obiektu \pythoninline{GraphCypherQAChain}, który to jest algorytmem informującym LLM, jaki jest schemat bazy grafowej tj. jakie są dostępne obiekty, właściwości i relacje, oraz
-instruującym jak zbudować zapytanie w języku Cypher, i również weryfikującym jego poprawność składniową. Etap ten sprawdza czy zapytanie jest poprawnie skonstruowane pod względem uruchomienia, natomiast nie ma niestety pewności czy stworzone zapytanie jest poprawne merytorycznie, czyli czy informacje, o które zapyta LLM będą tymi oczekiwanymi przez użytkownika.
+Graph RAG realizuje przedstawiona funkcja \pythoninline{process_graph_response}, dostarczamy jej model -- \pythoninline{llm}, który na podstawie informacji w grafowej bazie danych -- \pythoninline{graph}, ma udzielić odpowiedzi na zadane pytanie -- \pythoninline{question}. Pierwszym i najważniejszym elementem funkcji jest stworzenie obiektu \pythoninline{GraphCypherQAChain}, który to definiuje 
+
+Ważnymi parametrami tego obiektu są:\\
+%  qa_prompt\\
+%  return_intermediate_steps\\
+%  top_k\\
+
+Wywołując metodę \pythoninline{graph_chain.invoke} uruchamiamy algorytm informującym LLM, jaki jest schemat bazy grafowej tj. jakie są dostępne obiekty, właściwości i relacje, oraz
+instruującym jak zbudować zapytanie w języku Cypher, i również weryfikującym jego poprawność składniową. Etap ten sprawdza czy zapytanie jest poprawnie skonstruowane pod względem składni języka Cypher, natomiast nie ma niestety pewności czy stworzone zapytanie jest poprawne merytorycznie, czyli czy informacje, o które zapyta LLM będą tymi oczekiwanymi przez użytkownika.
 
 
-\subsection{Rozwiązanie RAG -- metody dla porównania wyników z Graph RAG}
-% \textcolor{red}{\textit{? Opis ogólny dodać ? co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
+\subsection{Rozwiązanie RAG}
+
+\textcolor{red}{\textit{Dlaczego rozważam grag i rag\\
+jaki jest cel?}}
 
 \subsubsection{Wektoryzowanie danych tekstowych}
 % \textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ? co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
@@ -1008,7 +1023,7 @@ vector_store = PineconeVectorStore(
 )
 \end{python}
 
-Następnie otwieramy połączenie do Pinecone, by stworzyć bazę wektorową przy pomocy \linebreak{}\pythoninline{pc.create_index(...)} jeśli ta nie istnieje. W kolejnym kroku łączymy się do tej bazy (obiekt \pythoninline{index}), i otwieramy połączenie do wykonywania operacji retrieval poprzez obiekt \linebreak{}\pythoninline{vector_store}.
+Następnie otwieramy połączenie do Pinecone, by stworzyć bazę wektorową przy pomocy \linebreak{}\pythoninline{pc.create_index} jeśli ta nie istnieje. W kolejnym kroku łączymy się do tej bazy (obiekt \pythoninline{index}), i otwieramy połączenie do wykonywania operacji retrieval poprzez obiekt \linebreak{}\pythoninline{vector_store}.
 
 Powyższe definicje wykorzystujemy w implementacji funkcji odpowiedzialnych za wektoryzację danych wejściowych (tekstów z informacjami o filmach) i zapisanie ich w bazie Pinecone. Implementacja ta różni się dla dwóch zaproponowanych rozwiązań: RAG v1 (tylko wyszukiwanie wektorowe na podstawie pytania użytkownika bez dodatkowych metadanych) oraz RAG v2 (dodatkowa możliwość filtrowania danych na podstawie wybranych wartości), i zostały przedstawione w dalszej części tekstu. 
 \newline\null
@@ -1055,7 +1070,7 @@ def create_chunk_embeddings(content, document_name):
     pass
 \end{python}
 
-W tej części kodu najważniejszą funkcją jest \pythoninline{create_chunk_embeddings(...)}, która to przyjmuje treść dokumentu oraz jego nazwę, a wykorzysując \pythoninline{text_splitter} dzieli treść na części (ang. chunk) i zapisuje je na liście do wysłania -- \pythoninline{texts} (zapisuje również nazwę pliku źródłowego w metadanych - \pythoninline{metadataList} - potrzebne w procesie rozwoju metody, w celu łatwiejszej weryfikacji poprawności rozwiązania, nie używany de facto w gotowym rozwiązaniu). Generowanie embeddingu oraz zapis tych danych do bazy Pinecone został przeniesiony do osobnej funkcji \pythoninline{send_embeddings()}, w celu optymalizacji prędkości wykonania. Wykorzystujemy tutaj API OpenAI, które pozwala nam zwektoryzować wiele tekstów naraz (zamiast generować dla każdego chunku tekstu), i analogicznie API Pinecone pozwala nam zapisać do bazy wszystkie te wygenerowane embeddingi oraz dane w jednym żądaniu. Dzięki temu przy wybranej opcji 100 embeddingów naraz (\pythoninline{BATCH_LIMIT}), zamiast co najmniej 1000 (tyle jest plików z danymi) żądań generowania embeddingu oraz zapisu do bazy, wykonujemy 100x mniej, a więc 10 lub więcej zapytań (jeśli jeden plik z danymi został podzielony na części). Sprawia to że generujemy mniej ruchu sieciowego, który dokłada pewien narzut czasowy, ale co ważniejsze usługi te są w stanie nasze żądania np. generacji embeddingu wykonać współbieżnie, co oznacza że wysłane teksty zostaną zwektoryzowane jednocześnie, a nie sekwencyjnie, przez co jeszcze bardziej skracamy czas wykonywania operacji.
+W tej części kodu najważniejszą funkcją jest \pythoninline{create_chunk_embeddings}, która to przyjmuje treść dokumentu oraz jego nazwę, a wykorzysując \pythoninline{text_splitter} dzieli treść na części (ang. chunk) i zapisuje je na liście do wysłania -- \pythoninline{texts} (zapisuje również nazwę pliku źródłowego w metadanych - \pythoninline{metadataList} - potrzebne w procesie rozwoju metody, w celu łatwiejszej weryfikacji poprawności rozwiązania, nie używany de facto w gotowym rozwiązaniu). Generowanie embeddingu oraz zapis tych danych do bazy Pinecone został przeniesiony do osobnej funkcji \pythoninline{send_embeddings()}, w celu optymalizacji prędkości wykonania. Wykorzystujemy tutaj API OpenAI, które pozwala nam zwektoryzować wiele tekstów naraz (zamiast generować dla każdego chunku tekstu), i analogicznie API Pinecone pozwala nam zapisać do bazy wszystkie te wygenerowane embeddingi oraz dane w jednym żądaniu. Dzięki temu przy wybranej opcji 100 embeddingów naraz (\pythoninline{BATCH_LIMIT}), zamiast co najmniej 1000 (tyle jest plików z danymi) żądań generowania embeddingu oraz zapisu do bazy, wykonujemy 100x mniej, a więc 10 lub więcej zapytań (jeśli jeden plik z danymi został podzielony na części). Sprawia to że generujemy mniej ruchu sieciowego, który dokłada pewien narzut czasowy, ale co ważniejsze usługi te są w stanie nasze żądania np. generacji embeddingu wykonać współbieżnie, co oznacza że wysłane teksty zostaną zwektoryzowane jednocześnie, a nie sekwencyjnie, przez co jeszcze bardziej skracamy czas wykonywania operacji.
 \newline\null
 
 \noindent\textbf{Wektoryzacja tekstu w RAG v2}
@@ -1178,7 +1193,7 @@ def process_vector_response(llm, question):
         ...
 \end{python}
 
-RAG v1 realizuje przedstawiona funkcja \pythoninline{process_vector_response(...)}, dostarczamy jej model -- \pythoninline{llm}, który ma udzielić odpowiedzi na zadane pytanie -- \pythoninline{question}. Pierwszym i najważniejszym elementem RAG jest możliwość wydobycia z bazy wektorowej danych, co realizujemy przez obiekt \pythoninline{retriever}. Podajemy mu ustawienia: próg wyniku podobieństwa - 0.5 (czyli oczekujemy że zwróci chunki dla których wynik similarity score wynosi co najmniej 0.5) i maksymalna liczba chunków, którą retriever zwróci - 100. Następnie tworzymy chain \pythoninline{doc_retriever}, który opakowuje wcześniej wspomnianego retrivera o dodatkowe funkcje kompresujące odpowiedź poprzez podział otrzymanych dokumentów na części nie większe niż 3000 tokenów oraz odrzucające teksty które zostaną uznane za redundantne ze względu na podobieństwo wektorowe do innych otrzymanych tekstów. Następnie uruchamiamy \pythoninline{doc_retriever} aby otrzymać dokumenty, które spełnią wszystkie powyższe warunki, dla zadanego pytania użytkownika. 
+RAG v1 realizuje przedstawiona funkcja \pythoninline{process_vector_response}, dostarczamy jej model -- \pythoninline{llm}, który ma udzielić odpowiedzi na zadane pytanie -- \pythoninline{question}. Pierwszym i najważniejszym elementem RAG jest możliwość wydobycia z bazy wektorowej danych, co realizujemy przez obiekt \pythoninline{retriever}. Podajemy mu ustawienia: próg wyniku podobieństwa - 0.5 (czyli oczekujemy że zwróci chunki dla których wynik similarity score wynosi co najmniej 0.5) i maksymalna liczba chunków, którą retriever zwróci - 100. Następnie tworzymy chain \pythoninline{doc_retriever}, który opakowuje wcześniej wspomnianego retrivera o dodatkowe funkcje kompresujące odpowiedź poprzez podział otrzymanych dokumentów na części nie większe niż 3000 tokenów oraz odrzucające teksty które zostaną uznane za redundantne ze względu na podobieństwo wektorowe do innych otrzymanych tekstów. Następnie uruchamiamy \pythoninline{doc_retriever} aby otrzymać dokumenty, które spełnią wszystkie powyższe warunki, dla zadanego pytania użytkownika. 
 
 \begin{python}
         ...
