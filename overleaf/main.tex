@@ -45,7 +45,7 @@ bmargin=2.8cm,
 
 \usepackage[
 backend=biber, 
-sorting=none, 
+sorting=none,
 ]{biblatex}
 \addbibresource{bibliografia.bib} % Import bibliografii
 \DefineBibliographyStrings{polish}{
@@ -57,6 +57,15 @@ urlseen = {dostęp}
   \thefield{urlyear}\isdot
 )}
 
+\usepackage[
+title, 
+titletoc,
+]{appendix}
+
+\addto\captionspolish{%
+  \renewcommand\appendixname{Załącznik}
+  \renewcommand\appendixpagename{Załączniki}
+}
 
 % \newcommand\blankpage{%
 %     \newpage%
@@ -307,7 +316,7 @@ Grafy wiedzy są również obecne w popularnych wyszukiwarkach takich jak Google
     \label{fig:googleBingKGpanel}
 \end{figure}
 
-Panel wiedzy prezentowany w wyszukiwarce Google korzysta z Google Knowledge Graph, rozbudowanego grafu wiedzy, w którym węzłami są encje – osoby, miejsca, obiekty czy pojęcia – a krawędziami relacje opisujące ich wzajemne powiązania. Projekt uruchomiono w 2012 roku, aby umożliwić wyszukiwarce przechodzenie od przetwarzania zapytań jako ciągów znaków do interpretowania ich jako odniesień do konkretnych encji w grafie. Dane zasilające graf pochodzą z wielu źródeł, takich jak Wikipedia, CIA World Factbook czy Freebase, a jego funkcjonalności obejmują m.in. generowanie paneli wiedzy, czy bardziej precyzyjne rozpoznawanie intencji użytkownika, co pozwala na dostarczenie trafniejszych odpowiedzi. Google udostępnia także API KG Search, umożliwiające programistom wyszukiwanie encji w Google Knowledge Graph, oraz umożliwia wykorzystanie tych zasobów w niestandardowych silnikach wyszukiwania. Technologie takie jak Google Knowledge Graph wzbogacają doświadczenie użytkowników, dostarczając kontekstowych informacji zamiast samych odnośników i zwiększając widoczność encji w sieci, co może pozytywnie wpływać na ich wiarygodność i rozpoznawalność \cite{kg:googlekg}.
+Panel wiedzy prezentowany w wyszukiwarce Google korzysta z Google Knowledge Graph, rozbudowanego grafu wiedzy, w którym węzłami są encje -- osoby, miejsca, obiekty czy pojęcia -- a krawędziami relacje opisujące ich wzajemne powiązania. Projekt uruchomiono w 2012 roku, aby umożliwić wyszukiwarce przechodzenie od przetwarzania zapytań jako ciągów znaków do interpretowania ich jako odniesień do konkretnych encji w grafie. Dane zasilające graf pochodzą z wielu źródeł, takich jak Wikipedia, CIA World Factbook czy Freebase, a jego funkcjonalności obejmują m.in. generowanie paneli wiedzy, czy bardziej precyzyjne rozpoznawanie intencji użytkownika, co pozwala na dostarczenie trafniejszych odpowiedzi. Google udostępnia także API KG Search, umożliwiające programistom wyszukiwanie encji w Google Knowledge Graph, oraz umożliwia wykorzystanie tych zasobów w niestandardowych silnikach wyszukiwania. Technologie takie jak Google Knowledge Graph wzbogacają doświadczenie użytkowników, dostarczając kontekstowych informacji zamiast samych odnośników i zwiększając widoczność encji w sieci, co może pozytywnie wpływać na ich wiarygodność i rozpoznawalność \cite{kg:googlekg}.
 
 \subsection{Wielkie modele językowe -- LLM}
 
@@ -461,6 +470,7 @@ Rozwiązanie implementujące to podejście to np. \textbf{Graph RAG} \cite{graph
 
 % \subsubsection{Definicja i koncepcja Graph RAG}
 \subsubsubsection{Definicja i koncepcja Graph RAG}
+\label{sec:defgrag}
 
 Graph RAG (Graph Retrieval-Augmented Generation) to zaawansowane podejście do przetwarzania języka naturalnego, które łączy tradycyjne techniki RAG (Retrieval-Augmented Generation) z wykorzystaniem grafów wiedzy (ang. Knowledge Graphs, KG). Podstawową ideą Graph RAG jest wykorzystanie LLM do wygenerowania zapytania do KG (np. w języku Cypher) w celu otrzymania wiedzy na zadane pytanie, a uzyskane informacje służą za kontekst w prompcie do generowania odpowiedzi. Dzięki temu możliwe jest generowanie bardziej precyzyjnych i kontekstowych odpowiedzi na zapytania użytkowników \cite{graphRAG}.
 
@@ -866,22 +876,52 @@ W procesie ekstrakcji może się zdarzyć, że wygenerowane nazwy obiektów czy 
 Finalnie zapisujemy wygenerowane przez LLM elementy grafowe do bazy Neo4j poprzez wywołanie 
 \pythoninline{graph.add_graph_documents}.
 
-Wygenerowany graf zawiera 4376 obiektów oraz 8528 relacji. Na rysunku \ref{fig:my_graph} zaprezentowano przykładowy podgraf informacji o filmie „The Shawshank Redemption” oraz relacja do innych filmów, w których występował aktor „Morgan Freeman”.
+Wygenerowany graf zawiera 4376 obiektów oraz 8528 relacji. Na rysunku \ref{fig:my_graph} zaprezentowano przykładowy podgraf informacji o filmie „The Shawshank Redemption” oraz relacji do innych filmów, w których występował aktor „Morgan Freeman”.
 
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{images/fig/my_graph.png}
 \vspace*{-8mm}
-\caption{Przykładowy podgraf informacji o filmie „The Shawshank Redemption” oraz relacja do innych filmów, w których występował aktor „Morgan Freeman”.}
+\caption{Przykładowy podgraf informacji o filmie „The Shawshank Redemption” oraz relacji do innych filmów, w których występował aktor „Morgan Freeman”.}
 \label{fig:my_graph}
 \end{figure}
 
 \subsubsection{Algorytm Graph RAG}
-% \textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ? co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
 
 \subsubsubsection{Implementacja Graph RAG}
-\textcolor{red}{\textit{! TODO: [J] nie zaczynac od kodu, jakims tekstem zacząć}}
+
+Graph RAG realizuje, przedstawiona na poniższym fragmencie kodu, funkcja \linebreak{}
+\pythoninline{process_graph_response}. Przyjmuje ona w parametrach model (\pythoninline{llm}), który na podstawie informacji w grafowej bazie danych (\pythoninline{graph}), ma udzielić odpowiedzi na zadane pytanie (\pythoninline{question}). Pierwszym i najważniejszym elementem funkcji jest stworzenie obiektu \pythoninline{GraphCypherQAChain}, który to definiuje parametry dla algorytmu wydobywającego informacje z grafu. 
+
+Ważnym i wymaganym parametrem tego obiektu jest \pythoninline{allow_dangerous_requests}. Twórcy biblioteki informują przez dokumentację do tego parametru programistę, że algorytm może wygenerować niebezpieczne zapytanie, takie jak usunięcie danych z bazy i wymagają świadomego wyrażernia na to zgody. Jednocześnie zalecają, by w związku z tym nadać odpowiednie uprawnienienia na koncie dostępowym do bazy Neo4j, by zapobiec wykonaniu takiego polecenia, jeśli taka jest intencja programisty.
+
+Kolejnum istotmym parametrem jest \pythoninline{qa_prompt}, który to definiuje prompt dla LLM, instruujący jak model ma odpowiedzieć na pytanie użytkownika używając informacji z dołączonego kontekstu.
+
+Parametr \pythoninline{top_k} określa ile maksymalnie obiektów może zwrócić zapytanie w języku Cypher do bazy grafowej. Jego wartość została dobrana na podstawie wielu prób, tak by umożliwić algorytmowi uzyskanie jak najlepszych wyników.
+
+Parametr \pythoninline{return_intermediate_steps} zezwala na to by algorytm zwracał dodatkowo informacje o wygenerowany zapytaniu w języku Cypher oraz otrzymanym na jego podstawie kontekście z bazy Neo4j.
 
 \begin{python}\\
+CYPHER_QA_TEMPLATE = "You are an assistant that helps to form nice and human understandable answers.
+The information part contains the provided information that you must use to construct an answer.
+The provided information is authoritative, you must never doubt it or try to use your internal knowledge to correct it.
+Make the answer sound as a response to the question. Do not mention that you based the result on the given information.
+Here is an example:
+
+Question: Which managers own Neo4j stocks?
+Context:[manager:CTL LLC, manager:JANE STREET GROUP LLC]
+Helpful Answer: CTL LLC, JANE STREET GROUP LLC owns Neo4j stocks.
+
+Follow this example when generating answers.
+Information:
+{context}
+
+Question: {question}
+Helpful Answer:"
+CYPHER_QA_PROMPT = PromptTemplate(
+    input_variables = ["context", "question"], 
+    template=CYPHER_QA_TEMPLATE,
+)
+
 def process_graph_response(llm:ChatOpenAI, graph:Neo4jGraph, question:str, verbose:bool):
     try:
         graph_chain = GraphCypherQAChain.from_llm(
@@ -920,24 +960,15 @@ def process_graph_response(llm:ChatOpenAI, graph:Neo4jGraph, question:str, verbo
         print(f"Error processing graph response: {str(e)}")
 \end{python}
 
-Graph RAG realizuje przedstawiona funkcja \pythoninline{process_graph_response}, dostarczamy jej model -- \pythoninline{llm}, który na podstawie informacji w grafowej bazie danych -- \pythoninline{graph}, ma udzielić odpowiedzi na zadane pytanie -- \pythoninline{question}. Pierwszym i najważniejszym elementem funkcji jest stworzenie obiektu \pythoninline{GraphCypherQAChain}, który to definiuje 
-
-Ważnymi parametrami tego obiektu są:\\
-%  qa_prompt\\
-%  return_intermediate_steps\\
-%  top_k\\
-
-Wywołując metodę \pythoninline{graph_chain.invoke} uruchamiamy algorytm informującym LLM, jaki jest schemat bazy grafowej tj. jakie są dostępne obiekty, właściwości i relacje, oraz
-instruującym jak zbudować zapytanie w języku Cypher, i również weryfikującym jego poprawność składniową. Etap ten sprawdza czy zapytanie jest poprawnie skonstruowane pod względem składni języka Cypher, natomiast nie ma niestety pewności czy stworzone zapytanie jest poprawne merytorycznie, czyli czy informacje, o które zapyta LLM będą tymi oczekiwanymi przez użytkownika.
+Wywołując metodę \pythoninline{graph_chain.invoke} uruchamiamy algorytm informujący LLM, jaki jest schemat bazy grafowej tj. jakie są dostępne obiekty, właściwości i relacje, oraz
+instruującym jak zbudować zapytanie w języku Cypher. Podczas tego etapu sprawdzane jest również czy zapytanie jest poprawnie skonstruowane pod względem składni języka Cypher (parametr \pythoninline{validate_cypher = True}), natomiast nie daje niestety pewności czy stworzone zapytanie jest poprawne merytorycznie, czyli czy informacje, o które zapyta LLM będą tymi oczekiwanymi przez użytkownika.
 
 
 \subsection{Rozwiązanie RAG}
 
-\textcolor{red}{\textit{Dlaczego rozważam grag i rag\\
-jaki jest cel?}}
+Metoda Graph RAG stanowi rozwinięcie metody RAG, w związku z czym porównanie tych metod jest zasadne, by sprawdzić czy metoda grafowa uzyska lepsze wyniki. Dodatkowo RAG będzie reprezentowane przez dwie metody: RAG v1 implementujący metodą Naive RAG opisaną w rozdziale \ref{sec:defgrag} oraz RAG v2 implementujący wersję rozszerzoną o dodatkowe metadane zapisywane razem z embeddingami w bazie wektorowej. Zdecydowałem się na nie, ponieważ interesuje mnie jak wyniki Graph RAG zaprezentują się na tle wyników uniwersalnego RAG v1, który pozwala na zwektoryzowanie i operowanie na dowolnych danych tekstowych oraz bardziej wyspecjalizowanego RAG v2 pod kątem konkretnie danych filmowych.
 
 \subsubsection{Wektoryzowanie danych tekstowych}
-% \textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ? co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
 
 \subsubsubsection{Metoda wektoryzacji tekstu -- text-embedding-3-small}
 
@@ -952,6 +983,8 @@ Istnieją również inne modele wektoryzujące m.in. $\text{all-MiniLM-L6-v2}$ \
 W pracy wykorzystujemy wektorową bazę danych Pinecone, ponieważ zapewnia ona dodatkowe funkcjonalności, z których korzystamy. U podstaw baza ta przechowywuje embeddingi tak jak na przykład biblioteka FAISS (Facebook AI Similarity Search) \cite{faiss}, dzięki czemu zwektoryzowane dane możemy zapisać i później wysyłać zapytania o dane podobne do pytania użytkownika (\textit{retrieval} i \textit{similarity search}). Ta podstawowa funkcjonalność zapewnia nam możliwość realizacji RAG w najprostszej postaci, w tej pracy nazwanej RAG v1. Natomiast dodatkowe funkcjonalności, których nie zapewnia FAISS, to przechowywanie i możliwość filtrowania po dodatkowych danych (metadanych) \cite{pinecone:metatdata}, które zapisujemy razem z embeddingiem, dzięki czemu jesteśmy w stanie wykonać bardziej zaawansowany RAG, u nas nazwany RAG v2. Poza tym Pinecone zapewnia znacznie więcej korzyści, takich jak zarządzanie dostępem, integrację z usługami firm trzecich, skalowalność przy znacznym rozbudowaniu i obciążeniu bazy, podpodział danych na przestrzenie nazwane (ang. namespaces), jednak te i inne zalety tego rozwiązania nie są wykorzystywane i prezentowane w tej pracy, jako że nie są istotne w realizacji rozważanych implementacji RAG. Wspominamy o nich ponieważ warto odnotować że są to cechy pożądane w komercyjnej realizacji RAG, gdzie poziom skomplikowania drastycznie rośnie i trzeba zadbać o bezpieczeństwo danych i stabilność rozwiązania dla klientów.
 
 \subsubsubsection{Implementacja i narzędzia wykorzystywane do wektoryzacji}
+
+Na poniższym fragmencie kodu zaprezentowano definicje dotyczące modelu do generowania \textit{embeddingów}.
 
 \begin{python}\\
 import tiktoken
@@ -976,15 +1009,17 @@ def tiktoken_len(text):
 
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size=400,
-    chunk_overlap=20,
     length_function=tiktoken_len,
     separators=["\n\n", "\n", " ", ""]
 )
 \end{python}
 
-W pierwszej kolejności definiujemy, że do embeddingu będziemy używać model\linebreak{} text-embedding-3-small i inicjalizujemy obiekt \pythoninline{embed}, który pozwoli nam wysyłać tekst i odbierać odpowiadający mu wektor.
+W pierwszej kolejności definiuję, że do \textit{embeddingu} będę używać modelu\linebreak{} \textit{text-embedding-3-small} oraz inicjalizuję obiekt \pythoninline{embed}, który pozwoli mi wysyłać tekst i odbierać odpowiadającą mu reprezentację wektorową.
 
-Funkcja \pythoninline{tiktoken_len} oblicza jaką długość w tokenach ma podany jej tekst i jest potrzebna obiektowi \pythoninline{text_splitter}, który to będzie używany by podzielić tekst pojedynczego dokumentu na chunki, które zgodnie z ustawieniem, nie powinny być dłuższe niż 400 tokenów.
+Funkcja \pythoninline{tiktoken_len} oblicza jaką długość w tokenach ma podany jej tekst i jest potrzebna obiektowi \pythoninline{text_splitter}, który to umożliwia podzielenie tekst pojedynczego dokumentu na \textit{chunki}. Zgodnie z parametrem \pythoninline{chunk_size=400}, nie powinny być one dłuższe niż 400 tokenów. Wartość parametru została tak dobrana, by pojedyncze teksty zostały zwektoryzowane w całości, ponieważ pliki te zawierają informacje o filmach, które powinny być dodawane jako spójna całość do kontekstu. 
+W związku z tym ustawieniem obie wygenerowane bazy wektorowe Pinecone dla RAG v1 i dla RAG v2 zawierają 1000 wpisów, jeden dla każdego filmu.
+
+Następnie otwieram połączenie do Pinecone, co zaprezentowano na poniższym frgmencie kodu, by stworzyć bazę wektorową przy pomocy funkcji \pythoninline{pc.create_index}, jeśli ta nie istnieje. W kolejnym kroku łączymy się do tej bazy (obiekt \pythoninline{index}), i otwieramy połączenie do wykonywania operacji retrieval poprzez obiekt \pythoninline{vector_store}.
 
 \begin{python}\\
 from pinecone import Pinecone, ServerlessSpec
@@ -1029,8 +1064,6 @@ vector_store = PineconeVectorStore(
     text_key=VECTOR_TEXT_FIELD,
 )
 \end{python}
-
-Następnie otwieramy połączenie do Pinecone, by stworzyć bazę wektorową przy pomocy \linebreak{}\pythoninline{pc.create_index} jeśli ta nie istnieje. W kolejnym kroku łączymy się do tej bazy (obiekt \pythoninline{index}), i otwieramy połączenie do wykonywania operacji retrieval poprzez obiekt \linebreak{}\pythoninline{vector_store}.
 
 Powyższe definicje wykorzystujemy w implementacji funkcji odpowiedzialnych za wektoryzację danych wejściowych (tekstów z informacjami o filmach) i zapisanie ich w bazie Pinecone. Implementacja ta różni się dla dwóch zaproponowanych rozwiązań: RAG v1 (tylko wyszukiwanie wektorowe na podstawie pytania użytkownika bez dodatkowych metadanych) oraz RAG v2 (dodatkowa możliwość filtrowania danych na podstawie wybranych wartości), i zostały przedstawione w dalszej części tekstu. 
 \newline\null
@@ -1200,7 +1233,8 @@ def process_vector_response(llm, question):
         ...
 \end{python}
 
-RAG v1 realizuje przedstawiona funkcja \pythoninline{process_vector_response}, dostarczamy jej model -- \pythoninline{llm}, który ma udzielić odpowiedzi na zadane pytanie -- \pythoninline{question}. Pierwszym i najważniejszym elementem RAG jest możliwość wydobycia z bazy wektorowej danych, co realizujemy przez obiekt \pythoninline{retriever}. Podajemy mu ustawienia: próg wyniku podobieństwa - 0.5 (czyli oczekujemy że zwróci chunki dla których wynik similarity score wynosi co najmniej 0.5) i maksymalna liczba chunków, którą retriever zwróci - 100. Następnie tworzymy chain \pythoninline{doc_retriever}, który opakowuje wcześniej wspomnianego retrivera o dodatkowe funkcje kompresujące odpowiedź poprzez podział otrzymanych dokumentów na części nie większe niż 3000 tokenów oraz odrzucające teksty które zostaną uznane za redundantne ze względu na podobieństwo wektorowe do innych otrzymanych tekstów. Następnie uruchamiamy \pythoninline{doc_retriever} aby otrzymać dokumenty, które spełnią wszystkie powyższe warunki, dla zadanego pytania użytkownika. 
+RAG v1 realizuje przedstawiona funkcja \pythoninline{process_vector_response}, dostarczam jej model (\pythoninline{llm}), który ma udzielić odpowiedzi na zadane pytanie (\pythoninline{question}). Pierwszym i najważniejszym elementem RAG jest możliwość wydobycia z bazy wektorowej danych, co realizuję przez obiekt \pythoninline{retriever}. Podaję mu paramerty: próg wyniku podobieństwa - 0.5 (czyli oczekujemy że zwróci chunki dla których wynik similarity score wynosi co najmniej 0.5) i maksymalna liczba chunków, którą retriever zwróci - 100. 
+Następnie tworzymy chain \pythoninline{doc_retriever}, który opakowuje wcześniej wspomnianego retrivera o dodatkowe funkcje kompresujące odpowiedź poprzez podział otrzymanych dokumentów na części nie większe niż 3000 tokenów oraz odrzucające teksty które zostaną uznane za redundantne ze względu na podobieństwo wektorowe do innych otrzymanych tekstów. Wszystkie parametry zostały dobrane tak, by metoda uzyskiwała jak najlepsze rezultaty. Następnie uruchamiamy \pythoninline{doc_retriever} aby otrzymać dokumenty, które spełnią wszystkie powyższe warunki, dla zadanego pytania użytkownika. 
 
 \begin{python}
         ...
@@ -1318,22 +1352,25 @@ W tej wersji przed stworzeniem retrievera, dodajemy chain z zapytaniem do LLM, c
 
 \subsubsection{Opis metodologii badawczej}
 
-W celu porównania zaproponowanych w tej pracy rozwiązań RAG i Graph RAG, przygotowaliśmy 100 pytań \textbf{[załącznik / przypis do pliku z pytaniami?]} o filmy, reżyserów, aktorów, statystyki, itp, o różnym poziomie skomplikowania, od prostszych pytań o fakty (np. „Kto wyreżyserował Ojca Chrzestnego?”) do takich wymagających pewnego rozumowania (np. „Podaj listę filmów, które mogą się spodobać entuzjaście Incepcji.”).
+W celu porównania zaproponowanych w tej pracy rozwiązań RAG i Graph RAG, przygotowałem 
+\nameref{apendix:100q}
+(\appendixname{}  \ref{apendix:100q})
+% \textbf{[załącznik / przypis do pliku z pytaniami?]} 
+o filmy, reżyserów, aktorów, statystyki, itp, o różnym poziomie skomplikowania. Od prostszych pytań o fakty (np. „Kto wyreżyserował Ojca Chrzestnego?”) do takich wymagających pewnego rozumowania (np. „Podaj listę filmów, które mogą się spodobać entuzjaście Incepcji.”).
 
-Następnie na każde z tych pytań ręcznie odnajdujemy poprawną odpowiedź (co wymagało wiele wysiłku i trwało wiele godzin), by stworzyć źródło prawdy, do którego to będziemy porównywać odpowiedzi przedstawionych wcześniej rozwiązań. 
+Następnie na każde z tych pytań ręcznie odnalazłem poprawną odpowiedź (co wymagało wiele wysiłku i trwało wiele godzin), by stworzyć źródło prawdy, do którego to będę porównywać odpowiedzi przedstawionych wcześniej rozwiązań. 
 
-W niniejszej pracy proponujemy 3 ewaluacje wyników:
+W niniejszej pracy proponuję 3 ewaluacje wyników:
 \begin{itemize}
     \item ewaluacja popraz \textit{embedding similarity} -- porównania odpowiedzi wygenerowanej przez metodę do oczekiwanej nie musimy znów robić ręcznie, ale możemy wykorzystać przedstawiane wcześniej \textit{embeddingi}, aby zwektoryzować poprawne odpowiedzi i wykorzystując podobieństwo cosinusowe, porównać je z również zwektoryzowanymi odpowiedziami algorytmów Graph RAG i RAG, dzięki czemu uzyskamy skwantyzowane, numeryczne wyniki, jak podobna jest odpowiedź modelu do oczekiwanej.
     Wyniki mogą przybierać wartości z pomiędzy: 
-    \begin{itemize}
+    \begin{itemize}[label={}]
         \item \pythoninline{-1 } -- odpowiedź o znaczeniu semantycznie przeciwnym, 
         \item \pythoninline{ 0 } -- odpowiedź o znaczeniu semantycznie niepowiązanym,
         \item \pythoninline{ 1 } -- odpowiedź o znaczeniu semantycznie identycznym.
     \end{itemize}
     
     \item ewaluacja z użyciem OpenAI GPT-4.1 -- porównania dokonuje model LLM, a więc znów jest to proces zautomatyzowany, jednak w tym przypadku poprzez odpowiedni prompt instruujemy LLM, aby zliczył wszystkie fakty obecne w odpowiedzi poprawnej i sprawdził ile z nich znajduje się w odpowiedzi wygenerowanej, tym samym badając procent poprawności odpowiedzi (wartości z przedziału 0-100\%). W takiej metodzie sprawdzenia tych odpowiedzi staramy się wychwycić fakty, czy odpowiedź dostarcza wiedzy której oczekiwaliśmy, a pomijamy samą semantykę i formę budowania zdań w odpowiedzi modelu \cite{gptEval}.
-    % [https://arxiv.org/abs/2510.19181 - 4.1 LLM-as-a-Judge Evaluation - \cite{gptEval} mimo że to był mój oryginalny pomysł]
     Na przykładzie poprawnej odpowiedzi zawierającej 10 faktów, jeśli metoda:
     \begin{itemize}
         \item nie poda żadnego faktu to wynik wygląda następująco: 0/10 = 0\%,
@@ -1341,7 +1378,7 @@ W niniejszej pracy proponujemy 3 ewaluacje wyników:
         \item poda 10 faktów poprawnie to wynik wygląda następująco: 10/10 = 100\%.
     \end{itemize}
     
-    \item ewaluacja przeprowadzona przez człowieka -- ręcznego porównania dokonuje człowiek, analogicznie jak w sposobie z użyciem modelu LLM, oceniamy fakty w wygenerowanej odpowiedzi i wynikiem również są wartości z zakresu 0-100\%, z tym że korzystając z większych możliwości niż LLM, odpowiedzi niepasujące do oczekiwanej sprawdzamy w danych źródłowych, bo być może istnieje więcej niż jedan poprawna odpowiedź.
+    \item ewaluacja przeprowadzona przez człowieka -- ręcznego porównania dokonuje człowiek, analogicznie jak w sposobie z użyciem modelu LLM, oceniamy fakty w wygenerowanej odpowiedzi i wynikiem również są wartości z zakresu 0-100\%, z tym że korzystając z większych możliwości niż LLM.
 \end{itemize}
 
 \subsubsection{Opis grup pytań}
@@ -1386,7 +1423,7 @@ Pytania zostały skategoryzowane i podzielone na grupy. Grupy te zostaną opisan
     Przykład pytania: 
     \textit{Which movies starred both Brad Pitt and George Clooney?}
 
-    \item Pytania oparte na czasie (ang. Time Based Questions) -- Pytania związane z chronologią – rok premiery, dekada, porządek czasowy.  Pytania te sprawdzają rozumienie czasu oraz chronologie przez LLM. 
+    \item Pytania oparte na czasie (ang. Time Based Questions) -- Pytania związane z chronologią -- rok premiery, dekada, porządek czasowy.  Pytania te sprawdzają rozumienie czasu oraz chronologie przez LLM. 
     Przykład pytania: 
     \textit{What is the trend of average rating from 2000 to 2020?}
 
@@ -1402,7 +1439,7 @@ Pytania zostały skategoryzowane i podzielone na grupy. Grupy te zostaną opisan
     Przykład pytania: 
     \textit{Tell me about a highly-rated crime thriller.}
 
-    \item Pytania trudne/przypadki skrajne (ang. Challenging/Edge Case Questions) -- Nietypowe lub podchwytliwe pytania – testujące odporność modelu na błędy i niejednoznaczność.
+    \item Pytania trudne/przypadki skrajne (ang. Challenging/Edge Case Questions) -- Nietypowe lub podchwytliwe pytania -- testujące odporność modelu na błędy i niejednoznaczność.
     Przykład pytania: 
     \textit{Which movie has zero gross revenue recorded?}
 
@@ -1410,11 +1447,11 @@ Pytania zostały skategoryzowane i podzielone na grupy. Grupy te zostaną opisan
     Przykład pytania: 
     \textit{Find movies with more than 8.5 rating, in the drama genre, released before 2000.}
 
-    \item Otwarte pytania analityczne (ang. Open Ended Analytical Questions) -- Pytania wymagające interpretacji, analizy lub opinii – nie mają jednej poprawnej odpowiedzi.
+    \item Otwarte pytania analityczne (ang. Open Ended Analytical Questions) -- Pytania wymagające interpretacji, analizy lub opinii -- nie mają jednej poprawnej odpowiedzi.
     Przykład pytania: 
     \textit{Are longer movies generally better rated?}
 
-    \item Eksploracyjne lub interaktywne (ang. Exploratory or Interactive) -- Pytania otwarte, eksploracyjne – użytkownik „szuka inspiracji” lub nowych tropów.   
+    \item Eksploracyjne lub interaktywne (ang. Exploratory or Interactive) -- Pytania otwarte, eksploracyjne -- użytkownik „szuka inspiracji” lub nowych tropów.   
     Przykład pytania: 
     \textit{List all movies you think a fan of *Inception* would enjoy.}
 
@@ -1428,10 +1465,11 @@ Pytania zostały skategoryzowane i podzielone na grupy. Grupy te zostaną opisan
 \end{itemize}
 
 
-%! \subsubsection{Porównanie i analiza wyników Graph RAG z RAG v1 i RAG v2}
+\subsubsection{Przykładowe wyniki}
+TODO
 
 \subsubsection{Analiza wyników poprzez \textit{embeddings similarity}}
-%! \subsubsubsection{Analiza wyników poprzez \textit{embeddings similarity}}
+
 Aby ocenić jakość uzyskanych wyników oraz sposób reprezentacji informacji w przestrzeni semantycznej, przeprowadzono analizę z wykorzystaniem miary \textit{embeddings similarity}. Metoda ta pozwala określić, w jakim stopniu poszczególne odpowiedzi, dokumenty lub pytania są zbliżone znaczeniowo w przestrzeni reprezentacji generowanej przez model językowy.
 
 W praktyce oznacza to porównywanie wektorów osadzeń odpowiadających danym elementom (np. pytaniom i ich wynikowym fragmentom kontekstu) przy użyciu metryk takich jak \textit{cosinus similarity}. Wysoka wartość podobieństwa sugeruje, że model poprawnie uchwycił semantyczne powiązanie między zapytaniem a zwróconą treścią, natomiast niskie wartości mogą wskazywać na problemy z dopasowaniem lub nieadekwatnym retrievalem.
@@ -1518,7 +1556,7 @@ Wszystkie metody radzą sobie dobrze z kategoriami \textit{Basic Factual Questio
 
 Grupa pytań zaklasyfikowana jako \textit{Free Form/Natural Language Style} została oceniona dużo gorzej niż pozostałe dla wszystkich rodzajów rozwiązań. Jest to dość logiczne, ponieważ w przypadku pytań otwartych z niejednoznaczną poprawną odpowiedziom trudno jest sprawdzić w ten sposób poprawność danych. Do oceny tego typu pytań najlepsza będzie analiza ekspercka aby jednoznacznie osądzić czy odpowiedzi są poprawne czy nie. 
 
-Warto podkreślić, że wykorzystanie\textit{ embedding similarity} jako automatycznej metody oceny jakości odpowiedzi, choć bardzo praktyczne i skalowalne, nie jest pozbawione ograniczeń. Miara ta nie zawsze potrafi jednoznacznie wychwycić poprawność semantyczną odpowiedzi – na przykład gdy dwa zdania są równoważne znaczeniowo, lecz różnią się konstrukcją, lub odwrotnie: mają wysokie podobieństwo embeddingów, ale faktycznie przekazują odmienne treści. Pomimo tych ograniczeń, metoda ta pozostaje niezwykle użyteczna, ponieważ umożliwia całkowicie automatyczną, powtarzalną i niezależną od człowieka ocenę na dużą skalę, co jest szczególnie cenne przy porównywaniu wielu modeli i tysięcy zapytań.
+Warto podkreślić, że wykorzystanie\textit{ embedding similarity} jako automatycznej metody oceny jakości odpowiedzi, choć bardzo praktyczne i skalowalne, nie jest pozbawione ograniczeń. Miara ta nie zawsze potrafi jednoznacznie wychwycić poprawność semantyczną odpowiedzi -- na przykład gdy dwa zdania są równoważne znaczeniowo, lecz różnią się konstrukcją, lub odwrotnie: mają wysokie podobieństwo embeddingów, ale faktycznie przekazują odmienne treści. Pomimo tych ograniczeń, metoda ta pozostaje niezwykle użyteczna, ponieważ umożliwia całkowicie automatyczną, powtarzalną i niezależną od człowieka ocenę na dużą skalę, co jest szczególnie cenne przy porównywaniu wielu modeli i tysięcy zapytań.
 
 Podsumowując, wyniki potwierdzają przewagę metod grafowych nad klasycznym RAG w zakresie złożonego rozumowania oraz analiz wymagających łączenia informacji z wielu źródeł. Jednocześnie automatyczna ocena embeddingowa, mimo swojej niedoskonałości, stanowi efektywne narzędzie do szybkiej i globalnej oceny jakości generowanej odpowiedzi, zapewniając spójny i praktyczny sposób porównywania systemów w dużej liczbie kategorii zadań.
 
@@ -1611,7 +1649,7 @@ Warto zauważyć również, że wyniki między analizą embeddingową a analizą
 
 Analiza ekspercka została wprowadzona jako uzupełnienie dwóch poprzednich metod — oceny embeddingowej oraz analizy opartej na modelach LLM — w celu zapewnienia pełniejszej i bardziej wiarygodnej weryfikacji wyników. Podejście to pozwala skorygować potencjalne błędy automatycznych metod i dostarcza perspektywy opartej na ludzkim rozumieniu treści oraz kontekstu. Dzięki temu zestawienie trzech komplementarnych analiz umożliwia bardziej wszechstronną i zrównoważoną ocenę jakości odpowiedzi.
 
-W ocenie eksperckiej brano pod uwagę zarówno ogólną poprawność merytoryczną odpowiedzi, jak i – w przypadku pytań typu „wymień” – liczbę poprawnie przytoczonych faktów. Takie podejście pozwoliło nie tylko ocenić trafność odpowiedzi, ale również ich kompletność, co stanowi istotne uzupełnienie wyników uzyskanych metodami automatycznymi.
+W ocenie eksperckiej brano pod uwagę zarówno ogólną poprawność merytoryczną odpowiedzi, jak i -- w przypadku pytań typu „wymień” -- liczbę poprawnie przytoczonych faktów. Takie podejście pozwoliło nie tylko ocenić trafność odpowiedzi, ale również ich kompletność, co stanowi istotne uzupełnienie wyników uzyskanych metodami automatycznymi.
 
 W przypadku analizy eksperckiej nie została zastosowana metody zliczania „zwycięstw” modeli, którą została wykorzystana wcześniej w analizie embeddingowej. W analizie eksperckiej bardzo często pojawiały się sytuacje, w których różne narzędzia otrzymywały identyczną ocenę, co prowadziło do licznych remisów. W efekcie wskaźnik liczby zwycięstw przestawał być rozróżniający i nie odzwierciedlał realnych różnic pomiędzy metodami, z tego powodu w tym podrozdziale zrezygnowano z jego stosowania.
 
@@ -1737,13 +1775,31 @@ W artykule \textit{Retrieval-Augmented Generation with Graphs (GraphRAG)} znajdu
 \clearpage\newpage
 
 %%% Spis rysunków
-\listoffigures
-\newpage
+% \listoffigures
+% \newpage
 
 %%% Bibliografia
-\printbibliography{}
+\printbibliography[
+heading=bibintoc,
+]{}
 
 %%% Załączniki ?
 % https://tex.stackexchange.com/questions/226481/appendix-section-title 
+
+\clearpage\newpage
+\appendixpage
+\begin{appendices}
+\section{100 pytań}
+\label{apendix:100q}
+
+lorem iposum
+
+lorem ipsum
+
+\end{appendices}
+
+% \clearpage\newpage
+% \noindent\textbf{Załączniki}\\
+% Załącznik A:  
 
 \end{document}
