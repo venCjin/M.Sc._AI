@@ -1435,7 +1435,7 @@ Pytania zostały skategoryzowane i podzielone na grupy. Grupy te zostaną opisan
     Przykład pytania: 
     \textit{Which actor starred in the highest-grossing drama movie?}
 
-    \item Forma swobodna/język naturalny (ang. Free Form/Natural Language Style) -- Pytania zadane w swobodnym, naturalnym języku — często nieprecyzyjne, subiektywne przez co testuje semantyczne rozumienie nieprecyzyjnych pytań i intencji użytkownika.
+    \item Forma swobodna/język naturalny (ang. Free Form/Natural Language Style) -- Pytania zadane w swobodnym, naturalnym języku -- często nieprecyzyjne, subiektywne przez co testuje semantyczne rozumienie nieprecyzyjnych pytań i intencji użytkownika.
     Przykład pytania: 
     \textit{Tell me about a highly-rated crime thriller.}
 
@@ -1474,7 +1474,7 @@ Aby ocenić jakość uzyskanych wyników oraz sposób reprezentacji informacji w
 
 W praktyce oznacza to porównywanie wektorów osadzeń odpowiadających danym elementom (np. pytaniom i ich wynikowym fragmentom kontekstu) przy użyciu metryk takich jak \textit{cosinus similarity}. Wysoka wartość podobieństwa sugeruje, że model poprawnie uchwycił semantyczne powiązanie między zapytaniem a zwróconą treścią, natomiast niskie wartości mogą wskazywać na problemy z dopasowaniem lub nieadekwatnym retrievalem.
 
-Dzięki takiemu podejściu możliwe jest nie tylko ilościowe porównanie wyników różnych konfiguracji modelu i komponentu RAG, ale również jakościowa interpretacja przestrzennego rozmieszczenia reprezentacji semantycznych — np. grupowanie podobnych pytań lub identyfikacja anomalii w embeddingach.
+Dzięki takiemu podejściu możliwe jest nie tylko ilościowe porównanie wyników różnych konfiguracji modelu i komponentu RAG, ale również jakościowa interpretacja przestrzennego rozmieszczenia reprezentacji semantycznych -- np. grupowanie podobnych pytań lub identyfikacja anomalii w embeddingach.
 
 Zgodnie z oczekiwaniami Graph RAG znacznie częściej uzyskuje wynik podobieństwa do oczekiwanej odpowiedzi wyższy niż RAG v1 i RAG v2 razem, co prezentuje tabela \ref{tab:1}.
 
@@ -1541,7 +1541,7 @@ Warto zauważyć również, że stosunkowo wąski zakres wartości (niewielka ro
 
 Przejdźmy teraz do analizy wyników w poszczególnych grupach pytań.  Pytania zostały skategoryzowane w 19 grup, zgodnie z tematyką oraz zgodnie z problemem merytorycznym, który jest poruszany. Grupy pytań wraz z przykładami zostały opisane w podrozdziale \textit{Opis grup pytań}. 
 
-Na rysunku  \ref{fig:similarity_eval} przedstawiona jest tabela porównawcza wyników embedding similarity (średnich trafności/zgodności odpowiedzi) dla poszczególnych kategorii. Wiersze to kategorie pytań — np. \textit{Basic Factual}, \textit{Multi Hop}, \textit{Statistics and Summarization}, \textit{Time Based} itd. W zastosowanej metodologi 0\% oznacza brak dopasowania, 100\% oznacza dopasowanie całkowite.  Kolorowanie komórek wskazuje jakość wyników w danej kategorii: kolory są dobrane liniowo od 0\% do 50\% - kolor czerwony, od 50\% do 100\% kolor zielony. 
+Na rysunku  \ref{fig:similarity_eval} przedstawiona jest tabela porównawcza wyników embedding similarity (średnich trafności/zgodności odpowiedzi) dla poszczególnych kategorii. Wiersze to kategorie pytań -- np. \textit{Basic Factual}, \textit{Multi Hop}, \textit{Statistics and Summarization}, \textit{Time Based} itd. W zastosowanej metodologi 0\% oznacza brak dopasowania, 100\% oznacza dopasowanie całkowite.  Kolorowanie komórek wskazuje jakość wyników w danej kategorii: kolory są dobrane liniowo od 0\% do 50\% - kolor czerwony, od 50\% do 100\% kolor zielony. 
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{images/fig/similarity_eval.png}
 \vspace*{-8mm}
@@ -1647,7 +1647,7 @@ Warto zauważyć również, że wyniki między analizą embeddingową a analizą
 \subsubsection{Analiza przeprowadzona przez człowieka}
 %! \subsubsubsection{Analiza przeprowadzona przez człowieka}
 
-Analiza ekspercka została wprowadzona jako uzupełnienie dwóch poprzednich metod — oceny embeddingowej oraz analizy opartej na modelach LLM — w celu zapewnienia pełniejszej i bardziej wiarygodnej weryfikacji wyników. Podejście to pozwala skorygować potencjalne błędy automatycznych metod i dostarcza perspektywy opartej na ludzkim rozumieniu treści oraz kontekstu. Dzięki temu zestawienie trzech komplementarnych analiz umożliwia bardziej wszechstronną i zrównoważoną ocenę jakości odpowiedzi.
+Analiza ekspercka została wprowadzona jako uzupełnienie dwóch poprzednich metod -- oceny embeddingowej oraz analizy opartej na modelach LLM -- w celu zapewnienia pełniejszej i bardziej wiarygodnej weryfikacji wyników. Podejście to pozwala skorygować potencjalne błędy automatycznych metod i dostarcza perspektywy opartej na ludzkim rozumieniu treści oraz kontekstu. Dzięki temu zestawienie trzech komplementarnych analiz umożliwia bardziej wszechstronną i zrównoważoną ocenę jakości odpowiedzi.
 
 W ocenie eksperckiej brano pod uwagę zarówno ogólną poprawność merytoryczną odpowiedzi, jak i -- w przypadku pytań typu „wymień” -- liczbę poprawnie przytoczonych faktów. Takie podejście pozwoliło nie tylko ocenić trafność odpowiedzi, ale również ich kompletność, co stanowi istotne uzupełnienie wyników uzyskanych metodami automatycznymi.
 
@@ -1726,7 +1726,7 @@ Podobnie jak w rozdziale dotyczącym analizy z zastosowaniem embeddingów, przej
 \end{figure}
 We wszystkich trzech metodach najwyższą skuteczność obserwuje się w pytaniach prostych, faktograficznych oraz takich, które wymagają odnalezienia pojedynczej, jasno określonej informacji. Dotyczy to zwłaszcza kategorii \textit{Basic Factual Questions}, \textit{Director Focused Questions}, \textit{Exploratory Questions}, \textit{Comparative Questions} oraz \textit{Aggregation Questions}, gdzie również klasyczne warianty RAG osiągają dobre wyniki. W tych obszarach wszystkie analizowane systemy radzą sobie porównywalnie dobrze, a różnice między nimi są niewielkie.
 
-RAG\_v1 i RAG\_v2 prezentują zbliżony profil — radzą sobie dobrze w pytaniach prostych i jednoznacznych, jednak ich efektywność gwałtownie spada tam, gdzie niezbędne jest łączenie wielu faktów lub bardziej złożona struktura wiedzy. Warto również zauważyć, że różnice między RAG\_v1 i RAG\_v2 są stosunkowo niewielkie, co sugeruje, że ich ograniczenia mają charakter systemowy i wynikają z klasycznego podejścia do wyszukiwania danych według podobieństwa embeddingów.
+RAG\_v1 i RAG\_v2 prezentują zbliżony profil -- radzą sobie dobrze w pytaniach prostych i jednoznacznych, jednak ich efektywność gwałtownie spada tam, gdzie niezbędne jest łączenie wielu faktów lub bardziej złożona struktura wiedzy. Warto również zauważyć, że różnice między RAG\_v1 i RAG\_v2 są stosunkowo niewielkie, co sugeruje, że ich ograniczenia mają charakter systemowy i wynikają z klasycznego podejścia do wyszukiwania danych według podobieństwa embeddingów.
 
 Klasyczne podejścia RAG\_v1 i RAG\_v2 utrzymują też dobrą skuteczność w pytaniach o umiarkowanej złożoności, takich jak \textit{Actor Focused}, \textit{Genre Specific} czy \textit{Range \& Filtering}. Są to kategorie, które wymagają odnalezienia kilku powiązanych informacji, ale nie angażują pełnego rozumowania wieloetapowego. W tych przypadkach RAG osiąga stabilne wyniki.
 
@@ -1792,9 +1792,7 @@ heading=bibintoc,
 \section{100 pytań}
 \label{apendix:100q}
 
-lorem iposum
-
-lorem ipsum
+TODO
 
 \end{appendices}
 
