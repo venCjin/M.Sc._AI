@@ -241,7 +241,28 @@ deletekeywords={id, type},
 %--------------------------------------------------------
 
 \section{Wstęp}
-\textcolor{red}{\textit{Napisać na końcu ...}}
+Tematem pracy są \textit{nowe perspektywy w przetwarzaniu i reprezentacji wiedzy przy użyciu grafów wiedzy i wielkich modeli językowych}. Temat jest istotny, ponieważ pozwala na badanie nowoczesnych technik przyspieszających tworzenie ustrukturyzowanych baz wiedzy (bardzo użytecznych w np. medycynie) oraz ulepszania jakości odpowiedzi generowanych przez wielkie modele językowe.
+
+Praca składa się z części teoretycznej oraz  rozdziału eksperymentalnego.
+
+W rozdziale o tytule \textit{Grafy wiedzy} zawarte są informacje o \textit{grafach wiedzy}. Przedstawiono w nim takie zagadnienia jak historia i działanie dużych modeli językowych.
+
+W rozdziale o tytule \textit{Wielkie modele językowe} zawarte są informacje o modelach stworzonych do przetwarzania języka naturalnego. Przedstawiono w nim takie zagadnienia jak historia i działanie wielkich modeli językowych.
+
+Rozdział  o tytule \textit{Metody połączenia KG i LLM} zawiera informacje o wybranych metodach łączenia tych dwóch narzędzi. Zawiera on opisy metod tworzenia grafu wiedzy przy pomocy wielkich modeli językowych oraz ulepszania odpowiedzi LLM przy pomocy wiedzy uzyskanej z KG wraz z przykładami użycia. 
+
+Treści przedstawione w rozdziałach teoretycznych posłużyły za podstawę do rozważań w części eksperymentalnej.
+
+\textit{Część Eksperymentalna}, składa się z 4 rozdziałów, w którym dokładnie opisuje metodologię oraz przeprowadzone eksperymenty. Na  początku zawarty jest opis pytań oraz opis wybranego LLM. 
+
+Rozdział \textit{Rozwiązanie Graph RAG} zawiera opis implementacji rozwiązania Graph RAG,  integrującego zarówno tworzenie grafu wiedzy i odpowiadania z użyciem zgromadzonych w nim informacji przez wieli model językowy w systemie pytanie-odpowiedź. 
+
+Rozdział \textit{Rozwiązanie RAG} zawiera opis implementacji rozwiązania w dwóch wersjach podstawowej i rozszerzonej, co pozwala na przeprowadzenie szerszej analizy wyników w porównaniu do Graph RAG.
+
+W rozdziale \textit{Wnioski i analiza wyników} znajduje się opis metodologii badań oraz opis pytań wraz z przykładami. Następne podrozdziały zawierają analizę wyników z zastosowaniem embedding similarity, analizę z zastosowaniem LLM oraz analizę ekspercką. Na koniec pod rozdział Analiza zalet i wad obu rozwiązań zawierają się wnioski i rekomendacje. 
+
+Na końcu pracy zamieszczono podsumowanie. Wszystkie użyte źródła są spisane w bibliografii na końcu pracy. 
+
 
 \section{Cel i zakres pracy}
 Grafy wiedzy i wielkie modele językowe to dwa fundamentalnie różne podejścia do reprezentacji i przetwarzania wiedzy. Grafy wiedzy oferują strukturalne i semantyczne ramy umożliwiające precyzyjne wyszukiwanie informacji oraz logikę wnioskowania. Wielkie modele językowe potrafią generować oraz interpretować tekst w sposób zbliżony do ludzkiego, co czyni je niezwykle potężnymi narzędziami w kontekście zadań związanych z przetwarzaniem języka naturalnego. Integracja grafów wiedzy z wielkimi modelami językowymi umożliwia tworzenie systemów, które mogą korzystać z najlepszych cech obu technologii: strukturalnej przejrzystości i dokładności grafów wiedzy oraz elastyczności i kreatywności modeli językowych. Celem pracy jest przedstawienie i przetestowanie różnych możliwości wykorzystania grafów wiedzy w połączeniu z wielkimi modelami językowymi. Praca skupi się na analizie, jak te dwa podejścia mogą wzajemnie się uzupełniać, a także na identyfikacji konkretnych scenariuszy aplikacyjnych, w których ich integracja jest szczególnie korzystna.
@@ -318,7 +339,7 @@ Grafy wiedzy są również obecne w popularnych wyszukiwarkach takich jak Google
 
 Panel wiedzy prezentowany w wyszukiwarce Google korzysta z Google Knowledge Graph, rozbudowanego grafu wiedzy, w którym węzłami są encje -- osoby, miejsca, obiekty czy pojęcia -- a krawędziami relacje opisujące ich wzajemne powiązania. Projekt uruchomiono w 2012 roku, aby umożliwić wyszukiwarce przechodzenie od przetwarzania zapytań jako ciągów znaków do interpretowania ich jako odniesień do konkretnych encji w grafie. Dane zasilające graf pochodzą z wielu źródeł, takich jak Wikipedia, CIA World Factbook czy Freebase, a jego funkcjonalności obejmują m.in. generowanie paneli wiedzy, czy bardziej precyzyjne rozpoznawanie intencji użytkownika, co pozwala na dostarczenie trafniejszych odpowiedzi. Google udostępnia także API KG Search, umożliwiające programistom wyszukiwanie encji w Google Knowledge Graph, oraz umożliwia wykorzystanie tych zasobów w niestandardowych silnikach wyszukiwania. Technologie takie jak Google Knowledge Graph wzbogacają doświadczenie użytkowników, dostarczając kontekstowych informacji zamiast samych odnośników i zwiększając widoczność encji w sieci, co może pozytywnie wpływać na ich wiarygodność i rozpoznawalność \cite{kg:googlekg}.
 
-\subsection{Wielkie modele językowe -- LLM}
+\subsection{Wielkie modele językowe}
 
 \subsubsection{Definicja i ewolucja wielkich modeli językowych (LLM)}
 
@@ -469,8 +490,6 @@ Rozwiązanie implementujące to podejście to np. \textbf{Graph RAG} \cite{graph
 % ! -----------
 
 % \subsubsubsection{Wydobywanie wiedzy z KG przy pomocy LLM}
-
-% \textit{\textcolor{red}{TODO: przenieść do „3.3.2 Wydobywanie wiedzy z KG przy pomocy LLM”}}
 
 % \subsubsection{Definicja i koncepcja Graph RAG}
 \subsubsubsection{Definicja i koncepcja Graph RAG}
@@ -660,23 +679,17 @@ Praca w dalszej części skupi się na implementacji tworzenia KG oraz wydobywan
 
 \section{Część eksperymentalna}
 
-% \textcolor{red}{\textit{TODO:}\\
-% jaki jest cel tego rozdziału?\\
-% co chce przetestować?\\
-% dlaczego warto przeprowadzic te testy?\\
-% }
-
-Podstawowym celem rozdziału jest przedstawienie praktycznego zastosowania wcześniej przedstawionych metod: ekstrakcji danych tekstowych przez LLM do KG oraz generowania odpowiedzi przez LLM rozszerzonej o odpowiednią wiedzę z KG (Graph RAG). 
-Przygotowane rozwiązanie to system pytanie-odpowiedź, które dla pewnych konkretnych pytań, może zostać potraktowane jak system rekomendacji (np. dla pytania „TODO”).
-Wyniki metody Graph RAG zostaną porównane do wyników metody, z której się wywodzi -- RAG. 
+Podstawowym celem rozdziału jest przedstawienie praktycznego zastosowania wcześniej przedstawionych metod: ekstrakcji danych tekstowych przez LLM do KG oraz generowania odpowiedzi przez LLM rozszerzonej o odpowiednią wiedzę z KG (\textit{Graph RAG}). 
+Przygotowane rozwiązanie to system pytanie-odpowiedź, które dla pewnych konkretnych pytań, może zostać potraktowane jak system rekomendacji (np. dla pytania „Recommend a highly-rated film from before 1980.”).
+Wyniki metody \textit{Graph RAG} zostaną porównane do wyników metody, z której się wywodzi -- RAG. 
 Zadaniem tych metod będzie udzielenie poprawnej odpowiedzi na 100 pytań dotyczących zróżnicowanych informacji o filmach. Testy te będą podstawą analizy do jakich kategorii pytań i problemów nadają się konkretne metody. 
 
 
 \subsection{Opis zbioru danych (dane o filmach)}
 
-Dane filmowe charakteryzują się dużą różnorodnością relacji, powiązań między encjami (aktorzy, reżyserzy, gatunki), obejmują informacje o czasie (daty premier, czas trwania), liczbach (oceny, przychody), a także bardziej opisowych cechach, takich jak streszczenia. Dzięki temu możliwe jest badanie szerokiego spektrum typów pytań: od prostych faktograficznych, przez pytania porównawcze i agregacyjne, aż po bardziej złożone zadania wymagające rozumowania wieloetapowego i analizy kontekstowej. Co istotne, dane filmowe są dobrze ustrukturyzowane, spójne i powszechnie wykorzystywane w literaturze do testowania modeli LLM oraz metod \textit{retrieval} \cite{kgllm:movie}, co zapewnia większą powtarzalność eksperymentów. W efekcie stanowią one optymalny wybór do kompleksowej oceny jakości działania systemów typu RAG czy Graph RAG w wielu zróżnicowanych scenariuszach.
+Dane filmowe charakteryzują się dużą różnorodnością relacji, powiązań między encjami (aktorzy, reżyserzy, gatunki), obejmują informacje o czasie (daty premier, czas trwania), liczbach (oceny, przychody), a także bardziej opisowych cechach, takich jak streszczenia. Dzięki temu możliwe jest badanie szerokiego spektrum typów pytań: od prostych faktograficznych, przez pytania porównawcze i agregacyjne, aż po bardziej złożone zadania wymagające rozumowania wieloetapowego i analizy kontekstowej. Co istotne, dane filmowe są dobrze ustrukturyzowane, spójne i powszechnie wykorzystywane w literaturze do testowania modeli LLM oraz metod \textit{retrieval} \cite{kgllm:movie}, co zapewnia większą powtarzalność eksperymentów. W efekcie stanowią one optymalny wybór do kompleksowej oceny jakości działania systemów typu RAG czy \textit{Graph RAG} w wielu zróżnicowanych scenariuszach.
 
-Do badania zostały wybrane dane 1000 filmów z bazy IMDB \cite{imdb:data}. Są one ustrukturyzowane i zapisane w pliku csv. W tej pracy potrzebuję danych w formie plików tekstowych, by móc zwektoryzować treść tych „dokumentów” dla rozwiązań RAG, a dla Graph RAG przeprowadzić z nich ekstrakcję grafu wiedzy. W związku z tym informacje o filmach zapisuję do plików w przedstawionej poniżej formie:
+Do badania zostały wybrane dane 1000 filmów z bazy IMDB \cite{imdb:data}. Są one ustrukturyzowane i zapisane w pliku csv. W tej pracy potrzebuję danych w formie plików tekstowych, by móc zwektoryzować treść tych „dokumentów” dla rozwiązań RAG, a dla \textit{Graph RAG} przeprowadzić z nich ekstrakcję grafu wiedzy. W związku z tym informacje o filmach zapisuję do plików w przedstawionej poniżej formie:
 
 \begin{codestyle}
 Movie name: The Shawshank Redemption
@@ -698,7 +711,7 @@ Tekst z wybranego zbioru jest w języku angielskim, dlatego też dane te są dal
 
 \subsection{Wybrany LLM}
 
-Do realizacji algorytmów RAG i Graph RAG wybrany został jeden z najbardziej zaawansowanych wielkich modeli językowych w czasie realizacji tej pracy -- OpenAI GPT-4.1. Dostępny za darmo z limitem 250 tys. tokenów dziennie, pod warunkiem udzielenia przez użytkownika zgody, by OpenAI miało dostęp do jego zapytań i odpowiedzi LLM.
+Do realizacji algorytmów RAG i \textit{Graph RAG} wybrany został jeden z najbardziej zaawansowanych wielkich modeli językowych w czasie realizacji tej pracy -- OpenAI GPT-4.1. Dostępny za darmo z limitem 250 tys. tokenów dziennie, pod warunkiem udzielenia przez użytkownika zgody, by OpenAI miało dostęp do jego zapytań i odpowiedzi LLM.
 
 W toku rozwoju pracy używane też były inne modele (Llama 3, Llama 3.1, Gemma2) z bazy publicznie dostępnych modeli LLM (Ollama) i używane one były na komputerze lokalnie. Niestety dostępny komputer nie był w stanie obsłużyć modeli większych niż 7B (7 miliardów aktywnych parametrów), co sprawiało że odpowiedzi LLM były niewystarczające (np. w przypadku tak trudnego zadania jak napisanie zapytania do bazy Neo4j w języku Cypher, gdzie owe „małe” modele często tworzyły zapytania nie dające poprawnych odpowiedzi z bazy). Zadecydowało to o tym, iż nie są one reprezentatywnym przykładem LLM do przedstawienia w tej pracy, ponieważ nie reprezentują pełnych możliwości modeli LLM i sztucznie zaniżałyby wyniki działania metody. Niemniej jednak warte odnotowania jest, iż o ile takie modele nie nadają się do tworzenia np. zapytań do bazy, to mogą okazać się wystarczające do wygenerowania finalnej odpowiedzi, w ostatnim etapie (\textit{augmented generation}) gdzie zostały już wyszukane dane (o ile cały dostarczony kontekst zmieści się w maksymalnej liczbie tokenów wejściowych dla tego modelu).
 
@@ -730,8 +743,6 @@ Powyższy fragment kodu prezentuje, jak zostały utworzone połączenia do model
 
 
 % \subsubsection{LLM Chains: koncepcja i przykłady zastosowania}
-
-% TODO: tutaj zmienić żeby pasowało
 
 % Mimo, że rozwój modeli językowych pozwolił na wykorzystanie ich do skomplikowanych zadań, nadal problem stanowi zachowanie kontekstu w długich tekstach. Rozwiązaniem tego problemu jest zastosowanie LLM Chain, czyli koncepcji, która realizuje złożone zadania przez podział na mniejsze etapy. Każdy z etapów obsługiwany jest przez odpowiednio przystosowany LLM. To podejście pozwala na zwiększenie precyzji i skuteczności przetwarzania złożonych zapytań \cite{llm_chains}.
 
@@ -767,14 +778,12 @@ Powyższy fragment kodu prezentuje, jak zostały utworzone połączenia do model
 
 
 \subsection{Rozwiązanie Graph RAG}
-% \textcolor{red}{\textit{? Opis ogólny dodać ? co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
 
 \subsubsection{Tworzenie grafu wiedzy}
-% \textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ? co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
 
 \subsubsubsection{Grafowa baza danych -- Neo4j}
 
-W pracy wykorzystujemy grafową bazę danych Neo4j, ponieważ zapewnia ona funkcjonalności niezbędne do realizacji podejścia Graph RAG. U podstaw baza ta przechowuje dane w postaci węzłów i krawędzi opisujących relacje pomiędzy elementami wiedzy. Umożliwia to tworzenie i eksplorowanie grafów wiedzy, które są znacznie lepiej dostosowane do reprezentowania powiązań relacyjnych niż tradycyjne bazy SQL czy wektorowe.
+W pracy wykorzystujemy grafową bazę danych Neo4j, ponieważ zapewnia ona funkcjonalności niezbędne do realizacji podejścia \textit{Graph RAG}. U podstaw baza ta przechowuje dane w postaci węzłów i krawędzi opisujących relacje pomiędzy elementami wiedzy. Umożliwia to tworzenie i eksplorowanie grafów wiedzy, które są znacznie lepiej dostosowane do reprezentowania powiązań relacyjnych niż tradycyjne bazy SQL czy wektorowe.
 Podstawowa funkcjonalność Neo4j opiera się na zapytaniach w języku Cypher, który umożliwia wyszukiwanie informacji w kontekście relacji pomiędzy węzłami. 
 
 Baza ta oferuje wiele dodatkowych funkcjonalności takich jak skalowalność czy bezpieczeństwo danych i dostępu do nich. W tej pracy nie korzystamy z nich, lecz w komercyjnej realizacji projektu byłby niezwykle istotne. 
@@ -896,7 +905,7 @@ Wygenerowany graf zawiera 4376 obiektów oraz 8528 relacji. Na rysunku \ref{fig:
 
 \subsubsubsection{Implementacja Graph RAG}
 
-Graph RAG realizuje, przedstawiona na poniższym fragmencie kodu, funkcja \linebreak{}
+\textit{Graph RAG} realizuje, przedstawiona na poniższym fragmencie kodu, funkcja \linebreak{}
 \pythoninline{process_graph_response}. Przyjmuje ona w parametrach model (\pythoninline{llm}), który na podstawie informacji w grafowej bazie danych (\pythoninline{graph}), ma udzielić odpowiedzi na zadane pytanie (\pythoninline{question}). Pierwszym i najważniejszym elementem funkcji jest stworzenie obiektu \pythoninline{GraphCypherQAChain}, który to definiuje parametry dla algorytmu wydobywającego informacje z grafu. 
 
 Ważnym i wymaganym parametrem tego obiektu jest \pythoninline{allow_dangerous_requests}. Twórcy biblioteki informują przez dokumentację do tego parametru programistę, że algorytm może wygenerować niebezpieczne zapytanie, takie jak usunięcie danych z bazy i wymagają świadomego wyrażernia na to zgody. Jednocześnie zalecają, by w związku z tym nadać odpowiednie uprawnienienia na koncie dostępowym do bazy Neo4j, by zapobiec wykonaniu takiego polecenia, jeśli taka jest intencja programisty.
@@ -973,7 +982,7 @@ instruującym jak zbudować zapytanie w języku Cypher. Podczas tego etapu spraw
 
 \subsection{Rozwiązanie RAG}
 
-Metoda Graph RAG stanowi rozwinięcie metody RAG, w związku z czym porównanie tych metod jest zasadne, by sprawdzić czy metoda grafowa uzyska lepsze wyniki. Dodatkowo RAG będzie reprezentowane przez dwie metody: RAG v1 implementujący metodą Naive RAG opisaną w rozdziale \ref{sec:defgrag} oraz RAG v2 implementujący wersję rozszerzoną o dodatkowe metadane zapisywane razem z embeddingami w bazie wektorowej. Zdecydowałem się na nie, ponieważ interesuje mnie jak wyniki Graph RAG zaprezentują się na tle wyników uniwersalnego RAG v1, który pozwala na zwektoryzowanie i operowanie na dowolnych danych tekstowych oraz bardziej wyspecjalizowanego RAG v2 pod kątem konkretnie danych filmowych.
+Metoda \textit{Graph RAG} stanowi rozwinięcie metody RAG, w związku z czym porównanie tych metod jest zasadne, by sprawdzić czy metoda grafowa uzyska lepsze wyniki. Dodatkowo RAG będzie reprezentowane przez dwie metody: \textit{RAG v1} implementujący metodą Naive RAG opisaną w rozdziale \ref{sec:defgrag} oraz \textit{RAG v2} implementujący wersję rozszerzoną o dodatkowe metadane zapisywane razem z embeddingami w bazie wektorowej. Zdecydowałem się na nie, ponieważ interesuje mnie jak wyniki \textit{Graph RAG} zaprezentują się na tle wyników uniwersalnego \textit{RAG v1}, który pozwala na zwektoryzowanie i operowanie na dowolnych danych tekstowych oraz bardziej wyspecjalizowanego \textit{RAG v2} pod kątem konkretnie danych filmowych.
 
 \subsubsection{Wektoryzowanie danych tekstowych}
 
@@ -983,11 +992,11 @@ Wybranym modelem do wektoryzacji tekstu został \textit{text-embedding-3-small} 
 Embeddingi to numeryczne reprezentacje tekstu w postaci wielowymiarowych wektorów, które pozwalają obliczyć podobieństwo dwóch tekstów. Wektory te są użyteczne w zadaniach związanych z przeszukiwaniem, klastrowaniem, rekomendacjami oraz klasyfikowaniem.
 Wybrany model jest oferowany jako usługa (ang. Software as a Service, SaaS) i jest jednym z najlepszych narzędzi tego typu dostępnych na rynku, i jest udostępniany w przystępnej cenie. Istnieje również bardziej zaawansowany model text-embedding-3-large \cite{te3l}, jednak jest on 7 razy droższy co zaważyło o decyzji wybrania modelu small. Zadaniem modelu jest wygenerowanie embeddingów, które zostaną zapisane w bazie wektorowej Pinecone, dzięki czemu będzie później możliwy do przeprowadzenia proces wyszukiwania tekstów (\textit{retrieval}) powiązanych z pytaniem użytkownika.
 
-Istnieją również inne modele wektoryzujące m.in. $\text{all-MiniLM-L6-v2}$ \cite{miniLM}, $\text{nomic-embed-text-v1}$ \cite{nomic} - natomiast ich wyniki są mniej dokładne on wybranego, zwłaszcza w kluczowej dla tej pracy operacji znajdowania powiązanych tekstów (\textit{retrieval}). 
+Istnieją również inne modele wektoryzujące m.in. $\text{all-MiniLM-L6-v2}$ \cite{miniLM}, \linebreak{}$\text{nomic-embed-text-v1}$ \cite{nomic} - natomiast ich wyniki są mniej dokładne on wybranego, zwłaszcza w kluczowej dla tej pracy operacji znajdowania powiązanych tekstów (\textit{retrieval}). 
 
 \subsubsubsection{Wektorowa baza danych -- Pinecone}
 
-W pracy wykorzystujemy wektorową bazę danych Pinecone, ponieważ zapewnia ona dodatkowe funkcjonalności, z których korzystamy. U podstaw baza ta przechowywuje embeddingi tak jak na przykład biblioteka FAISS (Facebook AI Similarity Search) \cite{faiss}, dzięki czemu zwektoryzowane dane możemy zapisać i później wysyłać zapytania o dane podobne do pytania użytkownika (\textit{retrieval} i \textit{similarity search}). Ta podstawowa funkcjonalność zapewnia nam możliwość realizacji RAG w najprostszej postaci, w tej pracy nazwanej RAG v1. Natomiast dodatkowe funkcjonalności, których nie zapewnia FAISS, to przechowywanie i możliwość filtrowania po dodatkowych danych (metadanych) \cite{pinecone:metatdata}, które zapisujemy razem z embeddingiem, dzięki czemu jesteśmy w stanie wykonać bardziej zaawansowany RAG, u nas nazwany RAG v2. Poza tym Pinecone zapewnia znacznie więcej korzyści, takich jak zarządzanie dostępem, integrację z usługami firm trzecich, skalowalność przy znacznym rozbudowaniu i obciążeniu bazy, podpodział danych na przestrzenie nazwane (ang. namespaces), jednak te i inne zalety tego rozwiązania nie są wykorzystywane i prezentowane w tej pracy, jako że nie są istotne w realizacji rozważanych implementacji RAG. Wspominamy o nich ponieważ warto odnotować że są to cechy pożądane w komercyjnej realizacji RAG, gdzie poziom skomplikowania drastycznie rośnie i trzeba zadbać o bezpieczeństwo danych i stabilność rozwiązania dla klientów.
+W pracy wykorzystujemy wektorową bazę danych Pinecone, ponieważ zapewnia ona dodatkowe funkcjonalności, z których korzystamy. U podstaw baza ta przechowywuje embeddingi tak jak na przykład biblioteka FAISS (Facebook AI Similarity Search) \cite{faiss}, dzięki czemu zwektoryzowane dane możemy zapisać i później wysyłać zapytania o dane podobne do pytania użytkownika (\textit{retrieval} i \textit{similarity search}). Ta podstawowa funkcjonalność zapewnia nam możliwość realizacji RAG w najprostszej postaci, w tej pracy nazwanej \textit{RAG v1}. Natomiast dodatkowe funkcjonalności, których nie zapewnia FAISS, to przechowywanie i możliwość filtrowania po dodatkowych danych (metadanych) \cite{pinecone:metatdata}, które zapisujemy razem z embeddingiem, dzięki czemu jesteśmy w stanie wykonać bardziej zaawansowany RAG, u nas nazwany \textit{RAG v2}. Poza tym Pinecone zapewnia znacznie więcej korzyści, takich jak zarządzanie dostępem, integrację z usługami firm trzecich, skalowalność przy znacznym rozbudowaniu i obciążeniu bazy, podpodział danych na przestrzenie nazwane (ang. namespaces), jednak te i inne zalety tego rozwiązania nie są wykorzystywane i prezentowane w tej pracy, jako że nie są istotne w realizacji rozważanych implementacji RAG. Wspominamy o nich ponieważ warto odnotować że są to cechy pożądane w komercyjnej realizacji RAG, gdzie poziom skomplikowania drastycznie rośnie i trzeba zadbać o bezpieczeństwo danych i stabilność rozwiązania dla klientów.
 
 \subsubsubsection{Implementacja i narzędzia wykorzystywane do wektoryzacji}
 
@@ -1024,7 +1033,7 @@ text_splitter = RecursiveCharacterTextSplitter(
 W pierwszej kolejności definiuję, że do \textit{embeddingu} będę używać modelu\linebreak{} \textit{text-embedding-3-small} oraz inicjalizuję obiekt \pythoninline{embed}, który pozwoli mi wysyłać tekst i odbierać odpowiadającą mu reprezentację wektorową.
 
 Funkcja \pythoninline{tiktoken_len} oblicza jaką długość w tokenach ma podany jej tekst i jest potrzebna obiektowi \pythoninline{text_splitter}, który to umożliwia podzielenie tekst pojedynczego dokumentu na \textit{chunki}. Zgodnie z parametrem \pythoninline{chunk_size=400}, nie powinny być one dłuższe niż 400 tokenów. Wartość parametru została tak dobrana, by pojedyncze teksty zostały zwektoryzowane w całości, ponieważ pliki te zawierają informacje o filmach, które powinny być dodawane jako spójna całość do kontekstu. 
-W związku z tym ustawieniem obie wygenerowane bazy wektorowe Pinecone dla RAG v1 i dla RAG v2 zawierają 1000 wpisów, jeden dla każdego filmu.
+W związku z tym ustawieniem obie wygenerowane bazy wektorowe Pinecone dla \textit{RAG v1} i dla \textit{RAG v2} zawierają 1000 wpisów, jeden dla każdego filmu.
 
 Następnie otwieram połączenie do Pinecone, co zaprezentowano na poniższym frgmencie kodu, by stworzyć bazę wektorową przy pomocy funkcji \pythoninline{pc.create_index}, jeśli ta nie istnieje. W kolejnym kroku łączymy się do tej bazy (obiekt \pythoninline{index}), i otwieramy połączenie do wykonywania operacji retrieval poprzez obiekt \pythoninline{vector_store}.
 
@@ -1072,7 +1081,7 @@ vector_store = PineconeVectorStore(
 )
 \end{python}
 
-Powyższe definicje wykorzystujemy w implementacji funkcji odpowiedzialnych za wektoryzację danych wejściowych (tekstów z informacjami o filmach) i zapisanie ich w bazie Pinecone. Implementacja ta różni się dla dwóch zaproponowanych rozwiązań: RAG v1 (tylko wyszukiwanie wektorowe na podstawie pytania użytkownika bez dodatkowych metadanych) oraz RAG v2 (dodatkowa możliwość filtrowania danych na podstawie wybranych wartości), i zostały przedstawione w dalszej części tekstu. 
+Powyższe definicje wykorzystujemy w implementacji funkcji odpowiedzialnych za wektoryzację danych wejściowych (tekstów z informacjami o filmach) i zapisanie ich w bazie Pinecone. Implementacja ta różni się dla dwóch zaproponowanych rozwiązań: \textit{RAG v1} (tylko wyszukiwanie wektorowe na podstawie pytania użytkownika bez dodatkowych metadanych) oraz \textit{RAG v2} (dodatkowa możliwość filtrowania danych na podstawie wybranych wartości), i zostały przedstawione w dalszej części tekstu. 
 \newline\null
 
 \noindent\textbf{Wektoryzacja tekstu w RAG v1}
@@ -1185,7 +1194,7 @@ def create_chunk_embeddings(content, document_name):
     pass
 \end{python}
 
-W tej wersji metody proces przebiega analogicznie jak został opisany dla RAG v1, z tą różnicą że tutaj dla każdego chunku tekstu do metadanych dodajemy dodatkowe dane takie jak: 
+W tej wersji metody proces przebiega analogicznie jak został opisany dla \textit{RAG v1}, z tą różnicą że tutaj dla każdego chunku tekstu do metadanych dodajemy dodatkowe dane takie jak: 
 \pythoninline{grossRevenue}, \pythoninline{numberOfRatingVotes}, \pythoninline{runtime}, \pythoninline{year}, \pythoninline{rating},
 po których później baza Pinecone będzie mogła filtrować wyniki. 
 Dodatkowy fragment został umieszczony mi˛edzy komentarzami 
@@ -1193,9 +1202,9 @@ Dodatkowy fragment został umieszczony mi˛edzy komentarzami
 
 \subsubsection{Algorytm RAG}
 
-% \textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ? co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
-
 \subsubsubsection{Implementacja standardowego RAG (RAG v1)}
+
+\textit{RAG v1} realizuje przedstawiona, na poniższym fragmencie kodu, funkcja \linebreak{}\pythoninline{process_vector_response}. Dostarczam jej model (\pythoninline{llm}), który ma udzielić odpowiedzi na zadane pytanie (\pythoninline{question}). Pierwszym i najważniejszym elementem RAG jest możliwość wydobycia z bazy wektorowej danych, co realizuję przez obiekt \pythoninline{retriever}. Podaję mu paramerty: próg wyniku podobieństwa - 0.5 (czyli oczekujemy że zwróci chunki dla których wynik similarity score wynosi co najmniej 0.5) i maksymalna liczba chunków, którą retriever zwróci - 100. 
 
 \begin{python}
 def process_vector_response(llm, question):
@@ -1240,7 +1249,7 @@ def process_vector_response(llm, question):
         ...
 \end{python}
 
-RAG v1 realizuje przedstawiona funkcja \pythoninline{process_vector_response}, dostarczam jej model (\pythoninline{llm}), który ma udzielić odpowiedzi na zadane pytanie (\pythoninline{question}). Pierwszym i najważniejszym elementem RAG jest możliwość wydobycia z bazy wektorowej danych, co realizuję przez obiekt \pythoninline{retriever}. Podaję mu paramerty: próg wyniku podobieństwa - 0.5 (czyli oczekujemy że zwróci chunki dla których wynik similarity score wynosi co najmniej 0.5) i maksymalna liczba chunków, którą retriever zwróci - 100. 
+
 Następnie tworzymy chain \pythoninline{doc_retriever}, który opakowuje wcześniej wspomnianego retrivera o dodatkowe funkcje kompresujące odpowiedź poprzez podział otrzymanych dokumentów na części nie większe niż 3000 tokenów oraz odrzucające teksty które zostaną uznane za redundantne ze względu na podobieństwo wektorowe do innych otrzymanych tekstów. Wszystkie parametry zostały dobrane tak, by metoda uzyskiwała jak najlepsze rezultaty. Następnie uruchamiamy \pythoninline{doc_retriever} aby otrzymać dokumenty, które spełnią wszystkie powyższe warunki, dla zadanego pytania użytkownika. 
 
 \begin{python}
@@ -1319,6 +1328,9 @@ Ostatecznie funkcja zwraca odpowiedź LLM, wraz ze źródłami z których model 
 
 \subsubsubsection{Implementacja rozszerzonego RAG (RAG v2)}
 
+Przedstawiona na poniższym fragmencie kodu rozszerzona wersja -- \textit{RAG v2} -- od podstawowej różni się tylko w początkowej fazie (przedstawionej powyżej), gdzie definiujemy ustawienia retrievera, natomiast w dalszej części jest taka sama jak w wersji podstawowej. Dodatkowy fragment został umieszczony między komentarzami 
+\text{\fontfamily{pcr}\selectfont\color{red} \#!-----------}.
+
 \begin{python}
 def process_vector_response(llm:ChatOpenAI, question:str, verbose:bool=False):
     try:
@@ -1350,8 +1362,7 @@ def process_vector_response(llm:ChatOpenAI, question:str, verbose:bool=False):
         ...
 \end{python}
 
-Rozszerzona wersja - RAG v2 - od podstawowej różni się tylko w początkowej fazie (przedstawionej powyżej), gdzie definiujemy ustawienia retrievera, natomiast w dalszej części jest taka sama jak w wersji podstawowej. Dodatkowy fragment został umieszczony między komentarzami 
-\text{\fontfamily{pcr}\selectfont\color{red} \#!-----------}.
+
 W tej wersji przed stworzeniem retrievera, dodajemy chain z zapytaniem do LLM, czy dla danego pytania użytkownika można utworzyć dodatkowe zapytanie filtrujące po metadanych zapisanych w bazie Pinecone razem z embeddingami. W promptcie do LLM podajemy modelowi informacje o tym jakie metadane są dostępne (nazwa i typ wartości), oraz instrukcje na podstawie dokumentacji z Pinecone \cite{pinecone:metatdata} jak stworzyć takie zapytanie filtrujące. 
 
 
@@ -1359,7 +1370,7 @@ W tej wersji przed stworzeniem retrievera, dodajemy chain z zapytaniem do LLM, c
 
 \subsubsection{Opis metodologii badawczej}
 
-W celu porównania zaproponowanych w tej pracy rozwiązań RAG i Graph RAG, przygotowałem 
+W celu porównania zaproponowanych w tej pracy rozwiązań \textit{RAG} i \textit{Graph RAG}, przygotowałem 
 \nameref{apendix:100q}
 (\appendixname{}  \ref{apendix:100q})
 % \textbf{[załącznik / przypis do pliku z pytaniami?]} 
@@ -1475,26 +1486,26 @@ Pytania zostały skategoryzowane i podzielone na grupy. Grupy te zostaną opisan
 \subsubsection{Przykładowe pytania i odpowiedzi metod}
 Pytania i odpowiedzi metod dla kilku losowo wybranych pytań.
 
-Numer pytania: 5\\
-Pytanie: Who are the main actors in *Forrest Gump*?\\
-Poprawna odpowiedź: Main actors in Forrest Gump are Tom Hanks, Robin Wright, Sally Field and Gary Sinise.\\
-Odpowiedź RAG v1: The main actors in Forrest Gump are Tom Hanks, Robin Wright, Gary Sinise, and Sally Field.\\
-Odpowiedź RAG v2: The main actors in Forrest Gump are Tom Hanks, Robin Wright, Gary Sinise, and Sally Field.\\
-Odpowiedź Graph RAG: Robin Wright, Tom Hanks, Sally Field, Gary Sinise are the main actors in *Forrest Gump*.\\
+\noindent{}Numer pytania: 5\\
+\textbf{Pytanie}: Who are the main actors in *Forrest Gump*?\\
+\textbf{Poprawna odpowiedź}: Main actors in Forrest Gump are Tom Hanks, Robin Wright, Sally Field and Gary Sinise.\\
+\textbf{Odpowiedź RAG v1}: The main actors in Forrest Gump are Tom Hanks, Robin Wright, Gary Sinise, and Sally Field.\\
+\textbf{Odpowiedź RAG v2}: The main actors in Forrest Gump are Tom Hanks, Robin Wright, Gary Sinise, and Sally Field.\\
+\textbf{Odpowiedź Graph RAG}: Robin Wright, Tom Hanks, Sally Field, Gary Sinise are the main actors in *Forrest Gump*.\\
 
-Numer pytania: 29\\
-Pytanie: What movie from the 90s has the longest runtime?\\
+\noindent{}Numer pytania: 29\\
+\textbf{Pytanie:} What movie from the 90s has the longest runtime?\\
 Poprawna odpowiedź: Hamlet\\
-Odpowiedź RAG v1: Among the movies from the 1990s listed in the provided context, "Short Cuts" (1993) and "Magnolia" (1999) both have the longest runtime at 188 minutes each.\\
-Odpowiedź RAG v2: Based on the provided context, the movies from the 90s with the longest runtime are "Short Cuts" (1993) and "Magnolia" (1999), both with a runtime of 188 minutes.\\
-Odpowiedź Graph RAG: Hamlet has the longest runtime among 90s movies, with a runtime of 242 minutes.\\
+\textbf{Odpowiedź RAG v1}: Among the movies from the 1990s listed in the provided context, "Short Cuts" (1993) and "Magnolia" (1999) both have the longest runtime at 188 minutes each.\\
+\textbf{Odpowiedź RAG v2}: Based on the provided context, the movies from the 90s with the longest runtime are "Short Cuts" (1993) and "Magnolia" (1999), both with a runtime of 188 minutes.\\
+\textbf{Odpowiedź Graph RAG}: Hamlet has the longest runtime among 90s movies, with a runtime of 242 minutes.\\
 
-Numer pytania: 67\\
-Pytanie: Which blockbuster starred Tom Cruise and was directed by Steven Spielberg?\\
-Poprawna odpowiedź: Minority Report\\
-Odpowiedź RAG v1: The blockbuster that starred Tom Cruise and was directed by Steven Spielberg is ""Minority Report,"" released in 2002.\\
-Odpowiedź RAG v2: The blockbuster that starred Tom Cruise and was directed by Steven Spielberg is ""Minority Report,"" released in 2002.\\
-Odpowiedź Graph RAG: Minority Report starred Tom Cruise and was directed by Steven Spielberg.\\
+\noindent{}Numer pytania: 67\\
+\textbf{Pytanie:} Which blockbuster starred Tom Cruise and was directed by Steven Spielberg?\\
+\textbf{Poprawna odpowiedź}: Minority Report\\
+\textbf{Odpowiedź RAG v1}: The blockbuster that starred Tom Cruise and was directed by Steven Spielberg is "Minority Report," released in 2002.\\
+\textbf{Odpowiedź RAG v2}: The blockbuster that starred Tom Cruise and was directed by Steven Spielberg is "Minority Report," released in 2002.\\
+\textbf{Odpowiedź Graph RAG}: Minority Report starred Tom Cruise and was directed by Steven Spielberg.\\
 
 
 \subsubsection{Analiza wyników poprzez \textit{embeddings similarity}}
@@ -1503,9 +1514,9 @@ Aby ocenić jakość uzyskanych wyników oraz sposób reprezentacji informacji w
 
 W praktyce oznacza to porównywanie wektorów osadzeń odpowiadających danym elementom (np. pytaniom i ich wynikowym fragmentom kontekstu) przy użyciu metryk takich jak \textit{cosinus similarity}. Wysoka wartość podobieństwa sugeruje, że model poprawnie uchwycił semantyczne powiązanie między zapytaniem a zwróconą treścią, natomiast niskie wartości mogą wskazywać na problemy z dopasowaniem lub nieadekwatnym retrievalem.
 
-Dzięki takiemu podejściu możliwe jest nie tylko ilościowe porównanie wyników różnych konfiguracji modelu i komponentu RAG, ale również jakościowa interpretacja przestrzennego rozmieszczenia reprezentacji semantycznych -- np. grupowanie podobnych pytań lub identyfikacja anomalii w embeddingach.
+Dzięki takiemu podejściu możliwe jest nie tylko ilościowe porównanie wyników różnych konfiguracji modelu i komponentu \textit{RAG}, ale również jakościowa interpretacja przestrzennego rozmieszczenia reprezentacji semantycznych -- np. grupowanie podobnych pytań lub identyfikacja anomalii w embeddingach.
 
-Zgodnie z oczekiwaniami Graph RAG znacznie częściej uzyskuje wynik podobieństwa do oczekiwanej odpowiedzi wyższy niż RAG v1 i RAG v2 razem, co prezentuje tabela \ref{tab:1}.
+Zgodnie z oczekiwaniami \textit{Graph RAG} znacznie częściej uzyskuje wynik podobieństwa do oczekiwanej odpowiedzi wyższy niż \textit{RAG v1} i \textit{RAG v2} razem, co prezentuje tabela \ref{tab:1}.
 
 \begin{table}[H]
 \centering
@@ -1522,7 +1533,7 @@ Zgodnie z oczekiwaniami Graph RAG znacznie częściej uzyskuje wynik podobieńst
 \label{tab:1}
 \end{table}
 
-Poza samą ilością lepiej ocenionych odpowiedzi, należy również zwrócić uwagę na samą ich jakość, ponieważ mimo iż jedna metoda uzyskała wynik wyższy niż pozostałe nie oznacza to, że jest to odpowiedź poprawna czy chociaż zadowalająca. Dobrze obrazuje to tabela \ref{tab:2}, gdzie widzimy jasno, iż średnio Graph RAG generuje znacznie celniejsze odpowiedzi niż metody RAG v1 i v2.
+Poza samą ilością lepiej ocenionych odpowiedzi, należy również zwrócić uwagę na samą ich jakość, ponieważ mimo iż jedna metoda uzyskała wynik wyższy niż pozostałe nie oznacza to, że jest to odpowiedź poprawna czy chociaż zadowalająca. Dobrze obrazuje to tabela \ref{tab:2}, gdzie widzimy jasno, iż średnio\textit{ Graph RAG} generuje znacznie celniejsze odpowiedzi niż metody \textit{RAG v1 i v2}.
 
 \begin{table}[H]
 \centering
@@ -1539,13 +1550,13 @@ Poza samą ilością lepiej ocenionych odpowiedzi, należy również zwrócić u
 \label{tab:2}
 \end{table}
 
-Na korzyść Graph RAG przemawia również mediana wyników, przedstawiona w tabeli \ref{tab:3}, która jest znacznie wyższa od tych prezentowanych przez RAG v1 i v2, ale co ważniejsze, jest również znacznie wyższa od swojej średniej. Z tej obserwacji wynika, że odpowiedzi Graph RAG są na ogół jeszcze lepsze niż wynika to ze średniej, a jednocześnie skłania nas do postawienia hipotezy, iż czasem udziela odpowiedzi o bardzo niskim wyniku.
+Na korzyść \textit{Graph RAG} przemawia również mediana wyników, przedstawiona w tabeli \ref{tab:3}, która jest znacznie wyższa od tych prezentowanych przez \textit{RAG v1 i v2}, ale co ważniejsze, jest również znacznie wyższa od swojej średniej. Z tej obserwacji wynika, że odpowiedzi \textit{Graph RAG} są na ogół jeszcze lepsze niż wynika to ze średniej, a jednocześnie skłania nas do postawienia hipotezy, iż czasem udziela odpowiedzi o bardzo niskim wyniku.
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|c|}
   \hline 
-    \multicolumn{3}{|c|} {Mediana wyników podobieństwa do odpowiedzi oczekiwanej - ocena z użyciem \textit{embeddings similarity}} \\
+    \multicolumn{3}{|c|} {Mediana wyników podobieństwa - ocena z użyciem \textit{embeddings similarity}} \\
   \hline 
     RAG v1 & RAG v2 & Graph RAG \\
   \hline 
@@ -1561,10 +1572,10 @@ W celu sprawdzenia tej hipotezy opracowujemy przedstawiony na rysunku \ref{fig:b
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{images/fig/box_plot.png}
 \vspace*{-8mm}
-\caption{Wykres pudełkowy wyników Graph RAG, RAG v1, RAG v2 - ocena z użyciem \textit{embeddings similarity}.}
+\caption{Wykres pudełkowy wyników \textit{Graph RAG, RAG v1, RAG v2} - ocena z użyciem \textit{embeddings similarity}.}
 \label{fig:box_plot}
 \end{figure}
-W przypadku metody \textbf{Graph RAG} obserwowana skośność rozkładu jest najbardziej wyraźna spośród analizowanych wariantów. Oznacza to, że wartości podobieństwa embeddingów w tej metodzie w jeszcze większym stopniu skupiają się w pobliżu górnej granicy przedziału, co świadczy o wysokim poziomie zgodności semantycznej pomiędzy zapytaniami a pozyskanymi fragmentami kontekstu. Jednocześnie obecność wartość odstających o znacząco niższym podobieństwie (0.1-0.3), sugeruje, że występują sporadyczne błędy wynikające z ograniczeń struktury grafowej. 
+W przypadku metody \textit{Graph RAG} obserwowana skośność rozkładu jest najbardziej wyraźna spośród analizowanych wariantów. Oznacza to, że wartości podobieństwa embeddingów w tej metodzie w jeszcze większym stopniu skupiają się w pobliżu górnej granicy przedziału, co świadczy o wysokim poziomie zgodności semantycznej pomiędzy zapytaniami a pozyskanymi fragmentami kontekstu. Jednocześnie obecność wartość odstających o znacząco niższym podobieństwie (0.1-0.3), sugeruje, że występują sporadyczne błędy wynikające z ograniczeń struktury grafowej. 
 
 Warto zauważyć również, że stosunkowo wąski zakres wartości (niewielka rozpiętość między kwartylami) sugeruje ponadto stabilność działania modelu oraz konsekwentne utrzymywanie wysokiej jakości generowanych odpowiedzi.
 
@@ -1574,12 +1585,12 @@ Na rysunku  \ref{fig:similarity_eval} przedstawiona jest tabela porównawcza wyn
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{images/fig/similarity_eval.png}
 \vspace*{-8mm}
-\caption{Ewaluacja wyników RAG v1, RAG v2, Graph RAG dla grup pytań - ocena z użyciem \textit{embedding similarity}.}
+\caption{Ewaluacja wyników\textit{ RAG v1, RAG v2, Graph RAG} dla grup pytań - ocena z użyciem \textit{embedding similarity}.}
 \label{fig:similarity_eval}
 \end{figure}
-Analizując poszczególne kategorie można wysnuć następujący wniosek: RAG v1 i RAG v2 mają podobne średnie, ale różnią się w poszczególnych typach pytań. RAG v1 lepiej radzi sobie w zadaniach typu \textit{Free Form/Natural Language} oraz \textit{Superlative Questions }niż RAG v2. RAG v2 jest wyraźnie lepszy niż RAG v1 w zadaniach typu  \textit{Multi Hop Questions} oraz \textit{Aggregation questions}.
+Analizując poszczególne kategorie można wysnuć następujący wniosek: \textit{RAG v1} i \textit{RAG v2} mają podobne średnie, ale różnią się w poszczególnych typach pytań. \textit{RAG v1} lepiej radzi sobie w zadaniach typu \textit{Free Form/Natural Language} oraz \textit{Superlative Questions }niż \textit{RAG v2}. \textit{RAG v2 }jest wyraźnie lepszy niż \textit{RAG v1} w zadaniach typu  \textit{Multi Hop Questions} oraz \textit{Aggregation questions}.
 
-GraphRAG sumarycznie osiąga o prawie 20 punktów procentowych wyższy wynik niz RAG v1 i RAG v2, przewaga GraphRAG  nie jest rozłożona równomiernie. GraphRAG radzi sobie najlepiej, zwłaszcza tam, gdzie wymagane jest łączenie relacji, hierarchii lub zależności czasowych, czyli kategoriach takich jak: \textit{Aggregation Questions}, \textit{Time Based Questions}, \textit{Challenging/Edge Case Questions}. 
+\textit{Graph RAG} sumarycznie osiąga o prawie 20 punktów procentowych wyższy wynik niz \textit{RAG v1} i \textit{RAG v2}, przewaga \textit{Graph RAG}  nie jest rozłożona równomiernie. \textit{Graph RAG} radzi sobie najlepiej, zwłaszcza tam, gdzie wymagane jest łączenie relacji, hierarchii lub zależności czasowych, czyli kategoriach takich jak: \textit{Aggregation Questions}, \textit{Time Based Questions}, \textit{Challenging/Edge Case Questions}. 
 
 Wszystkie metody radzą sobie dobrze z kategoriami \textit{Basic Factual Questions, Aggregation Questions, Comparative Questions, Range \& Filtering Questions. }
 
@@ -1595,7 +1606,7 @@ Automatyczna analiza poprawności odpowiedzi została przeprowadzona przez OpenA
 
 W przypadku analizy przy użyciu LLM nie została zastosowana metoda zliczania „zwycięstw” modeli, którą została wykorzystana wcześniej w analizie embeddingowej. W analizie przy użyciu LLM bardzo często pojawiały się sytuacje, w których różne narzędzia otrzymywały identyczną ocenę, co prowadziło do licznych remisów. W efekcie wskaźnik liczby zwycięstw przestawał być rozróżniający i nie odzwierciedlał realnych różnic pomiędzy metodami, z tego powodu w tym podrozdziale zrezygnowano z jego stosowania.
 
-Poniżej znajduje się tabela \ref{tab:4} za pomocą, której przedstawione są średnie wyniki poprawności odpowiedzi. Średni wynik poprawności odpowiedzi  RAG v1 i RAG v2 to 44\%, średni  Graph RAG wynosi 79\%.  Metoda Graph RAG uzyskała wynik o 35 punkty procentowe lepszy niż pozostałe metody. 
+Poniżej znajduje się tabela \ref{tab:4} za pomocą, której przedstawione są średnie wyniki poprawności odpowiedzi. Średni wynik poprawności odpowiedzi \textit{ RAG v1} i \textit{RAG v2} to 44\%, średni  \textit{Graph RAG} wynosi 79\%.  Metoda \textit{Graph RAG} uzyskała wynik o 35 punkty procentowe lepszy niż pozostałe metody. 
 
 \begin{table}[H]
 \centering
@@ -1612,7 +1623,7 @@ Poniżej znajduje się tabela \ref{tab:4} za pomocą, której przedstawione są 
 \label{tab:4}
 \end{table}
 
-Tabela \ref{tab:5} zawiera medianę z oceny poprawności odpowiedzi poszczególnych metod. Mediany metod RAG V1 oraz RAG V2 są na podobnym poziomie około 30\%.  Mediana metody  Graph RAG wynosi 100\%. 
+Tabela \ref{tab:5} zawiera medianę z oceny poprawności odpowiedzi poszczególnych metod. Mediany metod \textit{RAG v1} oraz \textit{RAG v2} są na podobnym poziomie około 30\%.  Mediana metody  \textit{Graph RAG} wynosi 100\%. 
 
 \begin{table}[H]
 \centering
@@ -1629,45 +1640,48 @@ Tabela \ref{tab:5} zawiera medianę z oceny poprawności odpowiedzi poszczególn
 \label{tab:5}
 \end{table}
 
-Analizując powyższe tabele \ref{tab:4} oraz  \ref{tab:5} możemy zauważyć, że metody RAG v1 oraz RAG v2 mają wyższą średni niż medianę, co oznacza, że kilka wyników znacząco zawyża średnią. Powyższą tezę możemy potwierdzić analizując histogramy metod RAG v1 oraz RAG v2, które znajdują się odpowiednio na rysunku \ref{fig:llm_hist_rag_v1} oraz \ref{fig:llm_hist_rag_v2}. Histogram to graficzne przedstawienie danych ilościowych, składające się z prostokątnych słupków. Każdy słupek reprezentuje przedział wartości, a jego wysokość odpowiada liczbie obserwacji w tym przedziale.
+Analizując powyższe tabele \ref{tab:4} oraz  \ref{tab:5} możemy zauważyć, że metody \textit{RAG v1} oraz \textit{RAG v2 }mają wyższą średni niż medianę, co oznacza, że kilka wyników znacząco zawyża średnią. Powyższą tezę możemy potwierdzić analizując histogramy metod \textit{RAG v1} oraz \textit{RAG v2}, które znajdują się odpowiednio na rysunku \ref{fig:llm_hist_rag_v1} oraz \ref{fig:llm_hist_rag_v2}. Histogram to graficzne przedstawienie danych ilościowych, składające się z prostokątnych słupków. Każdy słupek reprezentuje przedział wartości, a jego wysokość odpowiada liczbie obserwacji w tym przedziale.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{images/fig/llm_hist_rag_v1.png}
-    \caption{Histogram poprawności odpowiedzi metody RAG v1 - ocena z użyciem OpenAI GPT-4.1.}
+    \vspace*{-8mm}
+    \caption{Histogram poprawności odpowiedzi metody \textit{RAG v1} - ocena z użyciem OpenAI GPT-4.1.}
     \label{fig:llm_hist_rag_v1}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{images/fig/llm_hist_rag_v2.png}
-    \caption{Histogram poprawności odpowiedzi metody RAG v2 - ocena z użyciem OpenAI GPT-4.1.}
+    \vspace*{-8mm}
+    \caption{Histogram poprawności odpowiedzi metody \textit{RAG v2} - ocena z użyciem OpenAI GPT-4.1.}
     \label{fig:llm_hist_rag_v2}
 \end{figure}
-Analizując powyższe wykresy łatwo zauważyć, że największe słupki są przy wartościach 0 oraz 1, czyli metody  RAG v1 oraz RAG v2 najwięcej mają odpowiedzi błędnych i prawidłowych. 
+Analizując powyższe wykresy łatwo zauważyć, że największe słupki są przy wartościach 0 oraz 1, czyli metody  \textit{RAG v1} oraz \textit{RAG v2} najwięcej mają odpowiedzi błędnych i prawidłowych. 
 
-Metoda Graph RAG osiąga medianę wynoszącą 100\% i średnią wynoszącą 79\%, co oznacza, że większość odpowiedzi jest prawidłowa, a kilka błędnych odpowiedzi zaniża wynik. Potwierdzenie tego znajduje się poniżej na histogramie na rysunku \ref{fig:llm_hist_Graphrag}.
+Metoda \textit{Graph RAG} osiąga medianę wynoszącą 100\% i średnią wynoszącą 79\%, co oznacza, że większość odpowiedzi jest prawidłowa, a kilka błędnych odpowiedzi zaniża wynik. Potwierdzenie tego znajduje się poniżej na histogramie na rysunku \ref{fig:llm_hist_Graphrag}.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{images/fig/llm_hist_Graphrag.png}
-    \caption{Histogram poprawności odpowiedzi metody Graph RAG - ocena z użyciem OpenAI GPT-4.1.}
+    \vspace*{-8mm}
+    \caption{Histogram poprawności odpowiedzi metody \textit{Graph RAG} - ocena z użyciem OpenAI GPT-4.1.}
     \label{fig:llm_hist_Graphrag}
 \end{figure}
-Analizując powyższy histogram można zauważyć, że Graph RAG poprawnie odpowiedział na większość pytań i jest dość uniwersalny. Kolejnym krokiem będzie przyjrzenie się, w których zadania popełnił błędy. 
+Analizując powyższy histogram można zauważyć, że \textit{Graph RAG} poprawnie odpowiedział na większość pytań i jest dość uniwersalny. Kolejnym krokiem będzie przyjrzenie się, w których zadania popełnił błędy. 
 
-Podobnie jak w rozdziale dotyczącym analizy z zastosowaniem embeddingów, przejdziemy teraz do rozkładu wyników per grupy. Zastosowany podział jest ten sam  co w poprzednim rozdziale.  Na poniższym rysunku \ref{fig:gpt_eval} znajduje się średnia ocena poprawności per grupa dla każdego narzędzia. W wierszach znajdują się grupy pytań, kolumny to zastosowane metody. 
+Podobnie jak w rozdziale dotyczącym analizy z zastosowaniem embeddingów, przejdziemy teraz do rozkładu wyników per grupy. Zastosowany podział jest ten sam  co w poprzednim rozdziale.  Na poniższym rysunku \ref{fig:gpt_eval} znajduje się średnia ocena poprawności per grupa dla każdego narzędzia. W wierszach znajdują się grupy pytań, kolumny to zastosowane metody.  W zastosowanej metodologi 0\% oznacza brak dopasowania, 100\% oznacza dopasowanie całkowite.  Kolorowanie komórek wskazuje jakość wyników w danej kategorii: kolory są dobrane liniowo od 0\% do 50\% - kolor czerwony, od 50\% do 100\% kolor zielony. 
 
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{images/fig/gpt_eval.png}
 \vspace*{-8mm}
-\caption{Ewaluacja wyników RAG v1, RAG v2, Graph RAG dla grup pytań z użyciem OpenAI GPT-4.1.}
+\caption{Ewaluacja wyników \textit{RAG v1}, \textit{RAG v2}, \textit{Graph RAG} dla grup pytań z użyciem OpenAI GPT-4.1.}
 \label{fig:gpt_eval}
 \end{figure}
 
-Analizując powyższą tabelę można wysunąć następujący wniosek: metoda RAG v1 oraz RAG v2  radzi sobie dobrze w zadaniach takich jak \textit{Basic Factual Questions, Comparative Questions, Actor focused Question, Aggregation Questions} oraz \textit{Directon focused Question}. Oznacza to, że klasyczny RAG radzi sobie dobrze w zadaniach wymagających jednego, prostego dopasowania informacji, ale traci skuteczność, gdy konieczne jest łączenie wielu fragmentów wiedzy. 
+Analizując powyższą tabelę można wysunąć następujący wniosek: metoda \textit{RAG v1} oraz \textit{RAG v2}  radzi sobie dobrze w zadaniach takich jak \textit{Basic Factual Questions, Comparative Questions, Actor focused Question, Aggregation Questions} oraz \textit{Directon focused Question}. Oznacza to, że klasyczny \textit{RAG} radzi sobie dobrze w zadaniach wymagających jednego, prostego dopasowania informacji, ale traci skuteczność, gdy konieczne jest łączenie wielu fragmentów wiedzy. 
 
-Graph RAG poradził sobie dobrze w większości typów zadań.  Szczególną różnicę między Graph a RAG v1 oraz RAG v2 widać w zadaniach typu Superlative Questions, Multi Hop Questions, Time based Questions oraz Reasoning Questions. Najbardziej wyraźne różnice pojawiają się w obszarach wymagających złożonego rozumowania, takich jak zadania multi-hop, pytania o charakterze analitycznym, problemy związane z czasem, liczebnością czy statystyką. Podobne wnioski zawarte są w pracy  \textit{Retrieval-Augmented Generation with Graphs (GraphRAG)}, której autorzy wskazują, że GraphRAG lepiej radzi sobie w zadaniach wymagających relacyjnej struktury i logicznego połączenia informacji \cite{graphRAG}. 
+\textit{Graph RAG} poradził sobie dobrze w większości typów zadań.  Szczególną różnicę między \textit{Graph RAG} a \textit{RAG v1} oraz \textit{RAG v2} widać w zadaniach typu \textit{Superlative Questions, Multi Hop Questions, Time based Questions oraz Reasoning Questions}. Najbardziej wyraźne różnice pojawiają się w obszarach wymagających złożonego rozumowania, takich jak zadania multi-hop, pytania o charakterze analitycznym, problemy związane z czasem, liczebnością czy statystyką. Podobne wnioski zawarte są w pracy  \textit{Retrieval-Augmented Generation with Graphs (Graph RAG)}, której autorzy wskazują, że \textit{Graph RAG} lepiej radzi sobie w zadaniach wymagających relacyjnej struktury i logicznego połączenia informacji \cite{graphRAG}. 
 
 Warto zauważyć również, że wyniki między analizą embeddingową, a analizą z zastosowaniem LLM różnią na poszczególnych grupach. LLM skupił się na analizie faktologicznej oraz czy zawarte informację są prawidłowe. 
 
@@ -1680,7 +1694,7 @@ W ocenie eksperckiej brano pod uwagę zarówno ogólną poprawność merytoryczn
 
 W przypadku analizy eksperckiej nie została zastosowana metody zliczania „zwycięstw” modeli, którą została wykorzystana wcześniej w analizie embeddingowej. W analizie eksperckiej bardzo często pojawiały się sytuacje, w których różne narzędzia otrzymywały identyczną ocenę, co prowadziło do licznych remisów. W efekcie wskaźnik liczby zwycięstw przestawał być rozróżniający i nie odzwierciedlał realnych różnic pomiędzy metodami, z tego powodu w tym podrozdziale zrezygnowano z jego stosowania.
 
-Poniżej znajduje się  \ref{tab:6}, w której zawarty jest średni wynik wskazujący poprawność odpowiedzi. Metoda RAG v1 oraz RAG v2 uzyskały odpowiedzi na poziomie około 55\%. Metoda Graph RAG uzyskała odpowiedź na poziomie 87\%. 
+Poniżej zaprezentowano tabelę \ref{tab:6}, w której zawarty jest średni wynik wskazujący poprawność odpowiedzi. Metoda \textit{RAG v1} oraz \textit{RAG v2} uzyskały odpowiedzi na poziomie około 55\%. Metoda \textit{Graph RAG} uzyskała odpowiedź na poziomie 87\%. 
 
 \begin{table}[H]
 \centering
@@ -1696,7 +1710,8 @@ Poniżej znajduje się  \ref{tab:6}, w której zawarty jest średni wynik wskazu
 \caption{Średni wynik poprawności odpowiedzi per metoda - ocena człowieka.}
 \label{tab:6}
 \end{table}
-Tabela \ref{tab:5} zawiera medianę z oceny poprawności odpowiedzi poszczególnych metod. Mediana metody RAG v1 to 53,5\%, mediana RAG v2 to 70,2\%.  Mediana metody  Graph RAG wynosi 100\%. 
+
+Tabela \ref{tab:7} zawiera medianę z oceny poprawności odpowiedzi poszczególnych metod. Mediana metody \textit{RAG v1} to 53,5\%, mediana \textit{RAG v2} to 70,2\%.  Mediana metody  \textit{Graph RAG} wynosi 100\%. 
 
 
 \begin{table}[H]
@@ -1714,49 +1729,54 @@ Tabela \ref{tab:5} zawiera medianę z oceny poprawności odpowiedzi poszczególn
 \label{tab:7}
 \end{table}
 
-W tej metodzie analizy warto zauważyć, że średnia metody RAG v1 jest zbliżona do średniej.  W przypadku RAG v2 średnia wynosi 57\%, a mediana 72,2\%, co oznacza rozkład prawostronny danych. Poniżej na rysunku\ref{fig:human_hist_rag_v1} znajduje się histogram RAG v1, a na rysunku \ref{fig:human_hist_rag_v2} znajduje się histogram RAG v2. 
+W tej metodzie analizy warto zauważyć, że średnia metody \textit{RAG v1} jest zbliżona do średniej.  W przypadku \textit{RAG v2} średnia wynosi 57\%, a mediana 72,2\%, co oznacza rozkład prawostronny danych. Poniżej na rysunku\ref{fig:human_hist_rag_v1} znajduje się histogram \textit{RAG v1}, a na rysunku \ref{fig:human_hist_rag_v2} znajduje się histogram \textit{RAG v2}. 
 Przy metodzie eksperckiej warto zauważyć, że więcej pytań zostało uznanych za poprawne. 
 
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{images/fig/human_hist_rag_v1.png}
-    \caption{Enter Caption}
+    \vspace*{-8mm}
+    \caption{Histogram poprawności odpowiedzi metody \textit{RAG v1} - ocena człowieka.}
     \label{fig:human_hist_rag_v1}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{images/fig/human_hist_rag_v2.png}
-    \caption{Enter Caption}
+    \vspace*{-8mm}
+    \caption{Histogram poprawności odpowiedzi metody \textit{RAG v2} - ocena człowieka.}
     \label{fig:human_hist_rag_v2}
 \end{figure}
 
-W przypadku metody Graph RAG średnia wynosi 81\%, a mediana 100\%, co sugeruje rozkład prawostronny. Na rysunku \ref{fig:human_hist_graph} znajduje się histogram, reprezentujący rozkład odpowiedzi: większość pytań jest poprawna, zdarzają się pojedyncze nie pełne odpowiedzi oraz kilka nie poprawnych. Kolejnym krokiem będzie przyjrzenie się, w których zadania popełnił błędy. 
+W przypadku metody \textit{Graph RAG }średnia wynosi 81\%, a mediana 100\%, co sugeruje rozkład prawostronny. Na rysunku \ref{fig:human_hist_graph} znajduje się histogram, reprezentujący rozkład odpowiedzi: większość pytań jest poprawna, zdarzają się pojedyncze nie pełne odpowiedzi oraz kilka nie poprawnych. Kolejnym krokiem będzie przyjrzenie się, w których zadania popełnił błędy. 
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{images/fig/human_hist_graph.png}
-    \caption{Enter Caption}
+    \vspace*{-8mm}
+    \caption{Histogram poprawności odpowiedzi metody \textit{Graph RAG} - ocena człowieka.}
     \label{fig:human_hist_graph}
 \end{figure}
 
 
-Podobnie jak w rozdziale dotyczącym analizy z zastosowaniem embeddingów, przejdziemy teraz do rozkładu wyników per grupy. Zastosowany podział jest ten sam  co w poprzednim rozdziale.  Na poniższym rysunku \ref{fig:gpt_eval} znajduje się średnia ocena poprawności per grupa dla każdego narzędzia. W wierszach znajdują się grupy pytań, kolumny to zastosowane metody. 
+Podobnie jak w rozdziale dotyczącym analizy z zastosowaniem embeddingów, przejdziemy teraz do rozkładu wyników per grupy. Zastosowany podział jest ten sam  co w poprzednim rozdziale.  Na poniższym rysunku \ref{fig:human_eval} znajduje się średnia ocena poprawności per grupa dla każdego narzędzia. W wierszach znajdują się grupy pytań, kolumny to zastosowane metody.  W zastosowanej metodologi 0\% oznacza brak dopasowania, 100\% oznacza dopasowanie całkowite.  Kolorowanie komórek wskazuje jakość wyników w danej kategorii: kolory są dobrane liniowo od 0\% do 50\% - kolor czerwony, od 50\% do 100\% kolor zielony. 
 
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{images/fig/human_eval.png}
 \vspace*{-8mm}
-\caption{Ewaluacja wyników RAG v1, RAG v2, Graph RAG dla grup pytań przeprowadzona przez człowieka.}
+\caption{Ewaluacja wyników \textit{RAG v1, RAG v2, Graph RAG }dla grup pytań przeprowadzona przez człowieka.}
 \label{fig:human_eval}
 \end{figure}
 We wszystkich trzech metodach najwyższą skuteczność obserwuje się w pytaniach prostych, faktograficznych oraz takich, które wymagają odnalezienia pojedynczej, jasno określonej informacji. Dotyczy to zwłaszcza kategorii \textit{Basic Factual Questions}, \textit{Director Focused Questions}, \textit{Exploratory Questions}, \textit{Comparative Questions} oraz \textit{Aggregation Questions}, gdzie również klasyczne warianty RAG osiągają dobre wyniki. W tych obszarach wszystkie analizowane systemy radzą sobie porównywalnie dobrze, a różnice między nimi są niewielkie.
 
-RAG v1 i RAG v2 prezentują zbliżony profil -- radzą sobie dobrze w pytaniach prostych i jednoznacznych, jednak ich efektywność gwałtownie spada tam, gdzie niezbędne jest łączenie wielu faktów lub bardziej złożona struktura wiedzy. Warto również zauważyć, że różnice między RAG v1 i RAG v2 są stosunkowo niewielkie, co sugeruje, że ich ograniczenia mają charakter systemowy i wynikają z klasycznego podejścia do wyszukiwania danych według podobieństwa embeddingów.
+\textit{RAG v1} i \textit{RAG v2} prezentują zbliżony profil -- radzą sobie dobrze w pytaniach prostych i jednoznacznych, jednak ich efektywność gwałtownie spada tam, gdzie niezbędne jest łączenie wielu faktów lub bardziej złożona struktura wiedzy. Warto również zauważyć, że różnice między \textit{RAG v1} i \textit{RAG v2} są stosunkowo niewielkie, co sugeruje, że ich ograniczenia mają charakter systemowy i wynikają z klasycznego podejścia do wyszukiwania danych według podobieństwa embeddingów.
 
-Klasyczne podejścia RAG v1 i RAG v2 utrzymują też dobrą skuteczność w pytaniach o umiarkowanej złożoności, takich jak \textit{Actor Focused}, \textit{Genre Specific} czy \textit{Range \& Filtering}. Są to kategorie, które wymagają odnalezienia kilku powiązanych informacji, ale nie angażują pełnego rozumowania wieloetapowego. W tych przypadkach RAG osiąga stabilne wyniki.
+Klasyczne podejścia \textit{RAG v1} i \textit{RAG v2} utrzymują też dobrą skuteczność w pytaniach o umiarkowanej złożoności, takich jak \textit{Actor Focused}, \textit{Genre Specific} czy \textit{Range \& Filtering}. Są to kategorie, które wymagają odnalezienia kilku powiązanych informacji, ale nie angażują pełnego rozumowania wieloetapowego. W tych przypadkach \textit{RAG} osiąga stabilne wyniki.
 
 Warto zauważyć, że w analizie eksperckiej wszystkie 3 metody osiągają dobre wyniki w kategorii \textit{Free Form/Natural Language Style}. 
+
+\textit{Graph RAG} uzyskał bardzo dobre wyniki w większości kategorii. Kategorie w których wyniki są niższe, ale dalej dobre to \textit{Target Queries with Constraints},  \textit{Cross Attribute Filtering} oraz C\textit{hallenging/Edge Case Questions}. W wymienionych kategoriach pytań \textit{Graph RAG} uzyskał około 60-70 \% poprawności co jest dalej dobrym wynikiem. 
 
 Analiza została przeprowadzona w sposób ekspercki, co pozwoliło na rzetelną i wiarygodną ocenę jakości odpowiedzi niezależnie od ograniczeń metod automatycznych. Dzięki ocenie człowieka uzyskane wyniki możemy traktować jako solidne odniesienie potwierdzające lub korygujące rezultaty embeddingów i modeli LLM. Jednocześnie należy podkreślić, że choć analiza ekspercka zapewnia wysoką precyzję, nie jest metodą skalowalną ani praktyczną do stosowania w realnych systemach, w których konieczna jest automatyczna i powtarzalna ewaluacja na dużą skalę.
 
@@ -1768,16 +1788,25 @@ Po przeanalizowaniu wyników eksperymentu trzema różnymi metodami ewaluacji, m
 
 W analizie przeprowadzonej przez człowieka dodatkowo oba podejścia \textit{RAG} osiągnęły dobre wyniki w Natural Form Questions, czyli pytania zadane w swobodnym, naturalnym języku -- często nieprecyzyjne, subiektywne przez co testują semantyczne rozumienie nieprecyzyjnych pytań i intencji użytkownika. Podobne rezultaty osiągnęli autorzy pracy \textit{Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks}, których badania potwierdzają praktyczną użyteczność \textit{RAG} w krótkich, otwartych pytaniach \cite{NEURIPS2020_6b493230}. 
 
+Warto też zauważyć, że pytania typu \textit{Range \& Filtering} oraz \textit{Revenue \& Votes}, które plasują się pośrednio między kategoriami łatwymi a trudnymi — wymagają już operacji na danych liczbowych lub zakresach, ale nadal są możliwe do rozwiązania przez oba podejścia \textit{RAG}, choć ze znacznie gorszą stabilnością.
 
+We wszystkich trzech przeprowadzonych analizach \textit{Graph RAG} ma dobre wyniki w zakresie Basic Fakt Questions, Time Based Questions,  Exploratory or Interactive czyli pytań klasyfikowanych jako prostych. Dodatkowo \textit{Graph RAG} osiąga znacząco lepsze wyniki w kategoriach pytań \textit{Open Ended Analytical Questions}, \textit{Multi Hop Questions}, niż obie metody \textit{RAG}. 
 
+Wykonana analiza potwierdza, że \textit{Graph RAG} znacząco rozszerza możliwości klasycznych systemów \textit{RAG}, szczególnie w zadaniach wymagających bardziej strukturalnego podejścia do wiedzy. W kontekście złożonych pytań i kategorii operujących na relacjach, związkach czasowych lub danych liczbowych, metoda grafowa okazuje się nie tylko bardziej precyzyjna, ale również zdecydowanie bardziej stabilna i konsekwentna niż tradycyjne podejścia oparte wyłącznie na wyszukiwaniu podobnych fragmentów. Autorzy pracy \textit{Retrieval-Augmented Generation with Graphs (Graph RAG)}  wskazują, że \textit{Graph RAG} może znacznie poprawić zdolność modeli do multi-hop reasoning, ponieważ krawędzie grafu umożliwiają podróże „po ścieżkach” relacji między encjami, co klasyczne \textit{RAG} (oparte na embeddingach) często pomija \cite{graphRAG}. Jednakże, autorzy podkreślają, że nie da się zastosować jednego uniwersalnego podejścia \textit{Graph RAG } do wszystkich zadań, ponieważ struktury grafowe w różnych obszarach zastosowania mają odmienne wzorce relacyjne (np. graf użyty w danych filmowych jest wielowartościowe, nieliniowe oraz zawarte dane nie muszą trzymać sztywnej struktury, co jest zupełnie odmienne w grafach dokumentalnych zawierających np. prace naukowe, które będą hierarchiczne i uporządkowane). 
 
-Wykonana analiza potwierdza, że \textit{GraphRAG} znacząco rozszerza możliwości klasycznych systemów \textit{RAG}, szczególnie w zadaniach wymagających bardziej strukturalnego podejścia do wiedzy. W kontekście złożonych pytań i kategorii operujących na relacjach, związkach czasowych lub danych liczbowych, metoda grafowa okazuje się nie tylko bardziej precyzyjna, ale również zdecydowanie bardziej stabilna i konsekwentna niż tradycyjne podejścia oparte wyłącznie na wyszukiwaniu podobnych fragmentów. Autorzy pracy \textit{Retrieval-Augmented Generation with Graphs (GraphRAG)}  wskazują, że GraphRAG może znacznie poprawić zdolność modeli do multi-hop reasoning, ponieważ krawędzie grafu umożliwiają podróże „po ścieżkach” relacji między encjami, co klasyczne \textit{RAG} (oparte na embeddingach) często pomija \cite{graphRAG}. Jednakże, autorzy podkreślają, że nie da się zastosować jednego uniwersalnego podejścia \textit{GraphRAG } do wszystkich zadań, ponieważ struktury grafowe w różnych obszarach zastosowania mają odmienne wzorce relacyjne (np. graf użyty w danych filmowych jest wielowartościowe, nieliniowe oraz zawarte dane nie muszą trzymać sztywnej struktury, co jest zupełnie odmienne w grafach dokumentalnych zawierających np. prace naukowe, które będą hierarchiczne i uporządkowane). 
+Podsumowując, \textit{Graph RAG} można rekomendować do systemów, w których występują pytania złożone, wymagające integracji wielu faktów, rozumowania wieloetapowego lub pracy na strukturach relacyjnych. Klasyczny \textit{RAG }może pozostać wystarczającym rozwiązaniem w systemach o prostszych wymaganiach informacyjnych, jednak w zastosowaniach bardziej zaawansowanych \textit{Graph RAG} zdecydowanie przewyższa go pod względem jakości, stabilności i kompletności odpowiedzi.
 
-Podsumowując, \textit{GraphRAG} można rekomendować do systemów, w których występują pytania złożone, wymagające integracji wielu faktów, rozumowania wieloetapowego lub pracy na strukturach relacyjnych. Klasyczny \textit{RAG }może pozostać wystarczającym rozwiązaniem w systemach o prostszych wymaganiach informacyjnych, jednak w zastosowaniach bardziej zaawansowanych \textit{GraphRAG} zdecydowanie przewyższa go pod względem jakości, stabilności i kompletności odpowiedzi.
+Zarówno \textit{RAG}, jak i\textit{ Graph RAG} można traktować jako metody komplementarne, które najlepiej sprawdzają się w połączeniu z odpowiednio przygotowanym źródłem wiedzy. \textit{RAG} dobrze działa w sytuacjach, w których treści są niestrukturyzowane i można je reprezentować jako zbiory dokumentów lub segmentów tekstu – model wykorzystuje wtedy semantyczne podobieństwo embeddingów, aby odnaleźć fragmenty najbardziej powiązane z pytaniem użytkownika \cite{rag}. Z kolei \textit{Graph RAG} wykorzystuje relacyjną strukturę danych, umożliwiając modelowi dostęp do zależności pomiędzy encjami co wspiera rozumowanie wieloetapowe, które trudno uchwycić za pomocą samego podobieństwa embeddingów. Dlatego obie techniki wzajemnie się uzupełniają: \textit{RAG }pozwala szybko i efektywnie pozyskiwać kontekst semantyczny, natomiast \textit{Graph RAG }umożliwia zrozumienie i odtworzenie złożonych relacji w zbiorze danych. 
 
 
 \section{Podsumowanie}
-\textcolor{red}{\textit{TODO: napisać ...}}
+W pracy zbadano i przetestowano możliwości wykorzystania grafów wiedzy w połączeniu z wielkimi modelami językowymi, ukazując w jaki sposób oba podejścia mogą wzajemnie się uzupełniać. Analiza przeprowadzonych eksperymentów wykazała, że grafy wiedzy wnoszą do modeli językowych uporządkowaną, relacyjną reprezentację informacji, która znacząco podnosi jakość odpowiedzi w zadaniach wymagających rozumowania wieloetapowego, łączenia wielu faktów czy operowania na strukturach czasowych i semantycznych. Jednocześnie wykazano, że klasyczne podejścia \textit{RAG} pozostają niezwykle skuteczne w obszarach, gdzie dominuje proste wyszukiwanie informacji oparte na podobieństwie semantycznym, co pokazuje, że oba mechanizmy pełnią odmienne, lecz komplementarne funkcje.
+
+Praca pozwoliła również jednoznacznie wskazać scenariusze aplikacyjne, w których integracja grafów wiedzy z modelami językowymi przynosi największe korzyści. Szczególnie korzystne okazały się zastosowania wymagające interpretacji złożonych dokumentów, analizy procesów biznesowych, wnioskowania opartego na relacjach między encjami oraz obsługi zapytań z obszaru \textit{multi-hop reasoning}. W takich przypadkach \textit{Graph RAG} przewyższa klasyczne metody, zapewniając większą stabilność, spójność faktograficzną i interpretowalność. Jednocześnie wyniki pokazują, że technologie te nie konkurują ze sobą, lecz tworzą wspólny ekosystem rozwiązań:\textit{ RAG }dostarcza kontekst semantyczny w oparciu o przeszukiwanie danych, natomiast \textit{Graph RAG} umożliwia strukturalne zrozumienie wiedzy.
+
+Obszarami nad którymi skupiają się inżynierowie w rozwoju \textit{Graph RAG} oraz \textit{RAG} jest przede wszystkim redukcja halucynacji oraz optymalizacja procesu treningu modelu. Obszarem wartym wspomnienia jest również \textit{Multimodalny RAG}, czyli wykorzystywanie również obrazów, tabel, dzięków w pipeline’ach \textit{RAG} \cite{dataworkz}.  Pozwala to rozszerzyć wykorzystywanie \textit{RAG }oraz \textit{Graph RAG} w edukacji czy medycynie. Dodatkowo warto wspomnieć o wbudowaniu \textit{RAG}  czy \textit{Graph RAG} w systemach Agentów AI  czyli w autonomicznym programie komputerowym opartym na sztucznej inteligencji, który wykonuje złożone zadania bez stałego nadzoru człowieka.  Warto również wspomnieć o kierunku  rozwoju modularny framework RGL („RAG-on-Graphs Library”), który to  integruje cały pipeline \textit{Graph RAG} — od indeksowania grafu i dynamicznego pobierania węzłów, przez konstruowanie podgrafu i tokenizację, aż po generowanie odpowiedzi \cite{ RGL}. Dzięki zoptymalizowanym komponentom (np. filtrowanie węzłów) RGL pozwala na znaczące przyspieszenie (do 143x) w stosunku do tradycyjnych metod, a także zmniejsza zużycie tokenów \cite{RGL}.
+
+Podsumowując, praca dowodzi, że integracja grafów wiedzy z wielkimi modelami językowymi stanowi szczególnie wartościowe podejście w środowiskach, gdzie istotne są zarówno precyzyjne relacje, jak i elastyczność generowania odpowiedzi. Wyniki analiz podkreślają, że odpowiednio przygotowany graf wiedzy, połączony z dużym modelem językowym, pozwala budować systemy bardziej dokładne, stabilne i zdolne do obsługi szerokiej gamy zapytań. Tym samym praca nie tylko przedstawia praktyczne możliwości tej integracji, lecz także wskazuje konkretne obszary, w których jej zastosowanie jest najbardziej efektywne.
 
 %  tabela z excela do LaTeX: https://tex.stackexchange.com/questions/609475/how-to-add-excel-tables-with-colors-into-overleaf; https://www.ctan.org/tex-archive/support/excel2latex;
 %  być może z kolorami 
