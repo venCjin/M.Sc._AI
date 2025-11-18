@@ -866,7 +866,14 @@ W procesie ekstrakcji może się zdarzyć, że wygenerowane nazwy obiektów czy 
 Finalnie zapisujemy wygenerowane przez LLM elementy grafowe do bazy Neo4j poprzez wywołanie 
 \pythoninline{graph.add_graph_documents}.
 
-\textcolor{red}{\textit{! TODO: [J] obrazek + tekst o wygenerowanym grafie z neo4j}}
+Wygenerowany graf zawiera 4376 obiektów oraz 8528 relacji. Na rysunku \ref{fig:my_graph} zaprezentowano przykładowy podgraf informacji o filmie „The Shawshank Redemption” oraz relacja do innych filmów, w których występował aktor „Morgan Freeman”.
+
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{images/fig/my_graph.png}
+\vspace*{-8mm}
+\caption{Przykładowy podgraf informacji o filmie „The Shawshank Redemption” oraz relacja do innych filmów, w których występował aktor „Morgan Freeman”.}
+\label{fig:my_graph}
+\end{figure}
 
 \subsubsection{Algorytm Graph RAG}
 % \textcolor{red}{\textit{! TODO: [J] Opis ogólny dodać ? co robimy, jak i dlaczego - bez kodu, nietechnicznie}}
