@@ -43,6 +43,9 @@ bmargin=2.8cm,
 
 \newcommand\codelinespread{0.95}
 
+\usepackage{tabularx,booktabs}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
 \usepackage[
 backend=biber, 
 sorting=none,
@@ -1366,7 +1369,7 @@ def process_vector_response(llm:ChatOpenAI, question:str, verbose:bool=False):
 W tej wersji przed stworzeniem retrievera, dodajemy chain z zapytaniem do LLM, czy dla danego pytania użytkownika można utworzyć dodatkowe zapytanie filtrujące po metadanych zapisanych w bazie Pinecone razem z embeddingami. W promptcie do LLM podajemy modelowi informacje o tym jakie metadane są dostępne (nazwa i typ wartości), oraz instrukcje na podstawie dokumentacji z Pinecone \cite{pinecone:metatdata} jak stworzyć takie zapytanie filtrujące. 
 
 
-\subsection{Wnioski i analiza wyników}
+\subsection{Eksperymenty i wyniki}
 
 \subsubsection{Opis metodologii badawczej}
 
@@ -1520,15 +1523,15 @@ Zgodnie z oczekiwaniami \textit{Graph RAG} znacznie częściej uzyskuje wynik po
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|c|c|c|}
-  \hline 
+\begin{tabularx}{0.8\textwidth}{ | *{3}{Y|} }
+\hline 
     \multicolumn{3}{|c|} {Wyższy wynik podobieństwa - ocena z użyciem \textit{embeddings similarity}} \\
   \hline 
     RAG v1 & RAG v2 & Graph RAG \\
   \hline 
-    13 & 15 &78 \\
-  \hline 
-\end{tabular} 
+    13 & 15 & 78 \\
+\hline
+\end{tabularx}
 \caption{Liczba odpowiedzi dla których metoda uzyskała wyższy wynik niż pozostałe - ocena z użyciem \textit{embeddings similarity}}
 \label{tab:1}
 \end{table}
@@ -1537,7 +1540,7 @@ Poza samą ilością lepiej ocenionych odpowiedzi, należy również zwrócić u
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|c|c|c|}
+\begin{tabularx}{0.8\textwidth}{ | *{3}{Y|} }
   \hline 
     \multicolumn{3}{|c|} {Średni wynik podobieństwa - ocena z użyciem \textit{embeddings similarity}} \\
   \hline 
@@ -1545,7 +1548,7 @@ Poza samą ilością lepiej ocenionych odpowiedzi, należy również zwrócić u
   \hline 
     56,8\%& 57,7\%&75,4\%\\
   \hline 
-\end{tabular} 
+\end{tabularx} 
 \caption{Średni wynik podobieństwa do odpowiedzi oczekiwanej - ocena z użyciem \textit{embeddings similarity}}
 \label{tab:2}
 \end{table}
@@ -1554,7 +1557,7 @@ Na korzyść \textit{Graph RAG} przemawia również mediana wyników, przedstawi
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|c|c|c|}
+\begin{tabularx}{0.85\textwidth}{ | *{3}{Y|} }
   \hline 
     \multicolumn{3}{|c|} {Mediana wyników podobieństwa - ocena z użyciem \textit{embeddings similarity}} \\
   \hline 
@@ -1562,7 +1565,7 @@ Na korzyść \textit{Graph RAG} przemawia również mediana wyników, przedstawi
   \hline 
     59,8\%& 61,0\%&83,1\%\\
   \hline 
-\end{tabular} 
+\end{tabularx} 
 \caption{Mediana wyników podobieństwa do odpowiedzi oczekiwanej - ocena z użyciem \textit{embeddings similarity}}
 \label{tab:3}
 \end{table}
@@ -1610,7 +1613,7 @@ Poniżej znajduje się tabela \ref{tab:4} za pomocą, której przedstawione są 
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|c|c|c|}
+\begin{tabularx}{0.85\textwidth}{ | *{3}{Y|} }
   \hline 
     \multicolumn{3}{|c|} {Średni wynik poprawności odpowiedzi - ocena z użyciem OpenAI GPT-4.1} \\
   \hline 
@@ -1618,7 +1621,7 @@ Poniżej znajduje się tabela \ref{tab:4} za pomocą, której przedstawione są 
   \hline
     44\%& 44\%& 79\%\\
   \hline
-\end{tabular} 
+\end{tabularx} 
 \caption{Średni wynik poprawności odpowiedzi per metoda - ocena z użyciem OpenAI GPT-4.1.}
 \label{tab:4}
 \end{table}
@@ -1627,15 +1630,15 @@ Tabela \ref{tab:5} zawiera medianę z oceny poprawności odpowiedzi poszczególn
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|c|c|c|}
+\begin{tabularx}{0.9\textwidth}{ | *{3}{Y|} }
   \hline 
-    \multicolumn{3}{|c|} {Mediana wyników poprawności odpowiedzi - ocena z użyciem OpenAI GPT-4.1.} \\
+    \multicolumn{3}{|c|} {Mediana wyników poprawności odpowiedzi - ocena z użyciem OpenAI GPT-4.1} \\
   \hline 
     RAG v1& RAG v2 & Graph RAG\\
   \hline
     30\%& 31,50\%& 100\%\\
   \hline
-\end{tabular} 
+\end{tabularx} 
 \caption{Mediana wyników poprawności odpowiedzi per metoda - ocena z użyciem OpenAI GPT-4.1.}
 \label{tab:5}
 \end{table}
@@ -1698,7 +1701,7 @@ Poniżej zaprezentowano tabelę \ref{tab:6}, w której zawarty jest średni wyni
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|c|c|c|}
+\begin{tabularx}{0.8\textwidth}{ | *{3}{Y|} }
   \hline 
     \multicolumn{3}{|c|} {Średni wynik poprawności odpowiedzi - ocena człowieka} \\
   \hline 
@@ -1706,7 +1709,7 @@ Poniżej zaprezentowano tabelę \ref{tab:6}, w której zawarty jest średni wyni
   \hline
     53\%& 57\%& 87\%\\
   \hline
-\end{tabular} 
+\end{tabularx} 
 \caption{Średni wynik poprawności odpowiedzi per metoda - ocena człowieka.}
 \label{tab:6}
 \end{table}
@@ -1716,7 +1719,7 @@ Tabela \ref{tab:7} zawiera medianę z oceny poprawności odpowiedzi poszczególn
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|c|c|c|}
+\begin{tabularx}{0.8\textwidth}{ | *{3}{Y|} }
   \hline 
     \multicolumn{3}{|c|} {Mediana wyników poprawności odpowiedzi - ocena człowieka} \\
   \hline 
@@ -1724,7 +1727,7 @@ Tabela \ref{tab:7} zawiera medianę z oceny poprawności odpowiedzi poszczególn
   \hline
     53,5\%& 72,2\%& 100\%\\
   \hline
-\end{tabular} 
+\end{tabularx} 
 \caption{Mediana wyników poprawności odpowiedzi per metoda - ocena człowieka.}
 \label{tab:7}
 \end{table}
@@ -1807,26 +1810,6 @@ Praca pozwoliła również jednoznacznie wskazać scenariusze aplikacyjne, w kt�
 Obszarami nad którymi skupiają się inżynierowie w rozwoju \textit{Graph RAG} oraz \textit{RAG} jest przede wszystkim redukcja halucynacji oraz optymalizacja procesu treningu modelu. Obszarem wartym wspomnienia jest również \textit{Multimodalny RAG}, czyli wykorzystywanie również obrazów, tabel, dzięków w pipeline’ach \textit{RAG} \cite{dataworkz}.  Pozwala to rozszerzyć wykorzystywanie \textit{RAG }oraz \textit{Graph RAG} w edukacji czy medycynie. Dodatkowo warto wspomnieć o wbudowaniu \textit{RAG}  czy \textit{Graph RAG} w systemach Agentów AI  czyli w autonomicznym programie komputerowym opartym na sztucznej inteligencji, który wykonuje złożone zadania bez stałego nadzoru człowieka.  Warto również wspomnieć o kierunku  rozwoju modularny framework RGL („RAG-on-Graphs Library”), który to  integruje cały pipeline \textit{Graph RAG} -- od indeksowania grafu i dynamicznego pobierania węzłów, przez konstruowanie podgrafu i tokenizację, aż po generowanie odpowiedzi \cite{ RGL}. Dzięki zoptymalizowanym komponentom (np. filtrowanie węzłów) RGL pozwala na znaczące przyspieszenie (do 143x) w stosunku do tradycyjnych metod, a także zmniejsza zużycie tokenów \cite{RGL}.
 
 Podsumowując, praca dowodzi, że integracja grafów wiedzy z wielkimi modelami językowymi stanowi szczególnie wartościowe podejście w środowiskach, gdzie istotne są zarówno precyzyjne relacje, jak i elastyczność generowania odpowiedzi. Wyniki analiz podkreślają, że odpowiednio przygotowany graf wiedzy, połączony z dużym modelem językowym, pozwala budować systemy bardziej dokładne, stabilne i zdolne do obsługi szerokiej gamy zapytań. Tym samym praca nie tylko przedstawia praktyczne możliwości tej integracji, lecz także wskazuje konkretne obszary, w których jej zastosowanie jest najbardziej efektywne.
-
-%  tabela z excela do LaTeX: https://tex.stackexchange.com/questions/609475/how-to-add-excel-tables-with-colors-into-overleaf; https://www.ctan.org/tex-archive/support/excel2latex;
-%  być może z kolorami 
-
-%%% tabela wzorcowa begin
-% \begin{table}[H]
-% \centering
-% \begin{tabular}{|c|c|c|}
-%   \hline 
-%     \multicolumn{3}{|c|} {title} \\
-%   \hline 
-%     Graph RAG & RAG v2 & RAG v1 \\
-%   \hline
-%     0 & 0 & 0 \\
-%   \hline
-% \end{tabular} 
-% \caption{Podpis do tabeli}
-% \label{tab:X}
-% \end{table}
-%%% tabela wzorcowa end
 
 %%% ----------------
 
