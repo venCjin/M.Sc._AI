@@ -522,7 +522,7 @@ Graph RAG bazuje na architekturze RAG, w związku z czym najpierw omówimy tą p
 
 W klasycznym podejściu do generowania tekstu, modele językowe bazują wyłącznie na wewnętrznej wiedzy zdobytej podczas treningu na ogromnych zbiorach danych. Modele takie jak GPT-4 od OpenAI mają ograniczenia związane z ich statycznym charakterem. Nie są w stanie dynamicznie uwzględniać nowych informacji, które pojawiły się po zakończeniu treningu. Ten problem można rozwiązać przez zastosowanie RAG, który integruje komponent wyszukiwania informacji, umożliwiając modelowi dostęp do najnowszych danych z zewnętrznych źródeł, takich jak bazy danych, artykuły, dokumenty czy strony internetowe.
 
-Problem stateczności modelu został rozwiązany np. w systemie Chat GPT, gdzie LLMy takie jak GPT-3.5 czy GPT-4, mają dostęp do wyszukiwania informacji w internecie \cite{openai:chatgpt:truth}. W dokumentacji OpenAI nie jest jawnie stwierdzone, czy Chat GPT korzysta z RAG-a, ale zawarta jest informacja, że Chat GPT-4 może korzystać z systemów lub narzędzi, wspomagających tworzenie odpowiedzi \cite{openai:chatgpt:dev}.
+Problem stateczności modelu został rozwiązany np. w systemie Chat GPT, gdzie LLM takie jak GPT-3.5 czy GPT-4, mają dostęp do wyszukiwania informacji w internecie \cite{openai:chatgpt:truth}. W dokumentacji OpenAI nie jest jawnie stwierdzone, czy Chat GPT korzysta z RAG-a, ale zawarta jest informacja, że Chat GPT-4 może korzystać z systemów lub narzędzi, wspomagających tworzenie odpowiedzi \cite{openai:chatgpt:dev}.
 
 Dzięki zdolności do łączenia statycznej wiedzy modeli językowych z dynamicznymi informacjami z zewnętrznych źródeł, RAG stanowi potężne narzędzie, które znacząco zwiększa efektywność i użyteczność aplikacji NLP.\\
 
@@ -692,17 +692,17 @@ Praca w dalszej części skupi się na implementacji tworzenia KG oraz wydobywan
 
 \section{Część eksperymentalna}
 
-Podstawowym celem rozdziału jest przedstawienie praktycznego zastosowania wcześniej przedstawionych metod: ekstrakcji danych tekstowych przez LLM do KG oraz generowania odpowiedzi przez LLM rozszerzonej o odpowiednią wiedzę z KG (\textit{Graph RAG}). 
-Przygotowane rozwiązanie to system pytanie-odpowiedź, które dla pewnych konkretnych pytań, może zostać potraktowane jak system rekomendacji (np. dla pytania „Recommend a highly-rated film from before 1980.”).
-Wyniki metody \textit{Graph RAG} zostaną porównane do wyników metody, z której się wywodzi -- RAG. 
+Podstawowym celem rozdziału jest przedstawienie praktycznego zastosowania wcześniej przedstawionych metod: ekstrakcji danych tekstowych przez LLM do KG oraz generowania odpowiedzi przez model językowy w oparciu o wiedzę z grafu (\textit{Graph RAG}). 
+Przygotowane rozwiązanie to system pytanie-odpowiedź, które dla pewnych konkretnych pytań, może zostać potraktowane jak system rekomendacji.
+Wyniki metody \textit{Graph RAG} zostaną porównane do wyników metody, z której się wywodzi -- \textit{RAG}. 
 Zadaniem tych metod będzie udzielenie poprawnej odpowiedzi na 100 pytań dotyczących zróżnicowanych informacji o filmach. Testy te będą podstawą analizy do jakich kategorii pytań i problemów nadają się konkretne metody. 
 
 
 \subsection{Opis zbioru danych (dane o filmach)}
 
-Dane filmowe charakteryzują się dużą różnorodnością relacji, powiązań między encjami (aktorzy, reżyserzy, gatunki), obejmują informacje o czasie (daty premier, czas trwania), liczbach (oceny, przychody), a także bardziej opisowych cechach, takich jak streszczenia. Dzięki temu możliwe jest badanie szerokiego spektrum typów pytań: od prostych faktograficznych, przez pytania porównawcze i agregacyjne, aż po bardziej złożone zadania wymagające rozumowania wieloetapowego i analizy kontekstowej. Co istotne, dane filmowe są dobrze ustrukturyzowane, spójne i powszechnie wykorzystywane w literaturze do testowania modeli LLM oraz metod \textit{retrieval} \cite{kgllm:movie}, co zapewnia większą powtarzalność eksperymentów. W efekcie stanowią one optymalny wybór do kompleksowej oceny jakości działania systemów typu RAG czy \textit{Graph RAG} w wielu zróżnicowanych scenariuszach.
+Zbiory danych filmowych charakteryzują się dużą różnorodnością relacji, powiązań między encjami (aktorzy, reżyserzy, gatunki), obejmują informacje o czasie (daty premier, czas trwania), liczbach (oceny, przychody), a także bardziej opisowych cechach, takich jak streszczenia. Dzięki temu możliwe jest badanie wyników odpowiedzi na podstawie szerokiego spektrum typów pytań: od prostych faktograficznych, przez pytania porównawcze i agregacyjne, aż po bardziej złożone zadania wymagające rozumowania wieloetapowego i analizy kontekstowej. Co istotne, dane filmowe są dobrze ustrukturyzowane, spójne i powszechnie wykorzystywane w literaturze do testowania modeli LLM oraz metod \textit{retrieval} \cite{kgllm:movie}, co zapewnia większą powtarzalność eksperymentów. W efekcie stanowią one optymalny wybór do kompleksowej oceny jakości działania systemów typu \textit{RAG} czy \textit{Graph RAG} w wielu zróżnicowanych scenariuszach.
 
-Do badania zostały wybrane dane 1000 filmów z bazy IMDB \cite{imdb:data}. Są one ustrukturyzowane i zapisane w pliku csv. W tej pracy potrzebuję danych w formie plików tekstowych, by móc zwektoryzować treść tych „dokumentów” dla rozwiązań RAG, a dla \textit{Graph RAG} przeprowadzić z nich ekstrakcję grafu wiedzy. W związku z tym informacje o filmach zapisuję do plików w przedstawionej poniżej formie:
+Do badania zostały wybrane dane 1000 filmów z bazy IMDB \cite{imdb:data}. Są one ustrukturyzowane i zapisane w pliku csv. W tej pracy potrzebne są dane w formie plików tekstowych, by móc zwektoryzować treść tych „dokumentów” dla rozwiązań \textit{RAG}, a dla \textit{Graph RAG} przeprowadzić z nich ekstrakcję grafu wiedzy. W związku z tym informacje o filmach zapisane zostają do plików w przedstawionej poniżej formie:
 
 \begin{codestyle}
 Movie name: The Shawshank Redemption
@@ -718,17 +718,17 @@ Gross revenue: 28341469
 \end{codestyle}
 
 Dane tekstowe w takim formacie (etykieta: wartość) nadają się do wysłania w prompcie do LLM, ponieważ minimalizują możliwość błędnej interpretacji wartości (np. dla nazwy filmu z powyższego przykładu: etykieta to „Movie name”, a wartość to „The Shawshank Redemption”).
-
-Tekst z wybranego zbioru jest w języku angielskim, dlatego też dane te są dalej etykietowane w tym języku i w nim też będą odbywały się zapytania. W związku z tym należy zaznaczyć, że zarówno modele LLM jak i modele wektoryzujące są w znacznej większości trenowane na danych anglojęzycznych co ma znaczący wpływ na jakość i dokładność ich odpowiedzi. 
-% Należy zatem odnotować, że rozważane badania RAG vs Graph RAG są najlepszym wariantem danych wejściowych dla modeli LLM i wektoryzujących.
+Tekst z wybranego zbioru jest w języku angielskim, dlatego też zapytania do metod będą odbywały się w tym języku. W związku z tym należy zaznaczyć, że zarówno modele LLM jak i modele wektoryzujące są w znacznej większości trenowane na danych anglojęzycznych co ma znaczący wpływ na jakość i dokładność ich odpowiedzi. 
 
 \subsection{Wybrany LLM}
 
-Do realizacji algorytmów RAG i \textit{Graph RAG} wybrany został jeden z najbardziej zaawansowanych wielkich modeli językowych w czasie realizacji tej pracy -- OpenAI GPT-4.1. Dostępny za darmo z limitem 250 tys. tokenów dziennie, pod warunkiem udzielenia przez użytkownika zgody, by OpenAI miało dostęp do jego zapytań i odpowiedzi LLM.
+Do realizacji metod \textit{RAG} i \textit{Graph RAG} wybrany został jeden z najbardziej zaawansowanych wielkich modeli językowych w czasie realizacji tej pracy -- OpenAI GPT-4.1. Dostępny za darmo z limitem 250 tys. tokenów dziennie, pod warunkiem udzielenia przez użytkownika zgody, by OpenAI miało dostęp do zapytań użytkownika i odpowiedzi LLM.
 
-W toku rozwoju pracy używane też były inne modele (Llama 3, Llama 3.1, Gemma2) z bazy publicznie dostępnych modeli LLM (Ollama) i używane one były na komputerze lokalnie. Niestety dostępny komputer nie był w stanie obsłużyć modeli większych niż 7B (7 miliardów aktywnych parametrów), co sprawiało że odpowiedzi LLM były niewystarczające (np. w przypadku tak trudnego zadania jak napisanie zapytania do bazy Neo4j w języku Cypher, gdzie owe „małe” modele często tworzyły zapytania nie dające poprawnych odpowiedzi z bazy). Zadecydowało to o tym, iż nie są one reprezentatywnym przykładem LLM do przedstawienia w tej pracy, ponieważ nie reprezentują pełnych możliwości modeli LLM i sztucznie zaniżałyby wyniki działania metody. Niemniej jednak warte odnotowania jest, iż o ile takie modele nie nadają się do tworzenia np. zapytań do bazy, to mogą okazać się wystarczające do wygenerowania finalnej odpowiedzi, w ostatnim etapie (\textit{augmented generation}) gdzie zostały już wyszukane dane (o ile cały dostarczony kontekst zmieści się w maksymalnej liczbie tokenów wejściowych dla tego modelu).
+W toku rozwoju pracy używane też były inne modele (Llama 3, Llama 3.1, Gemma2) z bazy publicznie dostępnych modeli LLM (Ollama) i uruchomione były na komputerze lokalnie. Niestety dostępny komputer nie był w stanie obsłużyć modeli większych niż 7B (7 miliardów aktywnych parametrów), co sprawiało że odpowiedzi LLM były niewystarczające (np. w przypadku tak trudnego zadania jak napisanie zapytania do bazy Neo4j w języku Cypher, gdzie owe „małe” modele często tworzyły zapytania nie dające poprawnych odpowiedzi z bazy). Takie modele nie reprezentują pełnych możliwości modeli LLM i prowadziłoby to do niepoprawnych wniosków na temat użytezności wielkich modeli językowych w takim zastosowaniu. Niemniej jednak warte odnotowania jest, iż o ile takie modele nie nadają się do tworzenia np. zapytań do bazy, to mogą okazać się wystarczające do wygenerowania finalnej odpowiedzi, w ostatnim etapie (\textit{augmented generation}) gdzie zostały już wyszukane dane (o ile cały dostarczony kontekst zmieści się w maksymalnej liczbie tokenów wejściowych dla tego modelu).
 
 % \newpage
+Powyższy fragment kodu prezentuje, jak zostały utworzone połączenia do modeli\linebreak{} GPT-4.1 i Llama 3.1.
+
 \begin{python}
 from langchain_openai import ChatOpenAI
 
@@ -752,7 +752,7 @@ gpt4 = ChatOpenAI(
 )
 \end{python}
 
-Powyższy fragment kodu prezentuje, jak zostały utworzone połączenia do modeli\linebreak{} GPT-4.1 i Llama 3.1. Ważny jest tutaj parametr \textit{temperature}, który kontroluje losowość lub „kreatywność” wyników modelu i przyjmuje wartości z zakresu 0.0 do 2.0. Niższa temperatura skutkuje bardziej przewidywalnymi odpowiedziami, podczas gdy wyższa temperatura sprzyja bardziej zróżnicowanym i potencjalnie kreatywnym wynikom \cite{openai:temperature}. Parametr ten został ustawiony na wartość 0, ponieważ w niniejszej pracy zależy nam, żeby model dokładnie wykonywał instrukcje i korzystał z wiedzy, którą dostarczamy w procesie \textit{augmentation}.
+\noindent{}Ważny jest tutaj parametr \textit{temperature}, który kontroluje losowość, „kreatywność” wyników modelu i przyjmuje wartości z zakresu 0.0 do 2.0. Niższa temperatura skutkuje bardziej przewidywalnymi odpowiedziami, podczas gdy wyższa temperatura sprzyja bardziej zróżnicowanym i potencjalnie kreatywnym wynikom \cite{openai:temperature}. Parametr ten został ustawiony na wartość 0, ponieważ w niniejszej pracy zależy nam, żeby model dokładnie wykonywał instrukcje i korzystał z wiedzy, którą dostarczamy w procesie \textit{augmentation}.
 
 
 % \subsubsection{LLM Chains: koncepcja i przykłady zastosowania}
@@ -806,7 +806,8 @@ Baza ta oferuje wiele dodatkowych funkcjonalności takich jak skalowalność czy
 
 Zbudowane rozwiązanie jest autorską implementacją, jendak należy zaznaczyć, iż inspirowane było metodą \textbf{AutoKG} \cite{kg:autoKG}, przedstawianą w rozdziale \ref{kgllm:construction}.
 
-Implementację zaczynamy od stworzenia połączenia do bazy Neo4j - obiekt \pythoninline{graph}.
+Implementację zaczynamy od stworzenia połączenia do bazy Neo4j - obiekt \pythoninline{graph}.\\
+
 
 \begin{python}\\
 from langchain_neo4j import Neo4jGraph
@@ -821,7 +822,7 @@ graph = Neo4jGraph(
 )
 \end{python}
 
-Następnie definiujemy jakie typy obiektów, ich właściwości oraz relacje między nimi będą dopuszczalne w naszej bazie.
+\noindent{}Następnie definiujemy jakie typy obiektów, ich właściwości oraz relacje między nimi będą dopuszczalne w naszej bazie.
 \begin{python}\\
 nodes = [
     "Movie",
@@ -846,7 +847,7 @@ relationships = [
 ]
 \end{python}
 
-Z tymi definicjami możemy przystąpić do ekstrakcji danych tekstowych do grafu.
+\noindent{}Z tymi definicjami możemy przystąpić do ekstrakcji danych tekstowych do grafu.
 
 \begin{python}
 from typing import List
@@ -891,21 +892,19 @@ def llm_extract_graph(llm, document_list, graph:Neo4jGraph)-> List[GraphDocument
         graph_document.source.page_content = None
         
     graph.add_graph_documents(graph_document_list, baseEntityLabel=False, include_source=False)
-    
-    pass
-
 \end{python}
 
-Funkcja \pythoninline{llm_extract_graph} dla danej listy dokumentów (\pythoninline{document_list}) używa LLM, by wyekstrahować z ich treści obiekty i relacje. 
+\noindent{}Funkcja \pythoninline{llm_extract_graph} dla danej listy dokumentów (\pythoninline{document_list}) \linebreak{}używa LLM, by wydobyć z ich treści obiekty i relacje. 
 W tym celu tworzymy obiekt \linebreak{}\pythoninline{LLMGraphTransformer}, który przyjmuje parametry takie jak dodatkowe instrukcje ekstracji oraz wcześniej opisane dozwolone obiekty, właściwości i relacje. 
 Wywołując na tym obiekcie metodę \pythoninline{convert_to_graph_documents} utworzone zostają odpowiednie obiekty i relacje do zapisania w bazie Neo4j. 
-
+% 
 W procesie ekstrakcji może się zdarzyć, że wygenerowane nazwy obiektów czy relacji mogą zawierać dodatkowy znak ( \pythoninline{`} - odwrotny apostrof), dlatego dla każdego elementu usuwamy te znaki z nazw, jeśli występują. Dodatkowo usuwamy treść dokumentu źródłowego (\pythoninline{graph_document.source.page_content}), ponieważ w bazie Neo4j dane te chcemy mieć w postaci grafowej i nie potrzebujemy dodatkowo tekstu źródłowego.
-
+% 
 Finalnie zapisujemy wygenerowane przez LLM elementy grafowe do bazy Neo4j poprzez wywołanie 
 \pythoninline{graph.add_graph_documents}.
-
-Wygenerowany graf zawiera 4376 obiektów oraz 8528 relacji. Na rysunku \ref{fig:my_graph} zaprezentowano przykładowy podgraf informacji o filmie „The Shawshank Redemption” oraz relacji do innych filmów, w których występował aktor „Morgan Freeman”.
+% 
+Wygenerowany graf zawiera 4376 obiektów oraz 8528 relacji, w tym 1000 obiektów typu film. Dodatkowo ręcznie sprawdzono wszystkie wygenerowane obiekty i relacje, by potwierdzić ich poprawność.
+Na rysunku \ref{fig:my_graph} zaprezentowano przykładowy podgraf informacji o filmie „The Shawshank Redemption” oraz relacji do innych filmów, w których występował aktor „Morgan Freeman”.
 
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{images/fig/my_graph.png}
@@ -914,20 +913,13 @@ Wygenerowany graf zawiera 4376 obiektów oraz 8528 relacji. Na rysunku \ref{fig:
 \label{fig:my_graph}
 \end{figure}
 
+\newpage
 \subsubsection{Algorytm Graph RAG}
 
 \subsubsubsection{Implementacja Graph RAG}
 
 \textit{Graph RAG} realizuje, przedstawiona na poniższym fragmencie kodu, funkcja \linebreak{}
 \pythoninline{process_graph_response}. Przyjmuje ona w parametrach model (\pythoninline{llm}), który na podstawie informacji w grafowej bazie danych (\pythoninline{graph}), ma udzielić odpowiedzi na zadane pytanie (\pythoninline{question}). Pierwszym i najważniejszym elementem funkcji jest stworzenie obiektu \pythoninline{GraphCypherQAChain}, który to definiuje parametry dla algorytmu wydobywającego informacje z grafu. 
-
-Ważnym i wymaganym parametrem tego obiektu jest \pythoninline{allow_dangerous_requests}. Twórcy biblioteki informują przez dokumentację do tego parametru programistę, że algorytm może wygenerować niebezpieczne zapytanie, takie jak usunięcie danych z bazy i wymagają świadomego wyrażernia na to zgody. Jednocześnie zalecają, by w związku z tym nadać odpowiednie uprawnienienia na koncie dostępowym do bazy Neo4j, by zapobiec wykonaniu takiego polecenia, jeśli taka jest intencja programisty.
-
-Kolejnum istotmym parametrem jest \pythoninline{qa_prompt}, który to definiuje prompt dla LLM, instruujący jak model ma odpowiedzieć na pytanie użytkownika używając informacji z dołączonego kontekstu.
-
-Parametr \pythoninline{top_k} określa ile maksymalnie obiektów może zwrócić zapytanie w języku Cypher do bazy grafowej. Jego wartość została dobrana na podstawie wielu prób, tak by umożliwić algorytmowi uzyskanie jak najlepszych wyników.
-
-Parametr \pythoninline{return_intermediate_steps} zezwala na to by algorytm zwracał dodatkowo informacje o wygenerowany zapytaniu w języku Cypher oraz otrzymanym na jego podstawie kontekście z bazy Neo4j.
 
 \begin{python}\\
 CYPHER_QA_TEMPLATE = "You are an assistant that helps to form nice and human understandable answers.
@@ -989,13 +981,21 @@ def process_graph_response(llm:ChatOpenAI, graph:Neo4jGraph, question:str, verbo
         print(f"Error processing graph response: {str(e)}")
 \end{python}
 
+Ważnym i wymaganym parametrem obiektu \pythoninline{graph_chain} jest \linebreak{}\pythoninline{allow_dangerous_requests}. Twórcy biblioteki informują przez dokumentację do tego parametru programistę, że algorytm może wygenerować niebezpieczne zapytanie, takie jak usunięcie danych z bazy i wymagają świadomego wyrażernia na to zgody. Jednocześnie zalecają, by w związku z tym nadać odpowiednie uprawnienienia na koncie dostępowym do bazy Neo4j, by zapobiec wykonaniu takiego polecenia, jeśli taka jest intencja programisty.
+% 
+Kolejnum istotmym parametrem jest \pythoninline{qa_prompt}, który to definiuje prompt dla LLM, instruujący jak model ma odpowiedzieć na pytanie użytkownika używając informacji z dołączonego kontekstu.
+% 
+Parametr \pythoninline{top_k} określa ile maksymalnie obiektów może zwrócić zapytanie w języku Cypher do bazy grafowej. Jego wartość została dobrana na podstawie wielu prób, tak by umożliwić algorytmowi uzyskanie jak najlepszych wyników.
+% 
+Parametr \pythoninline{return_intermediate_steps} zezwala na to by algorytm zwracał dodatkowo informacje o wygenerowanym zapytaniu w języku Cypher oraz otrzymanym na jego podstawie kontekście z bazy Neo4j.
+% 
 Wywołując metodę \pythoninline{graph_chain.invoke} uruchamiamy algorytm informujący LLM, jaki jest schemat bazy grafowej tj. jakie są dostępne obiekty, właściwości i relacje, oraz
-instruującym jak zbudować zapytanie w języku Cypher. Podczas tego etapu sprawdzane jest również czy zapytanie jest poprawnie skonstruowane pod względem składni języka Cypher (parametr \pythoninline{validate_cypher = True}), natomiast nie daje niestety pewności czy stworzone zapytanie jest poprawne merytorycznie, czyli czy informacje, o które zapyta LLM będą tymi oczekiwanymi przez użytkownika.
+instruującym jak zbudować zapytanie w języku Cypher. Podczas tego etapu sprawdzane jest również, czy zapytanie jest poprawnie skonstruowane pod względem składni języka Cypher (parametr \pythoninline{validate_cypher = True}), natomiast nie daje niestety pewności czy stworzone zapytanie jest poprawne merytorycznie, czyli czy informacje, o które zapyta LLM będą tymi oczekiwanymi przez użytkownika.
 
 
 \subsection{Rozwiązanie RAG}
 
-Metoda \textit{Graph RAG} stanowi rozwinięcie metody RAG, w związku z czym porównanie tych metod jest zasadne, by sprawdzić czy metoda grafowa uzyska lepsze wyniki. Dodatkowo RAG będzie reprezentowane przez dwie metody: \textit{RAG v1} implementujący metodą Naive RAG opisaną w rozdziale \ref{sec:defgrag} oraz \textit{RAG v2} implementujący wersję rozszerzoną o dodatkowe metadane zapisywane razem z embeddingami w bazie wektorowej. Zdecydowałem się na nie, ponieważ interesuje mnie jak wyniki \textit{Graph RAG} zaprezentują się na tle wyników uniwersalnego \textit{RAG v1}, który pozwala na zwektoryzowanie i operowanie na dowolnych danych tekstowych oraz bardziej wyspecjalizowanego \textit{RAG v2} pod kątem konkretnie danych filmowych.
+Metoda \textit{Graph RAG} stanowi rozwinięcie metody \textit{RAG}, w związku z czym porównanie tych metod jest zasadne, by sprawdzić czy metoda grafowa uzyska lepsze wyniki. Dodatkowo \textit{RAG} będzie reprezentowane przez dwie metody: \textit{RAG v1} implementujący metodą Naive RAG opisaną w rozdziale \ref{sec:defgrag} oraz \textit{RAG v2} implementujący wersję rozszerzoną o dodatkowe metadane zapisywane razem z embeddingami w bazie wektorowej. Zdecydowałem się na nie, ponieważ interesuje mnie jak wyniki \textit{Graph RAG} zaprezentują się na tle wyników uniwersalnego \textit{RAG v1}, który pozwala na zwektoryzowanie i operowanie na dowolnych danych tekstowych oraz bardziej wyspecjalizowanego \textit{RAG v2} pod kątem konkretnie danych filmowych.
 
 \subsubsection{Wektoryzowanie danych tekstowych}
 
