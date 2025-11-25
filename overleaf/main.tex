@@ -244,31 +244,41 @@ deletekeywords={id, type},
 %--------------------------------------------------------
 
 \section{Wstęp}
-Tematem pracy są \textit{nowe perspektywy w przetwarzaniu i reprezentacji wiedzy przy użyciu grafów wiedzy i wielkich modeli językowych}. Temat jest istotny, ponieważ pozwala na badanie nowoczesnych technik przyspieszających tworzenie ustrukturyzowanych baz wiedzy (bardzo użytecznych w np. medycynie) oraz ulepszania jakości odpowiedzi generowanych przez wielkie modele językowe.
+Grafy wiedzy i wielkie modele językowe to dwa fundamentalnie różne podejścia do reprezentacji i przetwarzania wiedzy. Grafy wiedzy oferują strukturalne i semantyczne ramy umożliwiające precyzyjne wyszukiwanie informacji oraz logikę wnioskowania. Wielkie modele językowe potrafią generować oraz interpretować tekst w sposób zbliżony do ludzkiego, co czyni je niezwykle potężnymi narzędziami w kontekście zadań związanych z przetwarzaniem języka naturalnego. Integracja grafów wiedzy z wielkimi modelami językowymi umożliwia tworzenie systemów, które mogą korzystać z najlepszych cech obu technologii: strukturalnej przejrzystości i dokładności grafów wiedzy oraz elastyczności i kreatywności modeli językowych. 
 
-Praca składa się z części teoretycznej oraz  rozdziału eksperymentalnego.
+Celem pracy jest przedstawienie i przetestowanie różnych możliwości wykorzystania grafów wiedzy w połączeniu z wielkimi modelami językowymi. Praca skupi się na analizie, jak te dwa podejścia mogą wzajemnie się uzupełniać, a także na identyfikacji konkretnych scenariuszy aplikacyjnych, w których ich integracja jest szczególnie korzystna.
 
-W rozdziale o tytule \textit{Grafy wiedzy} zawarte są informacje o \textit{grafach wiedzy}. Przedstawiono w nim takie zagadnienia jak historia i działanie dużych modeli językowych.
+Tematem pracy są \textit{nowe perspektywy w przetwarzaniu i reprezentacji wiedzy przy użyciu grafów wiedzy i wielkich modeli językowych}. Temat jest istotny, ponieważ pozwala na badanie nowoczesnych technik przyspieszających tworzenie ustrukturyzowanych baz wiedzy oraz ulepszania jakości odpowiedzi generowanych przez wielkie modele językowe. Techniki te mogą się okazać bardzo użyteczne np. w systemach wspomagających diagnostykę medyczną. 
 
-W rozdziale o tytule \textit{Wielkie modele językowe} zawarte są informacje o modelach stworzonych do przetwarzania języka naturalnego. Przedstawiono w nim takie zagadnienia jak historia i działanie wielkich modeli językowych.
+Praca składa się z części teoretycznej oraz rozdziału eksperymentalnego.
 
-Rozdział  o tytule \textit{Metody połączenia KG i LLM} zawiera informacje o wybranych metodach łączenia tych dwóch narzędzi. Zawiera on opisy metod tworzenia grafu wiedzy przy pomocy wielkich modeli językowych oraz ulepszania odpowiedzi LLM przy pomocy wiedzy uzyskanej z KG wraz z przykładami użycia. 
-
+W \textit{części teoretycznej} zawarte są informacje o \textit{grafach wiedzy}, \textit{wielkich modelach językowych} oraz \textit{informacje o wybranych metodach łączenia tych dwóch narzędzi}.
+W części tej zawarte są opisy metody tworzenia grafu wiedzy przy pomocy wielkich modeli językowych oraz ulepszania odpowiedzi modelu językowego przy pomocy wiedzy uzyskanej z grafu wraz z przykładami użycia.
 Treści przedstawione w rozdziałach teoretycznych posłużyły za podstawę do rozważań w części eksperymentalnej.
 
-\textit{Część Eksperymentalna}, składa się z 4 rozdziałów, w którym dokładnie opisuje metodologię oraz przeprowadzone eksperymenty. Na  początku zawarty jest opis pytań oraz opis wybranego LLM. 
+% ---
 
-Rozdział \textit{Rozwiązanie Graph RAG} zawiera opis implementacji rozwiązania Graph RAG,  integrującego zarówno tworzenie grafu wiedzy i odpowiadania z użyciem zgromadzonych w nim informacji przez wieli model językowy w systemie pytanie-odpowiedź. 
+\textit{Część eksperymentalna} opisuje implementacje metod przedstawionych w części teoretycznej oraz dane i narzędzia wykorzystane do przeprowadzenia eksperymentów i analizy  wyników uzyskanych przez metody. 
+W pracy przedstawione zostaje rozwiązanie \textit{Graph RAG}, które łączy \textit{grafy wiedzy} i \textit{wielkie modele językowe} na dwa sposoby. 
+Wykorzystuje wielki model językowy do tworzenie grafu wiedzy, by następnie ulepszać odpowiedzi generowane przez model językowy w systemie pytanie-odpowiedź, z użyciem zgromadzonych w grafie informacji.
+Wyniki działania metody \textit{Graph RAG} porównane zostaną do wyników działania metody na której bazuje, czyli \textit{RAG}. Na podstawie tych wyników wyciągnięte zostają wnioski oraz wynikające z nich rekomendacje.
 
-Rozdział \textit{Rozwiązanie RAG} zawiera opis implementacji rozwiązania w dwóch wersjach podstawowej i rozszerzonej, co pozwala na przeprowadzenie szerszej analizy wyników w porównaniu do Graph RAG.
+% 4 rozdziałów, w którym dokładnie opisuje metodologię oraz przeprowadzone eksperymenty. Na początku zawarty jest opis pytań oraz opis wybranego LLM. 
 
-W rozdziale \textit{Wnioski i analiza wyników} znajduje się opis metodologii badań oraz opis pytań wraz z przykładami. Następne podrozdziały zawierają analizę wyników z zastosowaniem embedding similarity, analizę z zastosowaniem LLM oraz analizę ekspercką. Na koniec pod rozdział Analiza zalet i wad obu rozwiązań zawierają się wnioski i rekomendacje. 
+% Rozdział \textit{Rozwiązanie Graph RAG} zawiera opis implementacji rozwiązania Graph RAG,  integrującego zarówno tworzenie grafu wiedzy i odpowiadania z użyciem zgromadzonych w nim informacji przez wieli model językowy w systemie pytanie-odpowiedź. 
+
+% Rozdział \textit{Rozwiązanie RAG} zawiera opis implementacji rozwiązania w dwóch wersjach podstawowej i rozszerzonej, co pozwala na przeprowadzenie szerszej analizy wyników w porównaniu do Graph RAG.
+
+% W rozdziale \textit{Wnioski i analiza wyników} znajduje się opis metodologii badań oraz opis pytań wraz z przykładami. Następne podrozdziały zawierają analizę wyników z zastosowaniem embedding similarity, analizę z zastosowaniem LLM oraz analizę ekspercką. Na koniec podrozdział Analiza zalet i wad obu rozwiązań zawierają się wnioski i rekomendacje. 
 
 Na końcu pracy zamieszczono podsumowanie. Wszystkie użyte źródła są spisane w bibliografii na końcu pracy. 
 
 
-\section{Cel i zakres pracy}
-Grafy wiedzy i wielkie modele językowe to dwa fundamentalnie różne podejścia do reprezentacji i przetwarzania wiedzy. Grafy wiedzy oferują strukturalne i semantyczne ramy umożliwiające precyzyjne wyszukiwanie informacji oraz logikę wnioskowania. Wielkie modele językowe potrafią generować oraz interpretować tekst w sposób zbliżony do ludzkiego, co czyni je niezwykle potężnymi narzędziami w kontekście zadań związanych z przetwarzaniem języka naturalnego. Integracja grafów wiedzy z wielkimi modelami językowymi umożliwia tworzenie systemów, które mogą korzystać z najlepszych cech obu technologii: strukturalnej przejrzystości i dokładności grafów wiedzy oraz elastyczności i kreatywności modeli językowych. Celem pracy jest przedstawienie i przetestowanie różnych możliwości wykorzystania grafów wiedzy w połączeniu z wielkimi modelami językowymi. Praca skupi się na analizie, jak te dwa podejścia mogą wzajemnie się uzupełniać, a także na identyfikacji konkretnych scenariuszy aplikacyjnych, w których ich integracja jest szczególnie korzystna.
+% \section{Cel i zakres pracy}
+
+% Grafy wiedzy i wielkie modele językowe to dwa fundamentalnie różne podejścia do reprezentacji i przetwarzania wiedzy. Grafy wiedzy oferują strukturalne i semantyczne ramy umożliwiające precyzyjne wyszukiwanie informacji oraz logikę wnioskowania. Wielkie modele językowe potrafią generować oraz interpretować tekst w sposób zbliżony do ludzkiego, co czyni je niezwykle potężnymi narzędziami w kontekście zadań związanych z przetwarzaniem języka naturalnego. Integracja grafów wiedzy z wielkimi modelami językowymi umożliwia tworzenie systemów, które mogą korzystać z najlepszych cech obu technologii: strukturalnej przejrzystości i dokładności grafów wiedzy oraz elastyczności i kreatywności modeli językowych. 
+% Celem pracy jest przedstawienie i przetestowanie różnych możliwości wykorzystania grafów wiedzy w połączeniu z wielkimi modelami językowymi. Praca skupi się na analizie, jak te dwa podejścia mogą wzajemnie się uzupełniać, a także na identyfikacji konkretnych scenariuszy aplikacyjnych, w których ich integracja jest szczególnie korzystna.
+
 
 %%% Część teoretyczna
 \newpage
