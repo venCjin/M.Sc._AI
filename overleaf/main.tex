@@ -469,11 +469,11 @@ Inną metodą wartą uwagi jest \textbf{Grapher} \cite{kg:grapher}, w której LL
 
 Wykorzystanie wielkich modeli językowych do tworzenia grafów wiedzy jest bardziej pożądane lub wręcz wymagane w sytuacjach, gdy zadanie ekstrakcji wiedzy wymaga głębokiego rozumienia semantycznego, rozpoznawania złożonych relacji, rozwiązywania koreferencji lub interpretacji wiedzy niejawnej i nieustrukturyzowanej. Przykładowo, w domenach takich jak medycyna, prawo czy nauki społeczne, gdzie teksty zawierają subtelne zależności i wieloznaczności, LLM dzięki swojej zdolności do uogólniania i rozumowania na poziomie kontekstowym jest w stanie takie szczegóły uwzględniać podczas tworzenia grafu wiedzy \cite{kgllm:construction}.
 
-Warto jednak zwrócić uwagę na zagrożenia związane z generowaniem KG przy użyciu LLM, takie jak trudność w walidacji generowanej wiedzy \cite{kgllm:construction:hard}. Jakość generowanych trójek zależy w dużej mierze zarówno od promtów jak i doboru odpowiedniego LLM. Proces generowania informacji warto wzbogacić o dodatkowe mechanizmy weryfikacji i ewentualnej korekty, które sprawdzają, czy fakty wygenerowane lub uzupełnione przez model są poprawne. W przypadku, jeśli graf ma ściśle określony schemat np. poprzez ontologię, należy dodatkowo zweryfikować spójność i zgodność wygenerowanych trójek z tą ontologią. Jedynym z mechanizmów automatycznej weryfikacji i edycji KG jest PiVE (ang. \textbf{P}rompting with \textbf{I}terative \textbf{Ve}rification) \cite{kg:pive}, który dodaje pętlę kontrolną, aby ograniczyć tzw. problem halucynacji LLM (ang. \textit{hallucination problem}) -- czyli sytuacji, w której model generuje poprawnie brzmiące, lecz fałszywe informacje. W metodzie PiVE najpierw LLM generuje nową trójkę wiedzy, a następnie poprzez inny prompt model ocenia poprawność, spójność logiczną i zgodność tej trójki z istniejącym grafem. Jeśli wynik jest niepewny, metoda może odrzucić trójkę lub uruchomić ponowną jej generację.
+Warto jednak zwrócić uwagę na zagrożenia związane z generowaniem KG przy użyciu LLM, takie jak trudność w walidacji generowanej wiedzy \cite{kgllm:construction:hard}. Jakość generowanych trójek zależy w dużej mierze zarówno od promtów jak i doboru odpowiedniego LLM. Proces generowania informacji warto wzbogacić o dodatkowe mechanizmy weryfikacji i ewentualnej korekty, które sprawdzają, czy fakty wygenerowane lub uzupełnione przez model są poprawne. W przypadku, jeśli graf ma ściśle określony schemat np. poprzez ontologię, należy dodatkowo zweryfikować spójność i zgodność wygenerowanych trójek z tą ontologią. Jedynym z mechanizmów automatycznej weryfikacji i edycji KG jest PiVe (ang. \textbf{P}rompting with \textbf{I}terative \textbf{Ve}rification) \cite{kg:pive}, który dodaje pętlę kontrolną, aby ograniczyć tzw. problem halucynacji LLM (ang. \textit{hallucination problem}) -- czyli sytuacji, w której model generuje poprawnie brzmiące, lecz fałszywe informacje. W metodzie PiVe najpierw LLM generuje nową trójkę wiedzy, a następnie poprzez inny prompt model ocenia poprawność, spójność logiczną i zgodność tej trójki z istniejącym grafem. Jeśli wynik jest niepewny, metoda może odrzucić trójkę lub uruchomić ponowną jej generację.
 
 Podsumowując wielkie modele językowe nadają się do konstruowania grafów wiedzy przy użyciu odpowiednich podejść. 
 % Metody takie jak AutoKG znajdą swoje zastosowanie w tworzeniu i aktualizowaniu danych w grafie dla systemów eksperckich czy pytanie-odpowiedź nastawionych na operowanie w konkretnej dziedzinie lub dziedzinach wiedzy, jako że nie wymagają stosowania ontologii, co upraszcza proces konstrukcji grafu. Transformery takie jak COMET będą świetnym wyborem w rozwiązaniach wspierających tworzenie narracji i pisanie dialogów, jako że jest nastawiony na zależności między zdarzeniami, intencjami, emocjami i skutkami.
-% Rozwiązania te nie są jednak nie omylne, w związku z czym warto rozważyć dodanie do nich mechanizmów weryfikujących poprawność takich jak PiVE.
+% Rozwiązania te nie są jednak nie omylne, w związku z czym warto rozważyć dodanie do nich mechanizmów weryfikujących poprawność takich jak PiVe.
 W medycynie LLM jest wykorzystywany do przetwarzania artykułów naukowych i podręczników medycznych w celu stworzenia medycznego (domenowego) grafu wiedzy \cite{kgllm:construction:med}. Dla przykładu w badaniu \textit{Large language model powered knowledge graph construction for mental health exploration} z czasopisma Nature opisano budowę grafu zaburzeń psychicznych, przy użyciu wielkiego modelu językowego. Zebrano tam wiedzę z aktualnej literatury medycznej, która jest rozbita na wiele m.in. badań i artykułów, w celu zintegrowania jej w jedną koherentną całość \cite{kgllm:construction:nature}.
 Z kolei w obszarze korporacyjnym stworzona została platforma \textit{NebulaGraph}, która pozwala użytkownikom wprowadzać dane i polecenia w języku naturalnym, a platforma, przy użyciu LLM, tworzy na ich podstawie graf wiedzy pozwalający na łatwiejsze znajdywanie informacji i dokumentów firmowych \cite{kgllm:construction:nebula}.
 
@@ -691,7 +691,7 @@ Podsumowując, wykorzystywanie KG jako źródła dodatkowych informacji pozwala 
 
 % Ostatnim podejściem jest wykorzystanie LLM w ramach \textbf{generacji opartej na promptach (ang. Prompt-based Generation)}, które jest najnowszym podejściem wśród wyżej wymienionych. Podejście to nie wymaga dodatkowego trenowania LLM na KG, lecz użycia promptów, które opisując zadanie i kierują uwagę modelu na odpowiednią część jego wewnętrznej wiedzy, pozwalając wydobyć brakujące fakty i relacje. Przykładem realizacji tego podejścia jest\linebreak{}\textbf{AutoKG} \cite{kg:autoKG}, które wykorzystuje gotowe modele (np. GPT-3 czy T5) i specjalnie zaprojektowane prompty, by automatycznie generować brakujące encje lub relacje.
 
-% Jedną z głównych zalet wykorzystania LLM w uzupełnianiu grafów wiedzy jest możliwość automatycznego pozyskiwania nowych faktów bez potrzeby ręcznego analizowania danych. Zastosowanie automatycznych metod pozwala na szybszy i bardziej elastyczny proces generowania grafu, również w przypadku rzadkich i nowych encji. Ważne jest jednak zwrócenie uwagi, że podejście to nie jest wolne od halucynacji modelu. Wygenerowane przez model fakty wymagają weryfikacji przed dodaniem do grafu, co stanowi poważne wyzwanie techniczne. Nie wszystkie relacje można łatwo sprawdzić automatycznie, część z nich wymaga porównania z zewnętrznymi źródłami lub oceny eksperta. Ponadto model może wytwarzać nowe encje (np. imiona, organizacje), które nie istnieją w strukturze grafu, co moze doprowadzić do jego rozbieżności i niespójności, wobec czego należy rozważyć zastosowanie mechanizmów ograniczających generację do istniejących encji lub mechanizmów weryfikujących jak wcześniej omawiany PiVE \cite{kg:pive}.
+% Jedną z głównych zalet wykorzystania LLM w uzupełnianiu grafów wiedzy jest możliwość automatycznego pozyskiwania nowych faktów bez potrzeby ręcznego analizowania danych. Zastosowanie automatycznych metod pozwala na szybszy i bardziej elastyczny proces generowania grafu, również w przypadku rzadkich i nowych encji. Ważne jest jednak zwrócenie uwagi, że podejście to nie jest wolne od halucynacji modelu. Wygenerowane przez model fakty wymagają weryfikacji przed dodaniem do grafu, co stanowi poważne wyzwanie techniczne. Nie wszystkie relacje można łatwo sprawdzić automatycznie, część z nich wymaga porównania z zewnętrznymi źródłami lub oceny eksperta. Ponadto model może wytwarzać nowe encje (np. imiona, organizacje), które nie istnieją w strukturze grafu, co moze doprowadzić do jego rozbieżności i niespójności, wobec czego należy rozważyć zastosowanie mechanizmów ograniczających generację do istniejących encji lub mechanizmów weryfikujących jak wcześniej omawiany PiVe \cite{kg:pive}.
 
 % Metody te mogą znaleźć zastosowanie wszędzie tam, gdzie istniejący KG wymaga uzupełnienia informacji, a poprzednie rozwiązania generowania grafu nie dają odpowiednich możliwości jego aktualizacji. Szczególnie dotyczy to przypadków, gdy nie mamy nowych danych do dodania do KG, ale potrzebujemy np. znaleźć nowe połączenia między dokumentami, relacje między encjami lub wydedukować encje, których w grafie wiedzy brakuje. 
 % % \newline\null
@@ -2081,10 +2081,22 @@ heading=bibintoc,
 % Recommend a highly-rated film from before 1980.\\
 % What thriller films from the 2010s have high vote counts?
 
-\end{appendices}
+\newpage
+\section{Instrukcje do uruchomienia projektu}
 
-% \clearpage\newpage
-% \noindent\textbf{Załączniki}\\
-% Załącznik A:  
+\begin{enumerate}
+    \item Utwórz konto w \href{https://platform.openai.com/login}{OpenAI} i wygeneruj klucz do api (OPENAI\_API\_KEY), utwórz konto w \href{https://www.pinecone.io}{Pinecone} i wygeneruj klucz do api (PINECONE\_API\_KEY) i zapisz je odpowiednio w pliku "devcontainer/.env".
+    \item Musisz mieć zainstalowany w systemie programy: \href{https://docs.docker.com/desktop/setup/install/windows-install}{Docker} oraz \href{https://code.visualstudio.com/Download}{VSCode}.
+    \item Otwórz konsole CMD/bash w folderze neo4jdb  
+    i wykonaj komendę \textbf{docker compose up} - uruchomi to bazę danych neo4j.
+    \item Otwórz folder "devcontainer" w VSCode i \href{https://code.visualstudio.com/docs/devcontainers/containers}{uruchom jako devcontainer}
+    \begin{enumerate}[label=4.\arabic*.]
+        \item uruchomienie 1.ipynb - RAG v1 - automatyczna ewaluacja z emmbedding similarity (zapisuje sie w pliku "out\_v1\_only\_similarity.csv")
+        \item uruchomienie 2.ipynb - RAG v2 i GraphRAG - automatyczna ewaluacja z emmbedding similarity (zapisuje sie w pliku "out\_v2\_only\_similarity.csv")
+        \item uruchomienie gpt-4.1-rags-answer-eval.ipynb - automatyczna ewaluacja z użyciem modelu LLM: OpenAI GPT-4.1 (zapisuje sie w pliku "out/analyze/q\_v1\_v2\_g.csv")
+    \end{enumerate}
+\end{enumerate}
+
+\end{appendices}
 
 \end{document}
