@@ -1588,7 +1588,7 @@ Na korzyść \textit{Graph RAG} przemawia również mediana wyników, przedstawi
 \label{tab:3}
 \end{table}
 
-W celu sprawdzenia tej hipotezy opracowujemy przedstawiony na rysunku \ref{fig:box_plot} wykres pudełkowy. Wyniki uzyskane w eksperymencie we wszystkich trzech metodach charakteryzują się skośnością ujemną. Oznacza to, że rozkład odpowiedzi nie jest symetryczny, lecz przesunięty w stronę wartości wyższych (bliższych 1). Innymi słowy, większość uzyskanych wyników koncentruje się w prawej części przedziału [0, 1], podczas gdy lewy ogon rozkładu (w kierunku wartości bliskich 0) jest wydłużony. Taki kształt rozkładu wskazuje, że modele częściej generują odpowiedzi o stosunkowo wysokich wartościach, natomiast rzadziej - choć nadal istotne - pojawiają się wyniki znacznie niższe, które powodują odchylenie całego rozkładu w lewą stronę.
+W celu sprawdzenia tej hipotezy opracowujemy przedstawiony na rysunku \ref{fig:box_plot} wykres pudełkowy. Wyniki uzyskane w eksperymencie we wszystkich trzech metodach charakteryzują się skośnością ujemną. Oznacza to, że rozkład odpowiedzi nie jest symetryczny, lecz przesunięty w stronę wartości wyższych (bliższych 100\%). Innymi słowy, większość uzyskanych wyników koncentruje się w prawej części przedziału [0\%, 100\%], podczas gdy lewy ogon rozkładu (w kierunku wartości bliskich 0\%) jest wydłużony. Taki kształt rozkładu wskazuje, że modele częściej generują odpowiedzi o stosunkowo wysokich wartościach, natomiast rzadziej - choć nadal istotne - pojawiają się wyniki znacznie niższe, które powodują odchylenie całego rozkładu w lewą stronę.
 
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{images/fig/box_plot.png}
@@ -1596,7 +1596,7 @@ W celu sprawdzenia tej hipotezy opracowujemy przedstawiony na rysunku \ref{fig:b
 \caption{Wykres pudełkowy wyników \textit{Graph RAG, RAG v1, RAG v2} - ocena z użyciem \textit{embeddings similarity}.}
 \label{fig:box_plot}
 \end{figure}
-W przypadku metody \textit{Graph RAG} obserwowana skośność rozkładu jest najbardziej wyraźna spośród analizowanych wariantów. Oznacza to, że wartości podobieństwa embeddingów w tej metodzie w jeszcze większym stopniu skupiają się w pobliżu górnej granicy przedziału, co świadczy o wysokim poziomie zgodności semantycznej pomiędzy odpowiedziami metod, a odpowiedziami oczekiwanymi. Jednocześnie obecność wartości odstających o znacząco niższym podobieństwie (0.1-0.3), sugeruje, że występują sporadyczne błędy w działaniu \textit{Graph RAG}. 
+W przypadku metody \textit{Graph RAG} obserwowana skośność rozkładu jest najbardziej wyraźna spośród analizowanych wariantów. Oznacza to, że wartości podobieństwa embeddingów w tej metodzie w jeszcze większym stopniu skupiają się w pobliżu górnej granicy przedziału, co świadczy o wysokim poziomie zgodności semantycznej pomiędzy odpowiedziami metod, a odpowiedziami oczekiwanymi. Jednocześnie obecność wartości odstających o znacząco niższym podobieństwie (5--30\%), sugeruje, że \textit{Graph RAG} sporadycznie udziela niepoprawnych odpowiedzi. 
 
 Warto zauważyć również, że stosunkowo wąski zakres wartości (niewielka rozpiętość między kwartylami) sugeruje stabilność działania modelu oraz konsekwentne utrzymywanie wysokiej jakości generowanych odpowiedzi.
 
