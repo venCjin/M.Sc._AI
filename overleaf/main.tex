@@ -331,7 +331,7 @@ Grafy wiedzy można podzielić na cztery grupy na podstawie przechowywanych w ni
 \end{itemize}
 
 % zalety
-Grafy wiedzy są jednym z najskuteczniejszych sposobów reprezentacji informacji w postaci powiązanych ze sobą faktów. Ich główną zaletą jest strukturalność i przejrzystość -- dane są przedstawiane w postaci wierzchołków (bytów) i krawędzi (relacji), co umożliwia intuicyjne modelowanie złożonych zależności między obiekatmi. Dzięki temu możliwe jest wnioskowanie semantyczne, czyli odkrywanie nowych relacji na podstawie już istniejących powiązań (np. na podstawie relacji „Łódź leży w Polsce” i „Polska leży w Europie”, można odkryć nową relację „Łódź leży w Europie”). Grafy wiedzy cechują się także wysoką interpretowalnością, co oznacza, że procesy oparte na nich są bardziej zrozumiałe dla człowieka niż w przypadku modeli czysto statystycznych. Dodatkowo, w połączeniu z ontologiami i językami semantycznymi (np. RDF, OWL), grafy wiedzy umożliwiają integrowanie informacji z różnych źródeł i zapewniają spójność znaczeniową danych \cite{graph:llm:roadmap}.
+Grafy wiedzy są jednym z najskuteczniejszych sposobów reprezentacji informacji w postaci powiązanych ze sobą faktów. Ich główną zaletą jest strukturalność i przejrzystość -- dane są przedstawiane w postaci wierzchołków (bytów) i krawędzi (relacji), co umożliwia intuicyjne modelowanie złożonych zależności między obiekatmi. Dzięki temu możliwe jest wnioskowanie semantyczne, czyli odkrywanie nowych relacji na podstawie już istniejących powiązań (np. na podstawie relacji „\textit{Łódź} leży w \textit{Polsce}” i „\textit{Polska} leży w \textit{Europie}”, można odkryć nową relację „\textit{Łódź} leży w \textit{Europie}”). Grafy wiedzy cechują się także wysoką interpretowalnością, co oznacza, że procesy oparte na nich są bardziej zrozumiałe dla człowieka niż w przypadku modeli czysto statystycznych. Dodatkowo, w połączeniu z ontologiami i językami semantycznymi (np. RDF, OWL), grafy wiedzy umożliwiają integrowanie informacji z różnych źródeł i zapewniają spójność znaczeniową danych \cite{graph:llm:roadmap}.
 
 % wady
 Grafy wiedzy mają również pewne istotne ograniczenia. 
@@ -427,12 +427,15 @@ Innym bardzo popularnym zastosowaniem LLM są chatboty takie jak OpenAI ChatGPT,
 
 \subsection{Metody połączenia KG i LLM}
 
-Integracja wielkich modeli językowych (LLM) z grafami wiedzy (KG) stanowi obecnie jedno z najbardziej obiecujących podejść w dziedzinie sztucznej inteligencji. LLM oferują zdolność do przetwarzania języka naturalnego, natomiast KG zapewniają strukturalną, precyzyjną i interpretowalną reprezentację wiedzy. W niniejszym rozdziale przedstawiono analizę wybranych metod łączenia tych dwóch technologii (zaproponowanych w pracy \textit{Unifying Large Language Models and Knowledge Graphs: A Roadmap} (2024) \cite{graph:llm:roadmap}).
+Integracja wielkich modeli językowych (LLM) z grafami wiedzy (KG) stanowi obecnie jedno z najbardziej obiecujących podejść w dziedzinie sztucznej inteligencji. LLM oferują zdolność do przetwarzania języka naturalnego, natomiast KG zapewniają strukturalną i precyzyjną 
+% i interpretowalną 
+reprezentację wiedzy. W niniejszym rozdziale przedstawiono analizę dwóch wybranych metod łączenia tych dwóch technologii (zaproponowanych w pracy \textit{Unifying Large Language Models and Knowledge Graphs: A Roadmap} (2024) \cite{graph:llm:roadmap}): \textit{tworzenie KG przy pomocy LLM} oraz \textit{wydobywanie wiedzy z KG przy pomocy LLM}. 
+% TODO: Zostały one wybrane, ponieważ stanowią obiecujący obszar rozwoju ...
 
 \subsubsection{Tworzenie KG przy pomocy LLM} % (5.3)
 \label{kgllm:construction}
 
-Współczesne podejścia do konstrukcji grafów wiedzy (KG) coraz częściej wykorzystują potencjał wielkich modeli językowych (LLM), które dzięki zdolności do rozumienia kontekstu i generowania semantycznych reprezentacji tekstu, umożliwiają automatyczne wydobywanie wiedzy z nieustrukturyzowanych danych. Podczas konstrukcji grafu, model językowy wykonuje następujące akcje (przy czym każdą może wykonać pojedynczo -- osobne prompty, może dwie lub więcej wykonać w tym samym poleceniu, a może też te wszystkie zadania dostać do wykonania jednocześnie w jednym prompcie):
+Współczesne podejścia do konstrukcji grafów wiedzy (KG) coraz częściej wykorzystują potencjał wielkich modeli językowych (LLM), które dzięki zdolności do rozumienia kontekstu i generowania semantycznych reprezentacji tekstu, umożliwiają automatyczne wydobywanie wiedzy z nieustrukturyzowanych danych. Podczas konstrukcji grafu, model językowy wykonuje następujące akcje:
 \begin{itemize}
     \item \textbf{rozpoznawania encji} (ang. Named Entity Recognition, NER) -- automatyczne identyfikowanie, w danych podanych w prompcie, nazw własnych lub istotnych pojęć np. osób, organizacji czy terminów naukowych. 
     Przykładowy propmt: \textit{„Zidentyfikuj wszystkie encje występujące w poniższym tekście i podziel je na kategorie: osoby, organizacje, lokalizacje, obiekty, terminy naukowe. Tekst: \{text\}”}
@@ -449,29 +452,30 @@ Współczesne podejścia do konstrukcji grafów wiedzy (KG) coraz częściej wyk
     , reprezentujące zawarte w nim fakty. Upewnij się, że każda trójka jest zgodna z kontekstem. Tekst: \{text\}”}
 \end{itemize}
 
-Taką konstrukcją grafu, gdzie wszystkie akcje są oczekiwane od LLM w pojedynczym prompcie, zajmuje się np. metoda \textbf{AutoKG} \cite{kg:autoKG}. Wykorzystuje ona LLM do generowania trójek wiedzy na podstawie promptów zaprojektowanych pod konkretną wiedzę dziedzinową np. medyczną, techniczną czy encyklopedyczną. 
+Model językowy każdą akcję może wykonać pojedynczo, może dwie lub więcej akcji wykonać w tym samym poleceniu, a może też te wszystkie zadania dostać do wykonania jednocześnie w jednym prompcie.
+
+Konstrukcję grafu z wykorzystaniem wyżej przedstawionych akcji implementuje metoda \textbf{AutoKG} \cite{kg:autoKG}. Korzysta ona z LLM do generowania trójek wiedzy na podstawie promptów zaprojektowanych pod konkretną wiedzę dziedzinową np. medyczną, techniczną czy encyklopedyczną. 
 Metoda ta nie wymaga wcześniej zbudowanej ontologii, stąd słowo „Auto” (pol. automatyczny) w nazwie metody. 
 Metoda ta świetnie nadaje się do zastosowań w systemach eksperckich, rekomendacji czy systemach pytanie - odpowiedź (ang. question answering, QA), gdzie użytkownik nie musi mieć technicznych zdolności do zbudowania ontologii czy innej oczekiwanej struktury danych, wystarczy że opisze w prompcie na jakich informacjach LLM powinien się skupić. 
 Przykładowy propmt: \textit{„Na podstawie poniższego tekstu wygeneruj kompletne trójki wiedzy \textup{(}h, r, t\textup{)} dotyczące kluczowych pojęć z danej dziedziny. Wykonaj jednocześnie: rozpoznawanie encji, identyfikację relacji, rozwiązywanie koreferencji oraz ekstrakcję faktów. Zwróć wynik w formacie:
 \textup{(}h, r, t\textup{)}; \textup{(}h, r, t\textup{)}; ...
-Tekst: \{text\}”}
-
-Inne sposób prezentuje metoda \textbf{Grapher} \cite{kg:grapher}, w której LLM przetwarza tekst wieloetapowo. Najpierw identyfikuje pojedyncze encje, a następnie dedykowany moduł konstruuje relacje między nimi, a więc wykorzystuje różne prompty do wykonania różnych akcji. Podobnie jak AutoKG, tworzy to zintegrowany proces przetwarzania (tak zwany end-to-end pipeline), który nie wymaga ręcznego identyfikowania encji, koreferencji i relacji przez człowieka.
+Tekst: \{text\}”}.
+Inną metodą wartą uwagi jest \textbf{Grapher} \cite{kg:grapher}, w której LLM przetwarza tekst wieloetapowo. Najpierw identyfikuje pojedyncze encje, a następnie dedykowany moduł konstruuje relacje między nimi, a więc wykorzystuje różne prompty do wykonania różnych akcji. Podobnie jak AutoKG, tworzy to zintegrowany proces przetwarzania (tak zwany end-to-end pipeline), który nie wymaga ręcznego identyfikowania encji, koreferencji i relacji przez człowieka.
 
 % Dwie poprzednie metody bazują na już użyciu już wytrenowanego LLM, natomiast \textbf{COMET} (\textbf{COM}mons\textbf{E}nse \textbf{T}ransformers) \cite{kg:comet}, prezentuje całkowicie odmienne podejście, ponieważ zakłada wytrenowanie nowego generatywnego modelu opartego na architekturze transformera.
 % W przeciwieństwie do innych powszechnych transformerów, takich jak GPT-4, jego celem nie jest generowanie odpowiedzi w języku naturalnym, lecz generowanie „zdroworozsądkowych trójek wiedzy” (ang. commonsense knowledge triples) - czyli struktur opisujących codzienne zależności między zdarzeniami, intencjami, emocjami i skutkami. 
 % Przykładowy propmt: \textit{„\textcolor{red}{TODO:}”} i wygenerowane trójki: \textit{„\textcolor{red}{TODO:}”}.
 % Co ciekawe COMET został wytrenowany na wcześniej już wspominanych źródłach danych \textbf{ConceptNet} \cite{kg:conceptnet} oraz \textbf{ATOMIC} \cite{kg:ATOMIC}. 
 
-Wykorzystanie wielkich modeli językowych do tworzenia grafów wiedzy jest bardziej pożądane lub wręcz wymagane w sytuacjach, gdy zadanie ekstrakcji wiedzy wymaga głębokiego rozumienia semantycznego, rozpoznawania złożonych relacji, rozwiązywania koreferencji lub interpretacji wiedzy niejawnej i nieustrukturyzowanej. Przykładowo, w domenach takich jak medycyna, prawo czy nauki społeczne, gdzie teksty zawierają subtelne zależności i wieloznaczności, LLM dzięki swojej zdolności do uogólniania i rozumowania na poziomie kontekstowym jest w stanie takie szczegóły uwzględniać podczas generowania odpowiedzi \cite{kgllm:construction}.
+Wykorzystanie wielkich modeli językowych do tworzenia grafów wiedzy jest bardziej pożądane lub wręcz wymagane w sytuacjach, gdy zadanie ekstrakcji wiedzy wymaga głębokiego rozumienia semantycznego, rozpoznawania złożonych relacji, rozwiązywania koreferencji lub interpretacji wiedzy niejawnej i nieustrukturyzowanej. Przykładowo, w domenach takich jak medycyna, prawo czy nauki społeczne, gdzie teksty zawierają subtelne zależności i wieloznaczności, LLM dzięki swojej zdolności do uogólniania i rozumowania na poziomie kontekstowym jest w stanie takie szczegóły uwzględniać podczas tworzenia grafu wiedzy \cite{kgllm:construction}.
 
-Warto jednak zwrócić uwagę na zagrożenia związane z tą metodą, takie jak trudność w walidacji generowanej wiedzy \cite{kgllm:construction:hard}. Jakość generowanych trójek zależy w dużej mierze zarówno od promtów jak i doboru odpowiedniego LLM. Proces generowania informacji warto wzbogacić o dodatkowe mechanizmy weryfikacji i ewentualnej korekty, które sprawdzają, czy fakty wygenerowane lub uzupełnione przez model są poprawne. W przypadku jeśli graf ma ściśle określony schemat np. poprzez ontologię, to należy dodatkowo zweryfikować spójność i zgodność wygenerowanych trójek z tą ontologią. Jedynym z mechanizmów automatycznej weryfikacji i edycji KG jest PiVE \cite{kg:pive}, który dodaje pętlę kontrolną (ang. Prompt-in-the-loop Verification and Editing), aby ograniczyć tzw. problem halucynacji LLM (ang. hallucination problem) -- czyli sytuacji, w której model generuje poprawnie brzmiące, lecz fałszywe informacje. W metodzie PiVE najpierw LLM generuje nową trójkę wiedzy, a następnie poprzez inny prompt model ocenia poprawność, spójność logiczną i zgodność z istniejącym grafem tej trójki. Jeśli wynik jest niepewny, metoda może odrzucić trójkę lub uruchomić ponowną jej generację.
+Warto jednak zwrócić uwagę na zagrożenia związane z generowaniem KG przy użyciu LLM, takie jak trudność w walidacji generowanej wiedzy \cite{kgllm:construction:hard}. Jakość generowanych trójek zależy w dużej mierze zarówno od promtów jak i doboru odpowiedniego LLM. Proces generowania informacji warto wzbogacić o dodatkowe mechanizmy weryfikacji i ewentualnej korekty, które sprawdzają, czy fakty wygenerowane lub uzupełnione przez model są poprawne. W przypadku, jeśli graf ma ściśle określony schemat np. poprzez ontologię, należy dodatkowo zweryfikować spójność i zgodność wygenerowanych trójek z tą ontologią. Jedynym z mechanizmów automatycznej weryfikacji i edycji KG jest PiVE (ang. \textbf{P}rompting with \textbf{I}terative \textbf{Ve}rification) \cite{kg:pive}, który dodaje pętlę kontrolną, aby ograniczyć tzw. problem halucynacji LLM (ang. \textit{hallucination problem}) -- czyli sytuacji, w której model generuje poprawnie brzmiące, lecz fałszywe informacje. W metodzie PiVE najpierw LLM generuje nową trójkę wiedzy, a następnie poprzez inny prompt model ocenia poprawność, spójność logiczną i zgodność tej trójki z istniejącym grafem. Jeśli wynik jest niepewny, metoda może odrzucić trójkę lub uruchomić ponowną jej generację.
 
 Podsumowując wielkie modele językowe nadają się do konstruowania grafów wiedzy przy użyciu odpowiednich podejść. 
 % Metody takie jak AutoKG znajdą swoje zastosowanie w tworzeniu i aktualizowaniu danych w grafie dla systemów eksperckich czy pytanie-odpowiedź nastawionych na operowanie w konkretnej dziedzinie lub dziedzinach wiedzy, jako że nie wymagają stosowania ontologii, co upraszcza proces konstrukcji grafu. Transformery takie jak COMET będą świetnym wyborem w rozwiązaniach wspierających tworzenie narracji i pisanie dialogów, jako że jest nastawiony na zależności między zdarzeniami, intencjami, emocjami i skutkami.
 % Rozwiązania te nie są jednak nie omylne, w związku z czym warto rozważyć dodanie do nich mechanizmów weryfikujących poprawność takich jak PiVE.
 W medycynie LLM jest wykorzystywany do przetwarzania artykułów naukowych i podręczników medycznych w celu stworzenia medycznego (domenowego) grafu wiedzy \cite{kgllm:construction:med}. Dla przykładu w badaniu \textit{Large language model powered knowledge graph construction for mental health exploration} z czasopisma Nature opisano budowę grafu zaburzeń psychicznych, przy użyciu wielkiego modelu językowego. Zebrano tam wiedzę z aktualnej literatury medycznej, która jest rozbita na wiele m.in. badań i artykułów, w celu zintegrowania jej w jedną koherentną całość \cite{kgllm:construction:nature}.
-Z kolei w obszarze korporacyjnym stworzona została platforma \textit{NebulaGraph}, która pozwala użytkownikom wprowadzać dane i polecenia w języku naturalnym, a platforma, przy użyciu LLM, tworzy na ich podstawie graf wiedzy pozwalający później łatwiejsze znajdywanie informacji i dokumentów firmowych \cite{kgllm:construction:nebula}.
+Z kolei w obszarze korporacyjnym stworzona została platforma \textit{NebulaGraph}, która pozwala użytkownikom wprowadzać dane i polecenia w języku naturalnym, a platforma, przy użyciu LLM, tworzy na ich podstawie graf wiedzy pozwalający na łatwiejsze znajdywanie informacji i dokumentów firmowych \cite{kgllm:construction:nebula}.
 
 % ! -------------------
 % % \textbf{Lekka ekstrakcja grafowa z kontekstem}
@@ -496,17 +500,18 @@ Z kolei w obszarze korporacyjnym stworzona została platforma \textit{NebulaGrap
 % Rozdział ten odnosi się do rozdziału \textit{„KG-enhanced LLM Inference”} z wcześniej cytowanej pracy \cite{graph:llm:roadmap}.
 
 W podejściu tym graf wiedzy (KG) jest wykorzystywany do dynamicznego wydobycia wiedzy w czasie działania (inferencji) dużego modelu językowego (LLM)
-.
+. %TODO ??
 % , bez konieczności jego retrenowania. 
 Celem jest dostarczenie aktualnej, zewnętrznej wiedzy, która może być użyta przez LLM do generowania bardziej trafnych, faktograficznych odpowiedzi.
 
 Integracja KG z LLM w tym podejściu opiera się na dwufazowym mechanizmie działania. Najpierw w procesie \textit{retrievalu} następuje pobieranie odpowiednich informacji z KG, a następnie podczas \textit{augmented generation} wydobyta wiedza zostaje dodana jako kontekst do promptu, na który ma odpowiedzieć LLM.
+Rozwiązanie implementujące to podejście to np. \textbf{Graph RAG} \cite{graphRAG}.
 
 % W pierwszym etapie \textit{retrieval} LLM identyfikuje, które fragmenty wiedzy z grafu są istotne. Mechanizm ten może działać poprzez bezpośrednie dopasowanie semantyczne, wówczas zapytanie jest konwertowane na reprezentacje wektorową, a następnie porównane z trójkami w KG. Inny sposób działania opiera się na wnioskowaniu po ścieżkach KG, gdzie LLM eksploruje ścieżki relacji w KG. Dzięki temu etapowi model nie korzysta z całego KG, który może zawierać miliony trójek, tylko z ograniczonego fragmentu.
 
 % W drugim etapie \textit{augmented generation} pozyskane fakty są przekazywane do LLM jako dodatkowe informacje załączane do promptu. Trójki wiedzy mogą być przekazywane do KG w formie zamienionej na język naturalny i tak dołączonej do promptu. Wiedza z KG może być również przekazana symbolicznie, poprzez łączenie embeddingu słów LLM z embeddingiem encji i relacji. Dzięki temu etapowi odpowiedzi LLM są wzbogacane o dodatkową wiedzę z KG, co powoduje wzrost rzetelności odpowiedzi. 
 
-Rozwiązanie implementujące to podejście to np. \textbf{Graph RAG} \cite{graphRAG}.
+% Rozwiązanie implementujące to podejście to np. \textbf{Graph RAG} \cite{graphRAG}.
 
 % Rozwiązanie implementujące to podejście to np. \textbf{Graph RAG} \cite{graphRAG}, gdzie LLM generuje zapytanie do KG w celu otrzymania wiedzy na zadane pytanie, a uzyskane informacje służą za kontekst w prompcie do generowania odpowiedzi. Z kolei rozwiązanie \textbf{REALM} \cite{Realm} wykorzystuje retriever do pobierania dokumentów z korpusu wiedzy na etapie przygotowawczym i skutecznie poprawia wydajność odpowiedzi na pytania. \textbf{KGLM} \cite{KGLM} natomiast łączy model językowy z grafem wiedzy w sposób, który pozwala mu przewidywać słowa zależnie od faktów. Inne metody takie jak \textbf{Mindmap} \cite{mindmap}, \textbf{ChatRule} \cite{chatrule} czy \textbf{CoK} \cite{cok} przekształcają strukturę grafu na tekstowe prompty, umożliwiając LLM reasoning.
 
@@ -520,8 +525,8 @@ Rozwiązanie implementujące to podejście to np. \textbf{Graph RAG} \cite{graph
 \subsubsubsection{Definicja i koncepcja Graph RAG}
 \label{sec:defgrag}
 
-Graph RAG (Graph Retrieval-Augmented Generation) to zaawansowane podejście do przetwarzania języka naturalnego, które łączy tradycyjne techniki RAG (Retrieval-Augmented Generation) z wykorzystaniem grafów wiedzy (ang. Knowledge Graphs, KG). Podstawową ideą Graph RAG jest wykorzystanie LLM do wygenerowania zapytania do KG (np. w języku Cypher) w celu otrzymania wiedzy na zadane pytanie, a uzyskane informacje służą za kontekst w prompcie do generowania odpowiedzi. Dzięki temu możliwe jest generowanie bardziej precyzyjnych i kontekstowych odpowiedzi na zapytania użytkowników \cite{graphRAG}.
-
+Graph RAG (ang. Graph Retrieval-Augmented Generation) to zaawansowane podejście do przetwarzania języka naturalnego, które łączy tradycyjne techniki RAG (ang. Retrieval-Augmented Generation) z wykorzystaniem grafów wiedzy. 
+Podstawową ideą Graph RAG jest wykorzystanie KG do przechowywania i wydobywania wiedzy (np. poprzez wykorzystanie LLM do wygenerowania zapytania do KG  w języku Cypher) w celu otrzymania informacji na zadane pytanie, a uzyskane informacje służą za kontekst w prompcie do generowania odpowiedzi przez LLM. Dzięki temu możliwe jest generowanie bardziej precyzyjnych i kontekstowych odpowiedzi na zapytania użytkowników \cite{graphRAG}. 
 Graph RAG bazuje na architekturze RAG, w związku z czym najpierw omówimy tą podstawową architekturę, nim przejdziemy do dalszej części przedstawiania metody z niniejszego rozdziału.\newline
 
 % \subsubsection{RAG}
@@ -530,29 +535,29 @@ Graph RAG bazuje na architekturze RAG, w związku z czym najpierw omówimy tą p
 % \subsubsubsection{Definicja i koncepcja RAG}
 \noindent\textbf{Definicja i koncepcja RAG}\\
 
-\textbf{RAG (Retrieval-Augmented Generation)} to zaawansowana technika przetwarzania języka naturalnego, która łączy dwa kluczowe komponenty: wyszukiwanie informacji (\textit{retrieval}) i generowanie tekstu (\textit{generation}). Celem RAG jest poprawa jakości generowanych odpowiedzi poprzez wykorzystanie zewnętrznych źródeł wiedzy, co pozwala na bardziej trafne i kontekstowe odpowiedzi na pytania użytkowników. Koncepcja ta stanowi istotny postęp w dziedzinie QA systems (systemy pytanie - odpowiedź) oraz aplikacji NLP, gdzie istotne jest nie tylko rozumienie pytania, ale także dostarczenie precyzyjnych informacji opartych na dużych bazach danych \cite{rag}. 
+\textbf{RAG} (ang. \textbf{Retrieval-Augmented Generation}) to zaawansowana technika przetwarzania języka naturalnego, która łączy dwa kluczowe komponenty: wyszukiwanie informacji (\textit{retrieval}) i generowanie tekstu (\textit{generation}). Celem RAG jest poprawa jakości generowanych odpowiedzi poprzez wykorzystanie zewnętrznych źródeł wiedzy, co pozwala na bardziej trafne i kontekstowe odpowiedzi na pytania użytkowników. Koncepcja ta stanowi istotny postęp w dziedzinie QA systems (systemy pytanie - odpowiedź) oraz aplikacji NLP, gdzie istotne jest nie tylko rozumienie pytania, ale także dostarczenie precyzyjnych informacji opartych na dużych bazach danych \cite{rag}. 
 
 W klasycznym podejściu do generowania tekstu, modele językowe bazują wyłącznie na wewnętrznej wiedzy zdobytej podczas treningu na ogromnych zbiorach danych. Modele takie jak GPT-4 od OpenAI mają ograniczenia związane z ich statycznym charakterem. Nie są w stanie dynamicznie uwzględniać nowych informacji, które pojawiły się po zakończeniu treningu. Ten problem można rozwiązać przez zastosowanie RAG, który integruje komponent wyszukiwania informacji, umożliwiając modelowi dostęp do najnowszych danych z zewnętrznych źródeł, takich jak bazy danych, artykuły, dokumenty czy strony internetowe.
 
-Problem stateczności modelu został rozwiązany np. w systemie Chat GPT, gdzie LLM takie jak GPT-3.5 czy GPT-4, mają dostęp do wyszukiwania informacji w Internecie \cite{openai:chatgpt:truth}. W dokumentacji OpenAI nie jest jawnie stwierdzone, czy Chat GPT korzysta z RAG-a, ale zawarta jest informacja, że Chat GPT-4 może korzystać z systemów lub narzędzi, wspomagających tworzenie odpowiedzi \cite{openai:chatgpt:dev}.
+Problem ograniczonej aktualności wiedzy modelu został rozwiązany np. w systemie Chat GPT, gdzie modele LLM takie jak GPT-3.5 czy GPT-4, mają dostęp do wyszukiwania informacji w Internecie \cite{openai:chatgpt:truth}. W dokumentacji OpenAI nie jest jawnie stwierdzone, czy Chat GPT korzysta z RAG-a, ale zawarta jest informacja, że Chat GPT-4 może korzystać z systemów lub narzędzi, wspomagających tworzenie odpowiedzi \cite{openai:chatgpt:dev}.
 
 Dzięki zdolności do łączenia statycznej wiedzy modeli językowych z dynamicznymi informacjami z zewnętrznych źródeł, RAG stanowi potężne narzędzie, które znacząco zwiększa efektywność i użyteczność aplikacji NLP.\\
 
 % \subsubsubsection{Architektura i komponenty RAG}
 \noindent\textbf{Architektura i komponenty RAG}\\
 
-RAG łączy możliwości wielkich modeli językowych z mechanizmami wyszukiwania informacji. W tym podrozdziale poruszymy główne elementy architektury oraz sposób, w jaki współpracują one w procesie przetwarzania zapytań. W paradygmacie RAG rozróżniamy 3 możliwe typy architektury: Naive RAG, Advanced RAG oraz Modular RAG \cite{rag:survey}. Typu te różnią pod względem budowy. Metoda Naive RAG jest najprostsza i przewyższa wydajność zwykłych LLM, jednak posiada ograniczenia, w odpowiedzi na które powstały bardziej zaawansowane metody Advanced RAG i Modular RAG.
+RAG łączy możliwości wielkich modeli językowych z mechanizmami wyszukiwania informacji. W tym podrozdziale opisane zostaną główne elementy architektury oraz sposób, w jaki współpracują one w procesie przetwarzania zapytań. W paradygmacie RAG rozróżnia się 3 możliwe typy architektury: Naive RAG, Advanced RAG oraz Modular RAG \cite{rag:survey}. Typu te różnią się pod względem budowy. Metoda Naive RAG jest najprostsza i przewyższa wydajność zwykłych LLM, jednak posiada ograniczenia, w odpowiedzi na które powstały bardziej zaawansowane metody Advanced RAG i Modular RAG.
 
 \textbf{Naive RAG} jest podstawową architekturą, jej struktura przedstawiona jest na rysunku \ref{fig:rag}. 
-
+% 
 W pierwszym kroku następuje \textit{indexing}. Dane najpierw zostają oczyszczone i wyodrębnione z surowych danych, które mogą być przechowywane w różnych formatach. Następuje konwertowane są na jeden wspólny format. Informacje podzielone są na \textit{chunki}, czyli mniejsze elementy tekstu. Na koniec tego etapu \textit{chunki} zamieniane są w wektory przy wykorzystaniu \textit{embeddingu} i zapisywane w bazie wektorowej. 
-
-W kolejnym kroku potrzebujemy promptu (\textit{input}), który jest wprowadzony przez użytkownika. Prompt ten zawiera pytanie, np. o niedawne wydarzenie lub najnowsze aktualizacje informacji w jakiejś dziedzinie, jednak model nie jest w stanie odpowiedzieć, ponieważ model został wytrenowany w przeszłości i jego wiedza kończy się na pewnym momencie (ang. knowledge cutoff), a zatem nie ma dostępu do najnowszych wydarzeń ani aktualizacji po zakończeniu treningu \cite{rag:cutoff}.
-
-Następny krok - \textit{retrieval} polega na obliczeniu podobieństwa między embeddingiem\linebreak{}
+% 
+W kolejnym kroku wymagany jest prompt (\textit{input}), który jest wprowadzony przez użytkownika. Prompt ten zawiera pytanie, np. o niedawne wydarzenie lub najnowsze aktualizacje informacji w jakiejś dziedzinie, jednak model nie jest w stanie odpowiedzieć, ponieważ został wytrenowany w przeszłości i jego wiedza kończy się na pewnym momencie (ang. \textit{knowledge cutoff}), a zatem nie ma dostępu do najnowszych wydarzeń ani aktualizacji po zakończeniu treningu \cite{rag:cutoff}.
+% 
+Następny krok -- \textit{retrieval} polega na obliczeniu podobieństwa między embeddingiem
 promptu oraz emmbeddingami zapisanymi w bazie wektorowej, powstałymi podczas \textit{indexingu}. Uzyskane w ten sposób zostają teksty (\textit{chunki}), których emmbeddingi uzyskały największy wynik podobieństwa np. cosinusowego i zostają one dodane jako rozszerzony kontekst do promptu LLM. 
-
-Ostatni krok - \textit{generation} to generowanie odpowiedzi na podstawie informacji dostarczonych jako rozszerzony kontekst oraz ewentualnie na podstawie wiedzy, na której szkolony był model językowy. 
+% 
+Ostatni krok -- \textit{generation} to generowanie odpowiedzi na podstawie informacji dostarczonych jako rozszerzony kontekst oraz ewentualnie na podstawie wiedzy, na której szkolony był model językowy. 
 
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{images/fig/rag.png}
@@ -596,15 +601,15 @@ RAG jest jednym ze sposobów optymalizacji odpowiedzi LLM na prompty użytkownik
 RAG jest innowacyjnym narzędziem, które pozwala na optymalizację odpowiedzi LLM oraz wpływa na jakość oraz rzetelność informacji zawartych w odpowiedziach, co jest szczególnie istotne w szybko zmieniających się dziedzinach, takich jak medycyna, technologia czy finanse. Jednak jak każde narzędzie RAG posiada ograniczenia.
 
 W pracy \textit{Retrieval-Augmented Generation for Large Language Models: A Survey} (2024) \cite{rag:survey} omówione zostały następujące wady pracy z RAG. Głównym pojawiającym się problemem w architekturze jest skalowalność oraz integracja komponentów \textit{retrievera} i \textit{generatora}. Proces ten wymaga precyzyjnego dostosowania obu komponentów, aby działały one harmonijnie i efektywnie.
-
+% 
 Następne wyzwanie pojawia się na etapie \textit{retrievalu}, gdzie mogą występować problemy z precyzją i podobieństwem wektorowym zapytania i kontekstu, co prowadzi do wyszukania niespójnych lub nieistotnych \textit{chunków} tekstu. 
-
+% 
 Na etapie \textit{generation}, tak jak w innych rozwiązaniach, LLM może generować halucynacje, czyli spójne językowo odpowiedzi, które mijają się z prawdą lub są fikcją. Faza ta może mieć również problem ze stronniczością podczas odpowiedzi lub generować kontrowersyjne treści z uwagi na dostarczone źródła co wpływa na rzetelność modelu. 
-
+% 
 Na etapie \textit{augmentation} pojawia się problem integracji wyszukanych informacji, co może skutkować niespójnymi wynikami. Odpowiedzi generowane przez model mogą także zawierać redundancje, czyli powtarzanie tych samych treści w różnych fragmentach odpowiedzi. Nie wpływa to bezpośrednio na rzetelność modelu, jednak obniża użyteczność danych i może wymagać dodatkowej obróbki.
-
+% 
 Dodatkowym wyzwaniem jest określenie znaczenia i trafności poszczególnych fragmentów kontekstu oraz zapewnienie spójności stylistycznej i tonalnej całej odpowiedzi. W przypadku bardziej złożonych zapytań pojedyncze wyszukiwanie oparte wyłącznie na oryginalnym pytaniu często okazuje się niewystarczające do uzyskania adekwatnych informacji kontekstowych.
-
+% 
 Co więcej, istnieje ryzyko, że modele generujące będą nadmiernie polegać na dostarczonym kontekście, ograniczając się do powtarzania treści zamiast oferować głębszą analizę czy syntezę informacji.
 
 % Powyższe wyzwania mogą być ograniczone poprzez zastosowanie modułu \textit{fakt-checkingu} lub wykorzystania innego modułu, który poprawia jakość odpowiedzi.
@@ -625,19 +630,24 @@ Architektura Graph RAG składa się z następujących komponentów \cite{graphRA
     \item \textbf{Proces budowy grafu} -- proces tworzenia węzłów i krawędzi. Każdy węzeł reprezentuje określony byt (np. pojęcie, dokument, autor, termin), a krawędzie opisują relacje między nimi (np. „cytuje”, „dotyczy”, „pochodzi z”). Możliwe jest tworzenie grafów wielowarstwowych, które obejmują różne poziomy abstrakcji - od relacji między dokumentami po powiązania między pojęciami. 
     % \item \textbf{Indeksowanie / reprezentacja} -- tworzenie embeddingów węzłów, tekstów, struktury. Embedding pozwala na mierzenie semantycznego podobieństwa między strukturami grafu a zapytaniem użytkownika.
     % \item \textbf{Przetwarzanie zapytania} -- zapytanie użytkownika (ang. query) podlega analizie językowej i semantycznej, aby zrozumieć jego intencję oraz odnieść je do elementów grafu. Następnie tworzone jest zapytanie w języku obsługiwanym przez bazę grafową (np. język Cypher), które służy do wyszukiwania odpowiednich węzłów w grafie. 
-    \item \textbf{Retriever} -- zapytanie użytkownika (ang. query) podlega analizie językowej i semantycznej, aby zrozumieć jego intencję oraz odnieść je do elementów grafu. Następnie tworzone jest zapytanie w języku obsługiwanym przez bazę grafową (np. język Cypher), które służy do wyszukiwania odpowiednich węzłów w grafie.
+    \item \textbf{Retriever} -- zapytanie użytkownika (ang. query) podlega analizie językowej i semantycznej, aby zrozumieć jego intencję oraz odnieść je do elementów grafu. 
+    Następnie następuje wydobycie informacji z grafu (np. poprzez zapytanie w języku obsługiwanym przez bazę grafową).
+    % Następnie tworzone jest zapytanie w języku obsługiwanym przez bazę grafową (np. język Cypher), które służy do wyszukiwania odpowiednich węzłów w grafie.
     \item \textbf{Organizer / przeredagowanie / ograniczanie} -- proces polegający na selekcji najważniejszych informacji. 
     \item \textbf{Generator} -- Model LLM generuje odpowiedź, biorąc pod uwagę zapytanie i odzyskany kontekst (tekst + struktura). Niektóre implementacje stosują dodatkowe techniki, takie jak \textit{chain-of-thought prompting}, które pomagają modelowi lepiej zinterpretować informacje zawarte w strukturze z kontekstu \cite{grag1}.
 \end{itemize}
 
-\subsubsubsection{Zalety Graph RAG w porównaniu do standardowego RAG}
+\subsubsubsection{Zalety i wyzwania Graph RAG w porównaniu do standardowego RAG}
 % \textbf{Zalety Graph RAG w porównaniu do standardowego RAG}
 
-Graph RAG (Graph Retrieval-Augmented Generation) stanowi rozwinięcie klasycznego podejścia RAG (Retrieval-Augmented Generation), integrując mechanizmy grafowych struktur danych w procesie pozyskiwania i przetwarzania informacji. Podczas gdy standardowy RAG opiera się na wyszukiwaniu fragmentów tekstu w oparciu o podobieństwo semantyczne (np. z wykorzystaniem wektorowych baz danych), Graph RAG dodatkowo modeluje relacje między poszczególnymi jednostkami wiedzy w postaci grafu -- węzłów i krawędzi reprezentujących odpowiednio pojęcia oraz ich powiązania. Dzięki temu możliwe jest wydobycie z grafu informacji powiązanych relacjami wydedukowanymi na etapie tworzenia KG.
+Graph RAG stanowi rozwinięcie klasycznego podejścia RAG, integrując mechanizmy grafowych struktur danych w procesie pozyskiwania i przetwarzania informacji. Podczas gdy standardowy RAG opiera się na wyszukiwaniu fragmentów tekstu w oparciu o podobieństwo semantyczne (np. z wykorzystaniem wektorowych baz danych), Graph RAG dodatkowo modeluje relacje między poszczególnymi jednostkami wiedzy w postaci grafu -- węzłów i krawędzi reprezentujących odpowiednio pojęcia oraz ich powiązania. Dzięki temu możliwe jest wydobycie z grafu informacji powiązanych relacjami wydedukowanymi na etapie tworzenia KG.
 
 Zastosowanie grafowej reprezentacji wiedzy niesie ze sobą szereg zalet. W pracy \textit{In-depth Analysis of Graph-based RAG in a Unified Framework} (2025) znajduje się porównanie metod RAG oraz Graph RAG. Autorzy pracy wskazują, że zastosowanie metody Graph RAG skutkuje większą dokładnością faktograficzną oraz adaptacyjnością (lepsze dostosowanie do różnych typów zapytań) \cite{grag2}. Dodatkowo Graph RAG można wykorzystywać w sposób dualny - graf w postawi relacji jest dobrze interpretowany przez modele językowe, a graf w postaci graficznej jest również możliwy do interpretacji przez specjalistów w danej dziedzinie. W pracy pod tytułem \textit{Knowledge Graph-augmented Language Models for Knowledge-Grounded Dialogue Generation} (2023) autorzy zauważają, że korzystanie z grafów wiedzy, przy generowaniu treści dialogowych poprawia spójność faktów i trafność odpowiedzi \cite{grag3}. 
 
-Podsumowując, wykorzystywanie KG jako źródła dodatkowych informacji pozwala dostarczać aktualne informacje do LLM, co jest ważnym aspektem w dzisiejszym świecie. Rozwiązanie to szczególnie użytecznie okazuje się w korporacjach, które z zasady mają sztywną strukturę organizacyjną oraz mają zdefiniowane procesy operacyjne, zwłaszcza gdy dbają o spełnianie norm ISO (w szczególności certyfikat ISO 9001 - zapewnienie stałej jakości procesów i usług). Dokumenty i procesy firmowe idealnie nadają się do adaptacji do grafu wiedzy, a co ważniejsze z użyciem metod takich jak Graph RAG, znacznie ułatwią i przyspieszą pracę pracowników na polu np. wyszukiwania dokumentów firmowych, których w korporacjach znajdują się niepoliczalne ilości, tym samym optymalizując koszty prowadzenia działalności i oferując klientom sprawniejszą komunikację i realizację projektów. Tego typu rozwiązanie Graph RAG do klienta korporacyjnego kieruje firma WRITER \cite{writer}.
+Najważniejszym wyzwaniem związanym z Graph RAG jest zadanie utrzymywania aktualności danych w grafie. Błędne lub brakujące informacje czy relacje, mogą prowadzić do niepoprawnych wyników. 
+Graph RAG jest bardziej skomplikowany od RAG, a co za tym idzie wymaga, by osoba za niego odpowiedzialna, posiadała większe kompetencje. Co więcej przy prostych zadaniach klasyczny RAG może być wystarczający. Jeśli zapytania są proste, dotyczą pojedynczych faktów, albo dane nie są bardzo powiązane strukturalnie, korzyści z Graph RAG mogą być marginalne, a koszty utrzymania wyższe.
+
+Podsumowując, wykorzystywanie KG jako źródła dodatkowych informacji pozwala dostarczać aktualne informacje do LLM, co jest ważnym aspektem w dzisiejszym świecie. Rozwiązanie to szczególnie użytecznie okazuje się w korporacjach, które z zasady mają sztywną strukturę organizacyjną oraz mają zdefiniowane procesy operacyjne, zwłaszcza gdy dbają o spełnianie norm ISO (w szczególności certyfikat ISO 9001 - zapewnienie stałej jakości procesów i usług). Dokumenty i procesy firmowe idealnie nadają się do adaptacji do grafu wiedzy, a co ważniejsze z użyciem metod takich jak Graph RAG, znacznie ułatwią i przyspieszą pracę pracowników na polu np. wyszukiwania dokumentów firmowych, których w korporacjach znajdują się niepoliczalne ilości, tym samym optymalizując koszty prowadzenia działalności i oferując klientom sprawniejszą komunikację i realizację projektów. Tego typu rozwiązanie Graph RAG do klienta korporacyjnego kieruje firma WRITER \cite{writer}. Należy jednak pamiętać, by wybrać rozwiązanie odpowiednie do potrzeb i uwzględnić czy firma faktycznie będzie czerpać korzyści z Graph RAG, czy może jej wymagania zostałyby spełnione przez prostszy klasyczny RAG. 
 
 % Grafy wiedzy używane są przez wiele firm oraz instytucji państwowych. Firma Ringier Axel Springer Polska wykorzystuje modele oparte na Graph RAG, przy wspomaganiu śledztw dziennikarskich. 
 % ! --------
@@ -695,7 +705,9 @@ Podsumowując, wykorzystywanie KG jako źródła dodatkowych informacji pozwala 
 % Integracja wielkich modeli językowych z grafami wiedzy znajduje zastosowanie przede wszystkim w trzech obszarach: automatycznej konstrukcji i aktualizacji grafów, wnioskowaniu i uzupełnianiu braków wiedzy oraz interaktywnym dostępie do informacji w języku naturalnym. Takie połączenie łączy zalety przetwarzania semantycznego z precyzją struktur grafowych, stanowiąc podstawę rozwoju nowoczesnych systemów wiedzo-centrycznych.
 Integracja wielkich modeli językowych z grafami wiedzy znajduje zastosowanie przede wszystkim w obszarach automatycznej konstrukcji i aktualizacji grafów oraz interaktywnym dostępie do informacji z grafu w języku naturalnym. Takie połączenie łączy zalety przetwarzania semantycznego z precyzją struktur grafowych, stanowiąc podstawę rozwoju nowoczesnych systemów wiedzo-centrycznych.
 
-Praca w dalszej części skupi się na implementacji tworzenia KG oraz wydobywaniu z niego wiedzy, ponieważ zastosowania te zyskują na popularności np. w zastosowaniach firmowych. Tajne dane czy dokumenty wewnętrzne nie powinny opuszczać firmy, a jednocześnie firma nie chce ponosić ogromnych kosztów w związku z utrzymywaniem własnego LLM i infrastruktury do jego działania. Dzięki temu firma zajmuje się tylko utrzymaniem KG (tworzeniem, a następnie rozszerzaniem o nowe dane), natomiast LLM wynajmuje w formie SaaS (ang. Software as a Service), dzięki czemu może korzystać z coraz to nowszych i bardziej zaawansowanych modeli.
+Praca w dalszej części skupi się na implementacji \textit{metody tworzenia KG przy pomocy LLM} oraz \textit{metody wydobywania informacji z tego grafu do wykorzystania przy generowaniu odpowiedzi LLM}, ponieważ zastosowania te zyskują na popularności np. w zastosowaniach firmowych. 
+Tajne dane czy dokumenty wewnętrzne nie powinny opuszczać firmy, a jednocześnie firma nie chce ponosić ogromnych kosztów w związku z utrzymywaniem własnego LLM i infrastruktury do jego działania. 
+Dzięki temu firma zajmuje się tylko utrzymaniem KG (tworzeniem, a następnie rozszerzaniem o nowe dane), natomiast LLM wynajmuje w formie SaaS (ang. Software as a Service), dzięki czemu może korzystać z coraz to nowszych i bardziej zaawansowanych modeli.
 
 %%% -----------------
 
